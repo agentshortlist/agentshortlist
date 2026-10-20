@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { JsonLd, breadcrumbLd } from "@/components/json-ld";
-import { AUTHOR_BIO, AUTHOR_NAME, CORRECTIONS_EMAIL, BLUESKY_URL, LINKEDIN_URL, SITE_NAME, X_URL, absoluteUrl } from "@/lib/site";
+import { AUTHOR_BIO, AUTHOR_NAME, CORRECTIONS_EMAIL, BLUESKY_URL, GITHUB_URL, GITHUB_ORG_URL, LINKEDIN_URL, SITE_NAME, X_URL, absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
@@ -26,7 +26,7 @@ export default function AboutPage() {
             name: AUTHOR_NAME,
             description: AUTHOR_BIO,
             jobTitle: "Senior software developer and SEO",
-            worksFor: { "@type": "Organization", name: SITE_NAME, url: absoluteUrl("/"), sameAs: [X_URL, LINKEDIN_URL, BLUESKY_URL] },
+            worksFor: { "@type": "Organization", name: SITE_NAME, url: absoluteUrl("/"), sameAs: [X_URL, LINKEDIN_URL, BLUESKY_URL, GITHUB_ORG_URL] },
           },
         }}
       />
@@ -44,6 +44,8 @@ export default function AboutPage() {
         articles. You can find the project on <a href={X_URL} className={link} rel="me noopener noreferrer" target="_blank">X</a>,{" "}
         <a href={BLUESKY_URL} className={link} rel="me noopener noreferrer" target="_blank">Bluesky</a> and{" "}
         <a href={LINKEDIN_URL} className={link} rel="me noopener noreferrer" target="_blank">LinkedIn</a>.
+        The code is open source on <a href={GITHUB_URL} className={link} rel="me noopener noreferrer" target="_blank">GitHub</a>: MIT for the code, CC BY 4.0 for the
+        cards and the data, so you can reuse them if you credit the source.
       </p>
 
       <h2 className={h2}>What you will find here</h2>

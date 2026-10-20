@@ -105,6 +105,11 @@ export function MobileMenu({ main, rankings, more }: { main: Item[]; rankings: I
                     Bluesky
                   </a>
                 </li>
+                <li>
+                  <a href="https://github.com/agentshortlist/agentshortlist" target="_blank" rel="noopener noreferrer me" aria-label="GitHub (opens in a new tab)" className="mobile-menu-sub mobile-menu-icon">
+                    GitHub
+                  </a>
+                </li>
               </ul>
               <Link href="/#newsletter" className="edge-btn edge-primary mobile-menu-cta" onClick={() => setOpen(false)}>
                 Subscribe to the newsletter

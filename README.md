@@ -59,4 +59,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). You can also write to hi@agentshortlist.
 ## License
 
 - **Code**: MIT, see [LICENSE](LICENSE).
-- **Content and data** (`src/content/`, `docs/`): CC BY 4.0. Reuse it with attribution: credit AgentShortlist and link to https://agentshortlist.dev.
+- **Content and data** (`src/content/`, `src/data/`, `docs/`): CC BY 4.0, see [LICENSE-CONTENT.md](LICENSE-CONTENT.md). Reuse it with attribution: credit AgentShortlist and link to https://agentshortlist.dev.

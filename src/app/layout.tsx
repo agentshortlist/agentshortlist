@@ -21,7 +21,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { Eyebrow } from "@/components/ui-kit";
 import { BEST_PAGES, CATEGORIES, getAgents } from "@/lib/data";
 import { snapshotCount } from "@/lib/history";
-import { CORRECTIONS_EMAIL, GA_ID, SITE_NAME, SITE_TAGLINE, SITE_URL, X_URL, LINKEDIN_URL, BLUESKY_URL } from "@/lib/site";
+import { CORRECTIONS_EMAIL, GA_ID, SITE_NAME, SITE_TAGLINE, SITE_URL, X_URL, LINKEDIN_URL, BLUESKY_URL, GITHUB_URL, GITHUB_ORG_URL } from "@/lib/site";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const plexMono = IBM_Plex_Mono({ variable: "--font-plex-mono", subsets: ["latin"], weight: ["400", "500"] });
@@ -102,7 +102,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             url: SITE_URL,
             logo: `${SITE_URL}/apple-icon`,
             description: SITE_TAGLINE,
-            sameAs: [X_URL, LINKEDIN_URL, BLUESKY_URL],
+            sameAs: [X_URL, LINKEDIN_URL, BLUESKY_URL, GITHUB_ORG_URL],
             contactPoint: { "@type": "ContactPoint", contactType: "editorial corrections", email: CORRECTIONS_EMAIL, availableLanguage: "English" },
           }}
         />
@@ -228,6 +228,15 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                   className="inline-flex items-center gap-2 text-foreground/80 transition-colors hover:text-foreground"
                 >
                   Bluesky
+                </a>
+                <a
+                  href={GITHUB_URL}
+                  target="_blank"
+                  rel="noopener noreferrer me"
+                  aria-label={`${SITE_NAME} on GitHub (opens in a new tab)`}
+                  className="inline-flex items-center gap-2 text-foreground/80 transition-colors hover:text-foreground"
+                >
+                  GitHub
                 </a>
               </div>
             </div>
