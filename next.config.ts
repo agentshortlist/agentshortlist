@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
   output: process.env.STANDALONE === "1" ? "standalone" : undefined,
   // Fija la raíz del proyecto: hay un package-lock.json suelto en la carpeta personal que desplazaba la salida.
   outputFileTracingRoot: path.join(__dirname),
+  // El CSS de la página (unos 16 KB) se incrusta en el HTML: así no hay una petición que bloquee el primer pintado.
+  experimental: { inlineCss: true },
   // www y dominio sin www son la misma web: una sola dirección canónica.
   async redirects() {
     return [

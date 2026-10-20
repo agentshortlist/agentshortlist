@@ -56,7 +56,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           }}
         />
         {/* Google Analytics en modo de consentimiento: todo denegado por defecto (sin cookies). Solo pasa a "granted" si el lector acepta. */}
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
         <script
           dangerouslySetInnerHTML={{
             __html:
@@ -64,7 +64,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               "gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});" +
               "gtag('set','ads_data_redaction',true);" +
               "try{if(localStorage.getItem('agentshortlist:analytics')==='granted'&&navigator.globalPrivacyControl!==true){gtag('consent','update',{analytics_storage:'granted'})}}catch(e){}" +
-              `gtag('js',new Date());gtag('config','${GA_ID}',{allow_google_signals:false,allow_ad_personalization_signals:false});`,
+              `gtag('js',new Date());gtag('config','${GA_ID}',{allow_google_signals:false,allow_ad_personalization_signals:false});` +
+              // El script de Google pesa unos 180 KB: se descarga cuando la página ya ha cargado (o ante la primera interacción), no antes de pintar.
+              // Los datos que se encolan antes (consentimiento y configuración) no se pierden: gtag.js los procesa al llegar.
+              `var gl=function(){if(gl.d)return;gl.d=1;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=${GA_ID}';document.head.appendChild(s)};` +
+              "['pointerdown','keydown','scroll','touchstart'].forEach(function(e){addEventListener(e,gl,{once:true,passive:true})});" +
+              "addEventListener('load',function(){(window.requestIdleCallback||function(f){setTimeout(f,1200)})(gl,{timeout:3000})});",
           }}
         />
       </head>
