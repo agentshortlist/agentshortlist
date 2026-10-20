@@ -1,0 +1,2936 @@
+[
+  {
+    "name": "Cline",
+    "slug": "cline",
+    "category": "coding-agents",
+    "description": "Autonomous coding agent as an SDK, IDE extension, or CLI assistant.",
+    "officialUrl": "https://cline.bot",
+    "repoUrl": "https://github.com/cline/cline",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 70588,
+    "lastPush": "2026-10-20T05:43:19Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/cline/cline",
+      "https://github.com/cline/cline"
+    ],
+    "verifiedAt": "2026-10-20T08:11:17.513Z"
+  },
+  {
+    "name": "OpenHands",
+    "slug": "openhands",
+    "category": "coding-agents",
+    "description": "🙌 OpenHands: AI-Driven Development",
+    "officialUrl": "https://openhands.dev",
+    "repoUrl": "https://github.com/OpenHands/OpenHands",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 91341,
+    "lastPush": "2026-10-20T08:11:04Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/All-Hands-AI/OpenHands",
+      "https://github.com/OpenHands/OpenHands"
+    ],
+    "verifiedAt": "2026-10-20T08:11:18.449Z"
+  },
+  {
+    "name": "OpenAI Codex CLI",
+    "slug": "openai-codex-cli",
+    "category": "coding-agents",
+    "description": "Lightweight coding agent that runs in your terminal",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/openai/codex",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 130012,
+    "lastPush": "2026-10-20T07:56:26Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/openai/codex",
+      "https://github.com/openai/codex"
+    ],
+    "verifiedAt": "2026-10-20T08:11:19.204Z"
+  },
+  {
+    "name": "Claude Code",
+    "slug": "claude-code",
+    "category": "coding-agents",
+    "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+    "officialUrl": "https://code.claude.com/docs/en/overview",
+    "repoUrl": "https://github.com/anthropics/claude-code",
+    "license": null,
+    "pricingModel": null,
+    "stars": 152817,
+    "lastPush": "2026-10-19T23:06:46Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/anthropics/claude-code",
+      "https://github.com/anthropics/claude-code"
+    ],
+    "verifiedAt": "2026-10-20T08:11:19.602Z"
+  },
+  {
+    "name": "Goose",
+    "slug": "goose",
+    "category": "coding-agents",
+    "description": "an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM",
+    "officialUrl": "https://goose-docs.ai/",
+    "repoUrl": "https://github.com/aaif-goose/goose",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 55457,
+    "lastPush": "2026-10-20T05:47:47Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/block/goose",
+      "https://github.com/aaif-goose/goose"
+    ],
+    "verifiedAt": "2026-10-20T08:11:20.283Z"
+  },
+  {
+    "name": "Continue",
+    "slug": "continue",
+    "category": "coding-agents",
+    "description": "open-source coding agent",
+    "officialUrl": "https://continue.dev",
+    "repoUrl": "https://github.com/continuedev/continue",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 36271,
+    "lastPush": "2026-10-19T20:47:29Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/continuedev/continue",
+      "https://github.com/continuedev/continue"
+    ],
+    "verifiedAt": "2026-10-20T08:11:20.643Z"
+  },
+  {
+    "name": "SWE-agent",
+    "slug": "swe-agent",
+    "category": "coding-agents",
+    "description": "SWE-agent takes a GitHub issue and tries to automatically fix it, using your LM of choice. It can also be employed for offensive cybersecurity or competitive coding challenges. [NeurIPS 2024] ",
+    "officialUrl": "https://swe-agent.com",
+    "repoUrl": "https://github.com/SWE-agent/SWE-agent",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 20600,
+    "lastPush": "2026-10-19T22:57:44Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/SWE-agent/SWE-agent",
+      "https://github.com/SWE-agent/SWE-agent"
+    ],
+    "verifiedAt": "2026-10-20T08:11:21.069Z"
+  },
+  {
+    "name": "Gemini CLI",
+    "slug": "gemini-cli",
+    "category": "coding-agents",
+    "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+    "officialUrl": "https://geminicli.com",
+    "repoUrl": "https://github.com/google-gemini/gemini-cli",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 107462,
+    "lastPush": "2026-10-20T01:33:51Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/google-gemini/gemini-cli",
+      "https://github.com/google-gemini/gemini-cli"
+    ],
+    "verifiedAt": "2026-10-20T08:11:21.663Z"
+  },
+  {
+    "name": "Qwen Code",
+    "slug": "qwen-code",
+    "category": "coding-agents",
+    "description": "An open-source AI coding agent that lives in your terminal.",
+    "officialUrl": "https://qwenlm.github.io/qwen-code-docs/en/users/overview",
+    "repoUrl": "https://github.com/QwenLM/qwen-code",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 28591,
+    "lastPush": "2026-10-20T08:00:51Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/QwenLM/qwen-code",
+      "https://github.com/QwenLM/qwen-code"
+    ],
+    "verifiedAt": "2026-10-20T08:11:22.117Z"
+  },
+  {
+    "name": "Kilo Code",
+    "slug": "kilo-code",
+    "category": "coding-agents",
+    "description": "Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.",
+    "officialUrl": "https://kilo.ai/",
+    "repoUrl": "https://github.com/Kilo-Org/kilocode",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 27662,
+    "lastPush": "2026-10-20T07:18:28Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/Kilo-Org/kilocode",
+      "https://github.com/Kilo-Org/kilocode"
+    ],
+    "verifiedAt": "2026-10-20T08:11:22.641Z"
+  },
+  {
+    "name": "Open Interpreter",
+    "slug": "open-interpreter",
+    "category": "coding-agents",
+    "description": "A coding agent for open models like Kimi K3 and GLM 5.3",
+    "officialUrl": "http://openinterpreter.com/",
+    "repoUrl": "https://github.com/openinterpreter/openinterpreter",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 68614,
+    "lastPush": "2026-10-11T00:56:06Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/openinterpreter/openinterpreter",
+      "https://github.com/openinterpreter/openinterpreter"
+    ],
+    "verifiedAt": "2026-10-20T08:11:23.058Z"
+  },
+  {
+    "name": "DeepSeek Reasonix",
+    "slug": "deepseek-reasonix",
+    "category": "coding-agents",
+    "description": "A reliable coding agent for complex software engineering tasks.",
+    "officialUrl": "http://reasonix.io/",
+    "repoUrl": "https://github.com/esengine/DeepSeek-Reasonix",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 35878,
+    "lastPush": "2026-10-20T08:00:44Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/esengine/DeepSeek-Reasonix",
+      "https://github.com/esengine/DeepSeek-Reasonix"
+    ],
+    "verifiedAt": "2026-10-20T08:11:23.393Z"
+  },
+  {
+    "name": "GitHub MCP Server",
+    "slug": "github-mcp-server",
+    "category": "mcp-servers",
+    "description": "GitHub's official MCP Server",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/github/github-mcp-server",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 33780,
+    "lastPush": "2026-10-19T15:23:31Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/github/github-mcp-server",
+      "https://github.com/github/github-mcp-server"
+    ],
+    "verifiedAt": "2026-10-20T08:11:23.798Z"
+  },
+  {
+    "name": "Playwright MCP",
+    "slug": "playwright-mcp",
+    "category": "mcp-servers",
+    "description": "Playwright MCP server",
+    "officialUrl": "https://www.npmjs.com/package/@playwright/mcp",
+    "repoUrl": "https://github.com/microsoft/playwright-mcp",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 38390,
+    "lastPush": "2026-10-19T15:31:53Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/microsoft/playwright-mcp",
+      "https://github.com/microsoft/playwright-mcp"
+    ],
+    "verifiedAt": "2026-10-20T08:11:24.216Z"
+  },
+  {
+    "name": "Context7",
+    "slug": "context7",
+    "category": "mcp-servers",
+    "description": "Context7 Platform -- Up-to-date docs for AI agents",
+    "officialUrl": "https://context7.com",
+    "repoUrl": "https://github.com/upstash/context7",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 63340,
+    "lastPush": "2026-10-19T17:57:04Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/upstash/context7",
+      "https://github.com/upstash/context7"
+    ],
+    "verifiedAt": "2026-10-20T08:11:24.543Z"
+  },
+  {
+    "name": "MCP Reference Servers",
+    "slug": "mcp-reference-servers",
+    "category": "mcp-servers",
+    "description": "Model Context Protocol Servers",
+    "officialUrl": "https://modelcontextprotocol.io",
+    "repoUrl": "https://github.com/modelcontextprotocol/servers",
+    "license": null,
+    "pricingModel": null,
+    "stars": 91397,
+    "lastPush": "2026-10-19T06:46:48Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/modelcontextprotocol/servers",
+      "https://github.com/modelcontextprotocol/servers"
+    ],
+    "verifiedAt": "2026-10-20T08:11:24.933Z"
+  },
+  {
+    "name": "Chrome DevTools MCP",
+    "slug": "chrome-devtools-mcp",
+    "category": "mcp-servers",
+    "description": "Chrome DevTools for coding agents",
+    "officialUrl": "https://developer.chrome.com/docs/devtools/agents",
+    "repoUrl": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 53885,
+    "lastPush": "2026-10-20T08:09:15Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/ChromeDevTools/chrome-devtools-mcp",
+      "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+    ],
+    "verifiedAt": "2026-10-20T08:11:25.361Z"
+  },
+  {
+    "name": "Codebase Memory MCP",
+    "slug": "codebase-memory-mcp",
+    "category": "mcp-servers",
+    "description": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 162 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
+    "officialUrl": "https://deusdata.github.io/codebase-memory-mcp/",
+    "repoUrl": "https://github.com/DeusData/codebase-memory-mcp",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 46981,
+    "lastPush": "2026-10-20T04:36:05Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/DeusData/codebase-memory-mcp",
+      "https://github.com/DeusData/codebase-memory-mcp"
+    ],
+    "verifiedAt": "2026-10-20T08:11:25.848Z"
+  },
+  {
+    "name": "Serena",
+    "slug": "serena",
+    "category": "mcp-servers",
+    "description": "A powerful MCP toolkit for coding, providing semantic retrieval and editing capabilities  - the IDE for your agent",
+    "officialUrl": "https://oraios.github.io/serena",
+    "repoUrl": "https://github.com/oraios/serena",
+    "license": null,
+    "pricingModel": null,
+    "stars": 30410,
+    "lastPush": "2026-10-19T17:30:56Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/oraios/serena",
+      "https://github.com/oraios/serena"
+    ],
+    "verifiedAt": "2026-10-20T08:11:26.200Z"
+  },
+  {
+    "name": "n8n-MCP",
+    "slug": "n8n-mcp",
+    "category": "mcp-servers",
+    "description": "A MCP for Claude Desktop / Claude Code / Windsurf / Cursor to build n8n workflows for you ",
+    "officialUrl": "https://www.n8n-mcp.com/",
+    "repoUrl": "https://github.com/czlonkowski/n8n-mcp",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 23102,
+    "lastPush": "2026-10-19T10:07:26Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/czlonkowski/n8n-mcp",
+      "https://github.com/czlonkowski/n8n-mcp"
+    ],
+    "verifiedAt": "2026-10-20T08:11:26.514Z"
+  },
+  {
+    "name": "MCP Toolbox for Databases",
+    "slug": "mcp-toolbox-for-databases",
+    "category": "mcp-database-servers",
+    "description": "MCP Toolbox for Databases is an open source MCP server for databases.",
+    "officialUrl": "https://mcp-toolbox.dev/documentation/introduction/",
+    "repoUrl": "https://github.com/googleapis/mcp-toolbox",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 16687,
+    "lastPush": "2026-10-19T20:49:39Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/googleapis/mcp-toolbox",
+      "https://github.com/googleapis/mcp-toolbox"
+    ],
+    "verifiedAt": "2026-10-20T08:11:26.911Z"
+  },
+  {
+    "name": "DBHub",
+    "slug": "dbhub",
+    "category": "mcp-database-servers",
+    "description": "Token conscious database MCP server for Postgres, MySQL, SQL Server, Oracle, MariaDB, SQLite.",
+    "officialUrl": "https://dbhub.ai",
+    "repoUrl": "https://github.com/bytebase/dbhub",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 3686,
+    "lastPush": "2026-10-13T15:23:25Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/bytebase/dbhub",
+      "https://github.com/bytebase/dbhub"
+    ],
+    "verifiedAt": "2026-10-20T08:11:27.360Z"
+  },
+  {
+    "name": "MongoDB MCP Server",
+    "slug": "mongodb-mcp-server",
+    "category": "mcp-database-servers",
+    "description": "A Model Context Protocol server to connect to MongoDB databases and MongoDB Atlas Clusters.",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/mongodb-js/mongodb-mcp-server",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 1146,
+    "lastPush": "2026-10-19T11:43:08Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/mongodb-js/mongodb-mcp-server",
+      "https://github.com/mongodb-js/mongodb-mcp-server"
+    ],
+    "verifiedAt": "2026-10-20T08:11:27.904Z"
+  },
+  {
+    "name": "MySQL MCP Server",
+    "slug": "mysql-mcp-server",
+    "category": "mcp-database-servers",
+    "description": "A Model Context Protocol (MCP) server that enables secure interaction with MySQL databases",
+    "officialUrl": "https://designcomputer.com",
+    "repoUrl": "https://github.com/designcomputer/mysql_mcp_server",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 1400,
+    "lastPush": "2026-08-02T13:36:20Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/designcomputer/mysql_mcp_server",
+      "https://github.com/designcomputer/mysql_mcp_server"
+    ],
+    "verifiedAt": "2026-10-20T08:11:28.231Z"
+  },
+  {
+    "name": "Data API Builder",
+    "slug": "data-api-builder",
+    "category": "mcp-database-servers",
+    "description": "Data API builder provides modern REST, GraphQL endpoints and MCP tools to your Azure Databases and on-prem stores.",
+    "officialUrl": "https://aka.ms/dab/docs",
+    "repoUrl": "https://github.com/Azure/data-api-builder",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 1529,
+    "lastPush": "2026-10-20T01:59:09Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/Azure/data-api-builder",
+      "https://github.com/Azure/data-api-builder"
+    ],
+    "verifiedAt": "2026-10-20T08:11:28.725Z"
+  },
+  {
+    "name": "pREST",
+    "slug": "prest",
+    "category": "mcp-database-servers",
+    "description": "Instant REST and MCP APIs for PostgreSQL and MySQL, on existing or new databases. CRUD, custom SQL routes, auth and ACL without writing a backend. Low-code, ⚡ realtime, high-performance. Native MySQL support since v2.5.",
+    "officialUrl": "https://www.prestd.com",
+    "repoUrl": "https://github.com/prest/prest",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 4626,
+    "lastPush": "2026-10-19T09:33:45Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/prest/prest",
+      "https://github.com/prest/prest"
+    ],
+    "verifiedAt": "2026-10-20T08:11:29.134Z"
+  },
+  {
+    "name": "CrewAI",
+    "slug": "crewai",
+    "category": "multi-agent-frameworks",
+    "description": "Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks.",
+    "officialUrl": "https://crewai.com",
+    "repoUrl": "https://github.com/crewAIInc/crewAI",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 59901,
+    "lastPush": "2026-10-20T08:10:52Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/crewAIInc/crewAI",
+      "https://github.com/crewAIInc/crewAI"
+    ],
+    "verifiedAt": "2026-10-20T08:11:29.481Z"
+  },
+  {
+    "name": "AutoGen",
+    "slug": "autogen",
+    "category": "multi-agent-frameworks",
+    "description": "A programming framework for agentic AI",
+    "officialUrl": "https://microsoft.github.io/autogen/",
+    "repoUrl": "https://github.com/microsoft/autogen",
+    "license": "CC-BY-4.0",
+    "pricingModel": null,
+    "stars": 61495,
+    "lastPush": "2026-10-16T16:14:37Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/microsoft/autogen",
+      "https://github.com/microsoft/autogen"
+    ],
+    "verifiedAt": "2026-10-20T08:11:29.865Z"
+  },
+  {
+    "name": "LangGraph",
+    "slug": "langgraph",
+    "category": "multi-agent-frameworks",
+    "description": "Build resilient agents.",
+    "officialUrl": "https://docs.langchain.com/oss/python/langgraph/",
+    "repoUrl": "https://github.com/langchain-ai/langgraph",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 43555,
+    "lastPush": "2026-10-19T14:06:21Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/langchain-ai/langgraph",
+      "https://github.com/langchain-ai/langgraph"
+    ],
+    "verifiedAt": "2026-10-20T08:11:30.220Z"
+  },
+  {
+    "name": "Hive",
+    "slug": "hive",
+    "category": "multi-agent-frameworks",
+    "description": "Multi-Agent Harness for Production AI",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/aden-hive/hive",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 11112,
+    "lastPush": "2026-10-19T19:36:02Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/aden-hive/hive",
+      "https://github.com/aden-hive/hive"
+    ],
+    "verifiedAt": "2026-10-20T08:11:30.556Z"
+  },
+  {
+    "name": "Agent Squad",
+    "slug": "agent-squad",
+    "category": "multi-agent-frameworks",
+    "description": "Flexible and powerful framework for managing multiple AI agents and handling complex conversations",
+    "officialUrl": "https://2fastlabs.github.io/agent-squad/",
+    "repoUrl": "https://github.com/2FastLabs/agent-squad",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 7793,
+    "lastPush": "2026-10-08T09:03:31Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/2FastLabs/agent-squad",
+      "https://github.com/2FastLabs/agent-squad"
+    ],
+    "verifiedAt": "2026-10-20T08:11:31.080Z"
+  },
+  {
+    "name": "Open Multi-Agent",
+    "slug": "open-multi-agent",
+    "category": "multi-agent-frameworks",
+    "description": "Self-hosted TypeScript agent runtime with durable approvals and verifiable run records. Own it, approve it, audit it.",
+    "officialUrl": "https://open-multi-agent.com/go/repo",
+    "repoUrl": "https://github.com/open-multi-agent/open-multi-agent",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 7006,
+    "lastPush": "2026-10-19T06:24:58Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/open-multi-agent/open-multi-agent",
+      "https://github.com/open-multi-agent/open-multi-agent"
+    ],
+    "verifiedAt": "2026-10-20T08:11:31.404Z"
+  },
+  {
+    "name": "AgentScope Java",
+    "slug": "agentscope-java",
+    "category": "multi-agent-frameworks",
+    "description": "Build distributed, production-grade, long-running agents.",
+    "officialUrl": "https://java.agentscope.io/",
+    "repoUrl": "https://github.com/agentscope-ai/agentscope-java",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 6055,
+    "lastPush": "2026-10-20T06:14:04Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/agentscope-ai/agentscope-java",
+      "https://github.com/agentscope-ai/agentscope-java"
+    ],
+    "verifiedAt": "2026-10-20T08:11:31.890Z"
+  },
+  {
+    "name": "Pydantic AI",
+    "slug": "pydantic-ai",
+    "category": "agent-frameworks",
+    "description": "How Python does AI. Agents, realtime voice, image generation, embeddings. Every model, every interface, typed end to end.",
+    "officialUrl": "https://pydantic.dev/pydantic-ai",
+    "repoUrl": "https://github.com/pydantic/pydantic-ai",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 20747,
+    "lastPush": "2026-10-20T07:46:48Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/pydantic/pydantic-ai",
+      "https://github.com/pydantic/pydantic-ai"
+    ],
+    "verifiedAt": "2026-10-20T08:11:32.385Z"
+  },
+  {
+    "name": "Haystack",
+    "slug": "haystack",
+    "category": "agent-frameworks",
+    "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
+    "officialUrl": "https://haystack.deepset.ai",
+    "repoUrl": "https://github.com/deepset-ai/haystack",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 26785,
+    "lastPush": "2026-10-20T07:43:02Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/deepset-ai/haystack",
+      "https://github.com/deepset-ai/haystack"
+    ],
+    "verifiedAt": "2026-10-20T08:11:32.853Z"
+  },
+  {
+    "name": "VoltAgent",
+    "slug": "voltagent",
+    "category": "agent-frameworks",
+    "description": "AI Agent Engineering Platform built on an Open Source TypeScript AI Agent Framework",
+    "officialUrl": "https://voltagent.dev",
+    "repoUrl": "https://github.com/VoltAgent/voltagent",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 10843,
+    "lastPush": "2026-10-15T17:38:41Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/VoltAgent/voltagent",
+      "https://github.com/VoltAgent/voltagent"
+    ],
+    "verifiedAt": "2026-10-20T08:11:33.213Z"
+  },
+  {
+    "name": "Microsoft Agent Framework",
+    "slug": "microsoft-agent-framework",
+    "category": "agent-frameworks",
+    "description": "A framework for building, orchestrating and deploying AI agents and multi-agent workflows with support for Python and .NET.",
+    "officialUrl": "https://aka.ms/agent-framework",
+    "repoUrl": "https://github.com/microsoft/agent-framework",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 14224,
+    "lastPush": "2026-10-19T21:20:01Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/microsoft/agent-framework",
+      "https://github.com/microsoft/agent-framework"
+    ],
+    "verifiedAt": "2026-10-20T08:11:33.652Z"
+  },
+  {
+    "name": "DeerFlow",
+    "slug": "deerflow",
+    "category": "research-agents",
+    "description": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
+    "officialUrl": "https://deerflow.tech",
+    "repoUrl": "https://github.com/bytedance/deer-flow",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 84179,
+    "lastPush": "2026-10-20T06:30:57Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/bytedance/deer-flow",
+      "https://github.com/bytedance/deer-flow"
+    ],
+    "verifiedAt": "2026-10-20T08:11:34.050Z"
+  },
+  {
+    "name": "GPT Researcher",
+    "slug": "gpt-researcher",
+    "category": "research-agents",
+    "description": "An autonomous agent that conducts deep research on any data using any LLM providers",
+    "officialUrl": "https://gptr.dev",
+    "repoUrl": "https://github.com/assafelovic/gpt-researcher",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 30188,
+    "lastPush": "2026-10-10T22:03:53Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/assafelovic/gpt-researcher",
+      "https://github.com/assafelovic/gpt-researcher"
+    ],
+    "verifiedAt": "2026-10-20T08:11:34.452Z"
+  },
+  {
+    "name": "DeepSearcher",
+    "slug": "deepsearcher",
+    "category": "research-agents",
+    "description": "Open Source Deep Research Alternative to Reason and Search on Private Data. Written in Python.",
+    "officialUrl": "https://zilliztech.github.io/deep-searcher/",
+    "repoUrl": "https://github.com/zilliztech/deep-searcher",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 8350,
+    "lastPush": "2026-09-22T10:08:42Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/zilliztech/deep-searcher",
+      "https://github.com/zilliztech/deep-searcher"
+    ],
+    "verifiedAt": "2026-10-20T08:11:34.973Z"
+  },
+  {
+    "name": "HyperResearch",
+    "slug": "hyperresearch",
+    "category": "research-agents",
+    "description": "Convert Claude Code or Codex into the most intelligent Deep Research Agent. Collect, search, and synthesize web research into a persistent, searchable wiki that builds on itself. Hosted API + MCP: hyperresearch.ai",
+    "officialUrl": "https://hyperresearch.ai",
+    "repoUrl": "https://github.com/jordan-gibbs/hyperresearch",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 3887,
+    "lastPush": "2026-10-10T22:36:54Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/jordan-gibbs/hyperresearch",
+      "https://github.com/jordan-gibbs/hyperresearch"
+    ],
+    "verifiedAt": "2026-10-20T08:11:35.329Z"
+  },
+  {
+    "name": "NVIDIA Deep Researcher Agent",
+    "slug": "nvidia-deep-researcher-agent",
+    "category": "research-agents",
+    "description": "The NVIDIA Deep Researcher Agent Blueprint is an open reference example for building intelligent AI agents that connect to your enterprise data, reason using state-of-the-art models, and deliver trusted business insights.",
+    "officialUrl": "https://docs.nvidia.com/aiq-blueprint/latest/index.html",
+    "repoUrl": "https://github.com/NVIDIA-AI-Blueprints/deep-researcher-agent",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 902,
+    "lastPush": "2026-10-09T19:49:59Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/NVIDIA-AI-Blueprints/deep-researcher-agent",
+      "https://github.com/NVIDIA-AI-Blueprints/deep-researcher-agent"
+    ],
+    "verifiedAt": "2026-10-20T08:11:35.756Z"
+  },
+  {
+    "name": "Browser Use",
+    "slug": "browser-use",
+    "category": "browser-agents",
+    "description": "Open-source Python library for AI browser agents, plus Browser Use Cloud: stealth browsers and a hosted agent API.",
+    "officialUrl": "https://browser-use.com",
+    "repoUrl": "https://github.com/browser-use/browser-use",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 118593,
+    "lastPush": "2026-10-20T06:00:24Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/browser-use/browser-use",
+      "https://github.com/browser-use/browser-use"
+    ],
+    "verifiedAt": "2026-10-20T08:11:36.143Z"
+  },
+  {
+    "name": "UI-TARS Desktop",
+    "slug": "ui-tars-desktop",
+    "category": "browser-agents",
+    "description": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
+    "officialUrl": "https://agent-tars.com",
+    "repoUrl": "https://github.com/bytedance/UI-TARS-desktop",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 39341,
+    "lastPush": "2026-10-09T01:29:53Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/bytedance/UI-TARS-desktop",
+      "https://github.com/bytedance/UI-TARS-desktop"
+    ],
+    "verifiedAt": "2026-10-20T08:11:36.512Z"
+  },
+  {
+    "name": "Cua",
+    "slug": "cua",
+    "category": "browser-agents",
+    "description": "Scale computer-use 2.0 with open-source drivers, cross-OS sandboxes, and benchmarks for training, evaluation, and data generation.",
+    "officialUrl": "https://cua.ai",
+    "repoUrl": "https://github.com/trycua/cua",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 30288,
+    "lastPush": "2026-10-20T08:06:25Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/trycua/cua",
+      "https://github.com/trycua/cua"
+    ],
+    "verifiedAt": "2026-10-20T08:11:36.902Z"
+  },
+  {
+    "name": "Nanobrowser",
+    "slug": "nanobrowser",
+    "category": "browser-agents",
+    "description": "Open-source AI agent for web automation. Use your real, logged-in browser to automate daily tasks.",
+    "officialUrl": "https://nanobrowser.ai",
+    "repoUrl": "https://github.com/nanobrowser/nanobrowser",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 14132,
+    "lastPush": "2026-10-15T15:44:39Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/nanobrowser/nanobrowser",
+      "https://github.com/nanobrowser/nanobrowser"
+    ],
+    "verifiedAt": "2026-10-20T08:11:37.327Z"
+  },
+  {
+    "name": "Agent S",
+    "slug": "agent-s",
+    "category": "browser-agents",
+    "description": "Agent S: an open agentic framework that uses computers like a human",
+    "officialUrl": "https://www.simular.ai",
+    "repoUrl": "https://github.com/simular-ai/Agent-S",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 12658,
+    "lastPush": "2026-10-08T22:27:33Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/simular-ai/Agent-S",
+      "https://github.com/simular-ai/Agent-S"
+    ],
+    "verifiedAt": "2026-10-20T08:11:37.705Z"
+  },
+  {
+    "name": "Browser Use Web UI",
+    "slug": "browser-use-web-ui",
+    "category": "browser-agents",
+    "description": "🖥️ Run AI Agent in your browser.",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/browser-use/web-ui",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 16618,
+    "lastPush": "2026-09-25T03:56:21Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/browser-use/web-ui",
+      "https://github.com/browser-use/web-ui"
+    ],
+    "verifiedAt": "2026-10-20T08:11:38.082Z"
+  },
+  {
+    "name": "OpenSRE",
+    "slug": "opensre",
+    "category": "ops-agents",
+    "description": "Build your own AI SRE agents. The open source toolkit for the AI era.",
+    "officialUrl": "https://discord.com/invite/opensre",
+    "repoUrl": "https://github.com/Tracer-Cloud/opensre",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 12247,
+    "lastPush": "2026-10-20T06:42:00Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/Tracer-Cloud/opensre",
+      "https://github.com/Tracer-Cloud/opensre"
+    ],
+    "verifiedAt": "2026-10-20T08:11:38.469Z"
+  },
+  {
+    "name": "HolmesGPT",
+    "slug": "holmesgpt",
+    "category": "ops-agents",
+    "description": "SRE Agent - CNCF Sandbox Project",
+    "officialUrl": "https://holmesgpt.dev/",
+    "repoUrl": "https://github.com/HolmesGPT/holmesgpt",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 3644,
+    "lastPush": "2026-10-20T08:09:06Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/HolmesGPT/holmesgpt",
+      "https://github.com/HolmesGPT/holmesgpt"
+    ],
+    "verifiedAt": "2026-10-20T08:11:38.893Z"
+  },
+  {
+    "name": "OnGrid",
+    "slug": "ongrid",
+    "category": "ops-agents",
+    "description": "An ops AI Agent that understands your infrastructure, finds the root cause, and fixes it — right from Slack, Telegram, Lark or DingTalk.",
+    "officialUrl": "https://ongrid.cloud",
+    "repoUrl": "https://github.com/ongridio/ongrid",
+    "license": "AGPL-3.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 1193,
+    "lastPush": "2026-10-19T15:38:14Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/ongridio/ongrid",
+      "https://github.com/ongridio/ongrid"
+    ],
+    "verifiedAt": "2026-10-20T08:11:39.413Z"
+  },
+  {
+    "name": "Versus Incident",
+    "slug": "versus-incident",
+    "category": "ops-agents",
+    "description": "The self-hosted AI SRE agent. You don't have to monitor your systems alone. Versus Incident will keep track of your services, applications, and systems, detect new or unexpected problems, and provide your team with the evidence needed to investigate.",
+    "officialUrl": "https://versusincident.com",
+    "repoUrl": "https://github.com/VersusControl/versus-incident",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 890,
+    "lastPush": "2026-10-19T14:50:35Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/VersusControl/versus-incident",
+      "https://github.com/VersusControl/versus-incident"
+    ],
+    "verifiedAt": "2026-10-20T08:11:39.780Z"
+  },
+  {
+    "name": "nanobot",
+    "slug": "nanobot",
+    "category": "personal-agents",
+    "description": "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi-agent workflows, automation, and chat apps",
+    "officialUrl": "https://nanobot.wiki",
+    "repoUrl": "https://github.com/HKUDS/nanobot",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 49205,
+    "lastPush": "2026-10-20T08:08:57Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/HKUDS/nanobot",
+      "https://github.com/HKUDS/nanobot"
+    ],
+    "verifiedAt": "2026-10-20T08:11:40.198Z"
+  },
+  {
+    "name": "Leon",
+    "slug": "leon",
+    "category": "personal-agents",
+    "description": "🧠 Leon is your open-source personal assistant.",
+    "officialUrl": "https://getleon.ai",
+    "repoUrl": "https://github.com/leon-ai/leon",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 17591,
+    "lastPush": "2026-10-20T06:41:04Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/leon-ai/leon",
+      "https://github.com/leon-ai/leon"
+    ],
+    "verifiedAt": "2026-10-20T08:11:40.560Z"
+  },
+  {
+    "name": "gptme",
+    "slug": "gptme",
+    "category": "personal-agents",
+    "description": "Your agent in your terminal, equipped with local tools: writes code, uses the terminal, browses the web. Make your own persistent autonomous agent on top!",
+    "officialUrl": "https://gptme.org/",
+    "repoUrl": "https://github.com/gptme/gptme",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 4457,
+    "lastPush": "2026-10-20T07:51:30Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/gptme/gptme",
+      "https://github.com/gptme/gptme"
+    ],
+    "verifiedAt": "2026-10-20T08:11:40.894Z"
+  },
+  {
+    "name": "Waku Agent",
+    "slug": "waku-agent",
+    "category": "personal-agents",
+    "description": "Waku Waku! Waku Agent is a local-first AI agent harness you actually own, including loop, memory, eval, all in code built to stay legible as it grows.",
+    "officialUrl": "waku.one",
+    "repoUrl": "https://github.com/ShenSeanChen/waku-agent",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 2059,
+    "lastPush": "2026-10-11T23:44:04Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/ShenSeanChen/waku-agent",
+      "https://github.com/ShenSeanChen/waku-agent"
+    ],
+    "verifiedAt": "2026-10-20T08:11:41.553Z"
+  },
+  {
+    "name": "Herdr",
+    "slug": "herdr",
+    "category": "coding-agents",
+    "description": "the runtime your coding agents live on",
+    "officialUrl": "https://herdr.dev",
+    "repoUrl": "https://github.com/herdrdev/herdr",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 44880,
+    "lastPush": "2026-10-18T18:57:09Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/herdrdev/herdr",
+      "https://github.com/herdrdev/herdr"
+    ],
+    "verifiedAt": "2026-10-20T08:11:41.920Z"
+  },
+  {
+    "name": "Codewhale",
+    "slug": "codewhale",
+    "category": "coding-agents",
+    "description": "Open-source Rust agent engine and terminal client for Codewhale, with provider choice, tools, approvals and receipts.",
+    "officialUrl": "https://codewhale.net/",
+    "repoUrl": "https://github.com/codewhale-hq/Codewhale",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 41103,
+    "lastPush": "2026-10-19T19:54:00Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/codewhale-hq/Codewhale",
+      "https://github.com/codewhale-hq/Codewhale"
+    ],
+    "verifiedAt": "2026-10-20T08:11:42.346Z"
+  },
+  {
+    "name": "jcode",
+    "slug": "jcode",
+    "category": "coding-agents",
+    "description": "High performance coding agent harness written in Rust, built for heavy multi-agent dev workflows",
+    "officialUrl": "https://jcode.sh",
+    "repoUrl": "https://github.com/1jehuang/jcode",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 21054,
+    "lastPush": "2026-10-20T07:19:11Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/1jehuang/jcode",
+      "https://github.com/1jehuang/jcode"
+    ],
+    "verifiedAt": "2026-10-20T08:11:42.694Z"
+  },
+  {
+    "name": "Superset",
+    "slug": "superset",
+    "category": "coding-agents",
+    "description": "Superset is an agentic IDE to orchestrate 100+ coding agents in parallel. Run any agent with your own subscription.",
+    "officialUrl": "https://superset.sh",
+    "repoUrl": "https://github.com/superset-sh/superset",
+    "license": null,
+    "pricingModel": null,
+    "stars": 15387,
+    "lastPush": "2026-10-20T07:57:40Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/superset-sh/superset",
+      "https://github.com/superset-sh/superset"
+    ],
+    "verifiedAt": "2026-10-20T08:11:43.163Z"
+  },
+  {
+    "name": "Pydantic DeepAgents",
+    "slug": "pydantic-deepagents",
+    "category": "coding-agents",
+    "description": "Open-source, self-hosted Claude Code - a terminal AI assistant and the Python framework behind it. Tool-calling, sandboxed execution, multi-agent teams, skills, checkpoints, unlimited context - on Pydantic AI, any model.",
+    "officialUrl": "https://vstorm-co.github.io/pydantic-deepagents/",
+    "repoUrl": "https://github.com/vstorm-co/pydantic-deepagents",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 1103,
+    "lastPush": "2026-10-19T13:27:10Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/vstorm-co/pydantic-deepagents",
+      "https://github.com/vstorm-co/pydantic-deepagents"
+    ],
+    "verifiedAt": "2026-10-20T08:11:43.609Z"
+  },
+  {
+    "name": "Code Review Graph",
+    "slug": "code-review-graph",
+    "category": "mcp-servers",
+    "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+    "officialUrl": "https://code-review-graph.com",
+    "repoUrl": "https://github.com/tirth8205/code-review-graph",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 32273,
+    "lastPush": "2026-10-16T11:20:26Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/tirth8205/code-review-graph",
+      "https://github.com/tirth8205/code-review-graph"
+    ],
+    "verifiedAt": "2026-10-20T08:11:43.936Z"
+  },
+  {
+    "name": "Context Mode",
+    "slug": "context-mode",
+    "category": "mcp-servers",
+    "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
+    "officialUrl": "https://context-mode.com",
+    "repoUrl": "https://github.com/mksglu/context-mode",
+    "license": null,
+    "pricingModel": null,
+    "stars": 31200,
+    "lastPush": "2026-10-20T08:08:24Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/mksglu/context-mode",
+      "https://github.com/mksglu/context-mode"
+    ],
+    "verifiedAt": "2026-10-20T08:11:44.289Z"
+  },
+  {
+    "name": "FastMCP",
+    "slug": "fastmcp",
+    "category": "mcp-servers",
+    "description": "🚀 The fast, Pythonic way to build MCP servers and clients.",
+    "officialUrl": "https://gofastmcp.com",
+    "repoUrl": "https://github.com/PrefectHQ/fastmcp",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 28143,
+    "lastPush": "2026-10-20T02:36:41Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/PrefectHQ/fastmcp",
+      "https://github.com/PrefectHQ/fastmcp"
+    ],
+    "verifiedAt": "2026-10-20T08:11:44.743Z"
+  },
+  {
+    "name": "MCP Python SDK",
+    "slug": "mcp-python-sdk",
+    "category": "mcp-servers",
+    "description": "The official Python SDK for Model Context Protocol servers and clients",
+    "officialUrl": "https://py.sdk.modelcontextprotocol.io/",
+    "repoUrl": "https://github.com/modelcontextprotocol/python-sdk",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 24624,
+    "lastPush": "2026-10-17T13:54:39Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/modelcontextprotocol/python-sdk",
+      "https://github.com/modelcontextprotocol/python-sdk"
+    ],
+    "verifiedAt": "2026-10-20T08:11:45.184Z"
+  },
+  {
+    "name": "Blender MCP",
+    "slug": "blender-mcp",
+    "category": "mcp-servers",
+    "description": "Community plugin to control Blender 3D with any LLM of your choice. Not affiliated with the official Blender Foundation.",
+    "officialUrl": "https://www.mcp-for-blender.com/",
+    "repoUrl": "https://github.com/ahujasid/mcp-for-blender",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 31733,
+    "lastPush": "2026-10-20T05:25:11Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/ahujasid/blender-mcp",
+      "https://github.com/ahujasid/mcp-for-blender"
+    ],
+    "verifiedAt": "2026-10-20T08:11:45.944Z"
+  },
+  {
+    "name": "GraphJin",
+    "slug": "graphjin",
+    "category": "mcp-database-servers",
+    "description": "One governed graph for AI agents — GraphQL + MCP over your databases, files, APIs, and code",
+    "officialUrl": "https://graphjin.com",
+    "repoUrl": "https://github.com/dosco/graphjin",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 3215,
+    "lastPush": "2026-10-18T18:04:05Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/dosco/graphjin",
+      "https://github.com/dosco/graphjin"
+    ],
+    "verifiedAt": "2026-10-20T08:11:46.272Z"
+  },
+  {
+    "name": "ktx",
+    "slug": "ktx",
+    "category": "mcp-database-servers",
+    "description": "ktx is an executable context layer for data and analytics agents 🐙 Allow Claude Code, Codex, or other AI agents to query analytical databases accurately and with full context of your company",
+    "officialUrl": "https://docs.kaelio.com/ktx",
+    "repoUrl": "https://github.com/Kaelio/ktx",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 1618,
+    "lastPush": "2026-10-17T14:29:39Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/Kaelio/ktx",
+      "https://github.com/Kaelio/ktx"
+    ],
+    "verifiedAt": "2026-10-20T08:11:46.754Z"
+  },
+  {
+    "name": "Wren AI",
+    "slug": "wren-ai",
+    "category": "mcp-database-servers",
+    "description": "GenBI (Generative BI) for AI agents, an open-source, governed text-to-SQL through an open context layer that turns natural-language questions into trusted dashboards, charts, and SQL across 20+ data sources, such as BigQuery, Snowflake, PostgreSQL, ClickHouse, Amazon Redshift, Databricks and more.",
+    "officialUrl": "https://www.getwren.ai/en/open-core",
+    "repoUrl": "https://github.com/Canner/WrenAI",
+    "license": null,
+    "pricingModel": null,
+    "stars": 17910,
+    "lastPush": "2026-10-20T02:46:23Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/Canner/WrenAI",
+      "https://github.com/Canner/WrenAI"
+    ],
+    "verifiedAt": "2026-10-20T08:11:47.175Z"
+  },
+  {
+    "name": "CloudBase AI Toolkit",
+    "slug": "cloudbase-ai-toolkit",
+    "category": "mcp-database-servers",
+    "description": "Backend for AI coding agents on CloudBase — database, auth, functions via Plugin, Skills & MCP.",
+    "officialUrl": "https://docs.cloudbase.net/ai/cloudbase-ai-toolkit/",
+    "repoUrl": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 1140,
+    "lastPush": "2026-10-20T07:57:52Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/TencentCloudBase/CloudBase-AI-Toolkit",
+      "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit"
+    ],
+    "verifiedAt": "2026-10-20T08:11:47.532Z"
+  },
+  {
+    "name": "Ruflo",
+    "slug": "ruflo",
+    "category": "multi-agent-frameworks",
+    "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+    "officialUrl": "https://Cognitum.One",
+    "repoUrl": "https://github.com/ruvnet/ruflo",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 77411,
+    "lastPush": "2026-10-20T07:32:20Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/ruvnet/ruflo",
+      "https://github.com/ruvnet/ruflo"
+    ],
+    "verifiedAt": "2026-10-20T08:11:47.839Z"
+  },
+  {
+    "name": "Omnigent",
+    "slug": "omnigent",
+    "category": "multi-agent-frameworks",
+    "description": "Omnigent is an open-source AI agent framework and meta-harness: orchestrate Claude Code, Codex, Cursor, Pi, and custom agents — swap harnesses without rewriting, enforce policies and sandboxing, and collaborate in real time from any device.",
+    "officialUrl": "https://omnigent.ai",
+    "repoUrl": "https://github.com/omnigent-ai/omnigent",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 10914,
+    "lastPush": "2026-10-20T08:02:49Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/omnigent-ai/omnigent",
+      "https://github.com/omnigent-ai/omnigent"
+    ],
+    "verifiedAt": "2026-10-20T08:11:48.329Z"
+  },
+  {
+    "name": "Strands Agents Harness SDK",
+    "slug": "strands-agents-harness-sdk",
+    "category": "multi-agent-frameworks",
+    "description": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
+    "officialUrl": "http://strandsagents.com/",
+    "repoUrl": "https://github.com/strands-agents/harness-sdk",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 8871,
+    "lastPush": "2026-10-20T08:00:27Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/strands-agents/harness-sdk",
+      "https://github.com/strands-agents/harness-sdk"
+    ],
+    "verifiedAt": "2026-10-20T08:11:48.856Z"
+  },
+  {
+    "name": "IntentKit",
+    "slug": "intentkit",
+    "category": "multi-agent-frameworks",
+    "description": "IntentKit is an open-source, self-hosted cloud agent cluster that manages a collaborative team of AI agents for you.",
+    "officialUrl": "https://intentcat.com/docs",
+    "repoUrl": "https://github.com/crestalnetwork/intentkit",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 6521,
+    "lastPush": "2026-09-16T12:17:32Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/crestalnetwork/intentkit",
+      "https://github.com/crestalnetwork/intentkit"
+    ],
+    "verifiedAt": "2026-10-20T08:11:49.428Z"
+  },
+  {
+    "name": "Agent Governance Toolkit",
+    "slug": "agent-governance-toolkit",
+    "category": "agent-frameworks",
+    "description": "AI Agent Governance Toolkit — Policy enforcement, zero-trust identity, execution sandboxing, and reliability engineering for autonomous AI agents. Covers 10/10 OWASP Agentic Top 10.",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/microsoft/agent-governance-toolkit",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 6448,
+    "lastPush": "2026-10-20T07:54:46Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/microsoft/agent-governance-toolkit",
+      "https://github.com/microsoft/agent-governance-toolkit"
+    ],
+    "verifiedAt": "2026-10-20T08:11:49.797Z"
+  },
+  {
+    "name": "txtai",
+    "slug": "txtai",
+    "category": "agent-frameworks",
+    "description": "💡 All-in-one AI framework for semantic search, LLM orchestration and language model workflows",
+    "officialUrl": "https://neuml.github.io/txtai",
+    "repoUrl": "https://github.com/neuml/txtai",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 13027,
+    "lastPush": "2026-10-19T16:56:36Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/neuml/txtai",
+      "https://github.com/neuml/txtai"
+    ],
+    "verifiedAt": "2026-10-20T08:11:50.626Z"
+  },
+  {
+    "name": "n8n",
+    "slug": "n8n",
+    "category": "agent-frameworks",
+    "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+    "officialUrl": "https://n8n.io",
+    "repoUrl": "https://github.com/n8n-io/n8n",
+    "license": null,
+    "pricingModel": null,
+    "stars": 208098,
+    "lastPush": "2026-10-20T08:11:01Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/n8n-io/n8n",
+      "https://github.com/n8n-io/n8n"
+    ],
+    "verifiedAt": "2026-10-20T08:11:51.008Z"
+  },
+  {
+    "name": "Activepieces",
+    "slug": "activepieces",
+    "category": "agent-frameworks",
+    "description": "AI Agents & MCPs & AI Workflow Automation • (~400 MCP servers for AI agents) • AI Automation / AI Agent with MCPs • AI Workflows & AI Agents • MCPs for AI Agents",
+    "officialUrl": "https://www.activepieces.com",
+    "repoUrl": "https://github.com/activepieces/activepieces",
+    "license": null,
+    "pricingModel": null,
+    "stars": 25128,
+    "lastPush": "2026-10-20T08:10:33Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/activepieces/activepieces",
+      "https://github.com/activepieces/activepieces"
+    ],
+    "verifiedAt": "2026-10-20T08:11:51.355Z"
+  },
+  {
+    "name": "MS-Agent",
+    "slug": "ms-agent",
+    "category": "agent-frameworks",
+    "description": "MS-Agent: a lightweight framework to empower agentic execution of complex tasks",
+    "officialUrl": "https://ms-agent-en.readthedocs.io",
+    "repoUrl": "https://github.com/modelscope/ms-agent",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 4417,
+    "lastPush": "2026-10-19T00:42:26Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/modelscope/ms-agent",
+      "https://github.com/modelscope/ms-agent"
+    ],
+    "verifiedAt": "2026-10-20T08:11:51.766Z"
+  },
+  {
+    "name": "Heurist Agent Framework",
+    "slug": "heurist-agent-framework",
+    "category": "agent-frameworks",
+    "description": "A flexible multi-interface AI agent framework for building agents with reasoning, tool use, memory, deep research, blockchain interaction, MCP, and agents-as-a-service.",
+    "officialUrl": "https://agent.heurist.ai/",
+    "repoUrl": "https://github.com/heurist-network/heurist-agent-framework",
+    "license": null,
+    "pricingModel": null,
+    "stars": 827,
+    "lastPush": "2026-09-02T00:35:36Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/heurist-network/heurist-agent-framework",
+      "https://github.com/heurist-network/heurist-agent-framework"
+    ],
+    "verifiedAt": "2026-10-20T08:11:52.182Z"
+  },
+  {
+    "name": "SGR Agent Core",
+    "slug": "sgr-agent-core",
+    "category": "agent-frameworks",
+    "description": "Schema-Guided Reasoning (SGR) has agentic system design created by neuraldeep community",
+    "officialUrl": "https://vamplabai.github.io/sgr-agent-core/",
+    "repoUrl": "https://github.com/vamplabAI/sgr-agent-core",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 1126,
+    "lastPush": "2026-09-16T12:39:43Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/vamplabAI/sgr-agent-core",
+      "https://github.com/vamplabAI/sgr-agent-core"
+    ],
+    "verifiedAt": "2026-10-20T08:11:52.561Z"
+  },
+  {
+    "name": "last30days",
+    "slug": "last30days",
+    "category": "research-agents",
+    "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/mvanhorn/last30days-skill",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 64818,
+    "lastPush": "2026-10-18T20:12:47Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/mvanhorn/last30days-skill",
+      "https://github.com/mvanhorn/last30days-skill"
+    ],
+    "verifiedAt": "2026-10-20T08:11:52.870Z"
+  },
+  {
+    "name": "Local Deep Research",
+    "slug": "local-deep-research",
+    "category": "research-agents",
+    "description": " ~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/LearningCircuit/local-deep-research",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 9366,
+    "lastPush": "2026-10-20T05:09:43Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/LearningCircuit/local-deep-research",
+      "https://github.com/LearningCircuit/local-deep-research"
+    ],
+    "verifiedAt": "2026-10-20T08:11:53.190Z"
+  },
+  {
+    "name": "Deep Research Web UI",
+    "slug": "deep-research-web-ui",
+    "category": "research-agents",
+    "description": "AI deep-research agent that turns any question into a cited report: plans searches, reads real sources, verifies evidence. Self-hosted, multi-provider, Docker-ready.",
+    "officialUrl": "https://deep-research.ataw.top",
+    "repoUrl": "https://github.com/AnotiaWang/deep-research-web-ui",
+    "license": null,
+    "pricingModel": null,
+    "stars": 2224,
+    "lastPush": "2026-10-09T01:16:04Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/AnotiaWang/deep-research-web-ui",
+      "https://github.com/AnotiaWang/deep-research-web-ui"
+    ],
+    "verifiedAt": "2026-10-20T08:11:53.895Z"
+  },
+  {
+    "name": "DeepGit",
+    "slug": "deepgit",
+    "category": "research-agents",
+    "description": "Deep research agent to help you find the best GitHub repositories 🕵️!",
+    "officialUrl": "https://deepgit.vercel.app",
+    "repoUrl": "https://github.com/zamalali/DeepGit",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 922,
+    "lastPush": "2026-08-30T09:46:12Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/zamalali/DeepGit",
+      "https://github.com/zamalali/DeepGit"
+    ],
+    "verifiedAt": "2026-10-20T08:11:54.623Z"
+  },
+  {
+    "name": "DocsGPT",
+    "slug": "docsgpt",
+    "category": "research-agents",
+    "description": "Private AI platform for agents, assistants and enterprise search. Built-in Agent Builder, Deep research, Document analysis, Multi-model support, and API connectivity for agents.",
+    "officialUrl": "https://app.docsgpt.cloud/",
+    "repoUrl": "https://github.com/arc53/DocsGPT",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 18326,
+    "lastPush": "2026-10-19T22:09:33Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/arc53/DocsGPT",
+      "https://github.com/arc53/DocsGPT"
+    ],
+    "verifiedAt": "2026-10-20T08:11:55.041Z"
+  },
+  {
+    "name": "OpenCLI",
+    "slug": "opencli",
+    "category": "browser-agents",
+    "description": "Make Any Website into CLI & Use your logged-in browser by AI agent. ",
+    "officialUrl": "https://opencli.info/",
+    "repoUrl": "https://github.com/jackwener/OpenCLI",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 30458,
+    "lastPush": "2026-10-19T17:56:06Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/jackwener/OpenCLI",
+      "https://github.com/jackwener/OpenCLI"
+    ],
+    "verifiedAt": "2026-10-20T08:11:55.360Z"
+  },
+  {
+    "name": "Obscura",
+    "slug": "obscura",
+    "category": "browser-agents",
+    "description": "The headless browser for AI agents and web scraping",
+    "officialUrl": "https://obscura.sh",
+    "repoUrl": "https://github.com/h4ckf0r0day/obscura",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 29065,
+    "lastPush": "2026-10-19T18:20:08Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/h4ckf0r0day/obscura",
+      "https://github.com/h4ckf0r0day/obscura"
+    ],
+    "verifiedAt": "2026-10-20T08:11:55.671Z"
+  },
+  {
+    "name": "Moli",
+    "slug": "moli",
+    "category": "browser-agents",
+    "description": "Best headless browser for AI agents. Lite, Fast, High-Compatibility. Built in Rust",
+    "officialUrl": "https://browser.lexmount.com",
+    "repoUrl": "https://github.com/lexmount/moli",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 19762,
+    "lastPush": "2026-10-20T07:51:05Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/lexmount/moli",
+      "https://github.com/lexmount/moli"
+    ],
+    "verifiedAt": "2026-10-20T08:11:56.066Z"
+  },
+  {
+    "name": "Ego Lite",
+    "slug": "ego-lite",
+    "category": "browser-agents",
+    "description": "The fastest browser for AI agents to run browser automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
+    "officialUrl": "https://lite.ego.app",
+    "repoUrl": "https://github.com/citrolabs/ego-lite",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 17896,
+    "lastPush": "2026-10-20T07:40:02Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/citrolabs/ego-lite",
+      "https://github.com/citrolabs/ego-lite"
+    ],
+    "verifiedAt": "2026-10-20T08:11:56.443Z"
+  },
+  {
+    "name": "Midscene",
+    "slug": "midscene",
+    "category": "browser-agents",
+    "description": "See interfaces like a human. E2E testing in natural language.",
+    "officialUrl": "https://midscenejs.com",
+    "repoUrl": "https://github.com/web-infra-dev/midscene",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 15329,
+    "lastPush": "2026-10-20T07:43:17Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/web-infra-dev/midscene",
+      "https://github.com/web-infra-dev/midscene"
+    ],
+    "verifiedAt": "2026-10-20T08:11:56.982Z"
+  },
+  {
+    "name": "Steel Browser",
+    "slug": "steel-browser",
+    "category": "browser-agents",
+    "description": "🔥 Open Source Browser API for AI Agents & Apps. Steel Browser is a batteries-included browser sandbox that lets you automate the web without worrying about infrastructure.",
+    "officialUrl": "https://steel.dev",
+    "repoUrl": "https://github.com/steel-dev/steel-browser",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 7845,
+    "lastPush": "2026-10-20T02:53:05Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/steel-dev/steel-browser",
+      "https://github.com/steel-dev/steel-browser"
+    ],
+    "verifiedAt": "2026-10-20T08:11:57.323Z"
+  },
+  {
+    "name": "OpenBot",
+    "slug": "openbot",
+    "category": "browser-agents",
+    "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+    "officialUrl": "https://www.copilotkit.ai/openbot",
+    "repoUrl": "https://github.com/CopilotKit/OpenBot",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 6695,
+    "lastPush": "2026-10-19T23:41:15Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/CopilotKit/OpenBot",
+      "https://github.com/CopilotKit/OpenBot"
+    ],
+    "verifiedAt": "2026-10-20T08:11:57.766Z"
+  },
+  {
+    "name": "TuriX CUA",
+    "slug": "turix-cua",
+    "category": "browser-agents",
+    "description": "This is the official website for TuriX Computer-use-Agent",
+    "officialUrl": "https://turix.ai",
+    "repoUrl": "https://github.com/TurixAI/TuriX-CUA",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 3173,
+    "lastPush": "2026-09-14T06:52:24Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/TurixAI/TuriX-CUA",
+      "https://github.com/TurixAI/TuriX-CUA"
+    ],
+    "verifiedAt": "2026-10-20T08:11:59.138Z"
+  },
+  {
+    "name": "ITOps Agent Platform",
+    "slug": "itops-agent-platform",
+    "category": "ops-agents",
+    "description": "China's 1st enterprise multi-agent IT ops platform. LLM-powered auto-remediation for Zabbix/Prometheus. Docker deploy.",
+    "officialUrl": "https://aiopsdoc-0mwug01t6.maozi.io/",
+    "repoUrl": "https://github.com/qinshihu/itops-agent-platform",
+    "license": null,
+    "pricingModel": null,
+    "stars": 944,
+    "lastPush": "2026-10-19T01:15:04Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/qinshihu/itops-agent-platform",
+      "https://github.com/qinshihu/itops-agent-platform"
+    ],
+    "verifiedAt": "2026-10-20T08:11:59.455Z"
+  },
+  {
+    "name": "Flawless",
+    "slug": "flawless",
+    "category": "ops-agents",
+    "description": "AI SRE AgenticOps for Kubernetes and cloud infrastructure.",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/William-Lu-stack/Flawless",
+    "license": null,
+    "pricingModel": null,
+    "stars": 771,
+    "lastPush": "2026-08-14T09:47:00Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/William-Lu-stack/Flawless",
+      "https://github.com/William-Lu-stack/Flawless"
+    ],
+    "verifiedAt": "2026-10-20T08:11:59.860Z"
+  },
+  {
+    "name": "Khoj",
+    "slug": "khoj",
+    "category": "personal-agents",
+    "description": "Your AI second brain. Self-hostable. Get answers from the web or your docs. Build custom agents, schedule automations, do deep research. Turn any online or local LLM into your personal, autonomous AI (gpt, claude, gemini, llama, qwen, mistral). Get started - free.",
+    "officialUrl": "https://khoj.dev",
+    "repoUrl": "https://github.com/khoj-ai/khoj",
+    "license": "AGPL-3.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 37754,
+    "lastPush": "2026-08-02T01:55:40Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/khoj-ai/khoj",
+      "https://github.com/khoj-ai/khoj"
+    ],
+    "verifiedAt": "2026-10-20T08:12:00.228Z"
+  },
+  {
+    "name": "AnythingLLM",
+    "slug": "anythingllm",
+    "category": "personal-agents",
+    "description": "Stop renting your intelligence. Own it with AnythingLLM. Everything you need for a powerful local-first agent experience ",
+    "officialUrl": "https://anythingllm.com",
+    "repoUrl": "https://github.com/Mintplex-Labs/anything-llm",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 67343,
+    "lastPush": "2026-10-20T00:34:27Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/Mintplex-Labs/anything-llm",
+      "https://github.com/Mintplex-Labs/anything-llm"
+    ],
+    "verifiedAt": "2026-10-20T08:12:00.613Z"
+  },
+  {
+    "name": "Eigent",
+    "slug": "eigent",
+    "category": "personal-agents",
+    "description": "Eigent: The Open Source Cowork Desktop - Local and Free Alternative to Claude Cowork and Codex",
+    "officialUrl": "https://www.eigent.ai",
+    "repoUrl": "https://github.com/eigent-ai/eigent",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 15618,
+    "lastPush": "2026-10-19T09:33:49Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/eigent-ai/eigent",
+      "https://github.com/eigent-ai/eigent"
+    ],
+    "verifiedAt": "2026-10-20T08:12:00.957Z"
+  },
+  {
+    "name": "Sidekick",
+    "slug": "sidekick",
+    "category": "personal-agents",
+    "description": "A native macOS app that allows users to chat with a local LLM that can respond with information from files, folders and websites on your Mac without installing any other software. Powered by llama.cpp.",
+    "officialUrl": "https://johnbean393.github.io/Sidekick/",
+    "repoUrl": "https://github.com/johnbean393/Sidekick",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 3319,
+    "lastPush": "2026-09-30T08:40:44Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/johnbean393/Sidekick",
+      "https://github.com/johnbean393/Sidekick"
+    ],
+    "verifiedAt": "2026-10-20T08:12:01.300Z"
+  },
+  {
+    "name": "Atomic Agent",
+    "slug": "atomic-agent",
+    "category": "personal-agents",
+    "description": "Atomic Agent is a local-first AI agent. Runs open-weight models on your own machine via llama.cpp.",
+    "officialUrl": "https://atomicagent.io",
+    "repoUrl": "https://github.com/AtomicBot-ai/atomic-agent",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 3412,
+    "lastPush": "2026-10-19T17:28:11Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/AtomicBot-ai/atomic-agent",
+      "https://github.com/AtomicBot-ai/atomic-agent"
+    ],
+    "verifiedAt": "2026-10-20T08:12:01.722Z"
+  },
+  {
+    "name": "OpenCrabs",
+    "slug": "opencrabs",
+    "category": "personal-agents",
+    "description": "The all-in-one AI agent. Build mobile apps, frontend, backend, manages files, deep research, schedule tasks and events. Self-improving, self-healing, fully autonomous. TUI, CLI and Daemon. Connect to your favorite channels. Zero Telemetry.",
+    "officialUrl": "https://opencrabs.com",
+    "repoUrl": "https://github.com/opencrabs/opencrabs",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 999,
+    "lastPush": "2026-10-20T03:36:12Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/opencrabs/opencrabs",
+      "https://github.com/opencrabs/opencrabs"
+    ],
+    "verifiedAt": "2026-10-20T08:12:02.113Z"
+  },
+  {
+    "name": "Skales",
+    "slug": "skales",
+    "category": "personal-agents",
+    "description": "Personal AI agent for macOS, Windows, Linux, Android & iOS. Set a goal, it works alone: coding (Skales Code), desktop + browser automation, autonomous scheduled Tasks. Teams of agents and humans across paired desktops. Agent2Agent, MCP, computer use, voice, local LLMs (Ollama), Agent Skills (SKILL.md). 26 AI providers, BYOK. No Docker, no terminal.",
+    "officialUrl": "https://skales.app",
+    "repoUrl": "https://github.com/skalesapp/skales",
+    "license": null,
+    "pricingModel": null,
+    "stars": 2200,
+    "lastPush": "2026-10-19T18:40:23Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/skalesapp/skales",
+      "https://github.com/skalesapp/skales"
+    ],
+    "verifiedAt": "2026-10-20T08:12:02.484Z"
+  },
+  {
+    "name": "CORE",
+    "slug": "core",
+    "category": "personal-agents",
+    "description": "Your Personal AI OS",
+    "officialUrl": "https://getcore.me",
+    "repoUrl": "https://github.com/RedPlanetHQ/core",
+    "license": null,
+    "pricingModel": null,
+    "stars": 2000,
+    "lastPush": "2026-09-07T10:52:17Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/RedPlanetHQ/core",
+      "https://github.com/RedPlanetHQ/core"
+    ],
+    "verifiedAt": "2026-10-20T08:12:03.031Z"
+  },
+  {
+    "name": "Talorys",
+    "slug": "talorys",
+    "category": "personal-agents",
+    "description": "Your personal AI agent in your own Cloudflare account. Chat, memory, tasks, notes and scheduled reminders, deployed with one command: npx create-talorys@latest. Free-tier friendly, single-user, no telemetry.",
+    "officialUrl": "https://rociiu.github.io/talorys/",
+    "repoUrl": "https://github.com/rociiu/talorys",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 1345,
+    "lastPush": "2026-10-19T00:20:10Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/rociiu/talorys",
+      "https://github.com/rociiu/talorys"
+    ],
+    "verifiedAt": "2026-10-20T08:12:03.388Z"
+  },
+  {
+    "name": "Crush",
+    "slug": "crush",
+    "category": "coding-agents",
+    "description": "Glamourous agentic coding for all 💘",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/charmbracelet/crush",
+    "license": null,
+    "pricingModel": null,
+    "stars": 28719,
+    "lastPush": "2026-10-20T01:30:26Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/charmbracelet/crush",
+      "https://github.com/charmbracelet/crush"
+    ],
+    "verifiedAt": "2026-10-20T08:12:03.752Z"
+  },
+  {
+    "name": "DeepCode",
+    "slug": "deepcode",
+    "category": "coding-agents",
+    "description": "\"DeepCode: Open Agentic Coding (Agent Harness & Loop Engineering & Multi-Agent Orchestration)\"",
+    "officialUrl": "http://arxiv.org/abs/2512.07921",
+    "repoUrl": "https://github.com/HKUDS/DeepCode",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 16736,
+    "lastPush": "2026-10-14T12:39:54Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/HKUDS/DeepCode",
+      "https://github.com/HKUDS/DeepCode"
+    ],
+    "verifiedAt": "2026-10-20T08:12:04.133Z"
+  },
+  {
+    "name": "Claurst",
+    "slug": "claurst",
+    "category": "coding-agents",
+    "description": "Agentic Coding for Builders who Ship",
+    "officialUrl": "https://claurst.kuber.studio/",
+    "repoUrl": "https://github.com/Kuberwastaken/claurst",
+    "license": "GPL-3.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 10325,
+    "lastPush": "2026-10-16T21:00:22Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/Kuberwastaken/claurst",
+      "https://github.com/Kuberwastaken/claurst"
+    ],
+    "verifiedAt": "2026-10-20T08:12:04.458Z"
+  },
+  {
+    "name": "Forge",
+    "slug": "forge",
+    "category": "coding-agents",
+    "description": "AI enabled pair programmer for Claude, GPT, O Series, Grok, Deepseek, Gemini and 300+ models",
+    "officialUrl": "https://forgecode.dev",
+    "repoUrl": "https://github.com/tailcallhq/forgecode",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 7635,
+    "lastPush": "2026-10-19T22:41:10Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/tailcallhq/forgecode",
+      "https://github.com/tailcallhq/forgecode"
+    ],
+    "verifiedAt": "2026-10-20T08:12:04.842Z"
+  },
+  {
+    "name": "ANUS",
+    "slug": "anus",
+    "category": "coding-agents",
+    "description": "A free coding agent in your terminal. It runs on the smartest free model that is up today.",
+    "officialUrl": "https://anus.dev",
+    "repoUrl": "https://github.com/anus-dev/ANUS",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 6549,
+    "lastPush": "2026-10-01T16:32:18Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/anus-dev/ANUS",
+      "https://github.com/anus-dev/ANUS"
+    ],
+    "verifiedAt": "2026-10-20T08:12:05.218Z"
+  },
+  {
+    "name": "CodeCompanion",
+    "slug": "codecompanion",
+    "category": "coding-agents",
+    "description": "✨ AI Coding, Vim Style",
+    "officialUrl": "https://codecompanion.olimorris.dev",
+    "repoUrl": "https://github.com/olimorris/codecompanion.nvim",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 6899,
+    "lastPush": "2026-10-19T20:42:55Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/olimorris/codecompanion.nvim",
+      "https://github.com/olimorris/codecompanion.nvim"
+    ],
+    "verifiedAt": "2026-10-20T08:12:05.627Z"
+  },
+  {
+    "name": "mini-SWE-agent",
+    "slug": "mini-swe-agent",
+    "category": "coding-agents",
+    "description": "The 100 line AI agent that solves GitHub issues or helps you in your command line. Radically simple, no huge configs, no giant monorepo—but scores >74% on SWE-bench verified!",
+    "officialUrl": "https://mini-swe-agent.com",
+    "repoUrl": "https://github.com/SWE-agent/mini-swe-agent",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 8673,
+    "lastPush": "2026-10-19T22:57:58Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/SWE-agent/mini-swe-agent",
+      "https://github.com/SWE-agent/mini-swe-agent"
+    ],
+    "verifiedAt": "2026-10-20T08:12:06.157Z"
+  },
+  {
+    "name": "Claude Squad",
+    "slug": "claude-squad",
+    "category": "coding-agents",
+    "description": "Manage multiple AI terminal agents like Claude Code, Codex, OpenCode, and Amp.",
+    "officialUrl": "https://smtg-ai.github.io/claude-squad/",
+    "repoUrl": "https://github.com/smtg-ai/claude-squad",
+    "license": "AGPL-3.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 8631,
+    "lastPush": "2026-08-20T05:09:53Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/smtg-ai/claude-squad",
+      "https://github.com/smtg-ai/claude-squad"
+    ],
+    "verifiedAt": "2026-10-20T08:12:06.545Z"
+  },
+  {
+    "name": "Agent Orchestrator",
+    "slug": "agent-orchestrator",
+    "category": "coding-agents",
+    "description": "Open-source (Apache-2.0) orchestrator for Claude Code, Codex & 30+ coding agents. Plan, run and supervise agent teams from task to merged PR. Desktop (macOS, Windows, Linux) + iPhone & Android apps.",
+    "officialUrl": "https://orchestrator.inc",
+    "repoUrl": "https://github.com/OrchestratorInc/agent-orchestrator",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 13396,
+    "lastPush": "2026-10-20T08:09:58Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/OrchestratorInc/agent-orchestrator",
+      "https://github.com/OrchestratorInc/agent-orchestrator"
+    ],
+    "verifiedAt": "2026-10-20T08:12:06.927Z"
+  },
+  {
+    "name": "Desktop Commander MCP",
+    "slug": "desktop-commander-mcp",
+    "category": "mcp-servers",
+    "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+    "officialUrl": "https://desktopcommander.app/",
+    "repoUrl": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 10104,
+    "lastPush": "2026-10-19T23:07:49Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/wonderwhy-er/DesktopCommanderMCP",
+      "https://github.com/wonderwhy-er/DesktopCommanderMCP"
+    ],
+    "verifiedAt": "2026-10-20T08:12:07.254Z"
+  },
+  {
+    "name": "AWS MCP Servers",
+    "slug": "aws-mcp-servers",
+    "category": "mcp-servers",
+    "description": "Open source MCP Servers for AWS",
+    "officialUrl": "https://awslabs.github.io/mcp/",
+    "repoUrl": "https://github.com/awslabs/mcp",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 9796,
+    "lastPush": "2026-10-20T00:04:06Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/awslabs/mcp",
+      "https://github.com/awslabs/mcp"
+    ],
+    "verifiedAt": "2026-10-20T08:12:07.723Z"
+  },
+  {
+    "name": "Firecrawl MCP Server",
+    "slug": "firecrawl-mcp-server",
+    "category": "mcp-servers",
+    "description": "Official Firecrawl MCP server, the context API for AI agents: search, scrape, and interact with the web, plus parse, crawl, map, Agent and Monitor, from any MCP client.",
+    "officialUrl": "https://firecrawl.dev",
+    "repoUrl": "https://github.com/firecrawl/firecrawl-mcp-server",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 7642,
+    "lastPush": "2026-10-20T05:28:21Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/firecrawl/firecrawl-mcp-server",
+      "https://github.com/firecrawl/firecrawl-mcp-server"
+    ],
+    "verifiedAt": "2026-10-20T08:12:08.081Z"
+  },
+  {
+    "name": "Apify MCP Server",
+    "slug": "apify-mcp-server",
+    "category": "mcp-servers",
+    "description": "The Apify MCP server enables your AI agents to extract data from social media, search engines, maps, e-commerce sites, or any other website using thousands of ready-made scrapers, crawlers, and automation tools available on the Apify Store.",
+    "officialUrl": "https://mcp.apify.com",
+    "repoUrl": "https://github.com/apify/apify-mcp-server",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 12135,
+    "lastPush": "2026-10-20T03:55:56Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/apify/apify-mcp-server",
+      "https://github.com/apify/apify-mcp-server"
+    ],
+    "verifiedAt": "2026-10-20T08:12:08.533Z"
+  },
+  {
+    "name": "MCP TypeScript SDK",
+    "slug": "mcp-typescript-sdk",
+    "category": "mcp-servers",
+    "description": "The official TypeScript SDK for Model Context Protocol servers and clients",
+    "officialUrl": "https://ts.sdk.modelcontextprotocol.io/v2",
+    "repoUrl": "https://github.com/modelcontextprotocol/typescript-sdk",
+    "license": null,
+    "pricingModel": null,
+    "stars": 13619,
+    "lastPush": "2026-10-20T00:17:05Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/modelcontextprotocol/typescript-sdk",
+      "https://github.com/modelcontextprotocol/typescript-sdk"
+    ],
+    "verifiedAt": "2026-10-20T08:12:08.925Z"
+  },
+  {
+    "name": "mcp-use",
+    "slug": "mcp-use",
+    "category": "mcp-servers",
+    "description": "The fullstack MCP framework to develop MCP Apps for ChatGPT / Claude & MCP Servers for AI Agents.",
+    "officialUrl": "https://manufact.com",
+    "repoUrl": "https://github.com/mcp-use/mcp-use",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 10790,
+    "lastPush": "2026-10-20T03:13:37Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/mcp-use/mcp-use",
+      "https://github.com/mcp-use/mcp-use"
+    ],
+    "verifiedAt": "2026-10-20T08:12:09.376Z"
+  },
+  {
+    "name": "IDA Pro MCP",
+    "slug": "ida-pro-mcp",
+    "category": "mcp-servers",
+    "description": "AI-powered reverse engineering assistant that bridges IDA Pro with language models through MCP.",
+    "officialUrl": "https://plugins.hex-rays.com/mrexodia/ida-pro-mcp",
+    "repoUrl": "https://github.com/mrexodia/ida-pro-mcp",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 13037,
+    "lastPush": "2026-09-26T15:42:10Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/mrexodia/ida-pro-mcp",
+      "https://github.com/mrexodia/ida-pro-mcp"
+    ],
+    "verifiedAt": "2026-10-20T08:12:09.825Z"
+  },
+  {
+    "name": "Unity MCP",
+    "slug": "unity-mcp",
+    "category": "mcp-servers",
+    "description": "Unity MCP acts as a bridge between AI assistants and your Unity Editor. Give your LLM tools to manage assets, control scenes, edit scripts, and automate tasks within Unity.",
+    "officialUrl": "https://coplaydev.github.io/unity-mcp/",
+    "repoUrl": "https://github.com/CoplayDev/unity-mcp",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 15212,
+    "lastPush": "2026-10-19T18:48:57Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/CoplayDev/unity-mcp",
+      "https://github.com/CoplayDev/unity-mcp"
+    ],
+    "verifiedAt": "2026-10-20T08:12:10.172Z"
+  },
+  {
+    "name": "Browser Tools MCP",
+    "slug": "browser-tools-mcp",
+    "category": "mcp-servers",
+    "description": "Monitor browser logs directly from Cursor and other MCP compatible IDEs.",
+    "officialUrl": "https://agentdesk.ai/",
+    "repoUrl": "https://github.com/AgentDeskAI/browser-tools-mcp",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 7328,
+    "lastPush": "2026-10-16T18:21:25Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/AgentDeskAI/browser-tools-mcp",
+      "https://github.com/AgentDeskAI/browser-tools-mcp"
+    ],
+    "verifiedAt": "2026-10-20T08:12:10.589Z"
+  },
+  {
+    "name": "Talk to Figma MCP",
+    "slug": "talk-to-figma-mcp",
+    "category": "mcp-servers",
+    "description": "TalkToFigma: MCP integration between AI Agent (Cursor, Claude Code, Codex) and Figma, allowing Agentic AI to communicate with Figma for reading designs and modifying them programmatically.",
+    "officialUrl": "https://www.figma.com/community/plugin/1485687494525374295/cursor-talk-to-figma-mcp-plugin",
+    "repoUrl": "https://github.com/grab/cursor-talk-to-figma-mcp",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 7063,
+    "lastPush": "2026-07-26T07:14:26Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/grab/cursor-talk-to-figma-mcp",
+      "https://github.com/grab/cursor-talk-to-figma-mcp"
+    ],
+    "verifiedAt": "2026-10-20T08:12:10.957Z"
+  },
+  {
+    "name": "Mobile Build MCP",
+    "slug": "mobile-build-mcp",
+    "category": "mcp-servers",
+    "description": "A Model Context Protocol (MCP) server and CLI that provides tools for agent use when working on iOS and macOS projects.",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/getsentry/MobileBuildMCP",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 6489,
+    "lastPush": "2026-10-17T07:36:26Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/getsentry/MobileBuildMCP",
+      "https://github.com/getsentry/MobileBuildMCP"
+    ],
+    "verifiedAt": "2026-10-20T08:12:11.400Z"
+  },
+  {
+    "name": "Swarms",
+    "slug": "swarms",
+    "category": "multi-agent-frameworks",
+    "description": "The Enterprise-Grade Multi-Agent Orchestration Framework. Website: https://swarms.ai",
+    "officialUrl": "https://docs.swarms.world",
+    "repoUrl": "https://github.com/kyegomez/swarms",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 7283,
+    "lastPush": "2026-10-20T03:41:33Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/kyegomez/swarms",
+      "https://github.com/kyegomez/swarms"
+    ],
+    "verifiedAt": "2026-10-20T08:12:11.724Z"
+  },
+  {
+    "name": "PraisonAI",
+    "slug": "praisonai",
+    "category": "multi-agent-frameworks",
+    "description": "PraisonAI 🦞 — Hire a 24/7 AI Workforce. Stop writing boilerplate and start shipping autonomous self-improving agents that research, plan, code, and execute tasks. Deployed in 5 lines of code with built-in memory, RAG, and support for 100+ LLMs.",
+    "officialUrl": "https://praison.ai/docs",
+    "repoUrl": "https://github.com/MervinPraison/PraisonAI",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 9278,
+    "lastPush": "2026-10-20T01:29:40Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/MervinPraison/PraisonAI",
+      "https://github.com/MervinPraison/PraisonAI"
+    ],
+    "verifiedAt": "2026-10-20T08:12:12.055Z"
+  },
+  {
+    "name": "AgentScope",
+    "slug": "agentscope",
+    "category": "multi-agent-frameworks",
+    "description": "Build and run agents you can see, understand and trust.",
+    "officialUrl": "https://docs.agentscope.io/",
+    "repoUrl": "https://github.com/agentscope-ai/agentscope",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 33525,
+    "lastPush": "2026-10-20T07:03:16Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/agentscope-ai/agentscope",
+      "https://github.com/agentscope-ai/agentscope"
+    ],
+    "verifiedAt": "2026-10-20T08:12:12.449Z"
+  },
+  {
+    "name": "Paperclip",
+    "slug": "paperclip",
+    "category": "multi-agent-frameworks",
+    "description": "The open-source app everyone uses to manage agents at work",
+    "officialUrl": "https://paperclip.ing",
+    "repoUrl": "https://github.com/paperclipai/paperclip",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 104920,
+    "lastPush": "2026-10-20T07:11:26Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/paperclipai/paperclip",
+      "https://github.com/paperclipai/paperclip"
+    ],
+    "verifiedAt": "2026-10-20T08:12:12.981Z"
+  },
+  {
+    "name": "Agent Development Kit (Python)",
+    "slug": "agent-development-kit-python",
+    "category": "agent-frameworks",
+    "description": "An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
+    "officialUrl": "https://google.github.io/adk-docs/",
+    "repoUrl": "https://github.com/google/adk-python",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 21918,
+    "lastPush": "2026-10-20T04:51:08Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/google/adk-python",
+      "https://github.com/google/adk-python"
+    ],
+    "verifiedAt": "2026-10-20T08:12:13.352Z"
+  },
+  {
+    "name": "Letta",
+    "slug": "letta",
+    "category": "agent-frameworks",
+    "description": "Platform for stateful agents: AI with advanced memory that can learn and self-improve over time.",
+    "officialUrl": "https://docs.letta.com/",
+    "repoUrl": "https://github.com/letta-ai/letta",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 25199,
+    "lastPush": "2026-10-18T22:28:04Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/letta-ai/letta",
+      "https://github.com/letta-ai/letta"
+    ],
+    "verifiedAt": "2026-10-20T08:12:13.781Z"
+  },
+  {
+    "name": "Spring AI Alibaba",
+    "slug": "spring-ai-alibaba",
+    "category": "agent-frameworks",
+    "description": "Agentic AI Framework for Java Developers",
+    "officialUrl": "https://java2ai.com",
+    "repoUrl": "https://github.com/alibaba/spring-ai-alibaba",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 11037,
+    "lastPush": "2026-10-07T13:48:56Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/alibaba/spring-ai-alibaba",
+      "https://github.com/alibaba/spring-ai-alibaba"
+    ],
+    "verifiedAt": "2026-10-20T08:12:14.146Z"
+  },
+  {
+    "name": "Pocket Flow",
+    "slug": "pocket-flow",
+    "category": "agent-frameworks",
+    "description": "Pocket Flow: 100-line LLM framework. Let Agents build Agents!",
+    "officialUrl": "https://the-pocket.github.io/PocketFlow/",
+    "repoUrl": "https://github.com/The-Pocket/PocketFlow",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 11265,
+    "lastPush": "2026-07-26T16:13:20Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/The-Pocket/PocketFlow",
+      "https://github.com/The-Pocket/PocketFlow"
+    ],
+    "verifiedAt": "2026-10-20T08:12:14.543Z"
+  },
+  {
+    "name": "Agent Lightning",
+    "slug": "agent-lightning",
+    "category": "agent-frameworks",
+    "description": "The absolute trainer to light up AI agents.",
+    "officialUrl": "https://microsoft.github.io/agent-lightning/",
+    "repoUrl": "https://github.com/microsoft/agent-lightning",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 18764,
+    "lastPush": "2026-10-20T02:25:57Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/microsoft/agent-lightning",
+      "https://github.com/microsoft/agent-lightning"
+    ],
+    "verifiedAt": "2026-10-20T08:12:15.061Z"
+  },
+  {
+    "name": "AutoGPT",
+    "slug": "autogpt",
+    "category": "agent-frameworks",
+    "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+    "officialUrl": "https://agpt.co",
+    "repoUrl": "https://github.com/Significant-Gravitas/AutoGPT",
+    "license": null,
+    "pricingModel": null,
+    "stars": 187667,
+    "lastPush": "2026-10-20T08:08:32Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/Significant-Gravitas/AutoGPT",
+      "https://github.com/Significant-Gravitas/AutoGPT"
+    ],
+    "verifiedAt": "2026-10-20T08:12:15.630Z"
+  },
+  {
+    "name": "Dify",
+    "slug": "dify",
+    "category": "agent-frameworks",
+    "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
+    "officialUrl": "https://dify.ai",
+    "repoUrl": "https://github.com/langgenius/dify",
+    "license": null,
+    "pricingModel": null,
+    "stars": 158983,
+    "lastPush": "2026-10-20T08:11:05Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/langgenius/dify",
+      "https://github.com/langgenius/dify"
+    ],
+    "verifiedAt": "2026-10-20T08:12:16.112Z"
+  },
+  {
+    "name": "Composio",
+    "slug": "composio",
+    "category": "agent-frameworks",
+    "description": "Composio powers 1000+ toolkits, tool search, context management, authentication, and a sandboxed workbench to help you build AI agents that turn intent into action.",
+    "officialUrl": "https://docs.composio.dev",
+    "repoUrl": "https://github.com/ComposioHQ/composio",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 30644,
+    "lastPush": "2026-10-20T06:40:30Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/ComposioHQ/composio",
+      "https://github.com/ComposioHQ/composio"
+    ],
+    "verifiedAt": "2026-10-20T08:12:16.523Z"
+  },
+  {
+    "name": "CopilotKit",
+    "slug": "copilotkit",
+    "category": "agent-frameworks",
+    "description": "The Frontend Stack for Agents & Generative UI. React, Angular, Mobile, Slack, and more.  Makers of the AG-UI Protocol",
+    "officialUrl": "https://docs.copilotkit.ai",
+    "repoUrl": "https://github.com/CopilotKit/CopilotKit",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 38131,
+    "lastPush": "2026-10-20T08:03:00Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/CopilotKit/CopilotKit",
+      "https://github.com/CopilotKit/CopilotKit"
+    ],
+    "verifiedAt": "2026-10-20T08:12:16.890Z"
+  },
+  {
+    "name": "Trigger.dev",
+    "slug": "trigger-dev",
+    "category": "agent-frameworks",
+    "description": "Trigger.dev – build and deploy durable AI agents and workflows",
+    "officialUrl": "https://trigger.dev/changelog",
+    "repoUrl": "https://github.com/triggerdotdev/trigger.dev",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 16584,
+    "lastPush": "2026-10-20T07:52:41Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/triggerdotdev/trigger.dev",
+      "https://github.com/triggerdotdev/trigger.dev"
+    ],
+    "verifiedAt": "2026-10-20T08:12:17.294Z"
+  },
+  {
+    "name": "Astron Agent",
+    "slug": "astron-agent",
+    "category": "agent-frameworks",
+    "description": "Enterprise-grade, commercial-friendly agentic workflow platform for building next-generation SuperAgents.",
+    "officialUrl": "http://astron.ai/",
+    "repoUrl": "https://github.com/iflytek/astron-agent",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 8917,
+    "lastPush": "2026-10-14T07:25:39Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/iflytek/astron-agent",
+      "https://github.com/iflytek/astron-agent"
+    ],
+    "verifiedAt": "2026-10-20T08:12:17.702Z"
+  },
+  {
+    "name": "CowAgent",
+    "slug": "cowagent",
+    "category": "personal-agents",
+    "description": "Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
+    "officialUrl": "https://cowagent.ai",
+    "repoUrl": "https://github.com/zhayujie/CowAgent",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 47470,
+    "lastPush": "2026-10-20T02:58:42Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/zhayujie/CowAgent",
+      "https://github.com/zhayujie/CowAgent"
+    ],
+    "verifiedAt": "2026-10-20T08:12:18.022Z"
+  },
+  {
+    "name": "agenticSeek",
+    "slug": "agenticseek",
+    "category": "personal-agents",
+    "description": "Fully Local Manus AI. No APIs, No $200 monthly bills. Enjoy an autonomous agent that thinks, browses the web, and code for the sole cost of electricity.",
+    "officialUrl": "http://agenticseek.tech",
+    "repoUrl": "https://github.com/Fosowl/agenticSeek",
+    "license": "GPL-3.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 27514,
+    "lastPush": "2026-10-15T19:02:25Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/Fosowl/agenticSeek",
+      "https://github.com/Fosowl/agenticSeek"
+    ],
+    "verifiedAt": "2026-10-20T08:12:18.347Z"
+  },
+  {
+    "name": "Octop",
+    "slug": "octop",
+    "category": "personal-agents",
+    "description": "A smarter, self-hosted AI assistant — multi-user, multi-agent.",
+    "officialUrl": "https://octop.cloud",
+    "repoUrl": "https://github.com/TencentCloud/Octop",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 10372,
+    "lastPush": "2026-10-20T07:38:33Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/TencentCloud/Octop",
+      "https://github.com/TencentCloud/Octop"
+    ],
+    "verifiedAt": "2026-10-20T08:12:18.799Z"
+  },
+  {
+    "name": "Osaurus",
+    "slug": "osaurus",
+    "category": "personal-agents",
+    "description": "Own your AI. The native macOS harness for AI agents -- any model, persistent memory, autonomous execution, cryptographic identity. Built in Swift. Fully offline. Open source.",
+    "officialUrl": "https://osaurus.ai",
+    "repoUrl": "https://github.com/osaurus-ai/osaurus",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 8056,
+    "lastPush": "2026-10-20T08:04:54Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/osaurus-ai/osaurus",
+      "https://github.com/osaurus-ai/osaurus"
+    ],
+    "verifiedAt": "2026-10-20T08:12:19.262Z"
+  },
+  {
+    "name": "DeepChat",
+    "slug": "deepchat",
+    "category": "personal-agents",
+    "description": "🐬DeepChat - A smart assistant that connects powerful AI to your personal world",
+    "officialUrl": "https://deepchat.thinkinai.xyz/",
+    "repoUrl": "https://github.com/ThinkInAIXYZ/deepchat",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 6372,
+    "lastPush": "2026-10-20T06:54:24Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/ThinkInAIXYZ/deepchat",
+      "https://github.com/ThinkInAIXYZ/deepchat"
+    ],
+    "verifiedAt": "2026-10-20T08:12:19.653Z"
+  },
+  {
+    "name": "holaOS",
+    "slug": "holaos",
+    "category": "personal-agents",
+    "description": "Open-source agentic workspace enterprises can make their own. Connect the systems you already run — 100+ integrations, MCP, chat tools, apps, browser, local files — with shared memory. Any agent (Claude Code, Codex), any model, or BYOK. Set up in clicks, not months. Local-first: your data never leaves your machines.",
+    "officialUrl": "https://holaos.ai",
+    "repoUrl": "https://github.com/holaboss-ai/holaOS",
+    "license": null,
+    "pricingModel": null,
+    "stars": 11456,
+    "lastPush": "2026-08-21T13:11:13Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/holaboss-ai/holaOS",
+      "https://github.com/holaboss-ai/holaOS"
+    ],
+    "verifiedAt": "2026-10-20T08:12:20.129Z"
+  },
+  {
+    "name": "Ekko Studio",
+    "slug": "ekko-studio",
+    "category": "personal-agents",
+    "description": "Ekko Studio is a local-first AI workspace for multi-agent chat, coding, and visual workflows, available on desktop and the web.",
+    "officialUrl": "https://ekkostudio.xyz",
+    "repoUrl": "https://github.com/EKKOLearnAI/ekko-studio",
+    "license": null,
+    "pricingModel": null,
+    "stars": 11477,
+    "lastPush": "2026-10-20T08:02:05Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/EKKOLearnAI/ekko-studio",
+      "https://github.com/EKKOLearnAI/ekko-studio"
+    ],
+    "verifiedAt": "2026-10-20T08:12:20.521Z"
+  },
+  {
+    "name": "GenericAgent",
+    "slug": "genericagent",
+    "category": "personal-agents",
+    "description": "Self-evolving agent: grows skill tree from 3.3K-line seed, achieving full system control with 6x less token consumption",
+    "officialUrl": "https://github.com/lsdefine/GenericAgent",
+    "repoUrl": "https://github.com/lsdefine/GenericAgent",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 14330,
+    "lastPush": "2026-10-19T06:08:07Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/lsdefine/GenericAgent",
+      "https://github.com/lsdefine/GenericAgent"
+    ],
+    "verifiedAt": "2026-10-20T08:12:20.839Z"
+  },
+  {
+    "name": "ClawX",
+    "slug": "clawx",
+    "category": "personal-agents",
+    "description": "ClawX is a desktop app that provides a graphical interface for OpenClaw AI agents. It turns CLI-based AI orchestration into a desktop experience without using the terminal. China website is https://clawx.com.cn.",
+    "officialUrl": "https://claw-x.com",
+    "repoUrl": "https://github.com/ValueCell-ai/ClawX",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 7604,
+    "lastPush": "2026-10-19T10:22:57Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/ValueCell-ai/ClawX",
+      "https://github.com/ValueCell-ai/ClawX"
+    ],
+    "verifiedAt": "2026-10-20T08:12:21.195Z"
+  },
+  {
+    "name": "Supabase MCP",
+    "slug": "supabase-mcp",
+    "category": "mcp-servers",
+    "description": "Connect Supabase to your AI assistants",
+    "officialUrl": "https://supabase.com/mcp",
+    "repoUrl": "https://github.com/supabase/mcp",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 2963,
+    "lastPush": "2026-10-20T06:22:30Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/supabase-community/supabase-mcp",
+      "https://github.com/supabase/mcp"
+    ],
+    "verifiedAt": "2026-10-20T08:12:21.942Z"
+  },
+  {
+    "name": "Notion MCP Server",
+    "slug": "notion-mcp-server",
+    "category": "mcp-servers",
+    "description": "Official Notion MCP Server",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/makenotion/notion-mcp-server",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 4671,
+    "lastPush": "2026-09-20T23:09:02Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/makenotion/notion-mcp-server",
+      "https://github.com/makenotion/notion-mcp-server"
+    ],
+    "verifiedAt": "2026-10-20T08:12:22.410Z"
+  },
+  {
+    "name": "Terraform MCP Server",
+    "slug": "terraform-mcp-server",
+    "category": "mcp-servers",
+    "description": "The Terraform MCP Server provides seamless integration with Terraform ecosystem, enabling advanced automation and interaction capabilities for Infrastructure as Code (IaC) development.",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/hashicorp/terraform-mcp-server",
+    "license": "MPL-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 1551,
+    "lastPush": "2026-10-20T04:05:52Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/hashicorp/terraform-mcp-server",
+      "https://github.com/hashicorp/terraform-mcp-server"
+    ],
+    "verifiedAt": "2026-10-20T08:12:22.816Z"
+  },
+  {
+    "name": "Bright Data MCP",
+    "slug": "bright-data-mcp",
+    "category": "mcp-servers",
+    "description": "A powerful Model Context Protocol (MCP) server that provides an all-in-one solution for public web access.",
+    "officialUrl": "https://brightdata.com/",
+    "repoUrl": "https://github.com/brightdata/brightdata-mcp",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 2684,
+    "lastPush": "2026-10-19T12:43:43Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/brightdata/brightdata-mcp",
+      "https://github.com/brightdata/brightdata-mcp"
+    ],
+    "verifiedAt": "2026-10-20T08:12:23.207Z"
+  },
+  {
+    "name": "Exa MCP Server",
+    "slug": "exa-mcp-server",
+    "category": "mcp-servers",
+    "description": "Exa MCP for web search and web crawling!",
+    "officialUrl": "https://exa.ai/docs/reference/exa-mcp",
+    "repoUrl": "https://github.com/exa-labs/exa-mcp-server",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 5149,
+    "lastPush": "2026-10-19T19:23:37Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/exa-labs/exa-mcp-server",
+      "https://github.com/exa-labs/exa-mcp-server"
+    ],
+    "verifiedAt": "2026-10-20T08:12:23.589Z"
+  },
+  {
+    "name": "Tavily MCP",
+    "slug": "tavily-mcp",
+    "category": "mcp-servers",
+    "description": "Production ready MCP server with real-time search, extract, map & crawl.",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/tavily-ai/tavily-mcp",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 2443,
+    "lastPush": "2026-10-15T21:37:13Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/tavily-ai/tavily-mcp",
+      "https://github.com/tavily-ai/tavily-mcp"
+    ],
+    "verifiedAt": "2026-10-20T08:12:24.014Z"
+  },
+  {
+    "name": "Framelink MCP for Figma",
+    "slug": "framelink-mcp-for-figma",
+    "category": "mcp-servers",
+    "description": "MCP server to provide Figma layout information to AI coding agents like Cursor",
+    "officialUrl": "https://www.framelink.ai/",
+    "repoUrl": "https://github.com/GLips/Figma-Context-MCP",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 16018,
+    "lastPush": "2026-10-16T04:03:19Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/GLips/Figma-Context-MCP",
+      "https://github.com/GLips/Figma-Context-MCP"
+    ],
+    "verifiedAt": "2026-10-20T08:12:24.508Z"
+  },
+  {
+    "name": "Grafana MCP Server",
+    "slug": "grafana-mcp-server",
+    "category": "mcp-servers",
+    "description": "MCP server for Grafana",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/grafana/mcp-grafana",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 3578,
+    "lastPush": "2026-10-20T08:09:19Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/grafana/mcp-grafana",
+      "https://github.com/grafana/mcp-grafana"
+    ],
+    "verifiedAt": "2026-10-20T08:12:25.046Z"
+  },
+  {
+    "name": "Google Workspace MCP",
+    "slug": "google-workspace-mcp",
+    "category": "mcp-servers",
+    "description": "Control Gmail, Google Calendar, Docs, Sheets, Slides, Chat, Forms, Tasks, Search & Drive with AI - Comprehensive Google Workspace MCP Server & CLI Tool",
+    "officialUrl": "https://workspacemcp.com",
+    "repoUrl": "https://github.com/taylorwilsdon/google_workspace_mcp",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 3381,
+    "lastPush": "2026-10-20T01:48:16Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/taylorwilsdon/google_workspace_mcp",
+      "https://github.com/taylorwilsdon/google_workspace_mcp"
+    ],
+    "verifiedAt": "2026-10-20T08:12:25.423Z"
+  },
+  {
+    "name": "Perplexity MCP Server",
+    "slug": "perplexity-mcp-server",
+    "category": "mcp-servers",
+    "description": "The official MCP server implementation for the Perplexity API Platform",
+    "officialUrl": "https://docs.perplexity.ai/guides/mcp-server",
+    "repoUrl": "https://github.com/perplexityai/modelcontextprotocol",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 2582,
+    "lastPush": "2026-10-19T20:49:08Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/perplexityai/modelcontextprotocol",
+      "https://github.com/perplexityai/modelcontextprotocol"
+    ],
+    "verifiedAt": "2026-10-20T08:12:25.849Z"
+  },
+  {
+    "name": "Redis MCP Server",
+    "slug": "redis-mcp-server",
+    "category": "mcp-database-servers",
+    "description": "The official Redis MCP Server is a natural language interface designed for agentic applications to manage and search data in Redis efficiently",
+    "officialUrl": "https://redis.io/docs/latest/integrate/redis-mcp/",
+    "repoUrl": "https://github.com/redis/mcp-redis",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 637,
+    "lastPush": "2026-10-20T07:45:54Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/redis/mcp-redis",
+      "https://github.com/redis/mcp-redis"
+    ],
+    "verifiedAt": "2026-10-20T08:12:26.252Z"
+  },
+  {
+    "name": "Qdrant MCP Server",
+    "slug": "qdrant-mcp-server",
+    "category": "mcp-database-servers",
+    "description": "An official Qdrant Model Context Protocol (MCP) server implementation",
+    "officialUrl": "https://qdrant.tech",
+    "repoUrl": "https://github.com/qdrant/mcp-server-qdrant",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 1551,
+    "lastPush": "2026-09-04T00:13:58Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/qdrant/mcp-server-qdrant",
+      "https://github.com/qdrant/mcp-server-qdrant"
+    ],
+    "verifiedAt": "2026-10-20T08:12:26.648Z"
+  },
+  {
+    "name": "Neon MCP Server",
+    "slug": "neon-mcp-server",
+    "category": "mcp-database-servers",
+    "description": "MCP server for interacting with Neon Management API and databases",
+    "officialUrl": "https://mcp-server-neon-jet.vercel.app",
+    "repoUrl": "https://github.com/neondatabase/mcp-server-neon",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 655,
+    "lastPush": "2026-10-16T03:33:52Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/neondatabase/mcp-server-neon",
+      "https://github.com/neondatabase/mcp-server-neon"
+    ],
+    "verifiedAt": "2026-10-20T08:12:27.018Z"
+  },
+  {
+    "name": "MotherDuck MCP Server",
+    "slug": "motherduck-mcp-server",
+    "category": "mcp-database-servers",
+    "description": "Local MCP server for DuckDB and MotherDuck",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/motherduckdb/mcp-server-motherduck",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 532,
+    "lastPush": "2026-10-07T14:42:51Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/motherduckdb/mcp-server-motherduck",
+      "https://github.com/motherduckdb/mcp-server-motherduck"
+    ],
+    "verifiedAt": "2026-10-20T08:12:27.861Z"
+  }
+]

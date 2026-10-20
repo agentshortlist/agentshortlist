@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Aider",
+    "repo": "Aider-AI/aider",
+    "reason": "inactive",
+    "daysSincePush": 151
+  },
+  {
+    "name": "Hope Agent",
+    "repo": "shiwenwen/hope-agent",
+    "reason": "no English description",
+    "daysSincePush": 0
+  },
+  {
+    "name": "MaxKB",
+    "repo": "1Panel-dev/MaxKB",
+    "reason": "no English description",
+    "daysSincePush": 0
+  },
+  {
+    "name": "DeepAnalyze",
+    "repo": "ruc-datalab/DeepAnalyze",
+    "reason": "no English description",
+    "daysSincePush": 7
+  }
+]

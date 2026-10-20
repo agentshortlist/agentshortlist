@@ -1,0 +1,1273 @@
+{
+ "checkedAt": "2026-10-20",
+ "source": "https://osv.dev",
+ "items": {
+  "github-mcp-server": [
+   {
+    "ecosystem": "Go",
+    "name": "github.com/github/github-mcp-server",
+    "latest": null,
+    "total": 4,
+    "affectingLatest": null,
+    "vulns": [
+     {
+      "id": "GO-2026-6118",
+      "aliases": [
+       "CVE-2026-47427"
+      ],
+      "summary": "GitHub MCP Server has Nil Pointer Dereference DoS in completion/complete Handler in github.com/github/github-mcp-server",
+      "severity": null,
+      "published": "2026-08-18",
+      "fixedIn": [
+       "1.1.0"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "1.1.0"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-w4q6-qw23-4rg7",
+      "aliases": [
+       "CVE-2026-47427"
+      ],
+      "summary": "GitHub MCP Server has Nil Pointer Dereference DoS in completion/complete Handler",
+      "severity": "HIGH",
+      "published": "2026-07-28",
+      "fixedIn": [
+       "1.1.0"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "1.1.0"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GO-2026-5779",
+      "aliases": [
+       "CVE-2026-48529"
+      ],
+      "summary": "GitHub MCP Server: Lockdown mode singleton in HTTP server causes cross-user GraphQL client confusion in github.com/github/github-mcp-server",
+      "severity": null,
+      "published": "2026-07-07",
+      "fixedIn": [
+       "1.1.2"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0.22.0"
+        },
+        {
+         "fixed": "1.1.2"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-pjp5-fpmr-3349",
+      "aliases": [
+       "CVE-2026-48529"
+      ],
+      "summary": "GitHub MCP Server: Lockdown mode singleton in HTTP server causes cross-user GraphQL client confusion",
+      "severity": "MODERATE",
+      "published": "2026-06-25",
+      "fixedIn": [
+       "1.1.2"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0.22.0"
+        },
+        {
+         "fixed": "1.1.2"
+        }
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "playwright-mcp": [
+   {
+    "ecosystem": "npm",
+    "name": "@playwright/mcp",
+    "latest": "0.0.83",
+    "total": 1,
+    "affectingLatest": 0,
+    "vulns": [
+     {
+      "id": "GHSA-6fg3-hvw7-2fwq",
+      "aliases": [
+       "CVE-2025-9611"
+      ],
+      "summary": "Microsoft Playwright MCP Server vulnerable to DNS Rebinding Attack; Allows Attackers Access to All Server Tools",
+      "severity": "HIGH",
+      "published": "2026-01-07",
+      "fixedIn": [
+       "0.0.40"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "0.0.40"
+        }
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "desktop-commander-mcp": [
+   {
+    "ecosystem": "npm",
+    "name": "@wonderwhy-er/desktop-commander",
+    "latest": "0.3.0",
+    "total": 2,
+    "affectingLatest": 0,
+    "vulns": [
+     {
+      "id": "GHSA-5xx3-j724-wmx5",
+      "aliases": [
+       "CVE-2026-10690"
+      ],
+      "summary": "DesktopCommanderMCP is vulnerable to SSRF",
+      "severity": "LOW",
+      "published": "2026-06-03",
+      "fixedIn": [],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "last_affected": "0.2.37"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-r87g-78mx-3wg4",
+      "aliases": [
+       "CVE-2026-10691"
+      ],
+      "summary": "DesktopCommanderMCP is vulnerable to Uncontrolled Resource Consumption",
+      "severity": "LOW",
+      "published": "2026-06-03",
+      "fixedIn": [
+       "0.2.39"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "0.2.39"
+        }
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "mysql-mcp-server": [
+   {
+    "ecosystem": "PyPI",
+    "name": "mysql-mcp-server",
+    "latest": "0.4.4",
+    "total": 4,
+    "affectingLatest": 0,
+    "vulns": [
+     {
+      "id": "PYSEC-2026-4109",
+      "aliases": [
+       "CVE-2026-59971"
+      ],
+      "summary": "MySQL MCP Server: Missing Origin/Host Validation in SSE Transport Enables Unauthenticated SQL Execution (DNS Rebinding / Direct Exposure)",
+      "severity": null,
+      "published": "2026-10-01",
+      "fixedIn": [
+       "0.4.2"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "0.4.2"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-rqfv-2mw9-78g2",
+      "aliases": [
+       "CVE-2026-59971"
+      ],
+      "summary": "MySQL MCP Server: Missing Origin/Host Validation in SSE Transport Enables Unauthenticated SQL Execution (DNS Rebinding / Direct Exposure)",
+      "severity": "CRITICAL",
+      "published": "2026-09-11",
+      "fixedIn": [
+       "0.4.2"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "0.4.2"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "PYSEC-2026-3579",
+      "aliases": [
+       "CVE-2026-11529"
+      ],
+      "summary": "MySQL MCP Server is Vulnerable to SQL Injection Through its mysql URI Handler",
+      "severity": null,
+      "published": "2026-08-04",
+      "fixedIn": [
+       "0.3.0"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "0.3.0"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-mvq4-39wx-6h5g",
+      "aliases": [
+       "CVE-2026-11529"
+      ],
+      "summary": "MySQL MCP Server is Vulnerable to SQL Injection Through its mysql URI Handler",
+      "severity": "LOW",
+      "published": "2026-06-08",
+      "fixedIn": [
+       "0.3.0"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "0.3.0"
+        }
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "context7": [
+   {
+    "ecosystem": "npm",
+    "name": "@upstash/context7-mcp",
+    "latest": "4.4.4",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   }
+  ],
+  "chrome-devtools-mcp": [
+   {
+    "ecosystem": "npm",
+    "name": "chrome-devtools-mcp",
+    "latest": "1.11.0",
+    "total": 2,
+    "affectingLatest": 0,
+    "vulns": [
+     {
+      "id": "GHSA-8qf9-62x2-82pp",
+      "aliases": [
+       "CVE-2026-53766"
+      ],
+      "summary": "chrome-devtools-mcp: validatePath() does not canonicalize symlinks before enforcing roots",
+      "severity": "MODERATE",
+      "published": "2026-08-17",
+      "fixedIn": [
+       "1.1.0"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0.24.0"
+        },
+        {
+         "fixed": "1.1.0"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-3pvj-jv98-qhjq",
+      "aliases": [
+       "CVE-2026-53765"
+      ],
+      "summary": "Chrome DevTools for agents: daemon.pid write follows symlinks in /tmp fallback runtime directory",
+      "severity": "MODERATE",
+      "published": "2026-06-17",
+      "fixedIn": [
+       "1.1.0"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0.20.0"
+        },
+        {
+         "fixed": "1.1.0"
+        }
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "n8n-mcp": [
+   {
+    "ecosystem": "npm",
+    "name": "n8n-mcp",
+    "latest": "2.94.3",
+    "total": 11,
+    "affectingLatest": 0,
+    "vulns": [
+     {
+      "id": "GHSA-2cf7-hpwf-47h9",
+      "aliases": [
+       "CVE-2026-55608"
+      ],
+      "summary": "n8n-MCP: Incorrect authorization can expose default-scope workflow version backups in multi-tenant HTTP mode",
+      "severity": "MODERATE",
+      "published": "2026-07-14",
+      "fixedIn": [
+       "2.57.4"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "2.57.4"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-j6r7-6fhx-77wx",
+      "aliases": [
+       "CVE-2026-54052"
+      ],
+      "summary": "n8n-MCP: Cross-tenant access to workflow version backups in multi-tenant HTTP deployments",
+      "severity": "CRITICAL",
+      "published": "2026-07-14",
+      "fixedIn": [
+       "2.56.1"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "2.56.1"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-f3rg-xqjj-cj9w",
+      "aliases": [
+       "CVE-2026-45582"
+      ],
+      "summary": "n8n-MCP: Workflow telemetry sanitizer could retain partial values from URL-shaped node parameters",
+      "severity": "MODERATE",
+      "published": "2026-05-18",
+      "fixedIn": [
+       "2.51.3"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "2.51.3"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-jxx9-px88-pj69",
+      "aliases": [
+       "CVE-2026-45707"
+      ],
+      "summary": "n8n-MCP: Multi-tenant MCP requests fall back to process-level n8n credentials when tenant headers are absent or incomplete",
+      "severity": "HIGH",
+      "published": "2026-05-18",
+      "fixedIn": [
+       "2.51.2"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "2.51.2"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-8g7g-hmwm-6rv2",
+      "aliases": [],
+      "summary": "n8n-mcp affected by path traversal, redirect-following SSRF, and telemetry payload exposure",
+      "severity": "HIGH",
+      "published": "2026-05-08",
+      "fixedIn": [
+       "2.50.1"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "2.50.1"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-cmrh-wvq6-wm9r",
+      "aliases": [
+       "CVE-2026-44694"
+      ],
+      "summary": "n8n-mcp webhook and API client paths has an authenticated SSRF",
+      "severity": "HIGH",
+      "published": "2026-05-08",
+      "fixedIn": [
+       "2.50.2"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "2.18.7"
+        },
+        {
+         "fixed": "2.50.2"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-56c3-vfp2-5qqj",
+      "aliases": [
+       "CVE-2026-42449"
+      ],
+      "summary": "n8n-mcp's IPv4-mapped IPv6 addresses bypass SSRF protection in validateUrlSync(), enabling full SSRF for SDK embedders",
+      "severity": "HIGH",
+      "published": "2026-04-30",
+      "fixedIn": [
+       "2.47.14"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "2.47.4"
+        },
+        {
+         "fixed": "2.47.14"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-wg4g-395p-mqv3",
+      "aliases": [
+       "CVE-2026-42282"
+      ],
+      "summary": "n8n-MCP: Sensitive MCP tool-call arguments logged on authenticated requests in HTTP mode",
+      "severity": "MODERATE",
+      "published": "2026-04-25",
+      "fixedIn": [
+       "2.47.13"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "2.47.13"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-pfm2-2mhg-8wpx",
+      "aliases": [
+       "CVE-2026-41495"
+      ],
+      "summary": "n8n-MCP Logs Sensitive Request Data on Unauthorized /mcp Requests",
+      "severity": "MODERATE",
+      "published": "2026-04-23",
+      "fixedIn": [
+       "2.47.11"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "2.47.11"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-75hx-xj24-mqrw",
+      "aliases": [],
+      "summary": "n8n-mcp has unauthenticated session termination and information disclosure in HTTP transport",
+      "severity": "HIGH",
+      "published": "2026-04-10",
+      "fixedIn": [
+       "2.47.6"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "2.47.6"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-4ggg-h7ph-26qr",
+      "aliases": [
+       "CVE-2026-39974"
+      ],
+      "summary": "n8n-mcp has authenticated SSRF via instance-URL header in multi-tenant HTTP mode",
+      "severity": "HIGH",
+      "published": "2026-04-08",
+      "fixedIn": [
+       "2.47.4"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "2.47.4"
+        }
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "firecrawl-mcp-server": [
+   {
+    "ecosystem": "npm",
+    "name": "firecrawl-mcp",
+    "latest": "3.33.4",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   }
+  ],
+  "mongodb-mcp-server": [
+   {
+    "ecosystem": "npm",
+    "name": "mongodb-mcp-server",
+    "latest": "3.1.0",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   }
+  ],
+  "dbhub": [
+   {
+    "ecosystem": "npm",
+    "name": "@bytebase/dbhub",
+    "latest": "1.5.0",
+    "total": 2,
+    "affectingLatest": 0,
+    "vulns": [
+     {
+      "id": "GHSA-fm8p-53ww-hf6w",
+      "aliases": [
+       "CVE-2026-61742"
+      ],
+      "summary": "DBHub HTTP transport DNS rebinding allows unauthenticated browser-origin SQL execution",
+      "severity": "CRITICAL",
+      "published": "2026-09-24",
+      "fixedIn": [
+       "0.22.5"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "0.22.5"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-mwwr-p57h-56pf",
+      "aliases": [
+       "CVE-2026-61788"
+      ],
+      "summary": "@bytebase/dbhub's read-only mode does not prevent database writes",
+      "severity": "HIGH",
+      "published": "2026-09-24",
+      "fixedIn": [
+       "0.22.6"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "0.22.6"
+        }
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "browser-tools-mcp": [
+   {
+    "ecosystem": "npm",
+    "name": "@agentdeskai/browser-tools-mcp",
+    "latest": "2.0.2",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   }
+  ],
+  "apify-mcp-server": [
+   {
+    "ecosystem": "npm",
+    "name": "@apify/actors-mcp-server",
+    "latest": "0.19.0",
+    "total": 2,
+    "affectingLatest": 0,
+    "vulns": [
+     {
+      "id": "GHSA-6gr2-qh89-hxwm",
+      "aliases": [
+       "CVE-2026-50143"
+      ],
+      "summary": "Apify Model Context Protocol (MCP) server: Actor MCP path authority injection leaks Apify token",
+      "severity": "HIGH",
+      "published": "2026-07-01",
+      "fixedIn": [
+       "0.10.11"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "0.10.11"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-jwp7-wg77-3w9v",
+      "aliases": [
+       "CVE-2026-46341"
+      ],
+      "summary": "Apify Model Context Protocol (MCP) server: Domain Allowlist Bypass in fetch-apify-docs via String Prefix Matching",
+      "severity": "MODERATE",
+      "published": "2026-05-19",
+      "fixedIn": [
+       "0.9.21"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "0.9.21"
+        }
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "blender-mcp": [
+   {
+    "ecosystem": "PyPI",
+    "name": "mcp-for-blender",
+    "latest": "2.2.1",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   }
+  ],
+  "ida-pro-mcp": [
+   {
+    "ecosystem": "PyPI",
+    "name": "ida-pro-mcp",
+    "latest": "1.4.0",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   }
+  ],
+  "context-mode": [
+   {
+    "ecosystem": "npm",
+    "name": "context-mode",
+    "latest": "1.0.169",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   }
+  ],
+  "serena": [
+   {
+    "ecosystem": "PyPI",
+    "name": "serena-agent",
+    "latest": "2.1.0",
+    "total": 2,
+    "affectingLatest": 0,
+    "vulns": [
+     {
+      "id": "PYSEC-2026-3061",
+      "aliases": [
+       "CVE-2026-49471"
+      ],
+      "summary": "Serena: Unauthenticated Flask dashboard on fixed port enables DNS rebinding → memory poisoning → RCE",
+      "severity": null,
+      "published": "2026-07-13",
+      "fixedIn": [
+       "1.5.2"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "1.5.2"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-37h2-6p4f-mp3q",
+      "aliases": [
+       "CVE-2026-49471"
+      ],
+      "summary": "Serena: Unauthenticated Flask dashboard on fixed port enables DNS rebinding → memory poisoning → RCE",
+      "severity": "HIGH",
+      "published": "2026-07-08",
+      "fixedIn": [
+       "1.5.2"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "1.5.2"
+        }
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "unity-mcp": [
+   {
+    "ecosystem": "PyPI",
+    "name": "mcpforunityserver",
+    "latest": "10.3.0",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   }
+  ],
+  "codebase-memory-mcp": [
+   {
+    "ecosystem": "npm",
+    "name": "codebase-memory-mcp",
+    "latest": "0.12.1",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   }
+  ],
+  "graphjin": [
+   {
+    "ecosystem": "npm",
+    "name": "graphjin",
+    "latest": "3.21.16",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   }
+  ],
+  "mcp-reference-servers": [
+   {
+    "ecosystem": "npm",
+    "name": "@modelcontextprotocol/server-filesystem",
+    "latest": "2.0.0",
+    "total": 2,
+    "affectingLatest": 0,
+    "vulns": [
+     {
+      "id": "GHSA-hc55-p739-j48w",
+      "aliases": [
+       "CVE-2025-53110"
+      ],
+      "summary": "@modelcontextprotocol/server-filesystem vulnerability allows for path validation bypass via colliding path prefix",
+      "severity": "HIGH",
+      "published": "2025-07-01",
+      "fixedIn": [
+       "2025.7.1"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "last_affected": "0.6.2"
+        }
+       ],
+       [
+        {
+         "introduced": "2025.1.14"
+        },
+        {
+         "fixed": "2025.7.1"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-q66q-fx2p-7w4m",
+      "aliases": [
+       "CVE-2025-53109"
+      ],
+      "summary": "@modelcontextprotocol/server-filesystem allows for path validation bypass via prefix matching and symlink handling",
+      "severity": "HIGH",
+      "published": "2025-07-01",
+      "fixedIn": [
+       "2025.7.1"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "last_affected": "0.6.2"
+        }
+       ],
+       [
+        {
+         "introduced": "2025.1.14"
+        },
+        {
+         "fixed": "2025.7.1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "ecosystem": "npm",
+    "name": "@modelcontextprotocol/server-memory",
+    "latest": "2.0.0",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   },
+   {
+    "ecosystem": "npm",
+    "name": "@modelcontextprotocol/server-everything",
+    "latest": "2.0.0",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   },
+   {
+    "ecosystem": "PyPI",
+    "name": "mcp-server-git",
+    "latest": "2026.10.19",
+    "total": 8,
+    "affectingLatest": 0,
+    "vulns": [
+     {
+      "id": "PYSEC-2026-2630",
+      "aliases": [
+       "CVE-2026-27735"
+      ],
+      "summary": "mcp-server-git : Path traversal in git_add allows staging files outside repository boundaries",
+      "severity": null,
+      "published": "2026-07-13",
+      "fixedIn": [
+       "2026.1.14"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "2026.1.14"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "PYSEC-2026-1621",
+      "aliases": [
+       "CVE-2025-68143"
+      ],
+      "summary": "mcp-server-git's unrestricted git_init tool allows repository creation at arbitrary filesystem locations",
+      "severity": null,
+      "published": "2026-07-07",
+      "fixedIn": [
+       "2025.9.25"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "2025.9.25"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "PYSEC-2026-1622",
+      "aliases": [
+       "CVE-2025-68144"
+      ],
+      "summary": " mcp-server-git argument injection in git_diff and git_checkout functions allows overwriting local files",
+      "severity": null,
+      "published": "2026-07-07",
+      "fixedIn": [
+       "2025.12.18"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "2025.12.18"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "PYSEC-2026-1623",
+      "aliases": [
+       "CVE-2025-68145"
+      ],
+      "summary": "mcp-server-git has missing path validation when using --repository flag",
+      "severity": null,
+      "published": "2026-07-07",
+      "fixedIn": [
+       "2025.12.18"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "2025.12.18"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-vjqx-cfc4-9h6v",
+      "aliases": [
+       "CVE-2026-27735"
+      ],
+      "summary": "mcp-server-git : Path traversal in git_add allows staging files outside repository boundaries",
+      "severity": "MODERATE",
+      "published": "2026-02-26",
+      "fixedIn": [
+       "2026.1.14"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "2026.1.14"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-5cgr-j3jf-jw3v",
+      "aliases": [
+       "CVE-2025-68143"
+      ],
+      "summary": "mcp-server-git's unrestricted git_init tool allows repository creation at arbitrary filesystem locations",
+      "severity": "MODERATE",
+      "published": "2025-12-17",
+      "fixedIn": [
+       "2025.9.25"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "2025.9.25"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-9xwc-hfwc-8w59",
+      "aliases": [
+       "CVE-2025-68144"
+      ],
+      "summary": " mcp-server-git argument injection in git_diff and git_checkout functions allows overwriting local files",
+      "severity": "MODERATE",
+      "published": "2025-12-17",
+      "fixedIn": [
+       "2025.12.18"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "2025.12.18"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-j22h-9j4x-23w5",
+      "aliases": [
+       "CVE-2025-68145"
+      ],
+      "summary": "mcp-server-git has missing path validation when using --repository flag",
+      "severity": "MODERATE",
+      "published": "2025-12-17",
+      "fixedIn": [
+       "2025.12.18"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "2025.12.18"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "ecosystem": "PyPI",
+    "name": "mcp-server-fetch",
+    "latest": "2026.10.19",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   }
+  ],
+  "supabase-mcp": [
+   {
+    "ecosystem": "npm",
+    "name": "@supabase/mcp-server-supabase",
+    "latest": "0.14.0",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   }
+  ],
+  "notion-mcp-server": [
+   {
+    "ecosystem": "npm",
+    "name": "@notionhq/notion-mcp-server",
+    "latest": "2.5.2",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   }
+  ],
+  "terraform-mcp-server": [
+   {
+    "ecosystem": "Go",
+    "name": "github.com/hashicorp/terraform-mcp-server",
+    "latest": null,
+    "total": 0,
+    "affectingLatest": null,
+    "vulns": []
+   }
+  ],
+  "bright-data-mcp": [
+   {
+    "ecosystem": "npm",
+    "name": "@brightdata/mcp",
+    "latest": "4.0.0",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   }
+  ],
+  "exa-mcp-server": [
+   {
+    "ecosystem": "npm",
+    "name": "exa-mcp-server",
+    "latest": "3.4.2",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   }
+  ],
+  "tavily-mcp": [
+   {
+    "ecosystem": "npm",
+    "name": "tavily-mcp",
+    "latest": "0.2.22",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   }
+  ],
+  "framelink-mcp-for-figma": [
+   {
+    "ecosystem": "npm",
+    "name": "figma-developer-mcp",
+    "latest": "0.13.2",
+    "total": 1,
+    "affectingLatest": 0,
+    "vulns": [
+     {
+      "id": "GHSA-gxw4-4fc5-9gr5",
+      "aliases": [
+       "CVE-2025-15061",
+       "CVE-2025-53967"
+      ],
+      "summary": "figma-developer-mcp vulnerable to command injection in get_figma_data tool",
+      "severity": "HIGH",
+      "published": "2025-09-30",
+      "fixedIn": [
+       "0.6.3"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "0.6.3"
+        }
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "grafana-mcp-server": [
+   {
+    "ecosystem": "PyPI",
+    "name": "mcp-grafana",
+    "latest": "2.0.2",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   }
+  ],
+  "google-workspace-mcp": [
+   {
+    "ecosystem": "PyPI",
+    "name": "workspace-mcp",
+    "latest": "2.1.1",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   }
+  ],
+  "perplexity-mcp-server": [
+   {
+    "ecosystem": "npm",
+    "name": "@perplexity-ai/mcp-server",
+    "latest": "1.3.0",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   }
+  ],
+  "redis-mcp-server": [
+   {
+    "ecosystem": "PyPI",
+    "name": "redis-mcp-server",
+    "latest": "0.5.1",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   }
+  ]
+ }
+}
