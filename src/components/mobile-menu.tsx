@@ -101,7 +101,7 @@ export function MobileMenu({ main, rankings, more }: { main: Item[]; rankings: I
                   </a>
                 </li>
                 <li>
-                  <a href="https://bsky.app/profile/agentshortlist.bsky.social" target="_blank" rel="nofollow noopener noreferrer me" aria-label="Bluesky (opens in a new tab)" className="mobile-menu-sub mobile-menu-icon">
+                  <a href="https://bsky.app/profile/agentshortlist.dev" target="_blank" rel="nofollow noopener noreferrer me" aria-label="Bluesky (opens in a new tab)" className="mobile-menu-sub mobile-menu-icon">
                     Bluesky
                   </a>
                 </li>

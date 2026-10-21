@@ -24,7 +24,7 @@ export const clip = (s: string, max = 155) => {
 export const X_URL = "https://x.com/agentshortlist";
 export const GITHUB_URL = "https://github.com/agentshortlist/agentshortlist";
 export const GITHUB_ORG_URL = "https://github.com/agentshortlist";
-export const BLUESKY_URL = "https://bsky.app/profile/agentshortlist.bsky.social";
+export const BLUESKY_URL = "https://bsky.app/profile/agentshortlist.dev";
 export const LINKEDIN_URL = "https://www.linkedin.com/company/agentshortlist/";
 
 // Google Analytics 4. El identificador no es un secreto. La etiqueta solo se carga si el lector acepta (ver privacy-notice.tsx).
