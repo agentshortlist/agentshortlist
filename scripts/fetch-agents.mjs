@@ -192,6 +192,42 @@ const SEED = [
   ["qdrant/mcp-server-qdrant", "mcp-database-servers", "Qdrant MCP Server"],
   ["neondatabase/mcp-server-neon", "mcp-database-servers", "Neon MCP Server"],
   ["motherduckdb/mcp-server-motherduck", "mcp-database-servers", "MotherDuck MCP Server"],
+
+  // --- Tercera oleada (2026-10-21) ---
+  ["sooperset/mcp-atlassian", "mcp-servers", "MCP Atlassian"],
+  ["atlassian/atlassian-mcp-server", "mcp-servers", "Atlassian Remote MCP Server"],
+  ["containers/kubernetes-mcp-server", "mcp-servers", "Kubernetes MCP Server"],
+  ["Flux159/mcp-server-kubernetes", "mcp-servers", "MCP Server Kubernetes"],
+  ["microsoft/mcp", "mcp-servers", "Microsoft MCP Catalog"],
+  ["docker/mcp-gateway", "mcp-servers", "Docker MCP Gateway"],
+  ["IBM/mcp-context-forge", "mcp-servers", "MCP Context Forge"],
+  ["modelcontextprotocol/inspector", "mcp-servers", "MCP Inspector"],
+  ["stripe/ai", "mcp-servers", "Stripe Agent Toolkit"],
+  ["getsentry/sentry-mcp", "mcp-servers", "Sentry MCP"],
+  ["datadog-labs/mcp-server", "mcp-servers", "Datadog MCP Server"],
+  ["auth0/auth0-mcp-server", "mcp-servers", "Auth0 MCP Server"],
+  ["21st-dev/magic-mcp", "mcp-servers", "Magic MCP"],
+  ["haris-musa/excel-mcp-server", "mcp-servers", "Excel MCP Server"],
+  ["ref-tools/ref-tools-mcp", "mcp-servers", "Ref Tools MCP"],
+  ["homeassistant-ai/ha-mcp", "mcp-servers", "Home Assistant MCP Server"],
+  ["antvis/mcp-server-chart", "mcp-servers", "AntV Chart MCP Server"],
+  ["54yyyu/zotero-mcp", "mcp-servers", "Zotero MCP"],
+  ["bethington/ghidra-mcp", "mcp-servers", "Ghidra MCP"],
+  ["xerj-org/xerj", "mcp-servers", "Xerj"],
+  ["MinishLab/semble", "mcp-servers", "Semble"],
+  ["vitali87/code-graph-rag", "mcp-servers", "Code Graph RAG"],
+  ["ClickHouse/mcp-clickhouse", "mcp-database-servers", "ClickHouse MCP Server"],
+  ["neo4j-contrib/mcp-neo4j", "mcp-database-servers", "Neo4j MCP Servers"],
+  ["pinecone-io/pinecone-mcp", "mcp-database-servers", "Pinecone MCP Server"],
+  ["infiniflow/ragflow", "agent-frameworks", "RAGFlow"],
+  ["mem0ai/mem0", "agent-frameworks", "Mem0"],
+  ["vectorize-io/hindsight", "agent-frameworks", "Hindsight"],
+  ["getzep/graphiti", "agent-frameworks", "Graphiti"],
+  ["MemTensor/MemOS", "agent-frameworks", "MemOS"],
+  ["truefoundry/trueforge", "agent-frameworks", "TrueForge"],
+  ["evalstate/fast-agent", "agent-frameworks", "fast-agent"],
+  ["google/agents-cli", "coding-agents", "Agents CLI"],
+  ["microsoft/fara", "browser-agents", "Fara"],
 ];
 
 const headers = { Accept: "application/vnd.github+json", "User-Agent": "agentshortlist-build" };
@@ -214,7 +250,19 @@ let live = 0;
 for (const [repo, category, display] of SEED) {
   let r = cache[repo];
   if (!r || Date.now() - new Date(r.fetchedAt).getTime() > CACHE_TTL_MS) {
-    const res = await fetch(`https://api.github.com/repos/${repo}`, { headers });
+    // Reintenta ante cortes de red o errores 5xx de GitHub: un fallo puntual no debe tumbar la sincronización.
+    let res;
+    for (let t = 0; t < 4; t++) {
+      try {
+        res = await fetch(`https://api.github.com/repos/${repo}`, { headers, signal: AbortSignal.timeout(20000) });
+        if (res.status < 500) break;
+      } catch {}
+      await new Promise((r) => setTimeout(r, 1500 * (t + 1)));
+    }
+    if (!res) {
+      failed.push({ repo, status: "network" });
+      continue;
+    }
     live++;
     if (!res.ok) {
       failed.push({ repo, status: res.status });

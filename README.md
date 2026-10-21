@@ -19,11 +19,11 @@ This project reads each project's own documentation and source and records the a
 
 | | |
 |---|---|
-| **[Verified cards](https://agentshortlist.dev/verified)** | 39 MCP servers. Each line shows its source (official docs, GitHub, package registry, OSV.dev, our own recommendation or "not verified"), a link and the review date. |
+| **[Verified cards](https://agentshortlist.dev/verified)** | 44 MCP servers. Each line shows its source (official docs, GitHub, package registry, OSV.dev, our own recommendation or "not verified"), a link and the review date. |
 | **Security advisories** | Published advisories from [OSV.dev](https://osv.dev), matched to a package only after confirming that the package belongs to the same repository. Refreshed every day. |
 | **[Config checker](https://agentshortlist.dev/check)** | Paste your MCP configuration. It flags documented safety options you haven't turned on, pinned versions that fall inside an advisory range and secrets written in plain text. It runs in your browser and sends nothing. |
 | **[Picker](https://agentshortlist.dev/pick) and [live comparator](https://agentshortlist.dev/compare/live)** | Filter servers by what you need and compare two or three line by line. |
-| **[Rankings](https://agentshortlist.dev/best/coding)** | 163 open-source AI projects (coding agents, MCP servers, frameworks, research and browser agents) scored on public GitHub signals. |
+| **[Rankings](https://agentshortlist.dev/best/coding)** | 197 open-source AI projects (coding agents, MCP servers, frameworks, research and browser agents) scored on public GitHub signals. |
 
 ## What a card looks like
 

@@ -153,6 +153,23 @@ export const META: Record<string, Meta> = {
     checks: [{ ok: ["readonly"], message: "No readonly setting found, so the AI can create branches and run migrations. Neon documents readonly=true, projectId and roleName on the MCP URL, and says not to use this server in production." }],
   },
   "motherduck-mcp-server": { match: ["mcp-server-motherduck"], facts: { kind: "database", readOnly: "yes", telemetry: "unknown", hosting: "local" } },
+  "kubernetes-mcp-server": {
+    match: ["kubernetes-mcp-server"],
+    facts: { kind: "cloud", readOnly: "yes", telemetry: "claimed-off", hosting: "local" },
+    checks: [{ ok: [], message: "Read-only mode is set in the server's TOML file (read_only = true), not in this client configuration. Check that file. The project also documents denied_resources to block Secrets." }],
+  },
+  "mcp-server-kubernetes": {
+    match: ["mcp-server-kubernetes"],
+    facts: { kind: "cloud", readOnly: "no", telemetry: "claimed-off", hosting: "local" },
+    checks: [{ ok: ["ALLOW_ONLY_NON_DESTRUCTIVE_TOOLS"], message: "Non-destructive mode is off, so tools can delete resources, drain nodes and run any kubectl command. ALLOW_ONLY_NON_DESTRUCTIVE_TOOLS=true removes those, but create and update tools stay on: it is not a read-only mode." }],
+  },
+  "home-assistant-mcp-server": { match: ["ha-mcp", "homeassistant-ai"], facts: { kind: "platform", readOnly: "yes", telemetry: "claimed-off", hosting: "local" } },
+  "atlassian-remote-mcp-server": { match: ["mcp.atlassian.com"], facts: { kind: "platform", readOnly: "yes", telemetry: "unknown", hosting: "hosted" } },
+  "stripe-agent-toolkit": {
+    match: ["@stripe/mcp"],
+    facts: { kind: "platform", readOnly: "unknown", telemetry: "unknown", hosting: "both" },
+    checks: [{ ok: ["STRIPE_SECRET_KEY"], message: "No STRIPE_SECRET_KEY environment variable found. A key in the arguments (--api-key=...) is easier to leak. The project says tool permissions follow the key, so use a restricted one." }],
+  },
 };
 
 // Ajustes que pide cada servidor: solo NOMBRES, nunca valores. "required" = el proyecto dice que hace falta para funcionar.
@@ -275,5 +292,22 @@ export const SETTINGS: Record<string, Setting[]> = {
     { name: "--read-write", kind: "flag", required: false, note: "Allows writes. Without it, a DuckDB file is opened read-only.", url: R("motherduckdb/mcp-server-motherduck") },
     { name: "--allow-switch-databases", kind: "flag", required: false, note: "Lets the AI switch to any database, including S3 and MotherDuck, at runtime.", url: R("motherduckdb/mcp-server-motherduck") },
     { name: "motherduck_token", kind: "env", required: false, note: "MotherDuck token, for MotherDuck databases.", url: R("motherduckdb/mcp-server-motherduck") },
+  ],
+  "kubernetes-mcp-server": [
+    { name: "--config", kind: "flag", required: false, note: "Path to the TOML configuration file, where read_only, toolsets and denied_resources are set.", url: R("containers/kubernetes-mcp-server") },
+    { name: "read_only (TOML)", kind: "flag", required: false, note: "Set to true in the TOML file to restrict the server to read operations.", url: R("containers/kubernetes-mcp-server") },
+    { name: "toolsets (TOML)", kind: "flag", required: false, note: "List of toolsets to enable, to expose fewer tools.", url: R("containers/kubernetes-mcp-server") },
+  ],
+  "mcp-server-kubernetes": [
+    { name: "ALLOW_ONLY_NON_DESTRUCTIVE_TOOLS", kind: "env", required: false, note: "Set to true to turn off delete, uninstall, cleanup, node management and kubectl_generic. Create and update stay on.", url: R("Flux159/mcp-server-kubernetes", "#non-destructive-mode") },
+    { name: "ENABLE_TELEMETRY", kind: "env", required: false, note: "Set to true to enable OpenTelemetry tracing. Off by default.", url: R("Flux159/mcp-server-kubernetes") },
+  ],
+  "home-assistant-mcp-server": [
+    { name: "ENABLE_TOOL_SEARCH", kind: "env", required: false, note: "Set to true to hide the tool catalog behind a search, which reduces the context used.", url: R("homeassistant-ai/ha-mcp") },
+  ],
+  "stripe-agent-toolkit": [
+    { name: "STRIPE_SECRET_KEY", kind: "env", required: true, note: "Your Stripe key for the local server. Use a restricted key: tool permissions follow it.", url: R("stripe/ai", "/tree/main/tools/modelcontextprotocol") },
+    { name: "--api-key", kind: "flag", required: false, note: "The same key as a command-line argument, which is easier to leak than an environment variable.", url: R("stripe/ai", "/tree/main/tools/modelcontextprotocol") },
+    { name: "--stripe-account", kind: "flag", required: false, note: "A connected account to act on.", url: R("stripe/ai", "/tree/main/tools/modelcontextprotocol") },
   ],
 };

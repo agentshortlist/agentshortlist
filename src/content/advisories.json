@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-10-20",
+ "checkedAt": "2026-10-21",
  "source": "https://osv.dev",
  "items": {
   "github-mcp-server": [
@@ -689,7 +689,7 @@
    {
     "ecosystem": "npm",
     "name": "@apify/actors-mcp-server",
-    "latest": "0.19.0",
+    "latest": "0.19.1",
     "total": 2,
     "affectingLatest": 0,
     "vulns": [
@@ -744,7 +744,7 @@
    {
     "ecosystem": "PyPI",
     "name": "mcp-for-blender",
-    "latest": "2.2.1",
+    "latest": "2.2.2",
     "total": 0,
     "affectingLatest": 0,
     "vulns": []
@@ -1169,7 +1169,7 @@
    {
     "ecosystem": "npm",
     "name": "@brightdata/mcp",
-    "latest": "4.0.0",
+    "latest": "4.1.0",
     "total": 0,
     "affectingLatest": 0,
     "vulns": []
@@ -1233,7 +1233,7 @@
    {
     "ecosystem": "PyPI",
     "name": "mcp-grafana",
-    "latest": "2.0.2",
+    "latest": "2.1.1",
     "total": 0,
     "affectingLatest": 0,
     "vulns": []
@@ -1267,6 +1267,302 @@
     "total": 0,
     "affectingLatest": 0,
     "vulns": []
+   }
+  ],
+  "stripe-agent-toolkit": [
+   {
+    "ecosystem": "npm",
+    "name": "@stripe/mcp",
+    "latest": "0.3.3",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   }
+  ],
+  "kubernetes-mcp-server": [
+   {
+    "ecosystem": "npm",
+    "name": "kubernetes-mcp-server",
+    "latest": "0.0.67",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   },
+   {
+    "ecosystem": "PyPI",
+    "name": "kubernetes-mcp-server",
+    "latest": "0.0.67",
+    "total": 0,
+    "affectingLatest": 0,
+    "vulns": []
+   },
+   {
+    "ecosystem": "Go",
+    "name": "github.com/containers/kubernetes-mcp-server",
+    "latest": null,
+    "total": 0,
+    "affectingLatest": null,
+    "vulns": []
+   }
+  ],
+  "mcp-server-kubernetes": [
+   {
+    "ecosystem": "npm",
+    "name": "mcp-server-kubernetes",
+    "latest": "4.1.9",
+    "total": 5,
+    "affectingLatest": 0,
+    "vulns": [
+     {
+      "id": "GHSA-6mx4-4h42-r8vh",
+      "aliases": [
+       "CVE-2026-47250"
+      ],
+      "summary": "MCP Server Kubernetes: kubectl-generic flag injection enables Kubernetes bearer token exfiltration",
+      "severity": "MODERATE",
+      "published": "2026-06-05",
+      "fixedIn": [
+       "3.7.0"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "3.7.0"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-cr22-wjx7-2w6m",
+      "aliases": [
+       "CVE-2026-46519"
+      ],
+      "summary": "MCP Server Kubernetes: Tool Access Control Bypass via Presentation-Layer Filtering Without Execution-Layer Enforcement",
+      "severity": "HIGH",
+      "published": "2026-05-21",
+      "fixedIn": [
+       "3.6.0"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "3.6.0"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-4xqg-gf5c-ghwq",
+      "aliases": [
+       "CVE-2026-39884"
+      ],
+      "summary": "MCP Server Kubernetes has an Argument Injection in port_forward tool via space-splitting",
+      "severity": "HIGH",
+      "published": "2026-04-14",
+      "fixedIn": [
+       "3.5.0"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "3.5.0"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-wvxp-jp4w-w8wg",
+      "aliases": [
+       "CVE-2025-66404"
+      ],
+      "summary": "mcp-server-kubernetes has potential security issue in exec_in_pod tool",
+      "severity": "MODERATE",
+      "published": "2025-12-03",
+      "fixedIn": [
+       "2.9.8"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "2.9.8"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-gjv4-ghm7-q58q",
+      "aliases": [
+       "CVE-2025-53355"
+      ],
+      "summary": "MCP Server Kubernetes vulnerable to command injection in several tools",
+      "severity": "HIGH",
+      "published": "2025-07-08",
+      "fixedIn": [
+       "2.5.0"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "2.5.0"
+        }
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "home-assistant-mcp-server": [
+   {
+    "ecosystem": "PyPI",
+    "name": "ha-mcp",
+    "latest": "8.7.0",
+    "total": 6,
+    "affectingLatest": 0,
+    "vulns": [
+     {
+      "id": "PYSEC-2026-2507",
+      "aliases": [
+       "CVE-2026-32111"
+      ],
+      "summary": "ha-mcp OAuth 2.1 DCR mode enables network reconnaissance via an error oracle",
+      "severity": null,
+      "published": "2026-07-13",
+      "fixedIn": [
+       "7.0.0"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "7.0.0"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "PYSEC-2026-2508",
+      "aliases": [
+       "CVE-2026-32112"
+      ],
+      "summary": "ha-mcp has XSS via Unescaped HTML in OAuth Consent Form",
+      "severity": null,
+      "published": "2026-07-13",
+      "fixedIn": [
+       "7.0.0"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "7.0.0"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-q855-8rh5-jfgq",
+      "aliases": [],
+      "summary": "ha-mcp: Add-on settings and policy routes are reachable without authentication at the bare root path",
+      "severity": "MODERATE",
+      "published": "2026-07-07",
+      "fixedIn": [
+       "7.10.0"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "7.10.0"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-g39v-cvjh-8fpf",
+      "aliases": [],
+      "summary": "Home Assistant MCP Server: YAML config backups written under www/ are served unauthenticated at /local/",
+      "severity": "MODERATE",
+      "published": "2026-05-14",
+      "fixedIn": [
+       "7.5.0"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "7.5.0"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-fmfg-9g7c-3vq7",
+      "aliases": [
+       "CVE-2026-32111"
+      ],
+      "summary": "ha-mcp OAuth 2.1 DCR mode enables network reconnaissance via an error oracle",
+      "severity": "MODERATE",
+      "published": "2026-03-12",
+      "fixedIn": [
+       "7.0.0"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "7.0.0"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-pf93-j98v-25pv",
+      "aliases": [
+       "CVE-2026-32112"
+      ],
+      "summary": "ha-mcp has XSS via Unescaped HTML in OAuth Consent Form",
+      "severity": "MODERATE",
+      "published": "2026-03-12",
+      "fixedIn": [
+       "7.0.0"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "7.0.0"
+        }
+       ]
+      ]
+     }
+    ]
    }
   ]
  }

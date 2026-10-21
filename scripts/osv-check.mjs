@@ -42,6 +42,12 @@ const MAP = [
   ["qdrant-mcp-server", "PyPI", "mcp-server-qdrant", "qdrant/mcp-server-qdrant"],
   ["neon-mcp-server", "npm", "@neondatabase/mcp-server-neon", "mcp-server-neon"],
   ["motherduck-mcp-server", "PyPI", "mcp-server-motherduck", "mcp-server-motherduck"],
+  ["stripe-agent-toolkit", "npm", "@stripe/mcp", "stripe/ai"],
+  ["kubernetes-mcp-server", "npm", "kubernetes-mcp-server", "containers/kubernetes-mcp-server"],
+  ["kubernetes-mcp-server", "PyPI", "kubernetes-mcp-server", "containers/kubernetes-mcp-server"],
+  ["kubernetes-mcp-server", "Go", "github.com/containers/kubernetes-mcp-server", "containers/kubernetes-mcp-server"],
+  ["mcp-server-kubernetes", "npm", "mcp-server-kubernetes", "flux159/mcp-server-kubernetes"],
+  ["home-assistant-mcp-server", "PyPI", "ha-mcp", "homeassistant-ai/ha-mcp"],
 ];
 
 // Reintenta ante fallos de red o del servicio. Un error nunca debe convertirse en "0 avisos": se aborta sin escribir nada.

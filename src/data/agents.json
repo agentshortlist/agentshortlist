@@ -8,14 +8,14 @@
     "repoUrl": "https://github.com/cline/cline",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 70588,
-    "lastPush": "2026-10-20T05:43:19Z",
+    "stars": 70717,
+    "lastPush": "2026-10-21T05:17:27Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/cline/cline",
       "https://github.com/cline/cline"
     ],
-    "verifiedAt": "2026-10-20T08:11:17.513Z"
+    "verifiedAt": "2026-10-21T05:52:54.680Z"
   },
   {
     "name": "OpenHands",
@@ -26,14 +26,14 @@
     "repoUrl": "https://github.com/OpenHands/OpenHands",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 91341,
-    "lastPush": "2026-10-20T08:11:04Z",
+    "stars": 91428,
+    "lastPush": "2026-10-21T05:37:01Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/All-Hands-AI/OpenHands",
       "https://github.com/OpenHands/OpenHands"
     ],
-    "verifiedAt": "2026-10-20T08:11:18.449Z"
+    "verifiedAt": "2026-10-21T05:52:55.472Z"
   },
   {
     "name": "OpenAI Codex CLI",
@@ -44,14 +44,14 @@
     "repoUrl": "https://github.com/openai/codex",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 130012,
-    "lastPush": "2026-10-20T07:56:26Z",
+    "stars": 130209,
+    "lastPush": "2026-10-21T02:41:24Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/openai/codex",
       "https://github.com/openai/codex"
     ],
-    "verifiedAt": "2026-10-20T08:11:19.204Z"
+    "verifiedAt": "2026-10-21T05:52:56.250Z"
   },
   {
     "name": "Claude Code",
@@ -62,14 +62,14 @@
     "repoUrl": "https://github.com/anthropics/claude-code",
     "license": null,
     "pricingModel": null,
-    "stars": 152817,
-    "lastPush": "2026-10-19T23:06:46Z",
+    "stars": 152679,
+    "lastPush": "2026-10-21T03:16:31Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/anthropics/claude-code",
       "https://github.com/anthropics/claude-code"
     ],
-    "verifiedAt": "2026-10-20T08:11:19.602Z"
+    "verifiedAt": "2026-10-21T05:52:56.617Z"
   },
   {
     "name": "Goose",
@@ -80,14 +80,14 @@
     "repoUrl": "https://github.com/aaif-goose/goose",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 55457,
-    "lastPush": "2026-10-20T05:47:47Z",
+    "stars": 55470,
+    "lastPush": "2026-10-21T02:27:05Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/block/goose",
       "https://github.com/aaif-goose/goose"
     ],
-    "verifiedAt": "2026-10-20T08:11:20.283Z"
+    "verifiedAt": "2026-10-21T05:52:57.332Z"
   },
   {
     "name": "Continue",
@@ -98,14 +98,14 @@
     "repoUrl": "https://github.com/continuedev/continue",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 36271,
-    "lastPush": "2026-10-19T20:47:29Z",
+    "stars": 36276,
+    "lastPush": "2026-10-20T14:30:21Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/continuedev/continue",
       "https://github.com/continuedev/continue"
     ],
-    "verifiedAt": "2026-10-20T08:11:20.643Z"
+    "verifiedAt": "2026-10-21T05:52:57.764Z"
   },
   {
     "name": "SWE-agent",
@@ -116,14 +116,14 @@
     "repoUrl": "https://github.com/SWE-agent/SWE-agent",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 20600,
+    "stars": 20605,
     "lastPush": "2026-10-19T22:57:44Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/SWE-agent/SWE-agent",
       "https://github.com/SWE-agent/SWE-agent"
     ],
-    "verifiedAt": "2026-10-20T08:11:21.069Z"
+    "verifiedAt": "2026-10-21T05:52:58.127Z"
   },
   {
     "name": "Gemini CLI",
@@ -134,14 +134,14 @@
     "repoUrl": "https://github.com/google-gemini/gemini-cli",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 107462,
-    "lastPush": "2026-10-20T01:33:51Z",
+    "stars": 107478,
+    "lastPush": "2026-10-21T03:16:53Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/google-gemini/gemini-cli",
       "https://github.com/google-gemini/gemini-cli"
     ],
-    "verifiedAt": "2026-10-20T08:11:21.663Z"
+    "verifiedAt": "2026-10-21T05:52:58.528Z"
   },
   {
     "name": "Qwen Code",
@@ -152,14 +152,14 @@
     "repoUrl": "https://github.com/QwenLM/qwen-code",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 28591,
-    "lastPush": "2026-10-20T08:00:51Z",
+    "stars": 28615,
+    "lastPush": "2026-10-21T05:52:40Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/QwenLM/qwen-code",
       "https://github.com/QwenLM/qwen-code"
     ],
-    "verifiedAt": "2026-10-20T08:11:22.117Z"
+    "verifiedAt": "2026-10-21T05:52:58.969Z"
   },
   {
     "name": "Kilo Code",
@@ -170,14 +170,14 @@
     "repoUrl": "https://github.com/Kilo-Org/kilocode",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 27662,
-    "lastPush": "2026-10-20T07:18:28Z",
+    "stars": 27678,
+    "lastPush": "2026-10-20T22:59:58Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/Kilo-Org/kilocode",
       "https://github.com/Kilo-Org/kilocode"
     ],
-    "verifiedAt": "2026-10-20T08:11:22.641Z"
+    "verifiedAt": "2026-10-21T05:52:59.358Z"
   },
   {
     "name": "Open Interpreter",
@@ -188,14 +188,14 @@
     "repoUrl": "https://github.com/openinterpreter/openinterpreter",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 68614,
+    "stars": 68626,
     "lastPush": "2026-10-11T00:56:06Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/openinterpreter/openinterpreter",
       "https://github.com/openinterpreter/openinterpreter"
     ],
-    "verifiedAt": "2026-10-20T08:11:23.058Z"
+    "verifiedAt": "2026-10-21T05:52:59.701Z"
   },
   {
     "name": "DeepSeek Reasonix",
@@ -206,14 +206,14 @@
     "repoUrl": "https://github.com/esengine/DeepSeek-Reasonix",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 35878,
-    "lastPush": "2026-10-20T08:00:44Z",
+    "stars": 35891,
+    "lastPush": "2026-10-21T05:23:26Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/esengine/DeepSeek-Reasonix",
       "https://github.com/esengine/DeepSeek-Reasonix"
     ],
-    "verifiedAt": "2026-10-20T08:11:23.393Z"
+    "verifiedAt": "2026-10-21T05:52:59.998Z"
   },
   {
     "name": "GitHub MCP Server",
@@ -224,14 +224,14 @@
     "repoUrl": "https://github.com/github/github-mcp-server",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 33780,
+    "stars": 33807,
     "lastPush": "2026-10-19T15:23:31Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/github/github-mcp-server",
       "https://github.com/github/github-mcp-server"
     ],
-    "verifiedAt": "2026-10-20T08:11:23.798Z"
+    "verifiedAt": "2026-10-21T05:53:00.391Z"
   },
   {
     "name": "Playwright MCP",
@@ -242,14 +242,14 @@
     "repoUrl": "https://github.com/microsoft/playwright-mcp",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 38390,
+    "stars": 38447,
     "lastPush": "2026-10-19T15:31:53Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/microsoft/playwright-mcp",
       "https://github.com/microsoft/playwright-mcp"
     ],
-    "verifiedAt": "2026-10-20T08:11:24.216Z"
+    "verifiedAt": "2026-10-21T05:53:00.793Z"
   },
   {
     "name": "Context7",
@@ -260,14 +260,14 @@
     "repoUrl": "https://github.com/upstash/context7",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 63340,
-    "lastPush": "2026-10-19T17:57:04Z",
+    "stars": 63392,
+    "lastPush": "2026-10-20T21:31:09Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/upstash/context7",
       "https://github.com/upstash/context7"
     ],
-    "verifiedAt": "2026-10-20T08:11:24.543Z"
+    "verifiedAt": "2026-10-21T05:53:01.177Z"
   },
   {
     "name": "MCP Reference Servers",
@@ -278,14 +278,14 @@
     "repoUrl": "https://github.com/modelcontextprotocol/servers",
     "license": null,
     "pricingModel": null,
-    "stars": 91397,
+    "stars": 91434,
     "lastPush": "2026-10-19T06:46:48Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/modelcontextprotocol/servers",
       "https://github.com/modelcontextprotocol/servers"
     ],
-    "verifiedAt": "2026-10-20T08:11:24.933Z"
+    "verifiedAt": "2026-10-21T05:53:01.555Z"
   },
   {
     "name": "Chrome DevTools MCP",
@@ -296,32 +296,32 @@
     "repoUrl": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 53885,
-    "lastPush": "2026-10-20T08:09:15Z",
+    "stars": 53917,
+    "lastPush": "2026-10-21T04:14:28Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/ChromeDevTools/chrome-devtools-mcp",
       "https://github.com/ChromeDevTools/chrome-devtools-mcp"
     ],
-    "verifiedAt": "2026-10-20T08:11:25.361Z"
+    "verifiedAt": "2026-10-21T05:53:01.950Z"
   },
   {
     "name": "Codebase Memory MCP",
     "slug": "codebase-memory-mcp",
     "category": "mcp-servers",
-    "description": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 162 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
+    "description": "Local code intelligence for developers and AI agents. Connect code, docs and infrastructure in a persistent graph, with CBM Lens, MCP tools, agent integrations and change-aware test selection.",
     "officialUrl": "https://deusdata.github.io/codebase-memory-mcp/",
     "repoUrl": "https://github.com/DeusData/codebase-memory-mcp",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 46981,
-    "lastPush": "2026-10-20T04:36:05Z",
+    "stars": 47058,
+    "lastPush": "2026-10-21T01:44:39Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/DeusData/codebase-memory-mcp",
       "https://github.com/DeusData/codebase-memory-mcp"
     ],
-    "verifiedAt": "2026-10-20T08:11:25.848Z"
+    "verifiedAt": "2026-10-21T05:53:02.336Z"
   },
   {
     "name": "Serena",
@@ -332,14 +332,14 @@
     "repoUrl": "https://github.com/oraios/serena",
     "license": null,
     "pricingModel": null,
-    "stars": 30410,
-    "lastPush": "2026-10-19T17:30:56Z",
+    "stars": 30527,
+    "lastPush": "2026-10-20T08:47:27Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/oraios/serena",
       "https://github.com/oraios/serena"
     ],
-    "verifiedAt": "2026-10-20T08:11:26.200Z"
+    "verifiedAt": "2026-10-21T05:53:02.695Z"
   },
   {
     "name": "n8n-MCP",
@@ -350,14 +350,14 @@
     "repoUrl": "https://github.com/czlonkowski/n8n-mcp",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 23102,
+    "stars": 23112,
     "lastPush": "2026-10-19T10:07:26Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/czlonkowski/n8n-mcp",
       "https://github.com/czlonkowski/n8n-mcp"
     ],
-    "verifiedAt": "2026-10-20T08:11:26.514Z"
+    "verifiedAt": "2026-10-21T05:53:03.020Z"
   },
   {
     "name": "MCP Toolbox for Databases",
@@ -368,14 +368,14 @@
     "repoUrl": "https://github.com/googleapis/mcp-toolbox",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 16687,
-    "lastPush": "2026-10-19T20:49:39Z",
+    "stars": 16696,
+    "lastPush": "2026-10-21T01:38:52Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/googleapis/mcp-toolbox",
       "https://github.com/googleapis/mcp-toolbox"
     ],
-    "verifiedAt": "2026-10-20T08:11:26.911Z"
+    "verifiedAt": "2026-10-21T05:53:03.526Z"
   },
   {
     "name": "DBHub",
@@ -386,14 +386,14 @@
     "repoUrl": "https://github.com/bytebase/dbhub",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 3686,
-    "lastPush": "2026-10-13T15:23:25Z",
+    "stars": 3696,
+    "lastPush": "2026-10-21T04:19:56Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/bytebase/dbhub",
       "https://github.com/bytebase/dbhub"
     ],
-    "verifiedAt": "2026-10-20T08:11:27.360Z"
+    "verifiedAt": "2026-10-21T05:53:03.870Z"
   },
   {
     "name": "MongoDB MCP Server",
@@ -405,13 +405,13 @@
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
     "stars": 1146,
-    "lastPush": "2026-10-19T11:43:08Z",
+    "lastPush": "2026-10-20T12:18:16Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/mongodb-js/mongodb-mcp-server",
       "https://github.com/mongodb-js/mongodb-mcp-server"
     ],
-    "verifiedAt": "2026-10-20T08:11:27.904Z"
+    "verifiedAt": "2026-10-21T05:53:04.281Z"
   },
   {
     "name": "MySQL MCP Server",
@@ -429,7 +429,7 @@
       "https://api.github.com/repos/designcomputer/mysql_mcp_server",
       "https://github.com/designcomputer/mysql_mcp_server"
     ],
-    "verifiedAt": "2026-10-20T08:11:28.231Z"
+    "verifiedAt": "2026-10-21T05:53:04.628Z"
   },
   {
     "name": "Data API Builder",
@@ -441,13 +441,13 @@
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
     "stars": 1529,
-    "lastPush": "2026-10-20T01:59:09Z",
+    "lastPush": "2026-10-20T21:16:32Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/Azure/data-api-builder",
       "https://github.com/Azure/data-api-builder"
     ],
-    "verifiedAt": "2026-10-20T08:11:28.725Z"
+    "verifiedAt": "2026-10-21T05:53:05.095Z"
   },
   {
     "name": "pREST",
@@ -465,7 +465,7 @@
       "https://api.github.com/repos/prest/prest",
       "https://github.com/prest/prest"
     ],
-    "verifiedAt": "2026-10-20T08:11:29.134Z"
+    "verifiedAt": "2026-10-21T05:53:05.513Z"
   },
   {
     "name": "CrewAI",
@@ -476,14 +476,14 @@
     "repoUrl": "https://github.com/crewAIInc/crewAI",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 59901,
-    "lastPush": "2026-10-20T08:10:52Z",
+    "stars": 59932,
+    "lastPush": "2026-10-20T18:27:29Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/crewAIInc/crewAI",
       "https://github.com/crewAIInc/crewAI"
     ],
-    "verifiedAt": "2026-10-20T08:11:29.481Z"
+    "verifiedAt": "2026-10-21T05:53:05.938Z"
   },
   {
     "name": "AutoGen",
@@ -494,14 +494,14 @@
     "repoUrl": "https://github.com/microsoft/autogen",
     "license": "CC-BY-4.0",
     "pricingModel": null,
-    "stars": 61495,
+    "stars": 61502,
     "lastPush": "2026-10-16T16:14:37Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/microsoft/autogen",
       "https://github.com/microsoft/autogen"
     ],
-    "verifiedAt": "2026-10-20T08:11:29.865Z"
+    "verifiedAt": "2026-10-21T05:53:06.332Z"
   },
   {
     "name": "LangGraph",
@@ -512,14 +512,14 @@
     "repoUrl": "https://github.com/langchain-ai/langgraph",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 43555,
-    "lastPush": "2026-10-19T14:06:21Z",
+    "stars": 43609,
+    "lastPush": "2026-10-21T00:59:52Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/langchain-ai/langgraph",
       "https://github.com/langchain-ai/langgraph"
     ],
-    "verifiedAt": "2026-10-20T08:11:30.220Z"
+    "verifiedAt": "2026-10-21T05:53:06.725Z"
   },
   {
     "name": "Hive",
@@ -530,14 +530,14 @@
     "repoUrl": "https://github.com/aden-hive/hive",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 11112,
+    "stars": 11113,
     "lastPush": "2026-10-19T19:36:02Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/aden-hive/hive",
       "https://github.com/aden-hive/hive"
     ],
-    "verifiedAt": "2026-10-20T08:11:30.556Z"
+    "verifiedAt": "2026-10-21T05:53:07.078Z"
   },
   {
     "name": "Agent Squad",
@@ -555,7 +555,7 @@
       "https://api.github.com/repos/2FastLabs/agent-squad",
       "https://github.com/2FastLabs/agent-squad"
     ],
-    "verifiedAt": "2026-10-20T08:11:31.080Z"
+    "verifiedAt": "2026-10-21T05:53:07.564Z"
   },
   {
     "name": "Open Multi-Agent",
@@ -566,14 +566,14 @@
     "repoUrl": "https://github.com/open-multi-agent/open-multi-agent",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 7006,
-    "lastPush": "2026-10-19T06:24:58Z",
+    "stars": 7009,
+    "lastPush": "2026-10-20T18:36:06Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/open-multi-agent/open-multi-agent",
       "https://github.com/open-multi-agent/open-multi-agent"
     ],
-    "verifiedAt": "2026-10-20T08:11:31.404Z"
+    "verifiedAt": "2026-10-21T05:53:07.931Z"
   },
   {
     "name": "AgentScope Java",
@@ -584,14 +584,14 @@
     "repoUrl": "https://github.com/agentscope-ai/agentscope-java",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 6055,
-    "lastPush": "2026-10-20T06:14:04Z",
+    "stars": 6062,
+    "lastPush": "2026-10-20T14:14:37Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/agentscope-ai/agentscope-java",
       "https://github.com/agentscope-ai/agentscope-java"
     ],
-    "verifiedAt": "2026-10-20T08:11:31.890Z"
+    "verifiedAt": "2026-10-21T05:53:08.287Z"
   },
   {
     "name": "Pydantic AI",
@@ -602,14 +602,14 @@
     "repoUrl": "https://github.com/pydantic/pydantic-ai",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 20747,
-    "lastPush": "2026-10-20T07:46:48Z",
+    "stars": 20758,
+    "lastPush": "2026-10-21T05:51:16Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/pydantic/pydantic-ai",
       "https://github.com/pydantic/pydantic-ai"
     ],
-    "verifiedAt": "2026-10-20T08:11:32.385Z"
+    "verifiedAt": "2026-10-21T05:53:08.640Z"
   },
   {
     "name": "Haystack",
@@ -620,14 +620,14 @@
     "repoUrl": "https://github.com/deepset-ai/haystack",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 26785,
-    "lastPush": "2026-10-20T07:43:02Z",
+    "stars": 26796,
+    "lastPush": "2026-10-21T02:17:13Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/deepset-ai/haystack",
       "https://github.com/deepset-ai/haystack"
     ],
-    "verifiedAt": "2026-10-20T08:11:32.853Z"
+    "verifiedAt": "2026-10-21T05:53:09.097Z"
   },
   {
     "name": "VoltAgent",
@@ -638,14 +638,14 @@
     "repoUrl": "https://github.com/VoltAgent/voltagent",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 10843,
+    "stars": 10854,
     "lastPush": "2026-10-15T17:38:41Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/VoltAgent/voltagent",
       "https://github.com/VoltAgent/voltagent"
     ],
-    "verifiedAt": "2026-10-20T08:11:33.213Z"
+    "verifiedAt": "2026-10-21T05:53:09.463Z"
   },
   {
     "name": "Microsoft Agent Framework",
@@ -656,14 +656,14 @@
     "repoUrl": "https://github.com/microsoft/agent-framework",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 14224,
-    "lastPush": "2026-10-19T21:20:01Z",
+    "stars": 14239,
+    "lastPush": "2026-10-21T01:02:40Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/microsoft/agent-framework",
       "https://github.com/microsoft/agent-framework"
     ],
-    "verifiedAt": "2026-10-20T08:11:33.652Z"
+    "verifiedAt": "2026-10-21T05:53:09.858Z"
   },
   {
     "name": "DeerFlow",
@@ -674,14 +674,14 @@
     "repoUrl": "https://github.com/bytedance/deer-flow",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 84179,
-    "lastPush": "2026-10-20T06:30:57Z",
+    "stars": 84224,
+    "lastPush": "2026-10-21T03:42:45Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/bytedance/deer-flow",
       "https://github.com/bytedance/deer-flow"
     ],
-    "verifiedAt": "2026-10-20T08:11:34.050Z"
+    "verifiedAt": "2026-10-21T05:53:10.219Z"
   },
   {
     "name": "GPT Researcher",
@@ -692,14 +692,14 @@
     "repoUrl": "https://github.com/assafelovic/gpt-researcher",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 30188,
+    "stars": 30207,
     "lastPush": "2026-10-10T22:03:53Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/assafelovic/gpt-researcher",
       "https://github.com/assafelovic/gpt-researcher"
     ],
-    "verifiedAt": "2026-10-20T08:11:34.452Z"
+    "verifiedAt": "2026-10-21T05:53:10.635Z"
   },
   {
     "name": "DeepSearcher",
@@ -717,7 +717,7 @@
       "https://api.github.com/repos/zilliztech/deep-searcher",
       "https://github.com/zilliztech/deep-searcher"
     ],
-    "verifiedAt": "2026-10-20T08:11:34.973Z"
+    "verifiedAt": "2026-10-21T05:53:10.997Z"
   },
   {
     "name": "HyperResearch",
@@ -728,14 +728,14 @@
     "repoUrl": "https://github.com/jordan-gibbs/hyperresearch",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 3887,
+    "stars": 3896,
     "lastPush": "2026-10-10T22:36:54Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/jordan-gibbs/hyperresearch",
       "https://github.com/jordan-gibbs/hyperresearch"
     ],
-    "verifiedAt": "2026-10-20T08:11:35.329Z"
+    "verifiedAt": "2026-10-21T05:53:11.386Z"
   },
   {
     "name": "NVIDIA Deep Researcher Agent",
@@ -753,7 +753,7 @@
       "https://api.github.com/repos/NVIDIA-AI-Blueprints/deep-researcher-agent",
       "https://github.com/NVIDIA-AI-Blueprints/deep-researcher-agent"
     ],
-    "verifiedAt": "2026-10-20T08:11:35.756Z"
+    "verifiedAt": "2026-10-21T05:53:11.964Z"
   },
   {
     "name": "Browser Use",
@@ -764,14 +764,14 @@
     "repoUrl": "https://github.com/browser-use/browser-use",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 118593,
+    "stars": 118696,
     "lastPush": "2026-10-20T06:00:24Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/browser-use/browser-use",
       "https://github.com/browser-use/browser-use"
     ],
-    "verifiedAt": "2026-10-20T08:11:36.143Z"
+    "verifiedAt": "2026-10-21T05:53:12.436Z"
   },
   {
     "name": "UI-TARS Desktop",
@@ -782,14 +782,14 @@
     "repoUrl": "https://github.com/bytedance/UI-TARS-desktop",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 39341,
+    "stars": 39356,
     "lastPush": "2026-10-09T01:29:53Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/bytedance/UI-TARS-desktop",
       "https://github.com/bytedance/UI-TARS-desktop"
     ],
-    "verifiedAt": "2026-10-20T08:11:36.512Z"
+    "verifiedAt": "2026-10-21T05:53:12.989Z"
   },
   {
     "name": "Cua",
@@ -800,14 +800,14 @@
     "repoUrl": "https://github.com/trycua/cua",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 30288,
-    "lastPush": "2026-10-20T08:06:25Z",
+    "stars": 30468,
+    "lastPush": "2026-10-21T05:53:00Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/trycua/cua",
       "https://github.com/trycua/cua"
     ],
-    "verifiedAt": "2026-10-20T08:11:36.902Z"
+    "verifiedAt": "2026-10-21T05:53:13.384Z"
   },
   {
     "name": "Nanobrowser",
@@ -818,14 +818,14 @@
     "repoUrl": "https://github.com/nanobrowser/nanobrowser",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 14132,
+    "stars": 14137,
     "lastPush": "2026-10-15T15:44:39Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/nanobrowser/nanobrowser",
       "https://github.com/nanobrowser/nanobrowser"
     ],
-    "verifiedAt": "2026-10-20T08:11:37.327Z"
+    "verifiedAt": "2026-10-21T05:53:13.812Z"
   },
   {
     "name": "Agent S",
@@ -836,14 +836,14 @@
     "repoUrl": "https://github.com/simular-ai/Agent-S",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 12658,
-    "lastPush": "2026-10-08T22:27:33Z",
+    "stars": 12665,
+    "lastPush": "2026-10-21T05:35:15Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/simular-ai/Agent-S",
       "https://github.com/simular-ai/Agent-S"
     ],
-    "verifiedAt": "2026-10-20T08:11:37.705Z"
+    "verifiedAt": "2026-10-21T05:53:14.153Z"
   },
   {
     "name": "Browser Use Web UI",
@@ -854,14 +854,14 @@
     "repoUrl": "https://github.com/browser-use/web-ui",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 16618,
+    "stars": 16616,
     "lastPush": "2026-09-25T03:56:21Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/browser-use/web-ui",
       "https://github.com/browser-use/web-ui"
     ],
-    "verifiedAt": "2026-10-20T08:11:38.082Z"
+    "verifiedAt": "2026-10-21T05:53:14.570Z"
   },
   {
     "name": "OpenSRE",
@@ -872,14 +872,14 @@
     "repoUrl": "https://github.com/Tracer-Cloud/opensre",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 12247,
-    "lastPush": "2026-10-20T06:42:00Z",
+    "stars": 12309,
+    "lastPush": "2026-10-21T01:15:41Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/Tracer-Cloud/opensre",
       "https://github.com/Tracer-Cloud/opensre"
     ],
-    "verifiedAt": "2026-10-20T08:11:38.469Z"
+    "verifiedAt": "2026-10-21T05:53:14.944Z"
   },
   {
     "name": "HolmesGPT",
@@ -890,14 +890,14 @@
     "repoUrl": "https://github.com/HolmesGPT/holmesgpt",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 3644,
-    "lastPush": "2026-10-20T08:09:06Z",
+    "stars": 3646,
+    "lastPush": "2026-10-21T05:41:27Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/HolmesGPT/holmesgpt",
       "https://github.com/HolmesGPT/holmesgpt"
     ],
-    "verifiedAt": "2026-10-20T08:11:38.893Z"
+    "verifiedAt": "2026-10-21T05:53:15.338Z"
   },
   {
     "name": "OnGrid",
@@ -908,14 +908,14 @@
     "repoUrl": "https://github.com/ongridio/ongrid",
     "license": "AGPL-3.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 1193,
-    "lastPush": "2026-10-19T15:38:14Z",
+    "stars": 1198,
+    "lastPush": "2026-10-21T03:44:53Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/ongridio/ongrid",
       "https://github.com/ongridio/ongrid"
     ],
-    "verifiedAt": "2026-10-20T08:11:39.413Z"
+    "verifiedAt": "2026-10-21T05:53:15.727Z"
   },
   {
     "name": "Versus Incident",
@@ -926,14 +926,14 @@
     "repoUrl": "https://github.com/VersusControl/versus-incident",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 890,
-    "lastPush": "2026-10-19T14:50:35Z",
+    "stars": 895,
+    "lastPush": "2026-10-21T04:04:39Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/VersusControl/versus-incident",
       "https://github.com/VersusControl/versus-incident"
     ],
-    "verifiedAt": "2026-10-20T08:11:39.780Z"
+    "verifiedAt": "2026-10-21T05:53:16.110Z"
   },
   {
     "name": "nanobot",
@@ -944,14 +944,14 @@
     "repoUrl": "https://github.com/HKUDS/nanobot",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 49205,
-    "lastPush": "2026-10-20T08:08:57Z",
+    "stars": 49227,
+    "lastPush": "2026-10-21T05:50:51Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/HKUDS/nanobot",
       "https://github.com/HKUDS/nanobot"
     ],
-    "verifiedAt": "2026-10-20T08:11:40.198Z"
+    "verifiedAt": "2026-10-21T05:53:16.428Z"
   },
   {
     "name": "Leon",
@@ -962,14 +962,14 @@
     "repoUrl": "https://github.com/leon-ai/leon",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 17591,
-    "lastPush": "2026-10-20T06:41:04Z",
+    "stars": 17595,
+    "lastPush": "2026-10-20T12:14:10Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/leon-ai/leon",
       "https://github.com/leon-ai/leon"
     ],
-    "verifiedAt": "2026-10-20T08:11:40.560Z"
+    "verifiedAt": "2026-10-21T05:53:16.766Z"
   },
   {
     "name": "gptme",
@@ -981,13 +981,13 @@
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
     "stars": 4457,
-    "lastPush": "2026-10-20T07:51:30Z",
+    "lastPush": "2026-10-20T18:55:13Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/gptme/gptme",
       "https://github.com/gptme/gptme"
     ],
-    "verifiedAt": "2026-10-20T08:11:40.894Z"
+    "verifiedAt": "2026-10-21T05:53:17.153Z"
   },
   {
     "name": "Waku Agent",
@@ -998,14 +998,14 @@
     "repoUrl": "https://github.com/ShenSeanChen/waku-agent",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 2059,
+    "stars": 2067,
     "lastPush": "2026-10-11T23:44:04Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/ShenSeanChen/waku-agent",
       "https://github.com/ShenSeanChen/waku-agent"
     ],
-    "verifiedAt": "2026-10-20T08:11:41.553Z"
+    "verifiedAt": "2026-10-21T05:53:17.772Z"
   },
   {
     "name": "Herdr",
@@ -1016,14 +1016,14 @@
     "repoUrl": "https://github.com/herdrdev/herdr",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 44880,
+    "stars": 45061,
     "lastPush": "2026-10-18T18:57:09Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/herdrdev/herdr",
       "https://github.com/herdrdev/herdr"
     ],
-    "verifiedAt": "2026-10-20T08:11:41.920Z"
+    "verifiedAt": "2026-10-21T05:53:18.203Z"
   },
   {
     "name": "Codewhale",
@@ -1034,14 +1034,14 @@
     "repoUrl": "https://github.com/codewhale-hq/Codewhale",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 41103,
-    "lastPush": "2026-10-19T19:54:00Z",
+    "stars": 41099,
+    "lastPush": "2026-10-21T04:37:46Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/codewhale-hq/Codewhale",
       "https://github.com/codewhale-hq/Codewhale"
     ],
-    "verifiedAt": "2026-10-20T08:11:42.346Z"
+    "verifiedAt": "2026-10-21T05:53:18.569Z"
   },
   {
     "name": "jcode",
@@ -1052,14 +1052,14 @@
     "repoUrl": "https://github.com/1jehuang/jcode",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 21054,
-    "lastPush": "2026-10-20T07:19:11Z",
+    "stars": 21082,
+    "lastPush": "2026-10-21T03:35:49Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/1jehuang/jcode",
       "https://github.com/1jehuang/jcode"
     ],
-    "verifiedAt": "2026-10-20T08:11:42.694Z"
+    "verifiedAt": "2026-10-21T05:53:18.919Z"
   },
   {
     "name": "Superset",
@@ -1070,14 +1070,14 @@
     "repoUrl": "https://github.com/superset-sh/superset",
     "license": null,
     "pricingModel": null,
-    "stars": 15387,
-    "lastPush": "2026-10-20T07:57:40Z",
+    "stars": 15420,
+    "lastPush": "2026-10-21T05:38:30Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/superset-sh/superset",
       "https://github.com/superset-sh/superset"
     ],
-    "verifiedAt": "2026-10-20T08:11:43.163Z"
+    "verifiedAt": "2026-10-21T05:53:19.254Z"
   },
   {
     "name": "Pydantic DeepAgents",
@@ -1088,14 +1088,14 @@
     "repoUrl": "https://github.com/vstorm-co/pydantic-deepagents",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 1103,
-    "lastPush": "2026-10-19T13:27:10Z",
+    "stars": 1104,
+    "lastPush": "2026-10-20T18:37:56Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/vstorm-co/pydantic-deepagents",
       "https://github.com/vstorm-co/pydantic-deepagents"
     ],
-    "verifiedAt": "2026-10-20T08:11:43.609Z"
+    "verifiedAt": "2026-10-21T05:53:19.617Z"
   },
   {
     "name": "Code Review Graph",
@@ -1106,14 +1106,14 @@
     "repoUrl": "https://github.com/tirth8205/code-review-graph",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 32273,
+    "stars": 32289,
     "lastPush": "2026-10-16T11:20:26Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/tirth8205/code-review-graph",
       "https://github.com/tirth8205/code-review-graph"
     ],
-    "verifiedAt": "2026-10-20T08:11:43.936Z"
+    "verifiedAt": "2026-10-21T05:53:19.947Z"
   },
   {
     "name": "Context Mode",
@@ -1124,14 +1124,14 @@
     "repoUrl": "https://github.com/mksglu/context-mode",
     "license": null,
     "pricingModel": null,
-    "stars": 31200,
-    "lastPush": "2026-10-20T08:08:24Z",
+    "stars": 31433,
+    "lastPush": "2026-10-21T05:52:06Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/mksglu/context-mode",
       "https://github.com/mksglu/context-mode"
     ],
-    "verifiedAt": "2026-10-20T08:11:44.289Z"
+    "verifiedAt": "2026-10-21T05:53:20.294Z"
   },
   {
     "name": "FastMCP",
@@ -1142,14 +1142,14 @@
     "repoUrl": "https://github.com/PrefectHQ/fastmcp",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 28143,
-    "lastPush": "2026-10-20T02:36:41Z",
+    "stars": 28153,
+    "lastPush": "2026-10-21T05:45:50Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/PrefectHQ/fastmcp",
       "https://github.com/PrefectHQ/fastmcp"
     ],
-    "verifiedAt": "2026-10-20T08:11:44.743Z"
+    "verifiedAt": "2026-10-21T05:53:20.699Z"
   },
   {
     "name": "MCP Python SDK",
@@ -1160,14 +1160,14 @@
     "repoUrl": "https://github.com/modelcontextprotocol/python-sdk",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 24624,
+    "stars": 24628,
     "lastPush": "2026-10-17T13:54:39Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/modelcontextprotocol/python-sdk",
       "https://github.com/modelcontextprotocol/python-sdk"
     ],
-    "verifiedAt": "2026-10-20T08:11:45.184Z"
+    "verifiedAt": "2026-10-21T05:53:21.062Z"
   },
   {
     "name": "Blender MCP",
@@ -1178,14 +1178,14 @@
     "repoUrl": "https://github.com/ahujasid/mcp-for-blender",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 31733,
-    "lastPush": "2026-10-20T05:25:11Z",
+    "stars": 31815,
+    "lastPush": "2026-10-20T14:06:32Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/ahujasid/blender-mcp",
       "https://github.com/ahujasid/mcp-for-blender"
     ],
-    "verifiedAt": "2026-10-20T08:11:45.944Z"
+    "verifiedAt": "2026-10-21T05:53:21.881Z"
   },
   {
     "name": "GraphJin",
@@ -1196,14 +1196,14 @@
     "repoUrl": "https://github.com/dosco/graphjin",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 3215,
+    "stars": 3217,
     "lastPush": "2026-10-18T18:04:05Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/dosco/graphjin",
       "https://github.com/dosco/graphjin"
     ],
-    "verifiedAt": "2026-10-20T08:11:46.272Z"
+    "verifiedAt": "2026-10-21T05:53:22.222Z"
   },
   {
     "name": "ktx",
@@ -1214,14 +1214,14 @@
     "repoUrl": "https://github.com/Kaelio/ktx",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 1618,
+    "stars": 1621,
     "lastPush": "2026-10-17T14:29:39Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/Kaelio/ktx",
       "https://github.com/Kaelio/ktx"
     ],
-    "verifiedAt": "2026-10-20T08:11:46.754Z"
+    "verifiedAt": "2026-10-21T05:53:22.563Z"
   },
   {
     "name": "Wren AI",
@@ -1232,14 +1232,14 @@
     "repoUrl": "https://github.com/Canner/WrenAI",
     "license": null,
     "pricingModel": null,
-    "stars": 17910,
-    "lastPush": "2026-10-20T02:46:23Z",
+    "stars": 17922,
+    "lastPush": "2026-10-21T02:41:29Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/Canner/WrenAI",
       "https://github.com/Canner/WrenAI"
     ],
-    "verifiedAt": "2026-10-20T08:11:47.175Z"
+    "verifiedAt": "2026-10-21T05:53:22.927Z"
   },
   {
     "name": "CloudBase AI Toolkit",
@@ -1250,14 +1250,14 @@
     "repoUrl": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 1140,
-    "lastPush": "2026-10-20T07:57:52Z",
+    "stars": 1141,
+    "lastPush": "2026-10-21T05:38:57Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/TencentCloudBase/CloudBase-AI-Toolkit",
       "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit"
     ],
-    "verifiedAt": "2026-10-20T08:11:47.532Z"
+    "verifiedAt": "2026-10-21T05:53:23.298Z"
   },
   {
     "name": "Ruflo",
@@ -1268,14 +1268,14 @@
     "repoUrl": "https://github.com/ruvnet/ruflo",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 77411,
-    "lastPush": "2026-10-20T07:32:20Z",
+    "stars": 77956,
+    "lastPush": "2026-10-21T04:58:37Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/ruvnet/ruflo",
       "https://github.com/ruvnet/ruflo"
     ],
-    "verifiedAt": "2026-10-20T08:11:47.839Z"
+    "verifiedAt": "2026-10-21T05:53:23.610Z"
   },
   {
     "name": "Omnigent",
@@ -1286,14 +1286,14 @@
     "repoUrl": "https://github.com/omnigent-ai/omnigent",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 10914,
-    "lastPush": "2026-10-20T08:02:49Z",
+    "stars": 10941,
+    "lastPush": "2026-10-21T05:50:27Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/omnigent-ai/omnigent",
       "https://github.com/omnigent-ai/omnigent"
     ],
-    "verifiedAt": "2026-10-20T08:11:48.329Z"
+    "verifiedAt": "2026-10-21T05:53:24.069Z"
   },
   {
     "name": "Strands Agents Harness SDK",
@@ -1304,14 +1304,14 @@
     "repoUrl": "https://github.com/strands-agents/harness-sdk",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 8871,
-    "lastPush": "2026-10-20T08:00:27Z",
+    "stars": 8886,
+    "lastPush": "2026-10-21T01:54:19Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/strands-agents/harness-sdk",
       "https://github.com/strands-agents/harness-sdk"
     ],
-    "verifiedAt": "2026-10-20T08:11:48.856Z"
+    "verifiedAt": "2026-10-21T05:53:24.534Z"
   },
   {
     "name": "IntentKit",
@@ -1322,14 +1322,14 @@
     "repoUrl": "https://github.com/crestalnetwork/intentkit",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 6521,
+    "stars": 6523,
     "lastPush": "2026-09-16T12:17:32Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/crestalnetwork/intentkit",
       "https://github.com/crestalnetwork/intentkit"
     ],
-    "verifiedAt": "2026-10-20T08:11:49.428Z"
+    "verifiedAt": "2026-10-21T05:53:25.101Z"
   },
   {
     "name": "Agent Governance Toolkit",
@@ -1341,13 +1341,13 @@
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
     "stars": 6448,
-    "lastPush": "2026-10-20T07:54:46Z",
+    "lastPush": "2026-10-21T05:50:43Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/microsoft/agent-governance-toolkit",
       "https://github.com/microsoft/agent-governance-toolkit"
     ],
-    "verifiedAt": "2026-10-20T08:11:49.797Z"
+    "verifiedAt": "2026-10-21T05:53:25.439Z"
   },
   {
     "name": "txtai",
@@ -1359,13 +1359,13 @@
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
     "stars": 13027,
-    "lastPush": "2026-10-19T16:56:36Z",
+    "lastPush": "2026-10-20T19:54:19Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/neuml/txtai",
       "https://github.com/neuml/txtai"
     ],
-    "verifiedAt": "2026-10-20T08:11:50.626Z"
+    "verifiedAt": "2026-10-21T05:53:26.134Z"
   },
   {
     "name": "n8n",
@@ -1376,14 +1376,14 @@
     "repoUrl": "https://github.com/n8n-io/n8n",
     "license": null,
     "pricingModel": null,
-    "stars": 208098,
-    "lastPush": "2026-10-20T08:11:01Z",
+    "stars": 208170,
+    "lastPush": "2026-10-21T04:07:12Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/n8n-io/n8n",
       "https://github.com/n8n-io/n8n"
     ],
-    "verifiedAt": "2026-10-20T08:11:51.008Z"
+    "verifiedAt": "2026-10-21T05:53:26.478Z"
   },
   {
     "name": "Activepieces",
@@ -1394,14 +1394,14 @@
     "repoUrl": "https://github.com/activepieces/activepieces",
     "license": null,
     "pricingModel": null,
-    "stars": 25128,
-    "lastPush": "2026-10-20T08:10:33Z",
+    "stars": 25142,
+    "lastPush": "2026-10-21T05:35:49Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/activepieces/activepieces",
       "https://github.com/activepieces/activepieces"
     ],
-    "verifiedAt": "2026-10-20T08:11:51.355Z"
+    "verifiedAt": "2026-10-21T05:53:26.814Z"
   },
   {
     "name": "MS-Agent",
@@ -1419,7 +1419,7 @@
       "https://api.github.com/repos/modelscope/ms-agent",
       "https://github.com/modelscope/ms-agent"
     ],
-    "verifiedAt": "2026-10-20T08:11:51.766Z"
+    "verifiedAt": "2026-10-21T05:53:27.163Z"
   },
   {
     "name": "Heurist Agent Framework",
@@ -1430,14 +1430,14 @@
     "repoUrl": "https://github.com/heurist-network/heurist-agent-framework",
     "license": null,
     "pricingModel": null,
-    "stars": 827,
+    "stars": 826,
     "lastPush": "2026-09-02T00:35:36Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/heurist-network/heurist-agent-framework",
       "https://github.com/heurist-network/heurist-agent-framework"
     ],
-    "verifiedAt": "2026-10-20T08:11:52.182Z"
+    "verifiedAt": "2026-10-21T05:53:27.507Z"
   },
   {
     "name": "SGR Agent Core",
@@ -1455,7 +1455,7 @@
       "https://api.github.com/repos/vamplabAI/sgr-agent-core",
       "https://github.com/vamplabAI/sgr-agent-core"
     ],
-    "verifiedAt": "2026-10-20T08:11:52.561Z"
+    "verifiedAt": "2026-10-21T05:53:27.837Z"
   },
   {
     "name": "last30days",
@@ -1466,14 +1466,14 @@
     "repoUrl": "https://github.com/mvanhorn/last30days-skill",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 64818,
-    "lastPush": "2026-10-18T20:12:47Z",
+    "stars": 64905,
+    "lastPush": "2026-10-20T16:41:35Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/mvanhorn/last30days-skill",
       "https://github.com/mvanhorn/last30days-skill"
     ],
-    "verifiedAt": "2026-10-20T08:11:52.870Z"
+    "verifiedAt": "2026-10-21T05:53:28.174Z"
   },
   {
     "name": "Local Deep Research",
@@ -1484,14 +1484,14 @@
     "repoUrl": "https://github.com/LearningCircuit/local-deep-research",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 9366,
-    "lastPush": "2026-10-20T05:09:43Z",
+    "stars": 9372,
+    "lastPush": "2026-10-21T05:27:10Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/LearningCircuit/local-deep-research",
       "https://github.com/LearningCircuit/local-deep-research"
     ],
-    "verifiedAt": "2026-10-20T08:11:53.190Z"
+    "verifiedAt": "2026-10-21T05:53:28.509Z"
   },
   {
     "name": "Deep Research Web UI",
@@ -1502,14 +1502,14 @@
     "repoUrl": "https://github.com/AnotiaWang/deep-research-web-ui",
     "license": null,
     "pricingModel": null,
-    "stars": 2224,
+    "stars": 2223,
     "lastPush": "2026-10-09T01:16:04Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/AnotiaWang/deep-research-web-ui",
       "https://github.com/AnotiaWang/deep-research-web-ui"
     ],
-    "verifiedAt": "2026-10-20T08:11:53.895Z"
+    "verifiedAt": "2026-10-21T05:53:29.293Z"
   },
   {
     "name": "DeepGit",
@@ -1527,7 +1527,7 @@
       "https://api.github.com/repos/zamalali/DeepGit",
       "https://github.com/zamalali/DeepGit"
     ],
-    "verifiedAt": "2026-10-20T08:11:54.623Z"
+    "verifiedAt": "2026-10-21T05:53:29.737Z"
   },
   {
     "name": "DocsGPT",
@@ -1538,14 +1538,14 @@
     "repoUrl": "https://github.com/arc53/DocsGPT",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 18326,
-    "lastPush": "2026-10-19T22:09:33Z",
+    "stars": 18330,
+    "lastPush": "2026-10-21T04:34:06Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/arc53/DocsGPT",
       "https://github.com/arc53/DocsGPT"
     ],
-    "verifiedAt": "2026-10-20T08:11:55.041Z"
+    "verifiedAt": "2026-10-21T05:53:30.072Z"
   },
   {
     "name": "OpenCLI",
@@ -1556,14 +1556,14 @@
     "repoUrl": "https://github.com/jackwener/OpenCLI",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 30458,
-    "lastPush": "2026-10-19T17:56:06Z",
+    "stars": 30483,
+    "lastPush": "2026-10-20T16:37:07Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/jackwener/OpenCLI",
       "https://github.com/jackwener/OpenCLI"
     ],
-    "verifiedAt": "2026-10-20T08:11:55.360Z"
+    "verifiedAt": "2026-10-21T05:53:30.380Z"
   },
   {
     "name": "Obscura",
@@ -1574,14 +1574,14 @@
     "repoUrl": "https://github.com/h4ckf0r0day/obscura",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 29065,
-    "lastPush": "2026-10-19T18:20:08Z",
+    "stars": 29090,
+    "lastPush": "2026-10-21T05:06:58Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/h4ckf0r0day/obscura",
       "https://github.com/h4ckf0r0day/obscura"
     ],
-    "verifiedAt": "2026-10-20T08:11:55.671Z"
+    "verifiedAt": "2026-10-21T05:53:30.787Z"
   },
   {
     "name": "Moli",
@@ -1592,14 +1592,14 @@
     "repoUrl": "https://github.com/lexmount/moli",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 19762,
-    "lastPush": "2026-10-20T07:51:05Z",
+    "stars": 19926,
+    "lastPush": "2026-10-21T05:32:53Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/lexmount/moli",
       "https://github.com/lexmount/moli"
     ],
-    "verifiedAt": "2026-10-20T08:11:56.066Z"
+    "verifiedAt": "2026-10-21T05:53:31.160Z"
   },
   {
     "name": "Ego Lite",
@@ -1610,14 +1610,14 @@
     "repoUrl": "https://github.com/citrolabs/ego-lite",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 17896,
-    "lastPush": "2026-10-20T07:40:02Z",
+    "stars": 18282,
+    "lastPush": "2026-10-20T08:13:01Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/citrolabs/ego-lite",
       "https://github.com/citrolabs/ego-lite"
     ],
-    "verifiedAt": "2026-10-20T08:11:56.443Z"
+    "verifiedAt": "2026-10-21T05:53:31.494Z"
   },
   {
     "name": "Midscene",
@@ -1628,14 +1628,14 @@
     "repoUrl": "https://github.com/web-infra-dev/midscene",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 15329,
-    "lastPush": "2026-10-20T07:43:17Z",
+    "stars": 15344,
+    "lastPush": "2026-10-21T05:14:02Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/web-infra-dev/midscene",
       "https://github.com/web-infra-dev/midscene"
     ],
-    "verifiedAt": "2026-10-20T08:11:56.982Z"
+    "verifiedAt": "2026-10-21T05:53:31.828Z"
   },
   {
     "name": "Steel Browser",
@@ -1646,14 +1646,14 @@
     "repoUrl": "https://github.com/steel-dev/steel-browser",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 7845,
+    "stars": 7850,
     "lastPush": "2026-10-20T02:53:05Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/steel-dev/steel-browser",
       "https://github.com/steel-dev/steel-browser"
     ],
-    "verifiedAt": "2026-10-20T08:11:57.323Z"
+    "verifiedAt": "2026-10-21T05:53:32.192Z"
   },
   {
     "name": "OpenBot",
@@ -1664,14 +1664,14 @@
     "repoUrl": "https://github.com/CopilotKit/OpenBot",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 6695,
-    "lastPush": "2026-10-19T23:41:15Z",
+    "stars": 6769,
+    "lastPush": "2026-10-20T22:48:32Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/CopilotKit/OpenBot",
       "https://github.com/CopilotKit/OpenBot"
     ],
-    "verifiedAt": "2026-10-20T08:11:57.766Z"
+    "verifiedAt": "2026-10-21T05:53:32.509Z"
   },
   {
     "name": "TuriX CUA",
@@ -1682,14 +1682,14 @@
     "repoUrl": "https://github.com/TurixAI/TuriX-CUA",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 3173,
+    "stars": 3174,
     "lastPush": "2026-09-14T06:52:24Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/TurixAI/TuriX-CUA",
       "https://github.com/TurixAI/TuriX-CUA"
     ],
-    "verifiedAt": "2026-10-20T08:11:59.138Z"
+    "verifiedAt": "2026-10-21T05:53:32.877Z"
   },
   {
     "name": "ITOps Agent Platform",
@@ -1700,14 +1700,14 @@
     "repoUrl": "https://github.com/qinshihu/itops-agent-platform",
     "license": null,
     "pricingModel": null,
-    "stars": 944,
+    "stars": 942,
     "lastPush": "2026-10-19T01:15:04Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/qinshihu/itops-agent-platform",
       "https://github.com/qinshihu/itops-agent-platform"
     ],
-    "verifiedAt": "2026-10-20T08:11:59.455Z"
+    "verifiedAt": "2026-10-21T05:53:33.235Z"
   },
   {
     "name": "Flawless",
@@ -1725,7 +1725,7 @@
       "https://api.github.com/repos/William-Lu-stack/Flawless",
       "https://github.com/William-Lu-stack/Flawless"
     ],
-    "verifiedAt": "2026-10-20T08:11:59.860Z"
+    "verifiedAt": "2026-10-21T05:53:33.555Z"
   },
   {
     "name": "Khoj",
@@ -1736,14 +1736,14 @@
     "repoUrl": "https://github.com/khoj-ai/khoj",
     "license": "AGPL-3.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 37754,
+    "stars": 37765,
     "lastPush": "2026-08-02T01:55:40Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/khoj-ai/khoj",
       "https://github.com/khoj-ai/khoj"
     ],
-    "verifiedAt": "2026-10-20T08:12:00.228Z"
+    "verifiedAt": "2026-10-21T05:53:33.924Z"
   },
   {
     "name": "AnythingLLM",
@@ -1754,14 +1754,14 @@
     "repoUrl": "https://github.com/Mintplex-Labs/anything-llm",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 67343,
-    "lastPush": "2026-10-20T00:34:27Z",
+    "stars": 67374,
+    "lastPush": "2026-10-21T00:01:57Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/Mintplex-Labs/anything-llm",
       "https://github.com/Mintplex-Labs/anything-llm"
     ],
-    "verifiedAt": "2026-10-20T08:12:00.613Z"
+    "verifiedAt": "2026-10-21T05:53:34.280Z"
   },
   {
     "name": "Eigent",
@@ -1772,14 +1772,14 @@
     "repoUrl": "https://github.com/eigent-ai/eigent",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 15618,
-    "lastPush": "2026-10-19T09:33:49Z",
+    "stars": 15626,
+    "lastPush": "2026-10-20T10:05:08Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/eigent-ai/eigent",
       "https://github.com/eigent-ai/eigent"
     ],
-    "verifiedAt": "2026-10-20T08:12:00.957Z"
+    "verifiedAt": "2026-10-21T05:53:34.604Z"
   },
   {
     "name": "Sidekick",
@@ -1797,7 +1797,7 @@
       "https://api.github.com/repos/johnbean393/Sidekick",
       "https://github.com/johnbean393/Sidekick"
     ],
-    "verifiedAt": "2026-10-20T08:12:01.300Z"
+    "verifiedAt": "2026-10-21T05:53:34.976Z"
   },
   {
     "name": "Atomic Agent",
@@ -1808,14 +1808,14 @@
     "repoUrl": "https://github.com/AtomicBot-ai/atomic-agent",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 3412,
+    "stars": 3424,
     "lastPush": "2026-10-19T17:28:11Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/AtomicBot-ai/atomic-agent",
       "https://github.com/AtomicBot-ai/atomic-agent"
     ],
-    "verifiedAt": "2026-10-20T08:12:01.722Z"
+    "verifiedAt": "2026-10-21T05:53:35.505Z"
   },
   {
     "name": "OpenCrabs",
@@ -1826,14 +1826,14 @@
     "repoUrl": "https://github.com/opencrabs/opencrabs",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 999,
-    "lastPush": "2026-10-20T03:36:12Z",
+    "stars": 1004,
+    "lastPush": "2026-10-21T05:30:36Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/opencrabs/opencrabs",
       "https://github.com/opencrabs/opencrabs"
     ],
-    "verifiedAt": "2026-10-20T08:12:02.113Z"
+    "verifiedAt": "2026-10-21T05:53:35.827Z"
   },
   {
     "name": "Skales",
@@ -1844,14 +1844,14 @@
     "repoUrl": "https://github.com/skalesapp/skales",
     "license": null,
     "pricingModel": null,
-    "stars": 2200,
+    "stars": 2201,
     "lastPush": "2026-10-19T18:40:23Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/skalesapp/skales",
       "https://github.com/skalesapp/skales"
     ],
-    "verifiedAt": "2026-10-20T08:12:02.484Z"
+    "verifiedAt": "2026-10-21T05:53:36.232Z"
   },
   {
     "name": "CORE",
@@ -1869,7 +1869,7 @@
       "https://api.github.com/repos/RedPlanetHQ/core",
       "https://github.com/RedPlanetHQ/core"
     ],
-    "verifiedAt": "2026-10-20T08:12:03.031Z"
+    "verifiedAt": "2026-10-21T05:53:36.591Z"
   },
   {
     "name": "Talorys",
@@ -1880,14 +1880,14 @@
     "repoUrl": "https://github.com/rociiu/talorys",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 1345,
-    "lastPush": "2026-10-19T00:20:10Z",
+    "stars": 1361,
+    "lastPush": "2026-10-21T03:16:17Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/rociiu/talorys",
       "https://github.com/rociiu/talorys"
     ],
-    "verifiedAt": "2026-10-20T08:12:03.388Z"
+    "verifiedAt": "2026-10-21T05:53:36.900Z"
   },
   {
     "name": "Crush",
@@ -1898,14 +1898,14 @@
     "repoUrl": "https://github.com/charmbracelet/crush",
     "license": null,
     "pricingModel": null,
-    "stars": 28719,
-    "lastPush": "2026-10-20T01:30:26Z",
+    "stars": 28724,
+    "lastPush": "2026-10-21T01:02:23Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/charmbracelet/crush",
       "https://github.com/charmbracelet/crush"
     ],
-    "verifiedAt": "2026-10-20T08:12:03.752Z"
+    "verifiedAt": "2026-10-21T05:53:37.228Z"
   },
   {
     "name": "DeepCode",
@@ -1916,14 +1916,14 @@
     "repoUrl": "https://github.com/HKUDS/DeepCode",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 16736,
+    "stars": 16739,
     "lastPush": "2026-10-14T12:39:54Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/HKUDS/DeepCode",
       "https://github.com/HKUDS/DeepCode"
     ],
-    "verifiedAt": "2026-10-20T08:12:04.133Z"
+    "verifiedAt": "2026-10-21T05:53:37.602Z"
   },
   {
     "name": "Claurst",
@@ -1941,7 +1941,7 @@
       "https://api.github.com/repos/Kuberwastaken/claurst",
       "https://github.com/Kuberwastaken/claurst"
     ],
-    "verifiedAt": "2026-10-20T08:12:04.458Z"
+    "verifiedAt": "2026-10-21T05:53:37.974Z"
   },
   {
     "name": "Forge",
@@ -1952,14 +1952,14 @@
     "repoUrl": "https://github.com/tailcallhq/forgecode",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 7635,
-    "lastPush": "2026-10-19T22:41:10Z",
+    "stars": 7638,
+    "lastPush": "2026-10-21T03:21:27Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/tailcallhq/forgecode",
       "https://github.com/tailcallhq/forgecode"
     ],
-    "verifiedAt": "2026-10-20T08:12:04.842Z"
+    "verifiedAt": "2026-10-21T05:53:38.329Z"
   },
   {
     "name": "ANUS",
@@ -1977,7 +1977,7 @@
       "https://api.github.com/repos/anus-dev/ANUS",
       "https://github.com/anus-dev/ANUS"
     ],
-    "verifiedAt": "2026-10-20T08:12:05.218Z"
+    "verifiedAt": "2026-10-21T05:53:38.663Z"
   },
   {
     "name": "CodeCompanion",
@@ -1989,13 +1989,13 @@
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
     "stars": 6899,
-    "lastPush": "2026-10-19T20:42:55Z",
+    "lastPush": "2026-10-20T20:41:38Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/olimorris/codecompanion.nvim",
       "https://github.com/olimorris/codecompanion.nvim"
     ],
-    "verifiedAt": "2026-10-20T08:12:05.627Z"
+    "verifiedAt": "2026-10-21T05:53:38.978Z"
   },
   {
     "name": "mini-SWE-agent",
@@ -2006,14 +2006,14 @@
     "repoUrl": "https://github.com/SWE-agent/mini-swe-agent",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 8673,
+    "stars": 8693,
     "lastPush": "2026-10-19T22:57:58Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/SWE-agent/mini-swe-agent",
       "https://github.com/SWE-agent/mini-swe-agent"
     ],
-    "verifiedAt": "2026-10-20T08:12:06.157Z"
+    "verifiedAt": "2026-10-21T05:53:39.363Z"
   },
   {
     "name": "Claude Squad",
@@ -2024,14 +2024,14 @@
     "repoUrl": "https://github.com/smtg-ai/claude-squad",
     "license": "AGPL-3.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 8631,
+    "stars": 8639,
     "lastPush": "2026-08-20T05:09:53Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/smtg-ai/claude-squad",
       "https://github.com/smtg-ai/claude-squad"
     ],
-    "verifiedAt": "2026-10-20T08:12:06.545Z"
+    "verifiedAt": "2026-10-21T05:53:39.721Z"
   },
   {
     "name": "Agent Orchestrator",
@@ -2042,14 +2042,14 @@
     "repoUrl": "https://github.com/OrchestratorInc/agent-orchestrator",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 13396,
-    "lastPush": "2026-10-20T08:09:58Z",
+    "stars": 13427,
+    "lastPush": "2026-10-21T05:51:40Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/OrchestratorInc/agent-orchestrator",
       "https://github.com/OrchestratorInc/agent-orchestrator"
     ],
-    "verifiedAt": "2026-10-20T08:12:06.927Z"
+    "verifiedAt": "2026-10-21T05:53:40.036Z"
   },
   {
     "name": "Desktop Commander MCP",
@@ -2060,14 +2060,14 @@
     "repoUrl": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 10104,
-    "lastPush": "2026-10-19T23:07:49Z",
+    "stars": 10088,
+    "lastPush": "2026-10-20T23:43:39Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/wonderwhy-er/DesktopCommanderMCP",
       "https://github.com/wonderwhy-er/DesktopCommanderMCP"
     ],
-    "verifiedAt": "2026-10-20T08:12:07.254Z"
+    "verifiedAt": "2026-10-21T05:53:40.364Z"
   },
   {
     "name": "AWS MCP Servers",
@@ -2078,14 +2078,14 @@
     "repoUrl": "https://github.com/awslabs/mcp",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 9796,
-    "lastPush": "2026-10-20T00:04:06Z",
+    "stars": 9800,
+    "lastPush": "2026-10-21T03:41:43Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/awslabs/mcp",
       "https://github.com/awslabs/mcp"
     ],
-    "verifiedAt": "2026-10-20T08:12:07.723Z"
+    "verifiedAt": "2026-10-21T05:53:40.802Z"
   },
   {
     "name": "Firecrawl MCP Server",
@@ -2096,14 +2096,14 @@
     "repoUrl": "https://github.com/firecrawl/firecrawl-mcp-server",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 7642,
-    "lastPush": "2026-10-20T05:28:21Z",
+    "stars": 7655,
+    "lastPush": "2026-10-21T05:08:42Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/firecrawl/firecrawl-mcp-server",
       "https://github.com/firecrawl/firecrawl-mcp-server"
     ],
-    "verifiedAt": "2026-10-20T08:12:08.081Z"
+    "verifiedAt": "2026-10-21T05:53:41.274Z"
   },
   {
     "name": "Apify MCP Server",
@@ -2114,14 +2114,14 @@
     "repoUrl": "https://github.com/apify/apify-mcp-server",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 12135,
-    "lastPush": "2026-10-20T03:55:56Z",
+    "stars": 12316,
+    "lastPush": "2026-10-21T01:43:50Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/apify/apify-mcp-server",
       "https://github.com/apify/apify-mcp-server"
     ],
-    "verifiedAt": "2026-10-20T08:12:08.533Z"
+    "verifiedAt": "2026-10-21T05:53:41.680Z"
   },
   {
     "name": "MCP TypeScript SDK",
@@ -2132,14 +2132,14 @@
     "repoUrl": "https://github.com/modelcontextprotocol/typescript-sdk",
     "license": null,
     "pricingModel": null,
-    "stars": 13619,
-    "lastPush": "2026-10-20T00:17:05Z",
+    "stars": 13631,
+    "lastPush": "2026-10-20T22:11:45Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/modelcontextprotocol/typescript-sdk",
       "https://github.com/modelcontextprotocol/typescript-sdk"
     ],
-    "verifiedAt": "2026-10-20T08:12:08.925Z"
+    "verifiedAt": "2026-10-21T05:53:42.039Z"
   },
   {
     "name": "mcp-use",
@@ -2150,14 +2150,14 @@
     "repoUrl": "https://github.com/mcp-use/mcp-use",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 10790,
-    "lastPush": "2026-10-20T03:13:37Z",
+    "stars": 10791,
+    "lastPush": "2026-10-21T01:41:09Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/mcp-use/mcp-use",
       "https://github.com/mcp-use/mcp-use"
     ],
-    "verifiedAt": "2026-10-20T08:12:09.376Z"
+    "verifiedAt": "2026-10-21T05:53:42.361Z"
   },
   {
     "name": "IDA Pro MCP",
@@ -2168,14 +2168,14 @@
     "repoUrl": "https://github.com/mrexodia/ida-pro-mcp",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 13037,
+    "stars": 13062,
     "lastPush": "2026-09-26T15:42:10Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/mrexodia/ida-pro-mcp",
       "https://github.com/mrexodia/ida-pro-mcp"
     ],
-    "verifiedAt": "2026-10-20T08:12:09.825Z"
+    "verifiedAt": "2026-10-21T05:53:42.672Z"
   },
   {
     "name": "Unity MCP",
@@ -2186,14 +2186,14 @@
     "repoUrl": "https://github.com/CoplayDev/unity-mcp",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 15212,
+    "stars": 15252,
     "lastPush": "2026-10-19T18:48:57Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/CoplayDev/unity-mcp",
       "https://github.com/CoplayDev/unity-mcp"
     ],
-    "verifiedAt": "2026-10-20T08:12:10.172Z"
+    "verifiedAt": "2026-10-21T05:53:43.022Z"
   },
   {
     "name": "Browser Tools MCP",
@@ -2204,14 +2204,14 @@
     "repoUrl": "https://github.com/AgentDeskAI/browser-tools-mcp",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 7328,
+    "stars": 7329,
     "lastPush": "2026-10-16T18:21:25Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/AgentDeskAI/browser-tools-mcp",
       "https://github.com/AgentDeskAI/browser-tools-mcp"
     ],
-    "verifiedAt": "2026-10-20T08:12:10.589Z"
+    "verifiedAt": "2026-10-21T05:53:43.404Z"
   },
   {
     "name": "Talk to Figma MCP",
@@ -2222,14 +2222,14 @@
     "repoUrl": "https://github.com/grab/cursor-talk-to-figma-mcp",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 7063,
+    "stars": 7067,
     "lastPush": "2026-07-26T07:14:26Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/grab/cursor-talk-to-figma-mcp",
       "https://github.com/grab/cursor-talk-to-figma-mcp"
     ],
-    "verifiedAt": "2026-10-20T08:12:10.957Z"
+    "verifiedAt": "2026-10-21T05:53:43.734Z"
   },
   {
     "name": "Mobile Build MCP",
@@ -2240,14 +2240,14 @@
     "repoUrl": "https://github.com/getsentry/MobileBuildMCP",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 6489,
-    "lastPush": "2026-10-17T07:36:26Z",
+    "stars": 6495,
+    "lastPush": "2026-10-21T04:21:09Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/getsentry/MobileBuildMCP",
       "https://github.com/getsentry/MobileBuildMCP"
     ],
-    "verifiedAt": "2026-10-20T08:12:11.400Z"
+    "verifiedAt": "2026-10-21T05:53:44.116Z"
   },
   {
     "name": "Swarms",
@@ -2258,14 +2258,14 @@
     "repoUrl": "https://github.com/kyegomez/swarms",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 7283,
-    "lastPush": "2026-10-20T03:41:33Z",
+    "stars": 7285,
+    "lastPush": "2026-10-20T23:42:17Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/kyegomez/swarms",
       "https://github.com/kyegomez/swarms"
     ],
-    "verifiedAt": "2026-10-20T08:12:11.724Z"
+    "verifiedAt": "2026-10-21T05:53:44.465Z"
   },
   {
     "name": "PraisonAI",
@@ -2276,14 +2276,14 @@
     "repoUrl": "https://github.com/MervinPraison/PraisonAI",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 9278,
-    "lastPush": "2026-10-20T01:29:40Z",
+    "stars": 9281,
+    "lastPush": "2026-10-20T10:19:11Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/MervinPraison/PraisonAI",
       "https://github.com/MervinPraison/PraisonAI"
     ],
-    "verifiedAt": "2026-10-20T08:12:12.055Z"
+    "verifiedAt": "2026-10-21T05:53:44.808Z"
   },
   {
     "name": "AgentScope",
@@ -2294,14 +2294,14 @@
     "repoUrl": "https://github.com/agentscope-ai/agentscope",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 33525,
-    "lastPush": "2026-10-20T07:03:16Z",
+    "stars": 33568,
+    "lastPush": "2026-10-21T03:32:29Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/agentscope-ai/agentscope",
       "https://github.com/agentscope-ai/agentscope"
     ],
-    "verifiedAt": "2026-10-20T08:12:12.449Z"
+    "verifiedAt": "2026-10-21T05:53:45.139Z"
   },
   {
     "name": "Paperclip",
@@ -2312,14 +2312,14 @@
     "repoUrl": "https://github.com/paperclipai/paperclip",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 104920,
-    "lastPush": "2026-10-20T07:11:26Z",
+    "stars": 105326,
+    "lastPush": "2026-10-21T05:49:45Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/paperclipai/paperclip",
       "https://github.com/paperclipai/paperclip"
     ],
-    "verifiedAt": "2026-10-20T08:12:12.981Z"
+    "verifiedAt": "2026-10-21T05:53:45.465Z"
   },
   {
     "name": "Agent Development Kit (Python)",
@@ -2330,14 +2330,14 @@
     "repoUrl": "https://github.com/google/adk-python",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 21918,
-    "lastPush": "2026-10-20T04:51:08Z",
+    "stars": 21932,
+    "lastPush": "2026-10-21T05:31:44Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/google/adk-python",
       "https://github.com/google/adk-python"
     ],
-    "verifiedAt": "2026-10-20T08:12:13.352Z"
+    "verifiedAt": "2026-10-21T05:53:45.840Z"
   },
   {
     "name": "Letta",
@@ -2348,14 +2348,14 @@
     "repoUrl": "https://github.com/letta-ai/letta",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 25199,
+    "stars": 25211,
     "lastPush": "2026-10-18T22:28:04Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/letta-ai/letta",
       "https://github.com/letta-ai/letta"
     ],
-    "verifiedAt": "2026-10-20T08:12:13.781Z"
+    "verifiedAt": "2026-10-21T05:53:46.170Z"
   },
   {
     "name": "Spring AI Alibaba",
@@ -2366,14 +2366,14 @@
     "repoUrl": "https://github.com/alibaba/spring-ai-alibaba",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 11037,
+    "stars": 11042,
     "lastPush": "2026-10-07T13:48:56Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/alibaba/spring-ai-alibaba",
       "https://github.com/alibaba/spring-ai-alibaba"
     ],
-    "verifiedAt": "2026-10-20T08:12:14.146Z"
+    "verifiedAt": "2026-10-21T05:53:46.514Z"
   },
   {
     "name": "Pocket Flow",
@@ -2384,14 +2384,14 @@
     "repoUrl": "https://github.com/The-Pocket/PocketFlow",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 11265,
+    "stars": 11268,
     "lastPush": "2026-07-26T16:13:20Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/The-Pocket/PocketFlow",
       "https://github.com/The-Pocket/PocketFlow"
     ],
-    "verifiedAt": "2026-10-20T08:12:14.543Z"
+    "verifiedAt": "2026-10-21T05:53:46.882Z"
   },
   {
     "name": "Agent Lightning",
@@ -2402,14 +2402,14 @@
     "repoUrl": "https://github.com/microsoft/agent-lightning",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 18764,
+    "stars": 18774,
     "lastPush": "2026-10-20T02:25:57Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/microsoft/agent-lightning",
       "https://github.com/microsoft/agent-lightning"
     ],
-    "verifiedAt": "2026-10-20T08:12:15.061Z"
+    "verifiedAt": "2026-10-21T05:53:47.258Z"
   },
   {
     "name": "AutoGPT",
@@ -2420,14 +2420,14 @@
     "repoUrl": "https://github.com/Significant-Gravitas/AutoGPT",
     "license": null,
     "pricingModel": null,
-    "stars": 187667,
-    "lastPush": "2026-10-20T08:08:32Z",
+    "stars": 187687,
+    "lastPush": "2026-10-21T05:52:44Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/Significant-Gravitas/AutoGPT",
       "https://github.com/Significant-Gravitas/AutoGPT"
     ],
-    "verifiedAt": "2026-10-20T08:12:15.630Z"
+    "verifiedAt": "2026-10-21T05:53:47.643Z"
   },
   {
     "name": "Dify",
@@ -2438,14 +2438,14 @@
     "repoUrl": "https://github.com/langgenius/dify",
     "license": null,
     "pricingModel": null,
-    "stars": 158983,
-    "lastPush": "2026-10-20T08:11:05Z",
+    "stars": 159090,
+    "lastPush": "2026-10-21T05:53:04Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/langgenius/dify",
       "https://github.com/langgenius/dify"
     ],
-    "verifiedAt": "2026-10-20T08:12:16.112Z"
+    "verifiedAt": "2026-10-21T05:53:47.985Z"
   },
   {
     "name": "Composio",
@@ -2456,14 +2456,14 @@
     "repoUrl": "https://github.com/ComposioHQ/composio",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 30644,
-    "lastPush": "2026-10-20T06:40:30Z",
+    "stars": 30659,
+    "lastPush": "2026-10-21T05:05:18Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/ComposioHQ/composio",
       "https://github.com/ComposioHQ/composio"
     ],
-    "verifiedAt": "2026-10-20T08:12:16.523Z"
+    "verifiedAt": "2026-10-21T05:53:48.365Z"
   },
   {
     "name": "CopilotKit",
@@ -2474,14 +2474,14 @@
     "repoUrl": "https://github.com/CopilotKit/CopilotKit",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 38131,
-    "lastPush": "2026-10-20T08:03:00Z",
+    "stars": 38146,
+    "lastPush": "2026-10-21T05:41:20Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/CopilotKit/CopilotKit",
       "https://github.com/CopilotKit/CopilotKit"
     ],
-    "verifiedAt": "2026-10-20T08:12:16.890Z"
+    "verifiedAt": "2026-10-21T05:53:48.699Z"
   },
   {
     "name": "Trigger.dev",
@@ -2492,14 +2492,14 @@
     "repoUrl": "https://github.com/triggerdotdev/trigger.dev",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 16584,
-    "lastPush": "2026-10-20T07:52:41Z",
+    "stars": 16590,
+    "lastPush": "2026-10-20T20:58:29Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/triggerdotdev/trigger.dev",
       "https://github.com/triggerdotdev/trigger.dev"
     ],
-    "verifiedAt": "2026-10-20T08:12:17.294Z"
+    "verifiedAt": "2026-10-21T05:53:49.134Z"
   },
   {
     "name": "Astron Agent",
@@ -2510,14 +2510,14 @@
     "repoUrl": "https://github.com/iflytek/astron-agent",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 8917,
-    "lastPush": "2026-10-14T07:25:39Z",
+    "stars": 8920,
+    "lastPush": "2026-10-21T03:14:48Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/iflytek/astron-agent",
       "https://github.com/iflytek/astron-agent"
     ],
-    "verifiedAt": "2026-10-20T08:12:17.702Z"
+    "verifiedAt": "2026-10-21T05:53:49.466Z"
   },
   {
     "name": "CowAgent",
@@ -2528,14 +2528,14 @@
     "repoUrl": "https://github.com/zhayujie/CowAgent",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 47470,
-    "lastPush": "2026-10-20T02:58:42Z",
+    "stars": 47489,
+    "lastPush": "2026-10-20T10:34:55Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/zhayujie/CowAgent",
       "https://github.com/zhayujie/CowAgent"
     ],
-    "verifiedAt": "2026-10-20T08:12:18.022Z"
+    "verifiedAt": "2026-10-21T05:53:49.776Z"
   },
   {
     "name": "agenticSeek",
@@ -2546,14 +2546,14 @@
     "repoUrl": "https://github.com/Fosowl/agenticSeek",
     "license": "GPL-3.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 27514,
+    "stars": 27517,
     "lastPush": "2026-10-15T19:02:25Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/Fosowl/agenticSeek",
       "https://github.com/Fosowl/agenticSeek"
     ],
-    "verifiedAt": "2026-10-20T08:12:18.347Z"
+    "verifiedAt": "2026-10-21T05:53:50.181Z"
   },
   {
     "name": "Octop",
@@ -2564,14 +2564,14 @@
     "repoUrl": "https://github.com/TencentCloud/Octop",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 10372,
-    "lastPush": "2026-10-20T07:38:33Z",
+    "stars": 10518,
+    "lastPush": "2026-10-21T05:07:15Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/TencentCloud/Octop",
       "https://github.com/TencentCloud/Octop"
     ],
-    "verifiedAt": "2026-10-20T08:12:18.799Z"
+    "verifiedAt": "2026-10-21T05:53:50.536Z"
   },
   {
     "name": "Osaurus",
@@ -2582,14 +2582,14 @@
     "repoUrl": "https://github.com/osaurus-ai/osaurus",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 8056,
-    "lastPush": "2026-10-20T08:04:54Z",
+    "stars": 8061,
+    "lastPush": "2026-10-21T05:13:56Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/osaurus-ai/osaurus",
       "https://github.com/osaurus-ai/osaurus"
     ],
-    "verifiedAt": "2026-10-20T08:12:19.262Z"
+    "verifiedAt": "2026-10-21T05:53:50.867Z"
   },
   {
     "name": "DeepChat",
@@ -2601,13 +2601,13 @@
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
     "stars": 6372,
-    "lastPush": "2026-10-20T06:54:24Z",
+    "lastPush": "2026-10-20T13:35:07Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/ThinkInAIXYZ/deepchat",
       "https://github.com/ThinkInAIXYZ/deepchat"
     ],
-    "verifiedAt": "2026-10-20T08:12:19.653Z"
+    "verifiedAt": "2026-10-21T05:53:51.238Z"
   },
   {
     "name": "holaOS",
@@ -2618,14 +2618,14 @@
     "repoUrl": "https://github.com/holaboss-ai/holaOS",
     "license": null,
     "pricingModel": null,
-    "stars": 11456,
+    "stars": 11458,
     "lastPush": "2026-08-21T13:11:13Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/holaboss-ai/holaOS",
       "https://github.com/holaboss-ai/holaOS"
     ],
-    "verifiedAt": "2026-10-20T08:12:20.129Z"
+    "verifiedAt": "2026-10-21T05:53:51.757Z"
   },
   {
     "name": "Ekko Studio",
@@ -2636,14 +2636,14 @@
     "repoUrl": "https://github.com/EKKOLearnAI/ekko-studio",
     "license": null,
     "pricingModel": null,
-    "stars": 11477,
-    "lastPush": "2026-10-20T08:02:05Z",
+    "stars": 11492,
+    "lastPush": "2026-10-21T03:30:00Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/EKKOLearnAI/ekko-studio",
       "https://github.com/EKKOLearnAI/ekko-studio"
     ],
-    "verifiedAt": "2026-10-20T08:12:20.521Z"
+    "verifiedAt": "2026-10-21T05:53:52.280Z"
   },
   {
     "name": "GenericAgent",
@@ -2654,14 +2654,14 @@
     "repoUrl": "https://github.com/lsdefine/GenericAgent",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 14330,
-    "lastPush": "2026-10-19T06:08:07Z",
+    "stars": 14333,
+    "lastPush": "2026-10-20T16:06:46Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/lsdefine/GenericAgent",
       "https://github.com/lsdefine/GenericAgent"
     ],
-    "verifiedAt": "2026-10-20T08:12:20.839Z"
+    "verifiedAt": "2026-10-21T05:53:52.644Z"
   },
   {
     "name": "ClawX",
@@ -2672,14 +2672,14 @@
     "repoUrl": "https://github.com/ValueCell-ai/ClawX",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 7604,
+    "stars": 7603,
     "lastPush": "2026-10-19T10:22:57Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/ValueCell-ai/ClawX",
       "https://github.com/ValueCell-ai/ClawX"
     ],
-    "verifiedAt": "2026-10-20T08:12:21.195Z"
+    "verifiedAt": "2026-10-21T05:53:52.987Z"
   },
   {
     "name": "Supabase MCP",
@@ -2690,14 +2690,14 @@
     "repoUrl": "https://github.com/supabase/mcp",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 2963,
-    "lastPush": "2026-10-20T06:22:30Z",
+    "stars": 2966,
+    "lastPush": "2026-10-20T14:35:12Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/supabase-community/supabase-mcp",
       "https://github.com/supabase/mcp"
     ],
-    "verifiedAt": "2026-10-20T08:12:21.942Z"
+    "verifiedAt": "2026-10-21T05:53:53.852Z"
   },
   {
     "name": "Notion MCP Server",
@@ -2708,14 +2708,14 @@
     "repoUrl": "https://github.com/makenotion/notion-mcp-server",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 4671,
+    "stars": 4673,
     "lastPush": "2026-09-20T23:09:02Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/makenotion/notion-mcp-server",
       "https://github.com/makenotion/notion-mcp-server"
     ],
-    "verifiedAt": "2026-10-20T08:12:22.410Z"
+    "verifiedAt": "2026-10-21T05:53:54.267Z"
   },
   {
     "name": "Terraform MCP Server",
@@ -2727,13 +2727,13 @@
     "license": "MPL-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
     "stars": 1551,
-    "lastPush": "2026-10-20T04:05:52Z",
+    "lastPush": "2026-10-21T03:44:15Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/hashicorp/terraform-mcp-server",
       "https://github.com/hashicorp/terraform-mcp-server"
     ],
-    "verifiedAt": "2026-10-20T08:12:22.816Z"
+    "verifiedAt": "2026-10-21T05:53:54.645Z"
   },
   {
     "name": "Bright Data MCP",
@@ -2745,13 +2745,13 @@
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
     "stars": 2684,
-    "lastPush": "2026-10-19T12:43:43Z",
+    "lastPush": "2026-10-20T09:53:42Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/brightdata/brightdata-mcp",
       "https://github.com/brightdata/brightdata-mcp"
     ],
-    "verifiedAt": "2026-10-20T08:12:23.207Z"
+    "verifiedAt": "2026-10-21T05:53:54.986Z"
   },
   {
     "name": "Exa MCP Server",
@@ -2762,14 +2762,14 @@
     "repoUrl": "https://github.com/exa-labs/exa-mcp-server",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 5149,
+    "stars": 5156,
     "lastPush": "2026-10-19T19:23:37Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/exa-labs/exa-mcp-server",
       "https://github.com/exa-labs/exa-mcp-server"
     ],
-    "verifiedAt": "2026-10-20T08:12:23.589Z"
+    "verifiedAt": "2026-10-21T05:53:55.424Z"
   },
   {
     "name": "Tavily MCP",
@@ -2780,14 +2780,14 @@
     "repoUrl": "https://github.com/tavily-ai/tavily-mcp",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 2443,
+    "stars": 2446,
     "lastPush": "2026-10-15T21:37:13Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/tavily-ai/tavily-mcp",
       "https://github.com/tavily-ai/tavily-mcp"
     ],
-    "verifiedAt": "2026-10-20T08:12:24.014Z"
+    "verifiedAt": "2026-10-21T05:53:55.828Z"
   },
   {
     "name": "Framelink MCP for Figma",
@@ -2798,14 +2798,14 @@
     "repoUrl": "https://github.com/GLips/Figma-Context-MCP",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 16018,
+    "stars": 16026,
     "lastPush": "2026-10-16T04:03:19Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/GLips/Figma-Context-MCP",
       "https://github.com/GLips/Figma-Context-MCP"
     ],
-    "verifiedAt": "2026-10-20T08:12:24.508Z"
+    "verifiedAt": "2026-10-21T05:53:56.200Z"
   },
   {
     "name": "Grafana MCP Server",
@@ -2816,14 +2816,14 @@
     "repoUrl": "https://github.com/grafana/mcp-grafana",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 3578,
-    "lastPush": "2026-10-20T08:09:19Z",
+    "stars": 3584,
+    "lastPush": "2026-10-21T02:55:42Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/grafana/mcp-grafana",
       "https://github.com/grafana/mcp-grafana"
     ],
-    "verifiedAt": "2026-10-20T08:12:25.046Z"
+    "verifiedAt": "2026-10-21T05:53:56.576Z"
   },
   {
     "name": "Google Workspace MCP",
@@ -2834,14 +2834,14 @@
     "repoUrl": "https://github.com/taylorwilsdon/google_workspace_mcp",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 3381,
-    "lastPush": "2026-10-20T01:48:16Z",
+    "stars": 3386,
+    "lastPush": "2026-10-20T16:34:42Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/taylorwilsdon/google_workspace_mcp",
       "https://github.com/taylorwilsdon/google_workspace_mcp"
     ],
-    "verifiedAt": "2026-10-20T08:12:25.423Z"
+    "verifiedAt": "2026-10-21T05:53:56.889Z"
   },
   {
     "name": "Perplexity MCP Server",
@@ -2852,14 +2852,14 @@
     "repoUrl": "https://github.com/perplexityai/modelcontextprotocol",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 2582,
+    "stars": 2583,
     "lastPush": "2026-10-19T20:49:08Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/perplexityai/modelcontextprotocol",
       "https://github.com/perplexityai/modelcontextprotocol"
     ],
-    "verifiedAt": "2026-10-20T08:12:25.849Z"
+    "verifiedAt": "2026-10-21T05:53:57.256Z"
   },
   {
     "name": "Redis MCP Server",
@@ -2877,7 +2877,7 @@
       "https://api.github.com/repos/redis/mcp-redis",
       "https://github.com/redis/mcp-redis"
     ],
-    "verifiedAt": "2026-10-20T08:12:26.252Z"
+    "verifiedAt": "2026-10-21T05:53:57.623Z"
   },
   {
     "name": "Qdrant MCP Server",
@@ -2888,14 +2888,14 @@
     "repoUrl": "https://github.com/qdrant/mcp-server-qdrant",
     "license": "Apache-2.0",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 1551,
+    "stars": 1552,
     "lastPush": "2026-09-04T00:13:58Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/qdrant/mcp-server-qdrant",
       "https://github.com/qdrant/mcp-server-qdrant"
     ],
-    "verifiedAt": "2026-10-20T08:12:26.648Z"
+    "verifiedAt": "2026-10-21T05:53:58.047Z"
   },
   {
     "name": "Neon MCP Server",
@@ -2907,13 +2907,13 @@
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
     "stars": 655,
-    "lastPush": "2026-10-16T03:33:52Z",
+    "lastPush": "2026-10-20T23:28:26Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/neondatabase/mcp-server-neon",
       "https://github.com/neondatabase/mcp-server-neon"
     ],
-    "verifiedAt": "2026-10-20T08:12:27.018Z"
+    "verifiedAt": "2026-10-21T05:53:58.455Z"
   },
   {
     "name": "MotherDuck MCP Server",
@@ -2924,13 +2924,625 @@
     "repoUrl": "https://github.com/motherduckdb/mcp-server-motherduck",
     "license": "MIT",
     "pricingModel": "Open source (model/API usage billed separately by your provider)",
-    "stars": 532,
+    "stars": 533,
     "lastPush": "2026-10-07T14:42:51Z",
     "archived": false,
     "sources": [
       "https://api.github.com/repos/motherduckdb/mcp-server-motherduck",
       "https://github.com/motherduckdb/mcp-server-motherduck"
     ],
-    "verifiedAt": "2026-10-20T08:12:27.861Z"
+    "verifiedAt": "2026-10-21T05:53:59.092Z"
+  },
+  {
+    "name": "MCP Atlassian",
+    "slug": "mcp-atlassian",
+    "category": "mcp-servers",
+    "description": "MCP server for Atlassian tools (Confluence, Jira)",
+    "officialUrl": "https://mcp-atlassian.soomiles.com",
+    "repoUrl": "https://github.com/sooperset/mcp-atlassian",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 6022,
+    "lastPush": "2026-09-19T10:20:14Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/sooperset/mcp-atlassian",
+      "https://github.com/sooperset/mcp-atlassian"
+    ],
+    "verifiedAt": "2026-10-21T05:53:59.434Z"
+  },
+  {
+    "name": "Atlassian Remote MCP Server",
+    "slug": "atlassian-remote-mcp-server",
+    "category": "mcp-servers",
+    "description": "Official remote MCP server for Atlassian. Securely connect Jira, Confluence, Jira Service Management, Bitbucket, and Compass to Claude, ChatGPT, Cursor, VS Code, and other AI tools using OAuth 2.1 or API tokens.",
+    "officialUrl": "https://atlassian.com/platform/rovo-mcp",
+    "repoUrl": "https://github.com/atlassian/atlassian-mcp-server",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 1110,
+    "lastPush": "2026-10-10T20:27:29Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/atlassian/atlassian-mcp-server",
+      "https://github.com/atlassian/atlassian-mcp-server"
+    ],
+    "verifiedAt": "2026-10-21T05:53:59.797Z"
+  },
+  {
+    "name": "Kubernetes MCP Server",
+    "slug": "kubernetes-mcp-server",
+    "category": "mcp-servers",
+    "description": "Model Context Protocol (MCP) server for Kubernetes and OpenShift",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/containers/kubernetes-mcp-server",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 2174,
+    "lastPush": "2026-10-21T01:03:53Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/containers/kubernetes-mcp-server",
+      "https://github.com/containers/kubernetes-mcp-server"
+    ],
+    "verifiedAt": "2026-10-21T05:54:00.156Z"
+  },
+  {
+    "name": "MCP Server Kubernetes",
+    "slug": "mcp-server-kubernetes",
+    "category": "mcp-servers",
+    "description": "MCP Server for kubernetes management commands",
+    "officialUrl": "https://www.npmjs.com/package/mcp-server-kubernetes",
+    "repoUrl": "https://github.com/Flux159/mcp-server-kubernetes",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 1606,
+    "lastPush": "2026-10-14T18:16:38Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/Flux159/mcp-server-kubernetes",
+      "https://github.com/Flux159/mcp-server-kubernetes"
+    ],
+    "verifiedAt": "2026-10-21T05:54:00.466Z"
+  },
+  {
+    "name": "Microsoft MCP Catalog",
+    "slug": "microsoft-mcp-catalog",
+    "category": "mcp-servers",
+    "description": "Catalog of official Microsoft MCP (Model Context Protocol) server implementations for AI-powered data access and tool integration",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/microsoft/mcp",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 3790,
+    "lastPush": "2026-10-21T05:43:00Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/microsoft/mcp",
+      "https://github.com/microsoft/mcp"
+    ],
+    "verifiedAt": "2026-10-21T05:54:00.815Z"
+  },
+  {
+    "name": "Docker MCP Gateway",
+    "slug": "docker-mcp-gateway",
+    "category": "mcp-servers",
+    "description": "docker mcp CLI plugin / MCP Gateway",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/docker/mcp-gateway",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 1609,
+    "lastPush": "2026-09-23T16:47:37Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/docker/mcp-gateway",
+      "https://github.com/docker/mcp-gateway"
+    ],
+    "verifiedAt": "2026-10-21T05:54:01.194Z"
+  },
+  {
+    "name": "MCP Context Forge",
+    "slug": "mcp-context-forge",
+    "category": "mcp-servers",
+    "description": "An AI Gateway, registry, and proxy that sits in front of any MCP, A2A, or REST/gRPC APIs, exposing a unified endpoint with centralized discovery, guardrails and management. Optimizes Agent & Tool calling, and supports plugins.",
+    "officialUrl": "https://ibm.github.io/mcp-context-forge/",
+    "repoUrl": "https://github.com/IBM/mcp-context-forge",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 4670,
+    "lastPush": "2026-10-20T17:28:43Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/IBM/mcp-context-forge",
+      "https://github.com/IBM/mcp-context-forge"
+    ],
+    "verifiedAt": "2026-10-21T05:54:01.628Z"
+  },
+  {
+    "name": "MCP Inspector",
+    "slug": "mcp-inspector",
+    "category": "mcp-servers",
+    "description": "Visual testing tool for MCP servers",
+    "officialUrl": "https://modelcontextprotocol.io/docs/2026-07-28/tools/inspector",
+    "repoUrl": "https://github.com/modelcontextprotocol/inspector",
+    "license": null,
+    "pricingModel": null,
+    "stars": 11111,
+    "lastPush": "2026-10-21T05:53:39Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/modelcontextprotocol/inspector",
+      "https://github.com/modelcontextprotocol/inspector"
+    ],
+    "verifiedAt": "2026-10-21T05:54:02.142Z"
+  },
+  {
+    "name": "Stripe Agent Toolkit",
+    "slug": "stripe-agent-toolkit",
+    "category": "mcp-servers",
+    "description": "One-stop shop for building AI-powered products and businesses with Stripe.",
+    "officialUrl": "https://docs.stripe.com/agents",
+    "repoUrl": "https://github.com/stripe/ai",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 1964,
+    "lastPush": "2026-10-21T00:45:44Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/stripe/ai",
+      "https://github.com/stripe/ai"
+    ],
+    "verifiedAt": "2026-10-21T05:54:02.654Z"
+  },
+  {
+    "name": "Sentry MCP",
+    "slug": "sentry-mcp",
+    "category": "mcp-servers",
+    "description": "Agentic tooling for Sentry",
+    "officialUrl": "https://mcp.sentry.dev",
+    "repoUrl": "https://github.com/getsentry/toolkit",
+    "license": null,
+    "pricingModel": null,
+    "stars": 936,
+    "lastPush": "2026-10-21T01:48:12Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/getsentry/sentry-mcp",
+      "https://github.com/getsentry/toolkit"
+    ],
+    "verifiedAt": "2026-10-21T05:54:03.413Z"
+  },
+  {
+    "name": "Datadog MCP Server",
+    "slug": "datadog-mcp-server",
+    "category": "mcp-servers",
+    "description": "Official Datadog MCP Server",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/datadog-labs/mcp-server",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 46,
+    "lastPush": "2026-10-16T22:22:44Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/datadog-labs/mcp-server",
+      "https://github.com/datadog-labs/mcp-server"
+    ],
+    "verifiedAt": "2026-10-21T05:54:03.813Z"
+  },
+  {
+    "name": "Auth0 MCP Server",
+    "slug": "auth0-mcp-server",
+    "category": "mcp-servers",
+    "description": "Connect LLMs and AI agents to Auth0 Management APIs via an MCP server. Use natural-language commands to create apps, deploy Actions, and query logs—runs locally and supports interactive tenant authentication for secure Auth0 administration from AI tools/CLIs.",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/auth0/auth0-mcp-server",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 122,
+    "lastPush": "2026-10-20T08:14:52Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/auth0/auth0-mcp-server",
+      "https://github.com/auth0/auth0-mcp-server"
+    ],
+    "verifiedAt": "2026-10-21T05:54:04.416Z"
+  },
+  {
+    "name": "Magic MCP",
+    "slug": "magic-mcp",
+    "category": "mcp-servers",
+    "description": "It's like v0, but in your Cursor / Claude Code / Windsurf: search 10,000+ React/Tailwind components, generate new UI with AI, and publish your own — right from your editor. Magic MCP is now the 21st MCP; this package keeps old configs working. Setup: 21st.dev/mcp",
+    "officialUrl": "https://21st.dev/mcp",
+    "repoUrl": "https://github.com/21st-dev/magic-mcp",
+    "license": "ISC",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 6160,
+    "lastPush": "2026-09-09T20:38:22Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/21st-dev/magic-mcp",
+      "https://github.com/21st-dev/magic-mcp"
+    ],
+    "verifiedAt": "2026-10-21T05:54:04.754Z"
+  },
+  {
+    "name": "Excel MCP Server",
+    "slug": "excel-mcp-server",
+    "category": "mcp-servers",
+    "description": "Excel MCP server: let AI (Claude, Cursor, Codex) create and edit Excel files with charts, PivotTables, slicers and formulas. No Excel required.",
+    "officialUrl": "https://excelmcpserver.com",
+    "repoUrl": "https://github.com/haris-musa/excel-mcp-server",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 4254,
+    "lastPush": "2026-10-20T06:26:44Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/haris-musa/excel-mcp-server",
+      "https://github.com/haris-musa/excel-mcp-server"
+    ],
+    "verifiedAt": "2026-10-21T05:54:05.100Z"
+  },
+  {
+    "name": "Ref Tools MCP",
+    "slug": "ref-tools-mcp",
+    "category": "mcp-servers",
+    "description": "Helping coding agents never make mistakes working with public or private libraries without wasting the context window.",
+    "officialUrl": "http://ref.tools",
+    "repoUrl": "https://github.com/ref-tools/ref-tools-mcp",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 1183,
+    "lastPush": "2026-10-01T22:21:11Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/ref-tools/ref-tools-mcp",
+      "https://github.com/ref-tools/ref-tools-mcp"
+    ],
+    "verifiedAt": "2026-10-21T05:54:05.473Z"
+  },
+  {
+    "name": "Home Assistant MCP Server",
+    "slug": "home-assistant-mcp-server",
+    "category": "mcp-servers",
+    "description": "The Unofficial and Awesome Home Assistant MCP Server",
+    "officialUrl": "https://homeassistant-ai.github.io/ha-mcp/",
+    "repoUrl": "https://github.com/homeassistant-ai/ha-mcp",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 5156,
+    "lastPush": "2026-10-20T22:52:45Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/homeassistant-ai/ha-mcp",
+      "https://github.com/homeassistant-ai/ha-mcp"
+    ],
+    "verifiedAt": "2026-10-21T05:54:05.801Z"
+  },
+  {
+    "name": "AntV Chart MCP Server",
+    "slug": "antv-chart-mcp-server",
+    "category": "mcp-servers",
+    "description": "🤖 A visualization mcp & skills contains 25+ visual charts using @antvis. Using for chart generation and data analysis.",
+    "officialUrl": "https://github.com/antvis/mcp-server-chart",
+    "repoUrl": "https://github.com/antvis/mcp-server-chart",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 4402,
+    "lastPush": "2026-08-27T01:50:14Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/antvis/mcp-server-chart",
+      "https://github.com/antvis/mcp-server-chart"
+    ],
+    "verifiedAt": "2026-10-21T05:54:06.142Z"
+  },
+  {
+    "name": "Zotero MCP",
+    "slug": "zotero-mcp",
+    "category": "mcp-servers",
+    "description": "Zotero MCP: Connects your Zotero research library with Claude and other AI assistants via the Model Context Protocol to discuss papers, get summaries, analyze citations, and more.",
+    "officialUrl": "https://stevenyuyy.com/zotero-mcp/",
+    "repoUrl": "https://github.com/54yyyu/zotero-mcp",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 5495,
+    "lastPush": "2026-10-16T21:34:45Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/54yyyu/zotero-mcp",
+      "https://github.com/54yyyu/zotero-mcp"
+    ],
+    "verifiedAt": "2026-10-21T05:54:06.454Z"
+  },
+  {
+    "name": "Ghidra MCP",
+    "slug": "ghidra-mcp",
+    "category": "mcp-servers",
+    "description": "Ghidra MCP Server — 200+ MCP tools for AI-powered reverse engineering. GUI plugin + headless server, lazy tool loading, convention enforcement, batch operations, Ghidra Server integration, and Docker deployment.",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/bethington/ghidra-mcp",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 5824,
+    "lastPush": "2026-10-16T01:17:04Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/bethington/ghidra-mcp",
+      "https://github.com/bethington/ghidra-mcp"
+    ],
+    "verifiedAt": "2026-10-21T05:54:06.786Z"
+  },
+  {
+    "name": "Xerj",
+    "slug": "xerj",
+    "category": "mcp-servers",
+    "description": "Local-first search engine and MCP server for AI agents. One Rust binary indexes code, docs, logs, JSONL/CSV and PDFs for BM25 full-text, vector and hybrid search, code search without grep, agent memory and RAG. Elasticsearch-compatible API; Corpus Hub serves hundreds of reference memory corpora.",
+    "officialUrl": "https://xerj.org",
+    "repoUrl": "https://github.com/xerj-org/xerj",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 12501,
+    "lastPush": "2026-10-21T04:13:10Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/xerj-org/xerj",
+      "https://github.com/xerj-org/xerj"
+    ],
+    "verifiedAt": "2026-10-21T05:54:07.119Z"
+  },
+  {
+    "name": "Semble",
+    "slug": "semble",
+    "category": "mcp-servers",
+    "description": "Fast and Accurate Code Search for Agents. Uses 99% fewer tokens than grep+read",
+    "officialUrl": "https://minish.ai/packages/semble/introduction/",
+    "repoUrl": "https://github.com/MinishLab/semble",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 6254,
+    "lastPush": "2026-10-16T10:48:43Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/MinishLab/semble",
+      "https://github.com/MinishLab/semble"
+    ],
+    "verifiedAt": "2026-10-21T05:54:07.486Z"
+  },
+  {
+    "name": "Code Graph RAG",
+    "slug": "code-graph-rag",
+    "category": "mcp-servers",
+    "description": "The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with the power of AI and knowledge graphs",
+    "officialUrl": "https://code-graph-rag.com",
+    "repoUrl": "https://github.com/vitali87/code-graph-rag",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 5268,
+    "lastPush": "2026-10-21T05:31:18Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/vitali87/code-graph-rag",
+      "https://github.com/vitali87/code-graph-rag"
+    ],
+    "verifiedAt": "2026-10-21T05:54:07.876Z"
+  },
+  {
+    "name": "ClickHouse MCP Server",
+    "slug": "clickhouse-mcp-server",
+    "category": "mcp-database-servers",
+    "description": "Connect ClickHouse to your AI assistants.",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/ClickHouse/mcp-clickhouse",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 890,
+    "lastPush": "2026-10-20T20:58:05Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/ClickHouse/mcp-clickhouse",
+      "https://github.com/ClickHouse/mcp-clickhouse"
+    ],
+    "verifiedAt": "2026-10-21T05:54:08.281Z"
+  },
+  {
+    "name": "Neo4j MCP Servers",
+    "slug": "neo4j-mcp-servers",
+    "category": "mcp-database-servers",
+    "description": "Neo4j Labs Model Context Protocol servers",
+    "officialUrl": "https://neo4j.com/developer/genai-ecosystem/model-context-protocol-mcp/",
+    "repoUrl": "https://github.com/neo4j-contrib/mcp-neo4j",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 989,
+    "lastPush": "2026-09-09T16:31:34Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/neo4j-contrib/mcp-neo4j",
+      "https://github.com/neo4j-contrib/mcp-neo4j"
+    ],
+    "verifiedAt": "2026-10-21T05:54:08.660Z"
+  },
+  {
+    "name": "Pinecone MCP Server",
+    "slug": "pinecone-mcp-server",
+    "category": "mcp-database-servers",
+    "description": "Connect your Pinecone projects to Cursor, Claude, and other AI assistants",
+    "officialUrl": null,
+    "repoUrl": "https://github.com/pinecone-io/pinecone-mcp",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 72,
+    "lastPush": "2026-10-21T02:09:17Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/pinecone-io/pinecone-mcp",
+      "https://github.com/pinecone-io/pinecone-mcp"
+    ],
+    "verifiedAt": "2026-10-21T05:54:09.058Z"
+  },
+  {
+    "name": "RAGFlow",
+    "slug": "ragflow",
+    "category": "agent-frameworks",
+    "description": "RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs",
+    "officialUrl": "https://ragflow.io",
+    "repoUrl": "https://github.com/infiniflow/ragflow",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 92569,
+    "lastPush": "2026-10-21T05:14:27Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/infiniflow/ragflow",
+      "https://github.com/infiniflow/ragflow"
+    ],
+    "verifiedAt": "2026-10-21T05:54:09.411Z"
+  },
+  {
+    "name": "Mem0",
+    "slug": "mem0",
+    "category": "agent-frameworks",
+    "description": "The Memory Layer for AI Agents - Drop-in memory infrastructure for AI agents and apps. Context that persists. Built for production.",
+    "officialUrl": "https://mem0.ai",
+    "repoUrl": "https://github.com/mem0ai/mem0",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 67551,
+    "lastPush": "2026-10-21T01:16:37Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/mem0ai/mem0",
+      "https://github.com/mem0ai/mem0"
+    ],
+    "verifiedAt": "2026-10-21T05:54:09.796Z"
+  },
+  {
+    "name": "Hindsight",
+    "slug": "hindsight",
+    "category": "agent-frameworks",
+    "description": "Hindsight: Agent Memory That Learns",
+    "officialUrl": "https://hindsight.vectorize.io/",
+    "repoUrl": "https://github.com/vectorize-io/hindsight",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 52097,
+    "lastPush": "2026-10-20T21:56:58Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/vectorize-io/hindsight",
+      "https://github.com/vectorize-io/hindsight"
+    ],
+    "verifiedAt": "2026-10-21T05:54:10.177Z"
+  },
+  {
+    "name": "Graphiti",
+    "slug": "graphiti",
+    "category": "agent-frameworks",
+    "description": "Build Real-Time Knowledge Graphs for AI Agents",
+    "officialUrl": "https://help.getzep.com/graphiti",
+    "repoUrl": "https://github.com/getzep/graphiti",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 32090,
+    "lastPush": "2026-10-21T02:47:25Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/getzep/graphiti",
+      "https://github.com/getzep/graphiti"
+    ],
+    "verifiedAt": "2026-10-21T05:54:10.630Z"
+  },
+  {
+    "name": "MemOS",
+    "slug": "memos",
+    "category": "agent-frameworks",
+    "description": "Self-evolving memory OS for LLM & AI Agents: ultra-persistent memory, hybrid-retrieval, and cross-task skill reuse, with 35.24% token savings and DeepSeek Harness support.",
+    "officialUrl": "https://memos.openmem.net",
+    "repoUrl": "https://github.com/MemTensor/MemOS",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 11989,
+    "lastPush": "2026-10-20T12:32:29Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/MemTensor/MemOS",
+      "https://github.com/MemTensor/MemOS"
+    ],
+    "verifiedAt": "2026-10-21T05:54:10.990Z"
+  },
+  {
+    "name": "TrueForge",
+    "slug": "trueforge",
+    "category": "agent-frameworks",
+    "description": "The open-source agent harness - the runtime layer that turns an LLM into a working agent.",
+    "officialUrl": "https://trueforge.dev",
+    "repoUrl": "https://github.com/truefoundry/trueforge",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 6321,
+    "lastPush": "2026-10-21T05:50:48Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/truefoundry/trueforge",
+      "https://github.com/truefoundry/trueforge"
+    ],
+    "verifiedAt": "2026-10-21T05:54:11.460Z"
+  },
+  {
+    "name": "fast-agent",
+    "slug": "fast-agent",
+    "category": "agent-frameworks",
+    "description": "Code, Build and Evaluate agents - excellent Model and Skills/MCP/ACP/A2A Support",
+    "officialUrl": "https://fast-agent.ai",
+    "repoUrl": "https://github.com/evalstate/fast-agent",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 3944,
+    "lastPush": "2026-10-20T18:47:59Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/evalstate/fast-agent",
+      "https://github.com/evalstate/fast-agent"
+    ],
+    "verifiedAt": "2026-10-21T05:54:11.808Z"
+  },
+  {
+    "name": "Agents CLI",
+    "slug": "agents-cli",
+    "category": "coding-agents",
+    "description": "The CLI and skills that turn any coding assistant into an expert at creating, evaluating, and deploying AI agents on Google Cloud.",
+    "officialUrl": "https://google.github.io/agents-cli/",
+    "repoUrl": "https://github.com/google/agents-cli",
+    "license": "Apache-2.0",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 6123,
+    "lastPush": "2026-10-20T13:03:52Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/google/agents-cli",
+      "https://github.com/google/agents-cli"
+    ],
+    "verifiedAt": "2026-10-21T05:54:14.298Z"
+  },
+  {
+    "name": "Fara",
+    "slug": "fara",
+    "category": "browser-agents",
+    "description": "Fara1.5 – A family of frontier computer use agent models",
+    "officialUrl": "https://www.microsoft.com/en-us/research/articles/fara1-5-computer-use-agent/",
+    "repoUrl": "https://github.com/microsoft/fara",
+    "license": "MIT",
+    "pricingModel": "Open source (model/API usage billed separately by your provider)",
+    "stars": 6221,
+    "lastPush": "2026-09-22T14:45:27Z",
+    "archived": false,
+    "sources": [
+      "https://api.github.com/repos/microsoft/fara",
+      "https://github.com/microsoft/fara"
+    ],
+    "verifiedAt": "2026-10-21T05:54:14.984Z"
   }
 ]

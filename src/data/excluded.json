@@ -3,13 +3,13 @@
     "name": "Aider",
     "repo": "Aider-AI/aider",
     "reason": "inactive",
-    "daysSincePush": 151
+    "daysSincePush": 152
   },
   {
     "name": "Hope Agent",
     "repo": "shiwenwen/hope-agent",
     "reason": "no English description",
-    "daysSincePush": 0
+    "daysSincePush": 1
   },
   {
     "name": "MaxKB",
@@ -21,6 +21,6 @@
     "name": "DeepAnalyze",
     "repo": "ruc-datalab/DeepAnalyze",
     "reason": "no English description",
-    "daysSincePush": 7
+    "daysSincePush": 8
   }
 ]

@@ -39,6 +39,7 @@ export type VerifiedCard = {
 const D = "2026-10-18";
 const D2 = "2026-10-19";
 const D3 = "2026-10-20";
+const D4 = "2026-10-21";
 const STALE_REF = "2026-07-20"; // 90 días antes de la revisión
 
 export const VERIFIED: VerifiedCard[] = [
@@ -1322,6 +1323,182 @@ export const VERIFIED: VerifiedCard[] = [
         code: '{\n  "mcpServers": {\n    "DuckDB (read-only)": {\n      "command": "uvx",\n      "args": ["mcp-server-motherduck", "--db-path", "/absolute/path/to/your.duckdb"]\n    }\n  }\n}',
         source: "github",
         url: "https://github.com/motherduckdb/mcp-server-motherduck#readme",
+      },
+    ],
+  },
+  // --- Cuarta tanda (2026-10-21): datos de GitHub, registros y README comprobados el mismo día ---
+  {
+    slug: "kubernetes-mcp-server",
+    version: "v0.0.67 (2026-09-18)",
+    reviewedAt: D4,
+    use: [
+      { label: "Made for", value: "Managing Kubernetes and OpenShift clusters from an AI client: generic operations on any resource, pods, Helm and other toolsets.", source: "github", url: "https://github.com/containers/kubernetes-mcp-server#readme" },
+      { label: "Not made for", value: "Not stated by the project. The README points to a setup guide for production with a dedicated ServiceAccount and read-only access.", source: "github", url: "https://github.com/containers/kubernetes-mcp-server#readme" },
+    ],
+    context: [
+      { label: "Tools", value: "Not counted. The README lists them by toolset (core, config, Helm, KubeVirt, observability and others).", source: "github", url: "https://github.com/containers/kubernetes-mcp-server#readme" },
+      { label: "Ways to expose fewer tools", value: "The toolsets option, which the README says reduces context size, plus read_only = true and denied_resources (for example Secrets), all in a TOML configuration file.", source: "github", url: "https://github.com/containers/kubernetes-mcp-server#readme" },
+      { label: "Token weight of the definitions", value: "Not measured.", source: "unknown" },
+    ],
+    permissions: [
+      { label: "Credentials", value: "Your kubeconfig or the in-cluster configuration. HTTP mode supports OAuth/OIDC (Keycloak and Microsoft Entra ID are documented).", source: "github", url: "https://github.com/containers/kubernetes-mcp-server#readme" },
+      { label: "Can change data", value: "Yes: create, update and delete on any resource, and pods_exec runs a command inside a pod. read_only = true restricts it.", source: "github", url: "https://github.com/containers/kubernetes-mcp-server#readme" },
+      { label: "Local files", value: "It reads your kubeconfig, and the configuration_view tool returns its content as YAML.", source: "github", url: "https://github.com/containers/kubernetes-mcp-server#readme" },
+      { label: "Telemetry", value: "Optional OpenTelemetry tracing and metrics, sent to the endpoint you set under [telemetry].", source: "github", url: "https://github.com/containers/kubernetes-mcp-server#readme" },
+      { label: "Sends data to third parties", value: "Not verified.", source: "unknown" },
+    ],
+    maintenance: [
+      { label: "Latest release", value: "v0.0.67, 2026-09-18", source: "github", url: "https://github.com/containers/kubernetes-mcp-server/releases" },
+      { label: "Last push", value: "2026-10-21", source: "github", url: "https://github.com/containers/kubernetes-mcp-server" },
+      { label: "Open issues", value: `65, of which 43 were opened before ${STALE_REF}`, source: "github", url: "https://github.com/containers/kubernetes-mcp-server/issues" },
+      { label: "Dependency lockfiles", value: "go.sum", source: "github", url: "https://github.com/containers/kubernetes-mcp-server" },
+    ],
+    hardening: [
+      {
+        title: "Read-only, fewer toolsets, no Secrets",
+        note: "Adapted from the README's example configuration. Runtime settings live in a TOML file, not in command-line flags. Add the toolsets you really need.",
+        language: "bash",
+        code: 'cat > config.toml <<\'EOF\'\nread_only = true\ntoolsets = ["core", "config"]\n\n[[denied_resources]]\ngroup = ""\nversion = "v1"\nkind = "Secret"\nEOF\n\nkubernetes-mcp-server --config config.toml',
+        source: "github",
+        url: "https://github.com/containers/kubernetes-mcp-server#readme",
+      },
+    ],
+  },
+  {
+    slug: "mcp-server-kubernetes",
+    version: "v4.1.9 (2026-10-02)",
+    reviewedAt: D4,
+    use: [
+      { label: "Made for", value: "Connecting an AI client to a Kubernetes cluster and managing it with kubectl-style and Helm tools.", source: "github", url: "https://github.com/Flux159/mcp-server-kubernetes#readme" },
+      { label: "Not made for", value: "Not stated by the project.", source: "unknown" },
+    ],
+    context: [
+      { label: "Tools", value: "Not counted. The README names kubectl_get, describe, logs, create, apply, delete, scale, patch, rollout and generic, plus Helm, port-forward and cleanup tools.", source: "github", url: "https://github.com/Flux159/mcp-server-kubernetes#readme" },
+      { label: "Ways to expose fewer tools", value: "ALLOW_ONLY_NON_DESTRUCTIVE_TOOLS=true turns off delete, uninstall, cleanup, node management and kubectl_generic.", source: "github", url: "https://github.com/Flux159/mcp-server-kubernetes#readme" },
+      { label: "Token weight of the definitions", value: "Not measured.", source: "unknown" },
+    ],
+    permissions: [
+      { label: "Credentials", value: "Your kubeconfig, by default ~/.kube/config. Other sources are described in ADVANCED_README.md.", source: "github", url: "https://github.com/Flux159/mcp-server-kubernetes#readme" },
+      { label: "Can change data", value: "Yes. The non-destructive mode is not a read-only mode: kubectl_apply, create, scale, patch, rollout and Helm install and upgrade stay available.", source: "github", url: "https://github.com/Flux159/mcp-server-kubernetes#readme" },
+      { label: "Shell commands", value: "kubectl_generic runs any kubectl command. It is disabled in non-destructive mode.", source: "github", url: "https://github.com/Flux159/mcp-server-kubernetes#readme" },
+      { label: "Secrets", value: "The README says it masks sensitive data in kubectl get secrets output. Logs are not affected.", source: "github", url: "https://github.com/Flux159/mcp-server-kubernetes#readme" },
+      { label: "Telemetry", value: "OpenTelemetry tracing is opt-in (ENABLE_TELEMETRY=true) and disabled by default.", source: "github", url: "https://github.com/Flux159/mcp-server-kubernetes#readme" },
+      { label: "Sends data to third parties", value: "Not verified.", source: "unknown" },
+    ],
+    maintenance: [
+      { label: "Latest release", value: "v4.1.9, 2026-10-02", source: "github", url: "https://github.com/Flux159/mcp-server-kubernetes/releases" },
+      { label: "Last push", value: "2026-10-14", source: "github", url: "https://github.com/Flux159/mcp-server-kubernetes" },
+      { label: "Open issues", value: `9, of which 6 were opened before ${STALE_REF}`, source: "github", url: "https://github.com/Flux159/mcp-server-kubernetes/issues" },
+      { label: "Dependency lockfiles", value: "bun.lockb", source: "github", url: "https://github.com/Flux159/mcp-server-kubernetes" },
+    ],
+    hardening: [
+      {
+        title: "Non-destructive mode (not read-only)",
+        note: "From the README. It removes the tools that delete or drain, and kubectl_generic, but create and update stay on. Pair it with a Kubernetes account that can only read if you need real read-only access.",
+        language: "json",
+        code: '{\n  "mcpServers": {\n    "kubernetes": {\n      "command": "npx",\n      "args": ["mcp-server-kubernetes"],\n      "env": { "ALLOW_ONLY_NON_DESTRUCTIVE_TOOLS": "true" }\n    }\n  }\n}',
+        source: "github",
+        url: "https://github.com/Flux159/mcp-server-kubernetes#readme",
+      },
+    ],
+  },
+  {
+    slug: "home-assistant-mcp-server",
+    version: "v8.7.0 (2026-10-14)",
+    reviewedAt: D4,
+    use: [
+      { label: "Made for", value: "Controlling and configuring a Home Assistant installation from AI clients: entities, automations, scripts, helpers, devices, backups and more.", source: "github", url: "https://github.com/homeassistant-ai/ha-mcp#readme" },
+      { label: "Not made for", value: "Not stated. The project describes itself as unofficial.", source: "github", url: "https://github.com/homeassistant-ai/ha-mcp#readme" },
+    ],
+    context: [
+      { label: "Tools", value: "87, according to the README.", source: "github", url: "https://github.com/homeassistant-ai/ha-mcp#readme" },
+      { label: "Ways to expose fewer tools", value: "Per-tool enable and disable, and ENABLE_TOOL_SEARCH=true, which replaces the full catalog with a search so the model loads only the tools it needs.", source: "github", url: "https://github.com/homeassistant-ai/ha-mcp#readme" },
+      { label: "Token weight of the definitions", value: "Not measured.", source: "unknown" },
+    ],
+    permissions: [
+      { label: "Credentials", value: "A Home Assistant long-lived access token (an administrator's is recommended), or no token in the Home Assistant add-on. With remote access, the secret URL is the credential unless you turn on ha_auth or OIDC.", source: "github", url: "https://github.com/homeassistant-ai/ha-mcp#readme" },
+      { label: "Can change data", value: "Yes by default: tools edit automations, helpers, configuration and backups. The README lists a Read Only Mode toggle, tool security policies that ask for user approval and automatic backups of edits.", source: "github", url: "https://github.com/homeassistant-ai/ha-mcp#readme" },
+      { label: "Local files", value: "A beta tool edits configuration.yaml and package files, and needs beta feature flags to be switched on.", source: "github", url: "https://github.com/homeassistant-ai/ha-mcp#readme" },
+      { label: "Telemetry", value: "Its privacy file says that as of June 2026 no usage statistics are collected or sent. A telemetry feature is planned and would be announced at least a month before it takes effect.", source: "github", url: "https://github.com/homeassistant-ai/ha-mcp/blob/master/PRIVACY.md" },
+      { label: "Shell commands", value: "Not stated in the README.", source: "unknown" },
+    ],
+    maintenance: [
+      { label: "Latest release", value: "v8.7.0, 2026-10-14", source: "github", url: "https://github.com/homeassistant-ai/ha-mcp/releases" },
+      { label: "Last push", value: "2026-10-20", source: "github", url: "https://github.com/homeassistant-ai/ha-mcp" },
+      { label: "Open issues", value: `10, of which 1 was opened before ${STALE_REF}`, source: "github", url: "https://github.com/homeassistant-ai/ha-mcp/issues" },
+      { label: "Dependency lockfiles", value: "uv.lock", source: "github", url: "https://github.com/homeassistant-ai/ha-mcp" },
+    ],
+    hardening: [],
+  },
+  {
+    slug: "atlassian-remote-mcp-server",
+    version: "Hosted service, no GitHub releases",
+    reviewedAt: D4,
+    use: [
+      { label: "Made for", value: "Giving AI tools access to Jira, Confluence, Jira Service Management, Bitbucket Cloud, Compass, Loom and other Atlassian products through a cloud-hosted server.", source: "github", url: "https://github.com/atlassian/atlassian-mcp-server#readme" },
+      { label: "Not made for", value: "Not stated. Bitbucket tools need a workspace linked to an organization, and Jira Service Management tools need API token authentication.", source: "github", url: "https://github.com/atlassian/atlassian-mcp-server#readme" },
+    ],
+    context: [
+      { label: "Tools", value: "Not counted. The server shows a small set of primary tools and lets the client discover the rest on demand, to save context.", source: "github", url: "https://github.com/atlassian/atlassian-mcp-server#readme" },
+      { label: "Ways to expose fewer tools", value: "Permission groups per product (read, write, search, delete, manage). Organization admins grant or revoke each group. delete_jira and manage_jira are disabled by default.", source: "github", url: "https://github.com/atlassian/atlassian-mcp-server#readme" },
+      { label: "Token weight of the definitions", value: "Not measured.", source: "unknown" },
+    ],
+    permissions: [
+      { label: "Credentials", value: "OAuth 2.1, or an API token for headless use (personal token with Basic auth, or a service account key as Bearer). An organization admin must enable API tokens.", source: "github", url: "https://github.com/atlassian/atlassian-mcp-server#readme" },
+      { label: "Can change data", value: "Yes, where write groups are enabled. The README says every action respects the user's existing project and space permissions.", source: "github", url: "https://github.com/atlassian/atlassian-mcp-server#readme" },
+      { label: "Sends data to third parties", value: "It is a hosted service: requests go to Atlassian. The README says traffic uses HTTPS (TLS 1.2 or later), tool calls honor IP allowlists and every tool use is recorded in the organization's audit log.", source: "github", url: "https://github.com/atlassian/atlassian-mcp-server#readme" },
+      { label: "Local files and shell commands", value: "Not stated. The server runs on Atlassian's side.", source: "unknown" },
+    ],
+    maintenance: [
+      { label: "Latest release", value: "No GitHub releases. The README marks the server as generally available and v2 as the recommended version.", source: "github", url: "https://github.com/atlassian/atlassian-mcp-server#readme" },
+      { label: "Last push", value: "2026-10-10", source: "github", url: "https://github.com/atlassian/atlassian-mcp-server" },
+      { label: "Open issues", value: `86, of which 44 were opened before ${STALE_REF}`, source: "github", url: "https://github.com/atlassian/atlassian-mcp-server/issues" },
+      { label: "Dependency lockfiles", value: "package-lock.json", source: "github", url: "https://github.com/atlassian/atlassian-mcp-server" },
+    ],
+    hardening: [
+      {
+        title: "Connect to v2 and ask your admin to limit the groups",
+        note: "The v2 endpoint from the README. Access is controlled by the organization's permission groups, so ask your Atlassian admin to enable only the read and search groups you need.",
+        language: "json",
+        code: '{\n  "mcpServers": {\n    "atlassian": {\n      "type": "http",\n      "url": "https://mcp.atlassian.com/v2/mcp"\n    }\n  }\n}',
+        source: "github",
+        url: "https://github.com/atlassian/atlassian-mcp-server#readme",
+      },
+    ],
+  },
+  {
+    slug: "stripe-agent-toolkit",
+    version: "@stripe/mcp 0.3.3 on npm (no GitHub releases)",
+    reviewedAt: D4,
+    use: [
+      { label: "Made for", value: "Letting AI clients and agents call Stripe through MCP, with a hosted server at mcp.stripe.com or a local one (@stripe/mcp). The repository also holds billing SDKs and agent skills.", source: "github", url: "https://github.com/stripe/ai#readme" },
+      { label: "Not made for", value: "Not stated by the project.", source: "unknown" },
+    ],
+    context: [
+      { label: "Tools", value: "Not counted.", source: "unknown" },
+      { label: "Ways to expose fewer tools", value: "The README says tool permissions are controlled by the Restricted API Key you create in the Stripe Dashboard.", source: "github", url: "https://github.com/stripe/ai/tree/main/tools/modelcontextprotocol" },
+      { label: "Token weight of the definitions", value: "Not measured.", source: "unknown" },
+    ],
+    permissions: [
+      { label: "Credentials", value: "Hosted: OAuth. Local: a Stripe secret key, given with --api-key or as STRIPE_SECRET_KEY, and optionally a connected account.", source: "github", url: "https://github.com/stripe/ai/tree/main/tools/modelcontextprotocol" },
+      { label: "Can change data", value: "Up to what the key allows. Because permissions follow the key, a restricted key limits what the tools can do in your Stripe account.", source: "github", url: "https://github.com/stripe/ai/tree/main/tools/modelcontextprotocol" },
+      { label: "Local files and shell commands", value: "Not stated in the README.", source: "unknown" },
+      { label: "Sends data to third parties", value: "Not verified.", source: "unknown" },
+    ],
+    maintenance: [
+      { label: "Latest release", value: "No GitHub releases. Latest npm version of @stripe/mcp: 0.3.3", source: "registry", url: "https://www.npmjs.com/package/@stripe/mcp" },
+      { label: "Last push", value: "2026-10-21", source: "github", url: "https://github.com/stripe/ai" },
+      { label: "Open issues", value: `34, of which 22 were opened before ${STALE_REF}`, source: "github", url: "https://github.com/stripe/ai/issues" },
+      { label: "Dependency lockfiles", value: "None found at the repository root.", source: "github", url: "https://github.com/stripe/ai" },
+    ],
+    hardening: [
+      {
+        title: "Restricted key in the environment, not in the arguments",
+        note: "The README's examples pass the key as --api-key and also support STRIPE_SECRET_KEY. The environment keeps it out of the argument list. Create the key at dashboard.stripe.com/apikeys with only the permissions you need.",
+        language: "json",
+        code: '{\n  "mcpServers": {\n    "stripe": {\n      "command": "npx",\n      "args": ["-y", "@stripe/mcp"],\n      "env": { "STRIPE_SECRET_KEY": "<restricted-api-key>" }\n    }\n  }\n}',
+        source: "github",
+        url: "https://github.com/stripe/ai/tree/main/tools/modelcontextprotocol",
       },
     ],
   },
