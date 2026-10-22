@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BEST_PAGES, RECENCY_WINDOW_DAYS, WEIGHTS, agentsForPage } from "@/lib/data";
+import { BEST_PAGES, RECENCY_WINDOW_DAYS, WEIGHTS, agentsForPage, fmtDate, getAgents } from "@/lib/data";
 import { CORRECTIONS_EMAIL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -41,6 +41,10 @@ export default function MethodologyPage() {
         show it as not stated instead of guessing. The score measures popularity, maintenance and openness. It does
         not measure how well a tool performs on your task, so test shortlisted tools on your own work.
       </p>
+      <p>
+        The catalog has {getAgents().length} tools in {BEST_PAGES.length} rankings, checked {fmtDate(getAgents().map((a) => a.verifiedAt).sort().at(-1) ?? null)}.
+        A tool can appear in more than one ranking, so the counts listed below add up to more than {getAgents().length}.
+      </p>
       <h2 className="display-2 pt-6 text-2xl sm:text-3xl">Rules and sources of each ranking</h2>
       <p>
         Each ranking page ends with its own methodology block: what it includes, a worked example of the score for the
@@ -60,10 +64,20 @@ export default function MethodologyPage() {
         <li>Price, integrations, deployment options or data handling: each tool page lists them as not verified.</li>
         <li>Quality of the code or the documentation, and the size or health of its community beyond stars and recent pushes.</li>
       </ul>
+      <h2 id="scores" className="display-2 scroll-mt-28 pt-6 text-2xl sm:text-3xl">Health and risk scores on verified cards</h2>
+      <p>
+        The ranking score measures popularity, maintenance and openness. For verified servers we add two separate scores, so a popular
+        server is not mistaken for a safe one. Both are simple rules you can check, not a security audit.
+      </p>
+      <ul className="list-disc space-y-1 pl-5">
+        <li><strong>Health (0-100):</strong> days since the last push (up to 60 points: 14 days or less 60, 30 days 50, 90 days 30, 180 days 10), not archived (20) and an open-source license (20). An archived repository is capped at 10. Strong is 75 or more, Fair is 50 to 74.</li>
+        <li><strong>Risk (0-100, lower is better):</strong> no documented read-only option 30 (not verified 15), usage data sent by default 15 (not verified 5), an advisory affecting the latest version 30 (advisories on older versions only 5), and 5 for each documented safety option that is off by default, up to 10. Low is under 25, Medium under 50, High 50 or more.</li>
+        <li><strong>Estimate:</strong> when two or more of the risk inputs are not verified, the result is shown as an estimate. We never fill a gap by assumption, so unknown inputs add some risk.</li>
+      </ul>
       <h2 id="verified-cards" className="display-2 scroll-mt-28 pt-6 text-2xl sm:text-3xl">Verified cards</h2>
       <p>
         A small number of tools have a verified card: a page section we filled in by hand from the project&apos;s own
-        documentation and source code. Each line shows its origin: official docs, GitHub, our recommendation, or not verified.
+        documentation and source code. Each line shows its origin: official docs, GitHub, package registry, OSV.dev, our own view (an opinion of ours, drawn with a dashed outline, not something the project documents), or not verified.
         If we could not check something, we say so instead of guessing. A card is not a security audit and not a hands-on test.
         It states what the project says and what its code shows on the review date and version shown.
       </p>

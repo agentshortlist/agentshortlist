@@ -3,11 +3,14 @@ import { SOURCE_LABEL, type Row, type VerifiedCard } from "@/content/verified";
 import { SETTINGS } from "@/content/verified-meta";
 import { ADVISORIES_CHECKED_AT, getAdvisories, osvUrl } from "@/lib/advisories";
 import { fmtDate } from "@/lib/data";
+import { CopyCodeButton } from "@/components/copy-code-button";
+import { cardViews } from "@/lib/verified-view";
 
 function SourceTag({ row }: { row: Pick<Row, "source" | "url"> }) {
   const unknown = row.source === "unknown";
+  const ours = row.source === "own-view";
   const cls = `inline-flex items-center rounded-full border px-2 py-0.5 text-[0.6875rem] leading-none ${
-    unknown ? "border-ink/15 text-muted-foreground" : "border-ink/20 text-foreground/80"
+    unknown ? "border-ink/15 text-muted-foreground" : ours ? "border-dashed border-ink/40 text-foreground/80" : "border-ink/20 text-foreground/80"
   }`;
   if (row.url && !unknown) {
     return (
@@ -17,6 +20,32 @@ function SourceTag({ row }: { row: Pick<Row, "source" | "url"> }) {
     );
   }
   return <span className={cls}>{SOURCE_LABEL[row.source]}</span>;
+}
+
+function Scores({ slug }: { slug: string }) {
+  const v = cardViews().find((x) => x.slug === slug);
+  if (!v) return null;
+  return (
+    <div className="surface space-y-3 p-5 sm:p-6">
+      <h3 className="eyebrow">Health and risk</h3>
+      <dl className="grid gap-4 sm:grid-cols-2">
+        <div>
+          <dt className="text-sm text-muted-foreground">Project health</dt>
+          <dd className="text-[15px]">{v.health.level} ({v.health.score}/100){v.health.limited ? ", estimate: no push date" : ""}</dd>
+        </div>
+        <div>
+          <dt className="text-sm text-muted-foreground">Risk from what we read</dt>
+          <dd className="text-[15px]">{v.risk.level} ({v.risk.score}/100){v.risk.limited ? ", estimate: several items not verified" : ""}</dd>
+        </div>
+      </dl>
+      {v.risk.reasons.length > 0 && (
+        <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
+          {v.risk.reasons.map((r) => <li key={r}>{r}</li>)}
+        </ul>
+      )}
+      <p className="text-xs text-muted-foreground">Simple rules, not a security audit. <Link href="/methodology#scores" className="underline underline-offset-4">How they work</Link>.</p>
+    </div>
+  );
 }
 
 function Rows({ title, rows }: { title: string; rows: Row[] }) {
@@ -139,6 +168,7 @@ export function VerifiedCardView({ card }: { card: VerifiedCard }) {
         <Rows title="What it can do" rows={card.permissions} />
         <Rows title="Maintenance" rows={card.maintenance} />
       </div>
+      <Scores slug={card.slug} />
       <Settings slug={card.slug} />
       <Advisories slug={card.slug} />
 
@@ -153,6 +183,7 @@ export function VerifiedCardView({ card }: { card: VerifiedCard }) {
               </div>
               <p className="text-sm leading-[1.6] text-muted-foreground">{h.note}</p>
               <pre className="mono-num overflow-x-auto rounded-xl bg-ink/[0.06] p-4 text-[13px] leading-[1.6]"><code>{h.code}</code></pre>
+              <CopyCodeButton code={h.code} slug={card.slug} />
             </div>
           ))}
         </div>

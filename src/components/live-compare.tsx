@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { KIND_LABEL } from "@/content/verified-meta";
 import type { CardView } from "@/lib/verified-view";
+import { track } from "@/lib/track";
 
 const YES = { yes: "Documented", no: "None found", unknown: "Not verified" } as const;
 const TEL = { "default-on": "On by default", "claimed-off": "Project says none", unknown: "Not verified" } as const;
@@ -15,6 +16,8 @@ const ROWS: { label: string; get: (c: CardView) => string }[] = [
   { label: "Type", get: (c) => KIND_LABEL[c.facts.kind] },
   { label: "Runs", get: (c) => HOST[c.facts.hosting] },
   { label: "Tools", get: (c) => c.rows.tools },
+  { label: "Project health", get: (c) => `${c.health.level} (${c.health.score}/100)${c.health.limited ? ", estimate" : ""}` },
+  { label: "Risk from what we read", get: (c) => `${c.risk.level} (${c.risk.score}/100)${c.risk.limited ? ", estimate" : ""}` },
   { label: "Read-only option", get: (c) => YES[c.facts.readOnly] },
   { label: "Telemetry by default", get: (c) => TEL[c.facts.telemetry] },
   { label: "What it can do", get: (c) => c.rows.can || "Not assessed" },
@@ -43,6 +46,7 @@ export function LiveCompare({ cards }: { cards: CardView[] }) {
   const set = (i: number, v: string) => {
     const next = sel.map((s, j) => (j === i ? v : s));
     setSel(next);
+    if (v) track("compare_use", { selected: next.filter(Boolean).length });
     const q = new URLSearchParams();
     next.forEach((s, j) => s && q.set("abc"[j], s));
     window.history.replaceState(null, "", q.toString() ? `?${q}` : window.location.pathname);

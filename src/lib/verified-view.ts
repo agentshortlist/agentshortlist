@@ -4,6 +4,8 @@ import { getAdvisories } from "@/lib/advisories";
 import { getAgent } from "@/lib/data";
 
 // Vista plana de cada ficha para las herramientas interactivas (comparador, selector, comprobador).
+import { health, risk, type Health, type Risk } from "@/lib/scores";
+
 export type CardView = {
   slug: string;
   name: string;
@@ -17,6 +19,8 @@ export type CardView = {
   hardening: string[];
   alternative: { name: string; url: string } | null;
   adv: { total: number; latest: number | null; packages: number };
+  health: Health;
+  risk: Risk;
   packages: { name: string; ecosystem: string; latest: string | null; vulns: { id: string; severity: string | null; summary: string; ranges: { introduced?: string; fixed?: string; last_affected?: string }[][] }[] }[];
 };
 
@@ -34,6 +38,11 @@ const view = (c: VerifiedCard): CardView | null => {
   if (!a || !m) return null;
   const pk = getAdvisories(c.slug);
   const known = pk.length > 0;
+  const adv = {
+    total: pk.reduce((n, p) => n + p.total, 0),
+    latest: known && pk.every((p) => p.affectingLatest !== null) ? pk.reduce((n, p) => n + (p.affectingLatest ?? 0), 0) : null,
+    packages: pk.length,
+  };
   return {
     slug: c.slug,
     name: a.name,
@@ -57,11 +66,9 @@ const view = (c: VerifiedCard): CardView | null => {
     },
     hardening: c.hardening.map((h) => h.title),
     alternative: c.alternative ? { name: c.alternative.name, url: c.alternative.url } : null,
-    adv: {
-      total: pk.reduce((n, p) => n + p.total, 0),
-      latest: known && pk.every((p) => p.affectingLatest !== null) ? pk.reduce((n, p) => n + (p.affectingLatest ?? 0), 0) : known ? null : null,
-      packages: pk.length,
-    },
+    adv,
+    health: health(a),
+    risk: risk({ facts: m.facts, adv, checks: m.checks ?? [] }),
     packages: pk.map((p) => ({
       name: p.name,
       ecosystem: p.ecosystem,

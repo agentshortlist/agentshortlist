@@ -19,7 +19,7 @@ import { SoundProvider } from "@/components/sound-provider";
 import { SoundToggle } from "@/components/sound-toggle";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Eyebrow } from "@/components/ui-kit";
-import { BEST_PAGES, CATEGORIES, getAgents } from "@/lib/data";
+import { BEST_PAGES, CATEGORIES, fmtDate, getAgents } from "@/lib/data";
 import { snapshotCount } from "@/lib/history";
 import { CORRECTIONS_EMAIL, GA_ID, SITE_NAME, SITE_TAGLINE, SITE_URL, X_URL, LINKEDIN_URL, BLUESKY_URL, GITHUB_URL, GITHUB_ORG_URL } from "@/lib/site";
 
@@ -201,7 +201,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <div className="space-y-3">
               <Eyebrow>{SITE_NAME}</Eyebrow>
               <p className="prose-measure text-muted-foreground">
-                Strictly curated. Figures come from the public GitHub API and are re-checked on every update.
+                Strictly curated. Figures come from the public GitHub API and were last checked {fmtDate(getAgents().map((a) => a.verifiedAt).sort().at(-1) ?? null)}.
               </p>
               <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
                 <a

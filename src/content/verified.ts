@@ -9,7 +9,7 @@ export const SOURCE_LABEL: Record<Source, string> = {
   github: "GitHub",
   registry: "Package registry",
   osv: "OSV.dev",
-  "own-view": "Our recommendation",
+  "own-view": "Our view, not documented",
   unknown: "Not verified",
 };
 
@@ -40,6 +40,7 @@ const D = "2026-10-18";
 const D2 = "2026-10-19";
 const D3 = "2026-10-20";
 const D4 = "2026-10-21";
+const D5 = "2026-10-22";
 const STALE_REF = "2026-07-20"; // 90 días antes de la revisión
 
 export const VERIFIED: VerifiedCard[] = [
@@ -1374,13 +1375,13 @@ export const VERIFIED: VerifiedCard[] = [
     ],
     context: [
       { label: "Tools", value: "Not counted. The README names kubectl_get, describe, logs, create, apply, delete, scale, patch, rollout and generic, plus Helm, port-forward and cleanup tools.", source: "github", url: "https://github.com/Flux159/mcp-server-kubernetes#readme" },
-      { label: "Ways to expose fewer tools", value: "ALLOW_ONLY_NON_DESTRUCTIVE_TOOLS=true turns off delete, uninstall, cleanup, node management and kubectl_generic.", source: "github", url: "https://github.com/Flux159/mcp-server-kubernetes#readme" },
+      { label: "Ways to expose fewer tools", value: "ALLOW_ONLY_NON_DESTRUCTIVE_TOOLS=true turns off delete, uninstall, cleanup, node management, kubectl_generic and exec_in_pod.", source: "github", url: "https://github.com/Flux159/mcp-server-kubernetes#readme" },
       { label: "Token weight of the definitions", value: "Not measured.", source: "unknown" },
     ],
     permissions: [
       { label: "Credentials", value: "Your kubeconfig, by default ~/.kube/config. Other sources are described in ADVANCED_README.md.", source: "github", url: "https://github.com/Flux159/mcp-server-kubernetes#readme" },
       { label: "Can change data", value: "Yes. The non-destructive mode is not a read-only mode: kubectl_apply, create, scale, patch, rollout and Helm install and upgrade stay available.", source: "github", url: "https://github.com/Flux159/mcp-server-kubernetes#readme" },
-      { label: "Shell commands", value: "kubectl_generic runs any kubectl command. It is disabled in non-destructive mode.", source: "github", url: "https://github.com/Flux159/mcp-server-kubernetes#readme" },
+      { label: "Shell commands", value: "kubectl_generic runs any kubectl command and exec_in_pod runs a command inside a pod. Both are disabled in non-destructive mode.", source: "github", url: "https://github.com/Flux159/mcp-server-kubernetes#readme" },
       { label: "Secrets", value: "The README says it masks sensitive data in kubectl get secrets output. Logs are not affected.", source: "github", url: "https://github.com/Flux159/mcp-server-kubernetes#readme" },
       { label: "Telemetry", value: "OpenTelemetry tracing is opt-in (ENABLE_TELEMETRY=true) and disabled by default.", source: "github", url: "https://github.com/Flux159/mcp-server-kubernetes#readme" },
       { label: "Sends data to third parties", value: "Not verified.", source: "unknown" },
@@ -1502,6 +1503,196 @@ export const VERIFIED: VerifiedCard[] = [
       },
     ],
   },
+  {
+    slug: "mcp-atlassian",
+    version: "v0.23.1 (2026-08-19)",
+    reviewedAt: D5,
+    use: [
+      { label: "Made for", value: "Letting AI clients work with Jira and Confluence, on Atlassian Cloud and on Server or Data Center.", source: "github", url: "https://github.com/sooperset/mcp-atlassian#readme" },
+      { label: "Not made for", value: "Not stated by the project.", source: "unknown" },
+    ],
+    context: [
+      { label: "Tools", value: "Not counted. The docs list Jira and Confluence tools, including creating, updating and deleting issues. TOOLSETS=default is described as about 35 tools across 6 core toolsets.", source: "official", url: "https://mcp-atlassian.soomiles.com/docs/configuration" },
+      { label: "Ways to expose fewer tools", value: "READ_ONLY_MODE=true, ENABLED_TOOLS (or --enabled-tools) and TOOLSETS (default, jira_agile, legacy, all). JIRA_PROJECTS_FILTER and CONFLUENCE_SPACES_FILTER limit projects and spaces.", source: "official", url: "https://mcp-atlassian.soomiles.com/docs/configuration" },
+      { label: "Token weight of the definitions", value: "Not measured.", source: "unknown" },
+    ],
+    permissions: [
+      { label: "Credentials", value: "Cloud: an Atlassian API token and your email. Server or Data Center: a Personal Access Token. OAuth 2.0 is also supported.", source: "github", url: "https://github.com/sooperset/mcp-atlassian#readme" },
+      { label: "Can change data", value: "Yes by default. The docs mark each write tool, such as create, update and delete issue, as disabled when READ_ONLY_MODE=true.", source: "official", url: "https://mcp-atlassian.soomiles.com/docs/tools" },
+      { label: "Local files and shell commands", value: "Not stated in the README.", source: "unknown" },
+      { label: "Sends data to third parties", value: "Not verified.", source: "unknown" },
+    ],
+    maintenance: [
+      { label: "Latest release", value: "v0.23.1, 2026-08-19", source: "github", url: "https://github.com/sooperset/mcp-atlassian/releases" },
+      { label: "Last push", value: "2026-09-19", source: "github", url: "https://github.com/sooperset/mcp-atlassian" },
+      { label: "Open issues", value: `187, of which 115 were opened before ${STALE_REF}`, source: "github", url: "https://github.com/sooperset/mcp-atlassian/issues" },
+      { label: "Dependency lockfiles", value: "uv.lock", source: "github", url: "https://github.com/sooperset/mcp-atlassian" },
+    ],
+    hardening: [
+      {
+        title: "Read-only mode",
+        note: "The docs say READ_ONLY_MODE=true disables all write operations. The credentials in the example are the README's own placeholders; use a token that can only read as well.",
+        language: "json",
+        code: '{\n  "mcpServers": {\n    "mcp-atlassian": {\n      "command": "uvx",\n      "args": ["mcp-atlassian"],\n      "env": {\n        "JIRA_URL": "https://your-company.atlassian.net",\n        "JIRA_USERNAME": "your.email@company.com",\n        "JIRA_API_TOKEN": "<token>",\n        "READ_ONLY_MODE": "true"\n      }\n    }\n  }\n}',
+        source: "official",
+        url: "https://mcp-atlassian.soomiles.com/docs/configuration",
+      },
+    ],
+    alternative: {
+      name: "Atlassian's own remote server",
+      url: "https://github.com/atlassian/atlassian-mcp-server",
+      note: "A hosted server where admins grant access by permission group (read, write, search, delete, manage), per its own documentation.",
+      source: "github",
+    },
+  },
+  {
+    slug: "datadog-mcp-server",
+    version: "Hosted service (no GitHub releases; the repository keeps a CHANGELOG)",
+    reviewedAt: D5,
+    use: [
+      { label: "Made for", value: "Connecting AI agents to Datadog's managed MCP server to query logs, metrics, traces, incidents and more. The repository holds setup instructions and examples; the server is run by Datadog.", source: "github", url: "https://github.com/datadog-labs/mcp-server#readme" },
+      { label: "Not made for", value: "The docs say the server is under significant development, is not GovCloud compatible and is not supported on the ddog-gov.com sites.", source: "official", url: "https://docs.datadoghq.com/bits_ai/mcp_server/" },
+    ],
+    context: [
+      { label: "Tools", value: "Not counted. The docs organize tools by toolset in a separate reference.", source: "official", url: "https://docs.datadoghq.com/bits_ai/mcp_server/" },
+      { label: "Ways to expose fewer tools", value: "toolsets and omit_tools at connection time. A max_tokens parameter lets an agent ask for less or more information.", source: "official", url: "https://docs.datadoghq.com/bits_ai/mcp_server/" },
+      { label: "Token weight of the definitions", value: "Not measured.", source: "unknown" },
+    ],
+    permissions: [
+      { label: "Credentials", value: "The server forwards the authenticated user's own credentials to Datadog's APIs. The README's quick setup is the URL for your Datadog site and points to the setup docs for other methods.", source: "official", url: "https://docs.datadoghq.com/bits_ai/mcp_server/" },
+      { label: "Can change data", value: "Up to the connected user's Datadog permissions. The docs say write operations require the matching permission, with monitors_write as an example, and are checked on each call. No separate read-only mode is described.", source: "official", url: "https://docs.datadoghq.com/bits_ai/mcp_server/" },
+      { label: "Audit trail", value: "All tool calls are recorded in Datadog's Audit Trail with the tool name, arguments, user identity and MCP client.", source: "official", url: "https://docs.datadoghq.com/bits_ai/mcp_server/" },
+      { label: "Local files and shell commands", value: "Hosted service; the docs describe no local access for this server.", source: "official", url: "https://docs.datadoghq.com/bits_ai/mcp_server/" },
+      { label: "Sends data to third parties", value: "The docs say the server does not send Datadog data to a third-party AI provider; your AI client and its model decide what reaches its own provider. A few tools use Datadog-hosted AI models, and usage data including prompt context is stored for 120 days.", source: "official", url: "https://docs.datadoghq.com/bits_ai/mcp_server/" },
+    ],
+    maintenance: [
+      { label: "Latest release", value: "No GitHub releases. The repository keeps a CHANGELOG.", source: "github", url: "https://github.com/datadog-labs/mcp-server" },
+      { label: "Last push", value: "2026-10-16", source: "github", url: "https://github.com/datadog-labs/mcp-server" },
+      { label: "Open issues", value: "0 open issues on the repository", source: "github", url: "https://github.com/datadog-labs/mcp-server/issues" },
+      { label: "Dependency lockfiles", value: "None found at the repository root.", source: "github", url: "https://github.com/datadog-labs/mcp-server" },
+    ],
+    hardening: [
+      {
+        title: "Connect as a user that can only read",
+        note: "Because the server acts as the connected user, the limit is that user's Datadog permissions. Give the account or role only read permissions. The docs also describe toolsets and omit_tools to limit tools; check the setup docs for the exact syntax. This snippet is the README's own configuration.",
+        language: "json",
+        code: '{\n  "mcpServers": {\n    "datadog": {\n      "type": "http",\n      "url": "https://mcp.datadoghq.com/v1/mcp"\n    }\n  }\n}',
+        source: "github",
+        url: "https://github.com/datadog-labs/mcp-server#readme",
+      },
+    ],
+  },
+  {
+    slug: "auth0-mcp-server",
+    version: "0.1.0-beta.19 on npm (no GitHub releases)",
+    reviewedAt: D5,
+    use: [
+      { label: "Made for", value: "Letting AI clients manage an Auth0 tenant: applications, resource servers, Actions and logs.", source: "github", url: "https://github.com/auth0/auth0-mcp-server#readme" },
+      { label: "Not made for", value: "The README says this is beta software, provided as is and 'not recommended for production use or critical workloads'.", source: "github", url: "https://github.com/auth0/auth0-mcp-server#readme" },
+    ],
+    context: [
+      { label: "Tools", value: "About 24 tools named in the README (counted by us), such as auth0_list_*, auth0_get_*, auth0_create_* and auth0_update_*.", source: "github", url: "https://github.com/auth0/auth0-mcp-server#readme" },
+      { label: "Ways to expose fewer tools", value: "--tools with name patterns (the default is all) and --read-only. When both are given, --read-only takes priority.", source: "github", url: "https://github.com/auth0/auth0-mcp-server#readme" },
+      { label: "Token weight of the definitions", value: "Not measured.", source: "unknown" },
+    ],
+    permissions: [
+      { label: "Credentials", value: "OAuth 2.0 device authorization in the browser. The README says credentials are stored in your system keychain.", source: "github", url: "https://github.com/auth0/auth0-mcp-server#readme" },
+      { label: "Can change data", value: "Yes by default: tools create and update applications, resource servers and Actions. --read-only keeps only the read tools.", source: "github", url: "https://github.com/auth0/auth0-mcp-server#readme" },
+      { label: "Local files and shell commands", value: "Not stated in the README.", source: "unknown" },
+      { label: "Sends data to third parties", value: "Anonymized usage data is collected: the MCP version, operating system, timestamp and other technical details. AUTH0_MCP_ANALYTICS=false opts out.", source: "github", url: "https://github.com/auth0/auth0-mcp-server#readme" },
+    ],
+    maintenance: [
+      { label: "Latest release", value: "No GitHub releases. Latest npm version of @auth0/auth0-mcp-server: 0.1.0-beta.19", source: "registry", url: "https://www.npmjs.com/package/@auth0/auth0-mcp-server" },
+      { label: "Last push", value: "2026-10-20", source: "github", url: "https://github.com/auth0/auth0-mcp-server" },
+      { label: "Open issues", value: `8, of which 5 were opened before ${STALE_REF}`, source: "github", url: "https://github.com/auth0/auth0-mcp-server/issues" },
+      { label: "Dependency lockfiles", value: "None found at the repository root.", source: "github", url: "https://github.com/auth0/auth0-mcp-server" },
+    ],
+    hardening: [
+      {
+        title: "Read-only tools",
+        note: "The README documents --read-only and says it takes priority over --tools, so you can rely on it as a guardrail. It also shows --tools 'auth0_list_*,auth0_get_*' as an explicit way to pick read tools.",
+        language: "bash",
+        code: "npx @auth0/auth0-mcp-server init --read-only",
+        source: "github",
+        url: "https://github.com/auth0/auth0-mcp-server#readme",
+      },
+    ],
+  },
+  {
+    slug: "sentry-mcp",
+    version: "@sentry/mcp-server 0.42.0 on npm",
+    reviewedAt: D5,
+    use: [
+      { label: "Made for", value: "Letting coding agents work with Sentry errors, traces, logs and issues. Sentry runs a hosted server at mcp.sentry.dev, and the same repository can run it over stdio, including against self-hosted Sentry.", source: "github", url: "https://github.com/getsentry/toolkit#readme" },
+      { label: "Not made for", value: "The README says its tool selection is focused on developer workflows and debugging use cases, for human-in-the-loop coding agents.", source: "github", url: "https://github.com/getsentry/toolkit#readme" },
+      { label: "License", value: "Functional Source License 1.1 (FSL-1.1-Apache-2.0), a source-available license that later converts to Apache 2.0. It is not an OSI open-source license today.", source: "github", url: "https://github.com/getsentry/toolkit/blob/main/LICENSE.md" },
+    ],
+    context: [
+      { label: "Tools", value: "Not counted. The README names search_errors, search_traces, search_logs and search_issues among others.", source: "github", url: "https://github.com/getsentry/toolkit#readme" },
+      { label: "Ways to expose fewer tools", value: "Skills: --skills and --disable-skills on stdio, ?skills= and ?disable-skills= on the remote URL. The README's examples include inspect, triage, seer and project-management.", source: "github", url: "https://github.com/getsentry/toolkit#readme" },
+      { label: "Token weight of the definitions", value: "Not measured.", source: "unknown" },
+    ],
+    permissions: [
+      { label: "Credentials", value: "Remote: OAuth to Sentry. stdio: a Sentry user auth token with the scopes org:read, project:read, project:write, team:read, team:write and event:write.", source: "github", url: "https://github.com/getsentry/toolkit#readme" },
+      { label: "Can change data", value: "The stdio token scopes include write scopes, and the README shows a project-management skill you can disable. It documents no read-only mode.", source: "github", url: "https://github.com/getsentry/toolkit#readme" },
+      { label: "Local files and shell commands", value: "Not stated in the README.", source: "unknown" },
+      { label: "Sends data to third parties", value: "The AI-powered search tools need an LLM provider (OpenAI, Azure OpenAI, Anthropic or OpenRouter) to turn natural language into Sentry queries. Without one, those tools are unavailable.", source: "github", url: "https://github.com/getsentry/toolkit#readme" },
+      { label: "Telemetry", value: "The repository's TELEMETRY.md describes how the hosted service is monitored with Sentry traces, logs and metrics, including tool names and the authenticated Sentry user ID. We found no opt-out stated.", source: "github", url: "https://github.com/getsentry/toolkit/blob/main/TELEMETRY.md" },
+    ],
+    maintenance: [
+      { label: "Latest release", value: "@sentry/mcp-server 0.42.0 on npm. GitHub releases in this repository are mostly for the CLI (cli@0.47.0, 2026-10-05).", source: "registry", url: "https://www.npmjs.com/package/@sentry/mcp-server" },
+      { label: "Last push", value: "2026-10-21", source: "github", url: "https://github.com/getsentry/toolkit" },
+      { label: "Open issues", value: `112, of which 76 were opened before ${STALE_REF}`, source: "github", url: "https://github.com/getsentry/toolkit/issues" },
+      { label: "Dependency lockfiles", value: "pnpm-lock.yaml", source: "github", url: "https://github.com/getsentry/toolkit" },
+    ],
+    hardening: [
+      {
+        title: "Turn off a group of tools",
+        note: "The README's own example disables the project-management skill on stdio. Replace TOKEN with a token that has only the scopes you need, and pin a version instead of @latest.",
+        language: "bash",
+        code: "npx @sentry/mcp-server@latest --access-token=TOKEN --host=sentry.example.com --disable-skills=project-management",
+        source: "github",
+        url: "https://github.com/getsentry/toolkit#readme",
+      },
+    ],
+  },
+  {
+    slug: "excel-mcp-server",
+    version: "v2.2.2 (2026-10-21)",
+    reviewedAt: D5,
+    use: [
+      { label: "Made for", value: "Letting AI clients read, edit and format Excel workbooks (.xlsx, .xlsm, .xltx and .xltm), over stdio or HTTP.", source: "github", url: "https://github.com/haris-musa/excel-mcp-server#readme" },
+      { label: "Not made for", value: "Not stated by the project.", source: "unknown" },
+    ],
+    context: [
+      { label: "Tools", value: "Not counted. Every tool and parameter is documented in TOOLS.md.", source: "github", url: "https://github.com/haris-musa/excel-mcp-server/blob/main/TOOLS.md" },
+      { label: "Ways to expose fewer tools", value: "--read-only (EXCEL_MCP_READ_ONLY=1) offers only tools that do not change files. --tools (EXCEL_MCP_TOOLS) offers the core tools plus the areas you name.", source: "github", url: "https://github.com/haris-musa/excel-mcp-server#readme" },
+      { label: "Token weight of the definitions", value: "Not measured.", source: "unknown" },
+    ],
+    permissions: [
+      { label: "Credentials", value: "None needed by the server itself.", source: "github", url: "https://github.com/haris-musa/excel-mcp-server#readme" },
+      { label: "Can change data", value: "Yes by default: it reads and writes workbook files. Writing VBA is off unless you start it with --allow-vba-write, and the README says the server never runs macros.", source: "github", url: "https://github.com/haris-musa/excel-mcp-server#readme" },
+      { label: "Local files and shell commands", value: "Works on workbook files. --allow-dir (EXCEL_FILES_PATH) limits the folders; the README lists its default as none for stdio and ./excel_files for HTTP. HTTP listens on localhost by default.", source: "github", url: "https://github.com/haris-musa/excel-mcp-server#readme" },
+      { label: "Sends data to third parties", value: "Not verified.", source: "unknown" },
+    ],
+    maintenance: [
+      { label: "Latest release", value: "v2.2.2, 2026-10-21", source: "github", url: "https://github.com/haris-musa/excel-mcp-server/releases" },
+      { label: "Last push", value: "2026-10-21", source: "github", url: "https://github.com/haris-musa/excel-mcp-server" },
+      { label: "Open issues", value: `0 open issues, none opened before ${STALE_REF}`, source: "github", url: "https://github.com/haris-musa/excel-mcp-server/issues" },
+      { label: "Dependency lockfiles", value: "uv.lock", source: "github", url: "https://github.com/haris-musa/excel-mcp-server" },
+    ],
+    hardening: [
+      {
+        title: "Read-only and one folder",
+        note: "The README's configuration confines the server to one folder with --allow-dir. Adding the documented --read-only flag keeps only the tools that do not change files.",
+        language: "json",
+        code: '{\n  "mcpServers": {\n    "excel": {\n      "command": "uvx",\n      "args": ["excel-mcp-server", "stdio", "--allow-dir", "/path/to/workbooks", "--read-only"]\n    }\n  }\n}',
+        source: "github",
+        url: "https://github.com/haris-musa/excel-mcp-server#readme",
+      },
+    ],
+  },
+
 ];
 
 export const getVerified = (slug: string) => VERIFIED.find((c) => c.slug === slug);

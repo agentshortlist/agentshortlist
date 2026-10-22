@@ -1,6 +1,6 @@
 ---
 title: Two Kubernetes MCP servers, two kinds of safe
-description: Both Kubernetes MCP servers offer a safer mode. One is read-only and the other is not. What each README says, line by line, and where to put the limit.
+description: Both Kubernetes MCP servers offer a safer mode. One is documented as read-only; the other documents a non-destructive mode. What each README says, line by line, and where to put the limit.
 date: 2026-10-21
 tags: security, kubernetes
 ---
@@ -13,7 +13,7 @@ On 21 October we added two Kubernetes MCP servers to the [verified cards](/verif
 |---|---|---|
 | Setting | `read_only = true` | `ALLOW_ONLY_NON_DESTRUCTIVE_TOOLS=true` |
 | What stays on | Read operations | Reads, plus create and update |
-| What goes off | Writes | Delete, uninstall, cleanup, node management, `kubectl_generic` |
+| What goes off | Writes | Delete, uninstall, cleanup, node management, `kubectl_generic`, `exec_in_pod` |
 | Where you set it | A TOML file passed with `--config` | An environment variable |
 | Sensitive data | `denied_resources` can block whole types, such as Secrets | Masks values in `kubectl get secrets` output; logs are not covered |
 
@@ -29,9 +29,11 @@ The README's example file sets `read_only = true`, a short list of toolsets and 
 
 Flux159's README has an example configuration whose entry is called `kubernetes-readonly`. The only thing it sets is `ALLOW_ONLY_NON_DESTRUCTIVE_TOOLS`.
 
-That flag removes `kubectl_delete`, uninstalling Helm charts, the cleanup tools, node management (which can drain nodes) and `kubectl_generic`, which runs any kubectl command. What it keeps is `kubectl_apply`, create, scale, patch, rollout and Helm install and upgrade. An agent in that mode can still change a Deployment or roll out a different image.
+That flag removes `kubectl_delete`, uninstalling Helm charts, the cleanup tools, node management (which can drain nodes), `kubectl_generic`, which runs any kubectl command, and `exec_in_pod`. What it keeps is `kubectl_apply`, create, scale, patch, rollout and Helm install and upgrade. An agent in that mode can still change a Deployment or roll out a different image.
 
 Non-destructive is a real protection against deleting things. It is not read-only. If you copy that example because of its name, you won't get what the name says.
+
+There is a stricter switch, but it is not in the README. In the project's `src/index.ts` on 21 October 2026 we found `ALLOW_ONLY_READONLY_TOOLS=true`, which keeps eight tools: get, describe, logs, context, reconnect, explain, list API resources and ping. We haven't run it, and since the README doesn't document it we wouldn't build on it without asking the maintainer. If you want read-only here, enforce it in the cluster.
 
 ## What neither README settles
 

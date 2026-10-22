@@ -165,6 +165,37 @@ export const META: Record<string, Meta> = {
   },
   "home-assistant-mcp-server": { match: ["ha-mcp", "homeassistant-ai"], facts: { kind: "platform", readOnly: "yes", telemetry: "claimed-off", hosting: "local" } },
   "atlassian-remote-mcp-server": { match: ["mcp.atlassian.com"], facts: { kind: "platform", readOnly: "yes", telemetry: "unknown", hosting: "hosted" } },
+  "mcp-atlassian": {
+    match: ["mcp-atlassian"],
+    facts: { kind: "platform", readOnly: "yes", telemetry: "unknown", hosting: "local" },
+    checks: [{ ok: ["READ_ONLY_MODE", "--read-only"], message: "READ_ONLY_MODE is not set, so the write tools stay on, including creating, updating and deleting Jira issues. The docs name READ_ONLY_MODE=true to disable all write operations." }],
+  },
+  "datadog-mcp-server": {
+    match: ["mcp.datadoghq", "datadoghq.com/v1/mcp"],
+    facts: { kind: "platform", readOnly: "no", telemetry: "unknown", hosting: "hosted" },
+    checks: [{ ok: [], message: "The server acts as the connected Datadog user and the docs describe no separate read-only mode. Connect as a user that only has read permissions. Tool calls are recorded in Datadog's Audit Trail." }],
+  },
+  "auth0-mcp-server": {
+    match: ["auth0-mcp-server"],
+    facts: { kind: "platform", readOnly: "yes", telemetry: "default-on", hosting: "local" },
+    checks: [
+      { ok: ["--read-only"], message: "No --read-only flag found. The Auth0 server can create and update applications, resource servers and Actions. The README documents --read-only, which takes priority over --tools." },
+      { ok: ["AUTH0_MCP_ANALYTICS"], message: "Anonymized usage data (MCP version, operating system, timestamp) is collected by default. AUTH0_MCP_ANALYTICS=false opts out." },
+    ],
+  },
+  "sentry-mcp": {
+    match: ["@sentry/mcp-server", "mcp.sentry.dev"],
+    facts: { kind: "platform", readOnly: "no", telemetry: "unknown", hosting: "both" },
+    checks: [{ ok: ["disable-skills"], message: "No skills are disabled. The README documents no read-only mode and its stdio token scopes include write. It shows --disable-skills (or ?disable-skills= on the remote URL) to turn off a group such as project-management." }],
+  },
+  "excel-mcp-server": {
+    match: ["excel-mcp-server"],
+    facts: { kind: "system", readOnly: "yes", telemetry: "unknown", hosting: "local" },
+    checks: [
+      { ok: ["--read-only", "EXCEL_MCP_READ_ONLY"], message: "No read-only flag found, so the tools can change workbook files. --read-only (or EXCEL_MCP_READ_ONLY=1) offers only tools that do not change files." },
+      { ok: ["--allow-dir", "EXCEL_FILES_PATH"], message: "No folder confinement set. The README lists the default for stdio as none. --allow-dir restricts the folders workbooks must be in." },
+    ],
+  },
   "stripe-agent-toolkit": {
     match: ["@stripe/mcp"],
     facts: { kind: "platform", readOnly: "unknown", telemetry: "unknown", hosting: "both" },
@@ -304,6 +335,28 @@ export const SETTINGS: Record<string, Setting[]> = {
   ],
   "home-assistant-mcp-server": [
     { name: "ENABLE_TOOL_SEARCH", kind: "env", required: false, note: "Set to true to hide the tool catalog behind a search, which reduces the context used.", url: R("homeassistant-ai/ha-mcp") },
+  ],
+  "mcp-atlassian": [
+    { name: "JIRA_URL / JIRA_USERNAME / JIRA_API_TOKEN", kind: "env", required: true, note: "Address, email and API token for Jira Cloud. Use a Personal Access Token for Server or Data Center.", url: R("sooperset/mcp-atlassian") },
+    { name: "READ_ONLY_MODE", kind: "env", required: false, note: "Set to true to disable all write operations.", url: "https://mcp-atlassian.soomiles.com/docs/configuration" },
+    { name: "ENABLED_TOOLS / TOOLSETS", kind: "env", required: false, note: "Limit the server to named tools or to groups of tools.", url: "https://mcp-atlassian.soomiles.com/docs/configuration" },
+    { name: "JIRA_PROJECTS_FILTER / CONFLUENCE_SPACES_FILTER", kind: "env", required: false, note: "Limit the server to some Jira projects or Confluence spaces.", url: "https://mcp-atlassian.soomiles.com/docs/configuration" },
+  ],
+  "auth0-mcp-server": [
+    { name: "--read-only", kind: "flag", required: false, note: "Keep only the read tools. It takes priority over --tools.", url: R("auth0/auth0-mcp-server") },
+    { name: "--tools", kind: "flag", required: false, note: "Name patterns for the tools to offer; the default is all.", url: R("auth0/auth0-mcp-server") },
+    { name: "AUTH0_MCP_ANALYTICS", kind: "env", required: false, note: "Set to false to opt out of anonymized usage data.", url: R("auth0/auth0-mcp-server") },
+  ],
+  "sentry-mcp": [
+    { name: "--access-token", kind: "flag", required: true, note: "Your Sentry user auth token for stdio. It is easier to leak as an argument than as an environment variable.", url: R("getsentry/toolkit") },
+    { name: "--host", kind: "flag", required: false, note: "Hostname of a self-hosted Sentry.", url: R("getsentry/toolkit") },
+    { name: "--skills / --disable-skills", kind: "flag", required: false, note: "Turn groups of tools on or off, for example project-management.", url: R("getsentry/toolkit") },
+  ],
+  "excel-mcp-server": [
+    { name: "--allow-dir", kind: "flag", required: false, note: "Folders workbooks must be in. Also EXCEL_FILES_PATH.", url: R("haris-musa/excel-mcp-server") },
+    { name: "--read-only", kind: "flag", required: false, note: "Only offer tools that do not change files. Also EXCEL_MCP_READ_ONLY=1.", url: R("haris-musa/excel-mcp-server") },
+    { name: "--allow-vba-write", kind: "flag", required: false, note: "Adds the tools that write VBA macros. Off by default and ignored with --read-only.", url: R("haris-musa/excel-mcp-server") },
+    { name: "--tools", kind: "flag", required: false, note: "Core tools plus the areas you name. Also EXCEL_MCP_TOOLS.", url: R("haris-musa/excel-mcp-server") },
   ],
   "stripe-agent-toolkit": [
     { name: "STRIPE_SECRET_KEY", kind: "env", required: true, note: "Your Stripe key for the local server. Use a restricted key: tool permissions follow it.", url: R("stripe/ai", "/tree/main/tools/modelcontextprotocol") },

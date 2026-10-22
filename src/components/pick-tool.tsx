@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { track } from "@/lib/track";
 import { KIND_LABEL, type Kind } from "@/content/verified-meta";
 import type { CardView } from "@/lib/verified-view";
 
@@ -13,6 +14,8 @@ const FILTERS = [
   { id: "noTelemetry", label: "Project says it sends no telemetry", test: (c: CardView) => c.facts.telemetry === "claimed-off" },
   { id: "local", label: "Can run on my machine", test: (c: CardView) => c.facts.hosting === "local" || c.facts.hosting === "both" },
   { id: "noAdv", label: "No published advisory affects the latest version", test: (c: CardView) => c.adv.latest === 0 },
+  { id: "lowRisk", label: "Low risk from what we read", test: (c: CardView) => c.risk.level === "Low" && !c.risk.limited },
+  { id: "healthy", label: "Strong project health", test: (c: CardView) => c.health.level === "Strong" },
   { id: "fresh", label: "Pushed in the last 30 days", test: (c: CardView) => (daysSince(c.lastPush) ?? 999) <= 30 },
 ] as const;
 
@@ -30,6 +33,13 @@ export function PickTool({ cards }: { cards: CardView[] }) {
       .filter((x) => x.pass === x.total)
       .sort((a, b) => a.c.name.localeCompare(b.c.name));
   }, [cards, kind, on]);
+
+  const first = useRef(true);
+  useEffect(() => {
+    if (first.current) { first.current = false; return; }
+    const t = window.setTimeout(() => track("pick_use", { kind, filters: on.length, results: shown.length }), 1200);
+    return () => window.clearTimeout(t);
+  }, [kind, on, shown.length]);
 
   const toggle = (id: string) => setOn((o) => (o.includes(id) ? o.filter((x) => x !== id) : [...o, id]));
   const chip = (active: boolean) => `rounded-full border px-4 py-2 text-sm transition-colors ${active ? "border-ink bg-ink text-paper" : "border-ink/20 hover:bg-ink/5"}`;
@@ -74,10 +84,11 @@ export function PickTool({ cards }: { cards: CardView[] }) {
                   <span className="text-xs text-muted-foreground">{KIND_LABEL[c.facts.kind]}</span>
                 </div>
                 <p className="text-sm leading-[1.55] text-foreground/85">{c.rows.madeFor}</p>
+                <p className="mono-num text-xs text-muted-foreground">Health {c.health.level} · Risk {c.risk.level}{c.risk.limited ? " (estimate)" : ""}</p>
                 <ul className="space-y-1 text-sm text-muted-foreground">
                   {FILTERS.map((f) => {
                     const known =
-                      f.id === "readOnly" ? c.facts.readOnly !== "unknown" : f.id === "noTelemetry" ? c.facts.telemetry !== "unknown" : f.id === "noAdv" ? c.adv.latest !== null : true;
+                      f.id === "readOnly" ? c.facts.readOnly !== "unknown" : f.id === "noTelemetry" ? c.facts.telemetry !== "unknown" : f.id === "noAdv" ? c.adv.latest !== null : f.id === "lowRisk" ? !c.risk.limited : true;
                     return (
                       <li key={f.id}>
                         <span aria-hidden="true">{!known ? "? " : f.test(c) ? "✓ " : "✗ "}</span>

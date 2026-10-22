@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { track } from "@/lib/track";
 import type { CardView } from "@/lib/verified-view";
 
 type Entry = { name: string; text: string; env: Record<string, unknown> };
@@ -74,6 +75,15 @@ function findSecrets(e: Entry): string[] {
   return out;
 }
 
+const VERDICT = {
+  fix: { label: "Fix first", text: "A plain-text secret or a pinned version inside a published advisory range." },
+  review: { label: "Review", text: "At least one documented option is off, a pin is behind or missing, or nothing on our cards covers it." },
+  clear: { label: "Nothing flagged", text: "From our data only. This is not a security review." },
+} as const;
+const READ_ONLY = { yes: "Documented by the project", no: "None documented", unknown: "Not verified" } as const;
+const TELEMETRY = { "default-on": "Yes, with an opt-out", "claimed-off": "No, per the project", unknown: "Not verified" } as const;
+const HOSTING = { local: "On your machine", hosted: "As a hosted service", both: "Locally or hosted", unknown: "Not verified" } as const;
+
 const SAMPLE = `{
   "mcpServers": {
     "github": {
@@ -95,26 +105,53 @@ export function ConfigCheck({ cards }: { cards: CardView[] }) {
       const low = e.text.toLowerCase();
       const card = cards.find((c) => c.match.some((m) => low.includes(m.toLowerCase())));
       const secrets = findSecrets(e);
-      if (!card) return { e, card: null as CardView | null, notes: [] as string[], advice: [] as string[], secrets };
+      if (!card) return { e, card: null as CardView | null, notes: [] as string[], advice: [] as string[], secrets, verdict: "review" as "fix" | "review" | "clear" };
       const notes = card.checks.filter((c) => c.ok.length === 0 || !c.ok.some((t) => e.text.includes(t))).map((c) => c.message);
       const advice: string[] = [];
+      let inRange = false;
+      let behind = false;
+      let unpinnedRisk = false;
       for (const p of card.packages) {
         const esc = p.name.replace(/[.*+?^${}()|[\]\\/]/g, "\\$&");
         const m = e.text.match(new RegExp(`${esc}(?:@|==)(\\d[\\w.+-]*)`));
         if (m) {
           const hits = p.vulns.filter((v) => affected(v.ranges, m[1]));
+          if (hits.length) inRange = true;
+          if (p.latest && cmp(m[1], p.latest) < 0) {
+            behind = true;
+            advice.push(`${p.name}: you pin ${m[1]} and the latest we know is ${p.latest}. Read the release notes before updating, and update the pin on purpose.`);
+          }
           advice.push(
             hits.length
               ? `${p.name} is pinned to ${m[1]}, which falls in the affected range of ${hits.length} published advisor${hits.length === 1 ? "y" : "ies"}: ${hits.map((h) => h.id).join(", ")}. The latest version is ${p.latest ?? "unknown"}. This match is approximate; open each advisory to confirm.`
               : `${p.name} is pinned to ${m[1]}. We found no published advisory whose range includes it. The latest version is ${p.latest ?? "unknown"}.`,
           );
-        } else if (p.vulns.length && /@latest|npx|uvx/.test(e.text)) {
+        } else if (p.vulns.length && e.text.includes(p.name) && /@latest|npx|uvx/.test(e.text)) {
+          unpinnedRisk = true;
           advice.push(`No version pinned for ${p.name}, so you run whatever is current (${p.latest ?? "unknown"}). ${p.vulns.length} ${p.vulns.length === 1 ? "advisory has" : "advisories have"} been published for the package; none affect that version unless the card says so.`);
         }
       }
-      return { e, card, notes, advice, secrets };
+      const verdict: "fix" | "review" | "clear" = secrets.length || inRange ? "fix" : notes.length || behind || unpinnedRisk ? "review" : "clear";
+      return { e, card, notes, advice, secrets, verdict };
     });
   }, [result, cards]);
+
+  const sent = useRef("");
+  useEffect(() => {
+    if (!rows.length) return;
+    const key = `${rows.length}:${rows.map((r) => r.verdict).join(",")}`;
+    if (sent.current === key) return;
+    const t = window.setTimeout(() => {
+      sent.current = key;
+      track("check_scan", {
+        servers: rows.length,
+        matched: rows.filter((r) => r.card).length,
+        fix_first: rows.filter((r) => r.verdict === "fix").length,
+        secrets: rows.filter((r) => r.secrets.length > 0).length,
+      });
+    }, 1500);
+    return () => window.clearTimeout(t);
+  }, [rows]);
 
   return (
     <div className="space-y-8">
@@ -130,11 +167,11 @@ export function ConfigCheck({ cards }: { cards: CardView[] }) {
           className="mono-num w-full rounded-xl border border-ink/15 bg-transparent p-4 text-[13px] leading-[1.6] outline-none focus-visible:ring-2 focus-visible:ring-ring"
         />
         <div className="flex flex-wrap items-center gap-3">
-          <button type="button" onClick={() => setText(SAMPLE)} className="rounded-full border border-ink/20 px-4 py-2 text-sm hover:bg-ink/5">Try an example</button>
+          {!text && <button type="button" onClick={() => setText(SAMPLE)} className="rounded-full border border-ink/20 px-4 py-2 text-sm hover:bg-ink/5">Try an example</button>}
           {text && <button type="button" onClick={() => setText("")} className="rounded-full border border-ink/20 px-4 py-2 text-sm hover:bg-ink/5">Clear</button>}
         </div>
         <p className="text-sm text-muted-foreground">
-          This runs in your browser. Nothing you paste is sent anywhere or stored. Remove tokens and passwords anyway.
+          Results update as you type. This runs in your browser. Nothing you paste is sent anywhere or stored. Remove tokens and passwords anyway.
         </p>
       </div>
 
@@ -142,7 +179,7 @@ export function ConfigCheck({ cards }: { cards: CardView[] }) {
 
       {rows.length > 0 && (
         <ul className="space-y-4" aria-live="polite">
-          {rows.map(({ e, card, notes, advice, secrets }) => (
+          {rows.map(({ e, card, notes, advice, secrets, verdict }) => (
             <li key={e.name} className="surface space-y-3 p-5 sm:p-6">
               <div className="flex flex-wrap items-baseline gap-3">
                 <p className="mono-num font-medium">{e.name}</p>
@@ -168,6 +205,15 @@ export function ConfigCheck({ cards }: { cards: CardView[] }) {
               )}
               {card && (
                 <>
+                  <p className="text-sm">
+                    <span className="font-medium">{VERDICT[verdict].label}.</span>{" "}
+                    <span className="text-muted-foreground">{VERDICT[verdict].text}</span>
+                  </p>
+                  <dl className="grid gap-x-6 gap-y-1 text-sm sm:grid-cols-3">
+                    <div><dt className="text-muted-foreground">Read-only option</dt><dd>{READ_ONLY[card.facts.readOnly]}</dd></div>
+                    <div><dt className="text-muted-foreground">Sends data by default</dt><dd>{TELEMETRY[card.facts.telemetry]}</dd></div>
+                    <div><dt className="text-muted-foreground">Runs</dt><dd>{HOSTING[card.facts.hosting]}</dd></div>
+                  </dl>
                   {notes.length === 0 && advice.length === 0 && secrets.length === 0 && <p className="text-sm text-muted-foreground">Nothing to flag from the documented options on its card. That is not a security review.</p>}
                   {notes.map((n) => <p key={n} className="text-[15px] leading-[1.55]">{n}</p>)}
                   {advice.map((n) => <p key={n} className="text-[15px] leading-[1.55]">{n}</p>)}
