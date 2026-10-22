@@ -12,6 +12,8 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/:path*", has: [{ type: "host" as const, value: "www.agentshortlist.dev" }], destination: "https://agentshortlist.dev/:path*", permanent: true },
+      // Dirección anterior del artículo de solo lectura (el recuento pasó de 49 a 54 fichas): se mantiene el enlace.
+      { source: "/blog/18-of-49-mcp-servers-document-a-read-only-mode", destination: "/blog/20-of-54-mcp-servers-document-a-read-only-mode", permanent: true },
     ];
   },
   async headers() {

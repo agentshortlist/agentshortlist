@@ -1,15 +1,15 @@
 ---
-title: 18 of 49 MCP servers document a read-only mode
-description: We counted which of our 49 verified MCP servers document a way to run read-only, which ones use a switch and which only a recipe, and which say nothing.
+title: 20 of 54 MCP servers document a read-only mode
+description: We counted which of our 54 verified MCP servers document a way to run read-only, which ones use a switch and which only a recipe, and which say nothing.
 date: 2026-10-22
 tags: security, read-only
 ---
 
-On 19 October we told you that only 5 of the first 25 MCP servers we read documented a read-only mode. We now have [49 verified cards](/verified), so we counted again. The answer is better, but not by much: **18 of 49 document a way to run read-only, 12 document none, and for 19 we couldn't verify it.**
+On 19 October we told you that only 5 of the first 25 MCP servers we read documented a read-only mode. We now have [54 verified cards](/verified), so we counted again. The answer is better, but not by much: **20 of 54 document a way to run read-only, 12 document none, and for 22 we couldn't verify it.**
 
 "Documents" means the project's own README or docs say so. We haven't run any of these modes, and we don't claim they hold up when something tries to write. This is a count of what the documentation says on the dates shown on each card.
 
-## 15 have a switch
+## 17 have a switch
 
 For these, the project names a setting that turns writing off.
 
@@ -30,6 +30,8 @@ For these, the project names a setting that turns writing off.
 | [Atlassian (community server)](/agents/mcp-atlassian) | `READ_ONLY_MODE=true` disables all write operations |
 | [Auth0](/agents/auth0-mcp-server) | `--read-only`, which takes priority over `--tools` |
 | [Excel](/agents/excel-mcp-server) | `--read-only` offers only tools that do not change files |
+| [ClickHouse](/agents/clickhouse-mcp-server) | Read-only by default (`CLICKHOUSE_ALLOW_WRITE_ACCESS=false`); writes and destructive statements are separate opt-ins |
+| [Microsoft's Azure MCP Server](/agents/microsoft-mcp-catalog) | An `azureMcp.readOnly` setting in its VS Code extension, described as preventing write operations |
 
 Two details matter. Qdrant's switch turns off one tool, `qdrant-store`; that is enough if that is the only tool that writes, and we noted it on the card because it isn't obvious from the name. MotherDuck is the only one where read-only is the default: you have to ask for writing.
 
@@ -66,5 +68,3 @@ The switch is the second layer, not the only one. A server with no switch, like 
 - Paste your configuration into the [config checker](/check). It flags the documented read-only options you haven't turned on, for the servers we have cards for.
 
 Nothing here is an audit. If a card is wrong, send us the primary source and we'll correct it.
-
-**Update, 22 October evening:** we added five more cards (Microsoft's MCP catalog, Docker's MCP gateway, IBM's ContextForge, the MCP Inspector and ClickHouse). Two of them document a read-only option: the Azure MCP Server through a read-only setting in its VS Code extension, and ClickHouse, whose queries are read-only by default. With them the count is 20 of 54, with 12 documenting none and 22 not verified. The tables above show the 49 we counted at the time.
