@@ -1693,6 +1693,178 @@ export const VERIFIED: VerifiedCard[] = [
     ],
   },
 
+  {
+    slug: "microsoft-mcp-catalog",
+    version: "Catalog; Azure MCP Server 4.0.0-beta.2 (2026-10-21)",
+    reviewedAt: D5,
+    use: [
+      { label: "Made for", value: "A catalog of Microsoft's MCP servers (29 entries in the README, 15 marked REMOTE). The repository also holds the code of the servers built from it, such as the Azure MCP Server.", source: "github", url: "https://github.com/microsoft/mcp#readme" },
+      { label: "Not made for", value: "Not stated by the project.", source: "unknown" },
+    ],
+    context: [
+      { label: "Tools", value: "Not counted. Each server in the catalog has its own tools.", source: "unknown" },
+      { label: "Ways to expose fewer tools", value: "The Azure MCP Server README shows a read-only setting for its VS Code extension, azureMcp.readOnly, described as preventing write operations.", source: "github", url: "https://github.com/microsoft/mcp/blob/main/servers/Azure.Mcp.Server/README.md" },
+      { label: "Token weight of the definitions", value: "Not measured.", source: "unknown" },
+    ],
+    permissions: [
+      { label: "Credentials", value: "Depends on the server. The Azure MCP Server works through your Azure CLI sign-in (az login) and your Azure RBAC permissions.", source: "github", url: "https://github.com/microsoft/mcp/blob/main/servers/Azure.Mcp.Server/README.md" },
+      { label: "Can change data", value: "Yes for several servers. The Azure MCP Server README warns that clients can invoke operations based on your Azure RBAC permissions, that autonomous or misconfigured clients may perform destructive actions, and advises least-privilege roles. It says flags that prevent destructive operations are not standardized and may not be supported by all clients.", source: "github", url: "https://github.com/microsoft/mcp/blob/main/servers/Azure.Mcp.Server/README.md" },
+      { label: "Local files and shell commands", value: "Not stated in the README.", source: "unknown" },
+      { label: "Sends data to third parties", value: "The Azure MCP Server README says the software may collect information about your use and send it to Microsoft. AZURE_MCP_COLLECT_TELEMETRY=false turns off all telemetry, and AZURE_MCP_COLLECT_TELEMETRY_MICROSOFT=false turns off only Microsoft's.", source: "github", url: "https://github.com/microsoft/mcp/blob/main/servers/Azure.Mcp.Server/README.md" },
+    ],
+    maintenance: [
+      { label: "Latest release", value: "Azure.Mcp.Server-4.0.0-beta.2, 2026-10-21. The repository publishes several packages.", source: "github", url: "https://github.com/microsoft/mcp/releases" },
+      { label: "Last push", value: "2026-10-22", source: "github", url: "https://github.com/microsoft/mcp" },
+      { label: "Open issues", value: `232, of which 127 were opened before ${STALE_REF}`, source: "github", url: "https://github.com/microsoft/mcp/issues" },
+      { label: "Dependency lockfiles", value: "None found at the repository root.", source: "github", url: "https://github.com/microsoft/mcp" },
+    ],
+    hardening: [
+      {
+        title: "Turn off telemetry and read-only in VS Code",
+        note: "The README documents AZURE_MCP_COLLECT_TELEMETRY=false to disable all telemetry. For the VS Code extension it shows azureMcp.readOnly with the comment that read-only prevents write operations; its example value is false, so set it to true. Also give the account only the Azure roles you need.",
+        language: "bash",
+        code: "export AZURE_MCP_COLLECT_TELEMETRY=false",
+        source: "github",
+        url: "https://github.com/microsoft/mcp/blob/main/servers/Azure.Mcp.Server/README.md",
+      },
+    ],
+  },
+  {
+    slug: "docker-mcp-gateway",
+    version: "Tag v0.44.2 (no GitHub releases)",
+    reviewedAt: D5,
+    use: [
+      { label: "Made for", value: "Running and managing MCP servers through one gateway. It is the docker-mcp plugin behind the MCP Toolkit in Docker Desktop, and the README says it can also work independently.", source: "github", url: "https://github.com/docker/mcp-gateway#readme" },
+      { label: "Not made for", value: "Not stated by the project.", source: "unknown" },
+    ],
+    context: [
+      { label: "Tools", value: "Not counted. The tools come from the MCP servers the gateway runs.", source: "unknown" },
+      { label: "Ways to expose fewer tools", value: "Not stated. The README describes profiles that choose which configuration the gateway runs, for example docker mcp gateway run --profile dev-tools.", source: "github", url: "https://github.com/docker/mcp-gateway#readme" },
+      { label: "Token weight of the definitions", value: "Not measured.", source: "unknown" },
+    ],
+    permissions: [
+      { label: "Credentials", value: "The README says secrets are kept out of environment variables using Docker Desktop's secrets management, and that the gateway supports OAuth flows for servers that need them.", source: "github", url: "https://github.com/docker/mcp-gateway#readme" },
+      { label: "Can change data", value: "Depends on the servers you run through it. Not stated by the project.", source: "unknown" },
+      { label: "Local files and shell commands", value: "The README says each local server in the catalog runs in an isolated Docker container, and that npx and uvx servers are granted minimal host privileges.", source: "github", url: "https://github.com/docker/mcp-gateway#readme" },
+      { label: "Monitoring", value: "The README lists built-in logging and call tracing.", source: "github", url: "https://github.com/docker/mcp-gateway#readme" },
+      { label: "Sends data to third parties", value: "Not verified.", source: "unknown" },
+    ],
+    maintenance: [
+      { label: "Latest release", value: "No GitHub releases. Latest tag: v0.44.2", source: "github", url: "https://github.com/docker/mcp-gateway/tags" },
+      { label: "Last push", value: "2026-10-21", source: "github", url: "https://github.com/docker/mcp-gateway" },
+      { label: "Open issues", value: `120, of which 86 were opened before ${STALE_REF}`, source: "github", url: "https://github.com/docker/mcp-gateway/issues" },
+      { label: "Dependency lockfiles", value: "go.sum", source: "github", url: "https://github.com/docker/mcp-gateway" },
+    ],
+    hardening: [
+      {
+        title: "Run only the servers a profile needs",
+        note: "The README's example runs the gateway with a named profile. Keep the profile to the servers you need, and keep credentials in Docker Desktop's secrets manager instead of environment variables, as the README advises.",
+        language: "bash",
+        code: "docker mcp gateway run --profile dev-tools",
+        source: "github",
+        url: "https://github.com/docker/mcp-gateway#readme",
+      },
+    ],
+  },
+  {
+    slug: "mcp-context-forge",
+    version: "v1.1.0 (2026-10-20)",
+    reviewedAt: D5,
+    use: [
+      { label: "Made for", value: "A gateway and registry that puts MCP servers, A2A agents and REST or gRPC APIs behind one endpoint, with an admin UI, auth, rate limiting, plugins and OpenTelemetry tracing. It runs from PyPI or Docker, and on Kubernetes.", source: "github", url: "https://github.com/IBM/mcp-context-forge#readme" },
+      { label: "Not made for", value: "The README says arm64 is not supported on production for its container images; on Apple Silicon it suggests Rosetta or the PyPI install.", source: "github", url: "https://github.com/IBM/mcp-context-forge#readme" },
+    ],
+    context: [
+      { label: "Tools", value: "Not counted. It forwards the tools of the servers you register. The README mentions 40+ plugins.", source: "github", url: "https://github.com/IBM/mcp-context-forge#readme" },
+      { label: "Token weight of the definitions", value: "Not measured.", source: "unknown" },
+    ],
+    permissions: [
+      { label: "Credentials", value: "JWT_SECRET_KEY and AUTH_ENCRYPTION_SECRET are required in every environment, and the gateway won't start without them. python3 -m mcpgateway.scripts.init_secrets generates them. The admin account is set with PLATFORM_ADMIN_EMAIL and PLATFORM_ADMIN_PASSWORD, and the README says not to use 'changeme' in production.", source: "github", url: "https://github.com/IBM/mcp-context-forge#readme" },
+      { label: "Can change data", value: "A gateway passes calls to the servers and APIs you register, so what changes depends on them. The README describes an admin UI and an admin API, switched with MCPGATEWAY_UI_ENABLED and MCPGATEWAY_ADMIN_API_ENABLED.", source: "github", url: "https://github.com/IBM/mcp-context-forge#readme" },
+      { label: "Local files and shell commands", value: "Not stated in the README.", source: "unknown" },
+      { label: "Sends data to third parties", value: "The README describes OpenTelemetry tracing that can be exported to backends such as Phoenix, Jaeger and Zipkin.", source: "github", url: "https://github.com/IBM/mcp-context-forge#readme" },
+    ],
+    maintenance: [
+      { label: "Latest release", value: "v1.1.0, 2026-10-20", source: "github", url: "https://github.com/IBM/mcp-context-forge/releases" },
+      { label: "Last push", value: "2026-10-21", source: "github", url: "https://github.com/IBM/mcp-context-forge" },
+      { label: "Open issues", value: `724, of which 228 were opened before ${STALE_REF}`, source: "github", url: "https://github.com/IBM/mcp-context-forge/issues" },
+      { label: "Dependency lockfiles", value: "Cargo.lock, package-lock.json, uv.lock", source: "github", url: "https://github.com/IBM/mcp-context-forge" },
+    ],
+    hardening: [
+      {
+        title: "Generate real secrets before the first run",
+        note: "The README's setup copies .env.example to .env and generates real secrets with its script. It says the gateway won't start with placeholder values.",
+        language: "bash",
+        code: "cp .env.example .env\npython3 -m mcpgateway.scripts.init_secrets",
+        source: "github",
+        url: "https://github.com/IBM/mcp-context-forge#readme",
+      },
+    ],
+  },
+  {
+    slug: "mcp-inspector",
+    version: "2.12.0 (2026-10-21)",
+    reviewedAt: D5,
+    use: [
+      { label: "Made for", value: "A developer tool for inspecting MCP servers. One npm package gives a web UI, a CLI, a TUI and an experimental connection CLI called mcpdo.", source: "github", url: "https://github.com/modelcontextprotocol/inspector#readme" },
+      { label: "Not made for", value: "Not stated by the project.", source: "unknown" },
+      { label: "License", value: "The README points to its LICENSE: the MCP project is moving from MIT to Apache-2.0. New code is Apache-2.0, documentation is CC-BY-4.0, and contributions whose authors have not agreed to relicense stay MIT. GitHub shows no single license for the repository.", source: "github", url: "https://github.com/modelcontextprotocol/inspector/blob/main/LICENSE" },
+    ],
+    context: [
+      { label: "Tools", value: "Not stated in the README we read.", source: "unknown" },
+      { label: "Token weight of the definitions", value: "Not measured.", source: "unknown" },
+    ],
+    permissions: [
+      { label: "Credentials", value: "It manages OAuth tokens, OAuth client secrets and stdio env values. By default they go to the OS keychain. With no keychain (Linux without libsecret, headless and SSH sessions, containers with a mounted volume) they are saved to ~/.mcp-inspector/secrets.json, unencrypted unless you supply a key.", source: "github", url: "https://github.com/modelcontextprotocol/inspector#readme" },
+      { label: "Can change data", value: "Not stated by the project.", source: "unknown" },
+      { label: "Local files and shell commands", value: "The README mentions stdio server entries with env values, so it can launch local servers. Not otherwise stated.", source: "github", url: "https://github.com/modelcontextprotocol/inspector#readme" },
+      { label: "Sends data to third parties", value: "Not verified.", source: "unknown" },
+    ],
+    maintenance: [
+      { label: "Latest release", value: "2.12.0, 2026-10-21", source: "github", url: "https://github.com/modelcontextprotocol/inspector/releases" },
+      { label: "Last push", value: "2026-10-21", source: "github", url: "https://github.com/modelcontextprotocol/inspector" },
+      { label: "Open issues", value: `26, of which 3 were opened before ${STALE_REF}`, source: "github", url: "https://github.com/modelcontextprotocol/inspector/issues" },
+      { label: "Dependency lockfiles", value: "package-lock.json", source: "github", url: "https://github.com/modelcontextprotocol/inspector" },
+    ],
+    hardening: [],
+  },
+  {
+    slug: "clickhouse-mcp-server",
+    version: "v0.7.0 (2026-09-21)",
+    reviewedAt: D5,
+    use: [
+      { label: "Made for", value: "Letting AI clients query ClickHouse, and optionally chDB, over stdio, HTTP or SSE.", source: "github", url: "https://github.com/ClickHouse/mcp-clickhouse#readme" },
+      { label: "Not made for", value: "Not stated by the project.", source: "unknown" },
+    ],
+    context: [
+      { label: "Tools", value: "The README names four: list_databases, list_tables, run_query and run_chdb_select_query.", source: "github", url: "https://github.com/ClickHouse/mcp-clickhouse#readme" },
+      { label: "Ways to expose fewer tools", value: "CLICKHOUSE_ENABLED and CHDB_ENABLED switch each engine on or off. Writes are off by default.", source: "github", url: "https://github.com/ClickHouse/mcp-clickhouse#readme" },
+      { label: "Token weight of the definitions", value: "Not measured.", source: "unknown" },
+    ],
+    permissions: [
+      { label: "Credentials", value: "CLICKHOUSE_USER and CLICKHOUSE_PASSWORD for the database. HTTP and SSE transports require authentication by default: a static bearer token (CLICKHOUSE_MCP_AUTH_TOKEN), OAuth or OIDC through FastMCP, or disabled for local development only. stdio needs none.", source: "github", url: "https://github.com/ClickHouse/mcp-clickhouse#readme" },
+      { label: "Can change data", value: "No by default: queries run in read-only mode (CLICKHOUSE_ALLOW_WRITE_ACCESS=false). Setting it to true allows non-destructive CREATE, INSERT and ALTER ADD COLUMN. Destructive statements such as DROP, TRUNCATE, DELETE and UPDATE also need CLICKHOUSE_ALLOW_DROP=true.", source: "github", url: "https://github.com/ClickHouse/mcp-clickhouse#readme" },
+      { label: "Local files and shell commands", value: "With the optional chDB extra enabled, the README says it can query files, URLs and databases without ETL.", source: "github", url: "https://github.com/ClickHouse/mcp-clickhouse#readme" },
+      { label: "Sends data to third parties", value: "Not verified.", source: "unknown" },
+    ],
+    maintenance: [
+      { label: "Latest release", value: "v0.7.0, 2026-09-21", source: "github", url: "https://github.com/ClickHouse/mcp-clickhouse/releases" },
+      { label: "Last push", value: "2026-10-21", source: "github", url: "https://github.com/ClickHouse/mcp-clickhouse" },
+      { label: "Open issues", value: `3, of which 2 were opened before ${STALE_REF}`, source: "github", url: "https://github.com/ClickHouse/mcp-clickhouse/issues" },
+      { label: "Dependency lockfiles", value: "uv.lock", source: "github", url: "https://github.com/ClickHouse/mcp-clickhouse" },
+    ],
+    hardening: [
+      {
+        title: "Keep it read-only, and give the user read-only grants",
+        note: "Read-only is the documented default. Setting it explicitly makes that visible in your configuration. As with any database server, also connect with a ClickHouse user that can only read.",
+        language: "bash",
+        code: "export CLICKHOUSE_ALLOW_WRITE_ACCESS=false",
+        source: "github",
+        url: "https://github.com/ClickHouse/mcp-clickhouse#readme",
+      },
+    ],
+  },
+
 ];
 
 export const getVerified = (slug: string) => VERIFIED.find((c) => c.slug === slug);

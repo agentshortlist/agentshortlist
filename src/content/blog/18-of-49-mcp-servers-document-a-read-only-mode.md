@@ -66,3 +66,5 @@ The switch is the second layer, not the only one. A server with no switch, like 
 - Paste your configuration into the [config checker](/check). It flags the documented read-only options you haven't turned on, for the servers we have cards for.
 
 Nothing here is an audit. If a card is wrong, send us the primary source and we'll correct it.
+
+**Update, 22 October evening:** we added five more cards (Microsoft's MCP catalog, Docker's MCP gateway, IBM's ContextForge, the MCP Inspector and ClickHouse). Two of them document a read-only option: the Azure MCP Server through a read-only setting in its VS Code extension, and ClickHouse, whose queries are read-only by default. With them the count is 20 of 54, with 12 documenting none and 22 not verified. The tables above show the 49 we counted at the time.

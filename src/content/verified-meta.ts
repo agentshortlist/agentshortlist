@@ -196,6 +196,30 @@ export const META: Record<string, Meta> = {
       { ok: ["--allow-dir", "EXCEL_FILES_PATH"], message: "No folder confinement set. The README lists the default for stdio as none. --allow-dir restricts the folders workbooks must be in." },
     ],
   },
+  "microsoft-mcp-catalog": {
+    match: ["@azure/mcp", "mcp.svc.cloud.microsoft"],
+    facts: { kind: "cloud", readOnly: "yes", telemetry: "default-on", hosting: "both" },
+    checks: [
+      { ok: ["AZURE_MCP_COLLECT_TELEMETRY"], message: "The Azure MCP Server may send usage data to Microsoft by default. AZURE_MCP_COLLECT_TELEMETRY=false turns off all telemetry." },
+      { ok: [], message: "Operations follow your Azure RBAC permissions, and the README warns that autonomous clients can perform destructive actions. Use least-privilege roles." },
+    ],
+  },
+  "docker-mcp-gateway": {
+    match: ["docker mcp", "mcp-gateway"],
+    facts: { kind: "platform", readOnly: "unknown", telemetry: "unknown", hosting: "local" },
+  },
+  "mcp-context-forge": {
+    match: ["mcp-contextforge-gateway", "mcpgateway"],
+    facts: { kind: "platform", readOnly: "unknown", telemetry: "unknown", hosting: "both" },
+  },
+  "mcp-inspector": {
+    match: ["@modelcontextprotocol/inspector"],
+    facts: { kind: "browser", readOnly: "unknown", telemetry: "unknown", hosting: "local" },
+  },
+  "clickhouse-mcp-server": {
+    match: ["mcp-clickhouse"],
+    facts: { kind: "database", readOnly: "yes", telemetry: "unknown", hosting: "local" },
+  },
   "stripe-agent-toolkit": {
     match: ["@stripe/mcp"],
     facts: { kind: "platform", readOnly: "unknown", telemetry: "unknown", hosting: "both" },
@@ -357,6 +381,21 @@ export const SETTINGS: Record<string, Setting[]> = {
     { name: "--read-only", kind: "flag", required: false, note: "Only offer tools that do not change files. Also EXCEL_MCP_READ_ONLY=1.", url: R("haris-musa/excel-mcp-server") },
     { name: "--allow-vba-write", kind: "flag", required: false, note: "Adds the tools that write VBA macros. Off by default and ignored with --read-only.", url: R("haris-musa/excel-mcp-server") },
     { name: "--tools", kind: "flag", required: false, note: "Core tools plus the areas you name. Also EXCEL_MCP_TOOLS.", url: R("haris-musa/excel-mcp-server") },
+  ],
+  "microsoft-mcp-catalog": [
+    { name: "AZURE_MCP_COLLECT_TELEMETRY", kind: "env", required: false, note: "Set to false to turn off all telemetry of the Azure MCP Server.", url: "https://github.com/microsoft/mcp/blob/main/servers/Azure.Mcp.Server/README.md" },
+    { name: "AZURE_MCP_COLLECT_TELEMETRY_MICROSOFT", kind: "env", required: false, note: "Set to false to turn off only Microsoft's telemetry and keep your own Application Insights.", url: "https://github.com/microsoft/mcp/blob/main/servers/Azure.Mcp.Server/README.md" },
+  ],
+  "mcp-context-forge": [
+    { name: "JWT_SECRET_KEY / AUTH_ENCRYPTION_SECRET", kind: "env", required: true, note: "Required in every environment. The gateway won't start without them.", url: R("IBM/mcp-context-forge") },
+    { name: "PLATFORM_ADMIN_EMAIL / PLATFORM_ADMIN_PASSWORD", kind: "env", required: false, note: "The admin account. The README says not to use 'changeme' in production.", url: R("IBM/mcp-context-forge") },
+    { name: "AUTH_REQUIRED", kind: "env", required: false, note: "Set to true in the README's container example.", url: R("IBM/mcp-context-forge") },
+  ],
+  "clickhouse-mcp-server": [
+    { name: "CLICKHOUSE_HOST / CLICKHOUSE_USER / CLICKHOUSE_PASSWORD", kind: "env", required: true, note: "Connection to your ClickHouse server.", url: R("ClickHouse/mcp-clickhouse") },
+    { name: "CLICKHOUSE_ALLOW_WRITE_ACCESS", kind: "env", required: false, note: "Off by default. Set to true to allow non-destructive writes.", url: R("ClickHouse/mcp-clickhouse") },
+    { name: "CLICKHOUSE_ALLOW_DROP", kind: "env", required: false, note: "Also needed for destructive statements such as DROP and DELETE.", url: R("ClickHouse/mcp-clickhouse") },
+    { name: "CLICKHOUSE_MCP_AUTH_TOKEN", kind: "env", required: false, note: "Bearer token for the HTTP and SSE transports, which require authentication by default.", url: R("ClickHouse/mcp-clickhouse") },
   ],
   "stripe-agent-toolkit": [
     { name: "STRIPE_SECRET_KEY", kind: "env", required: true, note: "Your Stripe key for the local server. Use a restricted key: tool permissions follow it.", url: R("stripe/ai", "/tree/main/tools/modelcontextprotocol") },
