@@ -5,6 +5,12 @@ import { ADVISORIES_CHECKED_AT, getAdvisories, osvUrl } from "@/lib/advisories";
 import { fmtDate } from "@/lib/data";
 import { CopyCodeButton } from "@/components/copy-code-button";
 import { cardViews } from "@/lib/verified-view";
+import { GITHUB_URL } from "@/lib/site";
+import { testsFor, type ProbeStatus } from "@/content/tests";
+import { ACCESS, NEEDS_LABEL } from "@/content/access";
+
+const STATUS: Record<ProbeStatus, string> = { pass: "Pass", fail: "Fail", "not-run": "Not run" };
+const fmtDownloads = (n: number) => new Intl.NumberFormat("en", { notation: "compact", maximumFractionDigits: 1 }).format(n);
 
 function SourceTag({ row }: { row: Pick<Row, "source" | "url"> }) {
   const unknown = row.source === "unknown";
@@ -44,6 +50,120 @@ function Scores({ slug }: { slug: string }) {
         </ul>
       )}
       <p className="text-xs text-muted-foreground">Simple rules, not a security audit. <Link href="/methodology#scores" className="underline underline-offset-4">How they work</Link>.</p>
+    </div>
+  );
+}
+
+// Resume de dónde sale cada línea de la ficha. "Probado" no existe todavía: se muestra como tal en vez de omitirse.
+function Evidence({ card }: { card: VerifiedCard }) {
+  const rows = [...card.use, ...card.context, ...card.permissions, ...card.maintenance];
+  const documented = rows.filter((r) => r.source !== "unknown" && r.source !== "own-view").length;
+  const ours = rows.filter((r) => r.source === "own-view").length;
+  const unknown = rows.filter((r) => r.source === "unknown").length;
+  const runs = testsFor(card.slug);
+  return (
+    <div className="surface space-y-3 p-5 sm:p-6">
+      <h3 className="eyebrow">Evidence on this card</h3>
+      <dl className="grid gap-4 sm:grid-cols-4">
+        <div><dt className="text-sm text-muted-foreground">Documented</dt><dd className="text-[15px]">{documented} of {rows.length} lines, with a source</dd></div>
+        <div><dt className="text-sm text-muted-foreground">Our view</dt><dd className="text-[15px]">{ours} {ours === 1 ? "line" : "lines"}, marked as ours</dd></div>
+        <div><dt className="text-sm text-muted-foreground">Not verified</dt><dd className="text-[15px]">{unknown} {unknown === 1 ? "line" : "lines"}, shown as unknown</dd></div>
+        <div><dt className="text-sm text-muted-foreground">Tested by us</dt><dd className="text-[15px]">{runs.length ? `${runs.length} ${runs.length === 1 ? "run" : "runs"}, last ${fmtDate(runs[0].testedAt)}` : "Not yet"}</dd></div>
+      </dl>
+      <p className="text-xs text-muted-foreground">
+        A line is documented when the project or its package says it. <Link href="/methodology#evidence" className="underline underline-offset-4">What each label means</Link>.
+      </p>
+    </div>
+  );
+}
+
+// Qué hace falta para empezar, tomado de la línea de credenciales de la propia ficha. No incluye el precio del servicio de terceros.
+function AccessBlock({ slug }: { slug: string }) {
+  const v = cardViews().find((x) => x.slug === slug);
+  if (!v) return null;
+  const a = ACCESS[slug];
+  return (
+    <div className="surface space-y-3 p-5 sm:p-6">
+      <h3 className="eyebrow">What you need to start</h3>
+      <dl className="grid gap-4 sm:grid-cols-2">
+        <div>
+          <dt className="text-sm text-muted-foreground">Access</dt>
+          <dd className="text-[15px]">{NEEDS_LABEL[v.needs]}</dd>
+        </div>
+        <div>
+          <dt className="text-sm text-muted-foreground">Software license</dt>
+          <dd className="text-[15px]">{v.openSource ? "Open-source license detected on GitHub" : "No open-source license detected on GitHub"}</dd>
+        </div>
+      </dl>
+      {a && <p className="text-sm leading-[1.6] text-muted-foreground">{a.note}</p>}
+      <p className="text-xs text-muted-foreground">
+        Taken from the credentials line of this card. The price of a third-party service is not checked: a free server can still sit on a paid service.{" "}
+        <Link href="/methodology#access" className="underline underline-offset-4">What the labels mean</Link>.
+      </p>
+    </div>
+  );
+}
+
+// Descargas semanales de los paquetes confirmados como del mismo repositorio. Mide uso de instalación, incluidos CI y espejos; no calidad.
+function Adoption({ slug }: { slug: string }) {
+  const pkgs = getAdvisories(slug).filter((p) => p.ecosystem !== "Go");
+  if (!pkgs.length) return null;
+  return (
+    <div className="surface space-y-3 p-5 sm:p-6">
+      <h3 className="eyebrow">Package downloads, last 7 days</h3>
+      <ul className="space-y-1 text-[15px]">
+        {pkgs.map((p) => (
+          <li key={`${p.ecosystem}:${p.name}`}>
+            <span className="mono-num">{p.name}</span> <span className="text-muted-foreground">({p.ecosystem})</span>:{" "}
+            {typeof p.weeklyDownloads === "number" ? <strong className="font-medium">{fmtDownloads(p.weeklyDownloads)}</strong> : <span className="text-muted-foreground">not available</span>}
+          </li>
+        ))}
+      </ul>
+      <p className="text-xs text-muted-foreground">
+        From the npm registry and pypistats.org, checked {fmtDate(ADVISORIES_CHECKED_AT)}. Downloads include automated installs and mirrors, so they show how widely a package is pulled, not how many people use it or how good it is.
+      </p>
+    </div>
+  );
+}
+
+function TestRuns({ slug }: { slug: string }) {
+  const runs = testsFor(slug);
+  if (!runs.length) return null;
+  return (
+    <div className="surface space-y-4 p-5 sm:p-6">
+      <div className="space-y-2">
+        <h3 className="eyebrow">Tested by us</h3>
+        <p className="text-sm leading-[1.6] text-muted-foreground">
+          Each run is one exact combination. A pass means the server started, answered the handshake and listed its tools. It does not mean the tools work or that limits such as read-only hold.
+        </p>
+      </div>
+      {runs.map((t) => (
+        <dl key={`${t.testedAt}:${t.package}:${t.client}`} className="grid gap-x-6 gap-y-1 border-t border-ink/10 pt-4 text-sm first:border-0 first:pt-0 sm:grid-cols-2">
+          <div><dt className="text-muted-foreground">Date</dt><dd>{fmtDate(t.testedAt)}</dd></div>
+          <div><dt className="text-muted-foreground">Package</dt><dd className="mono-num">{t.package}</dd></div>
+          <div><dt className="text-muted-foreground">Client</dt><dd>{t.client} {t.clientVersion}</dd></div>
+          <div><dt className="text-muted-foreground">System</dt><dd>{t.os}</dd></div>
+          <div><dt className="text-muted-foreground">Environment</dt><dd>{t.environment}</dd></div>
+          <div><dt className="text-muted-foreground">Install, handshake, tools list</dt><dd>{STATUS[t.install]}, {STATUS[t.handshake]}, {STATUS[t.toolsList.status]}{t.toolsList.count !== null ? ` (${t.toolsList.count} tools)` : ""}</dd></div>
+          {t.call && <div className="sm:col-span-2"><dt className="text-muted-foreground">Harmless call</dt><dd>{t.call.tool}: {STATUS[t.call.status]}. {t.call.note}</dd></div>}
+          {t.notes && <div className="sm:col-span-2"><dt className="text-muted-foreground">Notes</dt><dd>{t.notes}</dd></div>}
+        </dl>
+      ))}
+    </div>
+  );
+}
+
+function Report({ card }: { card: VerifiedCard }) {
+  const body = `Server: ${card.slug}\nCard reviewed: ${card.reviewedAt}, version ${card.version}\n\nWhat did you test or find? (client and version, operating system, what happened, link to a source for a correction)\n\n`;
+  const href = `${GITHUB_URL}/issues/new?title=${encodeURIComponent(`Card report: ${card.slug}`)}&body=${encodeURIComponent(body)}`;
+  return (
+    <div className="surface space-y-2 p-5 sm:p-6">
+      <h3 className="eyebrow">Tested it, or spotted a mistake?</h3>
+      <p className="text-[15px] leading-[1.6]">
+        Tell us what you ran or what is wrong, with a source if you have one.{" "}
+        <a href={href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground">Open a report on GitHub</a>.
+        Corrections change the card. They never change a score or a position.
+      </p>
     </div>
   );
 }
@@ -162,6 +282,7 @@ export function VerifiedCardView({ card }: { card: VerifiedCard }) {
           <Link href="/methodology#verified-cards" className="underline underline-offset-4 hover:text-foreground">how verified cards work</Link>.
         </p>
       </div>
+      <Evidence card={card} />
       <div className="grid gap-4 lg:grid-cols-2">
         <Rows title="What it is for" rows={card.use} />
         <Rows title="Tools and context cost" rows={card.context} />
@@ -169,6 +290,9 @@ export function VerifiedCardView({ card }: { card: VerifiedCard }) {
         <Rows title="Maintenance" rows={card.maintenance} />
       </div>
       <Scores slug={card.slug} />
+      <AccessBlock slug={card.slug} />
+      <Adoption slug={card.slug} />
+      <TestRuns slug={card.slug} />
       <Settings slug={card.slug} />
       <Advisories slug={card.slug} />
 
@@ -188,6 +312,8 @@ export function VerifiedCardView({ card }: { card: VerifiedCard }) {
           ))}
         </div>
       )}
+
+      <Report card={card} />
 
       {card.alternative && (
         <div className="surface space-y-2 p-5 sm:p-6">

@@ -3,8 +3,10 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { KIND_LABEL } from "@/content/verified-meta";
+import { NEEDS_LABEL } from "@/content/access";
 import type { CardView } from "@/lib/verified-view";
 import { track } from "@/lib/track";
+import { CopyTextButton } from "@/components/copy-text-button";
 
 const YES = { yes: "Documented", no: "None found", unknown: "Not verified" } as const;
 const TEL = { "default-on": "On by default", "claimed-off": "Project says none", unknown: "Not verified" } as const;
@@ -18,9 +20,20 @@ const ROWS: { label: string; get: (c: CardView) => string }[] = [
   { label: "Tools", get: (c) => c.rows.tools },
   { label: "Project health", get: (c) => `${c.health.level} (${c.health.score}/100)${c.health.limited ? ", estimate" : ""}` },
   { label: "Risk from what we read", get: (c) => `${c.risk.level} (${c.risk.score}/100)${c.risk.limited ? ", estimate" : ""}` },
+  {
+    label: "Package downloads, last 7 days",
+    get: (c) => {
+      const d = c.packages.filter((p) => p.ecosystem !== "Go");
+      if (!d.length) return "No package matched";
+      const f = (n: number) => new Intl.NumberFormat("en", { notation: "compact", maximumFractionDigits: 1 }).format(n);
+      return d.map((p) => `${p.name}: ${typeof p.weeklyDownloads === "number" ? f(p.weeklyDownloads) : "not available"}`).join("; ");
+    },
+  },
   { label: "Read-only option", get: (c) => YES[c.facts.readOnly] },
   { label: "Telemetry by default", get: (c) => TEL[c.facts.telemetry] },
   { label: "What it can do", get: (c) => c.rows.can || "Not assessed" },
+  { label: "Needed to start", get: (c) => NEEDS_LABEL[c.needs] },
+  { label: "Open-source license", get: (c) => (c.openSource ? "Detected on GitHub" : "Not detected") },
   { label: "Credentials", get: (c) => c.rows.credentials },
   { label: "Sends data to third parties", get: (c) => c.rows.sends },
   { label: "Last push", get: (c) => c.lastPush ?? "Not verified" },
@@ -54,6 +67,21 @@ export function LiveCompare({ cards }: { cards: CardView[] }) {
 
   const chosen = sel.map((s) => cards.find((c) => c.slug === s)).filter((c): c is CardView => !!c);
 
+  const markdown = () => {
+    const head = `| | ${chosen.map((c) => c.name).join(" | ")} |`;
+    const sep = `|---|${chosen.map(() => "---").join("|")}|`;
+    const body = ROWS.map((r) => `| ${r.label} | ${chosen.map((c) => r.get(c).replace(/\|/g, "/").replace(/\n/g, " ")).join(" | ")} |`);
+    return [
+      `# MCP comparison: ${chosen.map((c) => c.name).join(" vs ")}`,
+      "",
+      `Source: agentshortlist.dev/compare/live, ${new Date().toISOString().slice(0, 10)}. Compares what each project documents, not how well it performs.`,
+      "",
+      head, sep, ...body,
+      "",
+      ...chosen.map((c) => `- ${c.name}: https://agentshortlist.dev/agents/${c.slug}#verified`),
+    ].join("\n");
+  };
+
   return (
     <div className="space-y-8">
       <div className="grid gap-3 sm:grid-cols-3">
@@ -77,6 +105,11 @@ export function LiveCompare({ cards }: { cards: CardView[] }) {
       {chosen.length < 2 ? (
         <p className="surface p-5 text-sm text-muted-foreground">Choose at least two servers to compare them line by line.</p>
       ) : (
+        <div className="space-y-3">
+        <div className="flex flex-wrap gap-3">
+          <CopyTextButton text={() => window.location.href} label="Copy link to this comparison" doneLabel="Link copied" event="compare_share" className="rounded-full border border-ink/20 px-3 py-1 text-xs hover:bg-ink/5" />
+          <CopyTextButton text={markdown} label="Copy as Markdown" event="compare_export" className="rounded-full border border-ink/20 px-3 py-1 text-xs hover:bg-ink/5" />
+        </div>
         <div className="surface overflow-x-auto">
           <table className="w-full min-w-[44rem] text-left text-sm">
             <thead>
@@ -105,6 +138,7 @@ export function LiveCompare({ cards }: { cards: CardView[] }) {
               })}
             </tbody>
           </table>
+        </div>
         </div>
       )}
       <p className="text-sm text-muted-foreground">

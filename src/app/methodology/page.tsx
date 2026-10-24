@@ -74,6 +74,34 @@ export default function MethodologyPage() {
         <li><strong>Risk (0-100, lower is better):</strong> no documented read-only option 30 (not verified 15), usage data sent by default 15 (not verified 5), an advisory affecting the latest version 30 (advisories on older versions only 5), and 5 for each documented safety option that is off by default, up to 10. Low is under 25, Medium under 50, High 50 or more.</li>
         <li><strong>Estimate:</strong> when two or more of the risk inputs are not verified, the result is shown as an estimate. We never fill a gap by assumption, so unknown inputs add some risk.</li>
       </ul>
+      <h2 id="evidence" className="display-2 scroll-mt-28 pt-6 text-2xl sm:text-3xl">What each evidence label means</h2>
+      <p>
+        Every line on a verified card says how we know it. We keep four states apart and never turn one into another.
+      </p>
+      <ul className="list-disc space-y-1 pl-5">
+        <li><strong>Documented:</strong> the project, its repository or its package says it. The line links to the source and the card shows the review date.</li>
+        <li><strong>Tested:</strong> we ran it ourselves and can state the client, version, system, package or commit, date and result. Each card lists the runs we have made. Until there is one it says &quot;Not yet&quot;. A pass means the server started, answered the handshake and listed its tools; it does not show that the tools work or that limits such as read-only hold.</li>
+        <li><strong>Estimated:</strong> a calculation or opinion of ours with its assumptions visible. Our own view is drawn with a dashed outline. Health and risk are estimates built from simple public rules.</li>
+        <li><strong>Not verified:</strong> we found no evidence or the source does not answer the question. It is shown as unknown and never counted as a yes.</li>
+      </ul>
+      <p>
+        Counts on the site follow the same rule. The number of tools is the number of projects in the current data snapshot; the number of verified cards is the number of cards
+        written by hand; both carry the date the data was last checked.
+      </p>
+      <h2 id="access" className="display-2 scroll-mt-28 pt-6 text-2xl sm:text-3xl">What &quot;free&quot; and &quot;no key&quot; mean here</h2>
+      <p>
+        A free server is not always free to use. We keep three questions apart: the software license, what you need to start, and what the service behind it costs. We answer the first two from the card; we do not check the third.
+      </p>
+      <ul className="list-disc space-y-1 pl-5">
+        <li><strong>Nothing to sign up for:</strong> the card says it needs no credentials.</li>
+        <li><strong>Credentials for systems you run:</strong> it connects to your own database, cluster or instance, so you need that system and its credentials, but no third-party account.</li>
+        <li><strong>Works without a key, with limits:</strong> a hosted or cloud tier the project says works without a key, with rate limits.</li>
+        <li><strong>A third-party account, key, sign-in or paid product:</strong> it needs a token, key or OAuth sign-in at a service you do not run, or a commercial product such as IDA Pro. That service may or may not have a free plan; we have not checked.</li>
+        <li><strong>Not verified:</strong> the card does not document it yet. It is never counted as a yes.</li>
+      </ul>
+      <p>
+        The license comes from GitHub&apos;s license detection and means the license is an open-source one; it says nothing about how the service behind the server is priced.
+      </p>
       <h2 id="verified-cards" className="display-2 scroll-mt-28 pt-6 text-2xl sm:text-3xl">Verified cards</h2>
       <p>
         A small number of tools have a verified card: a page section we filled in by hand from the project&apos;s own
@@ -83,6 +111,7 @@ export default function MethodologyPage() {
       </p>
       <ul className="list-disc space-y-1 pl-5">
         <li>Tools: counted from the README or the server source, as stated on each card. Token weight is not measured yet.</li>
+        <li>Package downloads: the last 7 days from the npm registry and pypistats.org, only for packages we confirmed belong to the same repository. They include automated installs and mirrors, so they show how widely a package is pulled, not quality or number of users.</li>
         <li>Open issues older than 90 days: counted from the GitHub issue tracker on the review date.</li>
         <li>Maintenance wording: &quot;active&quot; means a push in the last 30 days; &quot;low activity&quot; means 31 to 90 days.</li>
         <li>Configuration snippets come from the project&apos;s documentation. Where one is our own suggestion, it is labeled as such.</li>

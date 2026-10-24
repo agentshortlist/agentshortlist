@@ -1,6 +1,7 @@
 {
- "checkedAt": "2026-10-21",
+ "checkedAt": "2026-10-24",
  "source": "https://osv.dev",
+ "downloadsSource": "npm registry API and pypistats.org, last 7 days",
  "items": {
   "github-mcp-server": [
    {
@@ -9,6 +10,7 @@
     "latest": null,
     "total": 4,
     "affectingLatest": null,
+    "weeklyDownloads": null,
     "vulns": [
      {
       "id": "GO-2026-6118",
@@ -108,6 +110,7 @@
     "latest": "0.0.83",
     "total": 1,
     "affectingLatest": 0,
+    "weeklyDownloads": 3804915,
     "vulns": [
      {
       "id": "GHSA-6fg3-hvw7-2fwq",
@@ -138,9 +141,10 @@
    {
     "ecosystem": "npm",
     "name": "@wonderwhy-er/desktop-commander",
-    "latest": "0.3.0",
+    "latest": "0.3.1",
     "total": 2,
     "affectingLatest": 0,
+    "weeklyDownloads": 394686,
     "vulns": [
      {
       "id": "GHSA-5xx3-j724-wmx5",
@@ -194,6 +198,7 @@
     "latest": "0.4.4",
     "total": 4,
     "affectingLatest": 0,
+    "weeklyDownloads": 8825,
     "vulns": [
      {
       "id": "PYSEC-2026-4109",
@@ -293,6 +298,7 @@
     "latest": "4.4.4",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 440853,
     "vulns": []
    }
   ],
@@ -300,9 +306,10 @@
    {
     "ecosystem": "npm",
     "name": "chrome-devtools-mcp",
-    "latest": "1.11.0",
+    "latest": "1.12.0",
     "total": 2,
     "affectingLatest": 0,
+    "weeklyDownloads": 2262793,
     "vulns": [
      {
       "id": "GHSA-8qf9-62x2-82pp",
@@ -355,9 +362,10 @@
    {
     "ecosystem": "npm",
     "name": "n8n-mcp",
-    "latest": "2.94.3",
+    "latest": "2.98.1",
     "total": 11,
     "affectingLatest": 0,
+    "weeklyDownloads": 93806,
     "vulns": [
      {
       "id": "GHSA-2cf7-hpwf-47h9",
@@ -604,9 +612,10 @@
    {
     "ecosystem": "npm",
     "name": "firecrawl-mcp",
-    "latest": "3.33.4",
+    "latest": "3.34.1",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 128628,
     "vulns": []
    }
   ],
@@ -617,6 +626,7 @@
     "latest": "3.1.0",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 83264,
     "vulns": []
    }
   ],
@@ -627,6 +637,7 @@
     "latest": "1.5.0",
     "total": 2,
     "affectingLatest": 0,
+    "weeklyDownloads": 17149,
     "vulns": [
      {
       "id": "GHSA-fm8p-53ww-hf6w",
@@ -682,6 +693,7 @@
     "latest": "2.0.2",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 1715,
     "vulns": []
    }
   ],
@@ -689,9 +701,10 @@
    {
     "ecosystem": "npm",
     "name": "@apify/actors-mcp-server",
-    "latest": "0.19.1",
+    "latest": "0.19.3",
     "total": 2,
     "affectingLatest": 0,
+    "weeklyDownloads": 20764,
     "vulns": [
      {
       "id": "GHSA-6gr2-qh89-hxwm",
@@ -744,9 +757,10 @@
    {
     "ecosystem": "PyPI",
     "name": "mcp-for-blender",
-    "latest": "2.2.2",
+    "latest": "2.2.4",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 843712,
     "vulns": []
    }
   ],
@@ -757,6 +771,7 @@
     "latest": "1.4.0",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 3246,
     "vulns": []
    }
   ],
@@ -767,6 +782,7 @@
     "latest": "1.0.169",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 13833,
     "vulns": []
    }
   ],
@@ -777,6 +793,7 @@
     "latest": "2.1.0",
     "total": 2,
     "affectingLatest": 0,
+    "weeklyDownloads": 47203,
     "vulns": [
      {
       "id": "PYSEC-2026-3061",
@@ -832,6 +849,7 @@
     "latest": "10.3.0",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 71845,
     "vulns": []
    }
   ],
@@ -842,6 +860,7 @@
     "latest": "0.12.1",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 6780,
     "vulns": []
    }
   ],
@@ -852,6 +871,7 @@
     "latest": "3.21.16",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 519,
     "vulns": []
    }
   ],
@@ -862,6 +882,7 @@
     "latest": "2.0.0",
     "total": 2,
     "affectingLatest": 0,
+    "weeklyDownloads": 439752,
     "vulns": [
      {
       "id": "GHSA-hc55-p739-j48w",
@@ -931,6 +952,7 @@
     "latest": "2.0.0",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 122926,
     "vulns": []
    },
    {
@@ -939,6 +961,7 @@
     "latest": "2.0.0",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 169257,
     "vulns": []
    },
    {
@@ -947,6 +970,7 @@
     "latest": "2026.10.19",
     "total": 8,
     "affectingLatest": 0,
+    "weeklyDownloads": 88172,
     "vulns": [
      {
       "id": "PYSEC-2026-2630",
@@ -1132,6 +1156,7 @@
     "latest": "2026.10.19",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 228583,
     "vulns": []
    }
   ],
@@ -1142,6 +1167,7 @@
     "latest": "0.14.0",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 68012,
     "vulns": []
    }
   ],
@@ -1152,6 +1178,7 @@
     "latest": "2.5.2",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 106705,
     "vulns": []
    }
   ],
@@ -1162,6 +1189,7 @@
     "latest": null,
     "total": 0,
     "affectingLatest": null,
+    "weeklyDownloads": null,
     "vulns": []
    }
   ],
@@ -1172,6 +1200,7 @@
     "latest": "4.1.0",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 11829,
     "vulns": []
    }
   ],
@@ -1182,6 +1211,7 @@
     "latest": "3.4.2",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 11469,
     "vulns": []
    }
   ],
@@ -1192,6 +1222,7 @@
     "latest": "0.2.22",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 12526,
     "vulns": []
    }
   ],
@@ -1202,6 +1233,7 @@
     "latest": "0.13.2",
     "total": 1,
     "affectingLatest": 0,
+    "weeklyDownloads": 61327,
     "vulns": [
      {
       "id": "GHSA-gxw4-4fc5-9gr5",
@@ -1236,6 +1268,7 @@
     "latest": "2.1.1",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 122146,
     "vulns": []
    }
   ],
@@ -1243,9 +1276,10 @@
    {
     "ecosystem": "PyPI",
     "name": "workspace-mcp",
-    "latest": "2.1.1",
+    "latest": "2.2.0",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 73281,
     "vulns": []
    }
   ],
@@ -1256,6 +1290,7 @@
     "latest": "1.3.0",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 7941,
     "vulns": []
    }
   ],
@@ -1266,6 +1301,7 @@
     "latest": "0.5.1",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 3588,
     "vulns": []
    }
   ],
@@ -1276,6 +1312,415 @@
     "latest": "0.3.3",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 12204,
+    "vulns": []
+   }
+  ],
+  "auth0-mcp-server": [
+   {
+    "ecosystem": "npm",
+    "name": "@auth0/auth0-mcp-server",
+    "latest": "0.1.0-beta.19",
+    "total": 0,
+    "affectingLatest": 0,
+    "weeklyDownloads": 5743,
+    "vulns": []
+   }
+  ],
+  "sentry-mcp": [
+   {
+    "ecosystem": "npm",
+    "name": "@sentry/mcp-server",
+    "latest": "0.42.0",
+    "total": 0,
+    "affectingLatest": 0,
+    "weeklyDownloads": 77861,
+    "vulns": []
+   }
+  ],
+  "excel-mcp-server": [
+   {
+    "ecosystem": "PyPI",
+    "name": "excel-mcp-server",
+    "latest": "2.2.2",
+    "total": 2,
+    "affectingLatest": 0,
+    "weeklyDownloads": 52155,
+    "vulns": [
+     {
+      "id": "PYSEC-2026-331",
+      "aliases": [
+       "CVE-2026-40576"
+      ],
+      "summary": "excel-mcp-server has a Path Traversal issue",
+      "severity": null,
+      "published": "2026-06-29",
+      "fixedIn": [
+       "0.1.8"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "0.1.8"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-j98m-w3xp-9f56",
+      "aliases": [
+       "CVE-2026-40576"
+      ],
+      "summary": "excel-mcp-server has a Path Traversal issue",
+      "severity": "CRITICAL",
+      "published": "2026-04-14",
+      "fixedIn": [
+       "0.1.8"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "0.1.8"
+        }
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "microsoft-mcp-catalog": [
+   {
+    "ecosystem": "npm",
+    "name": "@azure/mcp",
+    "latest": "4.0.0-beta.3",
+    "total": 1,
+    "affectingLatest": 0,
+    "weeklyDownloads": 68622,
+    "vulns": [
+     {
+      "id": "GHSA-hhfx-wfvq-7g9c",
+      "aliases": [
+       "CVE-2026-26118"
+      ],
+      "summary": "Azure MCP Server has Server-Side Request Forgery issue that allows authorized attacker to elevate privileges over a network",
+      "severity": "HIGH",
+      "published": "2026-03-10",
+      "fixedIn": [
+       "2.0.0-beta.17",
+       "1.0.2"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "2.0.0-beta.1"
+        },
+        {
+         "fixed": "2.0.0-beta.17"
+        }
+       ],
+       [
+        {
+         "introduced": "1.0.0"
+        },
+        {
+         "fixed": "1.0.2"
+        }
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "docker-mcp-gateway": [
+   {
+    "ecosystem": "Go",
+    "name": "github.com/docker/mcp-gateway",
+    "latest": null,
+    "total": 4,
+    "affectingLatest": null,
+    "weeklyDownloads": null,
+    "vulns": [
+     {
+      "id": "GO-2026-5604",
+      "aliases": [
+       "CVE-2026-55887"
+      ],
+      "summary": "Docker MCP Gateway: Argument injection via OCI image label YAML in github.com/docker/mcp-gateway",
+      "severity": null,
+      "published": "2026-06-25",
+      "fixedIn": [
+       "0.42.2"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0.21.0"
+        },
+        {
+         "fixed": "0.42.2"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-r2xf-7jw5-pjg6",
+      "aliases": [
+       "CVE-2026-55887"
+      ],
+      "summary": "Docker MCP Gateway: Argument injection via OCI image label YAML",
+      "severity": "HIGH",
+      "published": "2026-06-18",
+      "fixedIn": [
+       "0.42.2"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0.21.0"
+        },
+        {
+         "fixed": "0.42.2"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GO-2025-4179",
+      "aliases": [
+       "CVE-2025-64443"
+      ],
+      "summary": "Docker MCP Plugin and Docker MCP Gateway have DNS Rebinding vulnerability when running in sse or streaming mode in github.com/docker/mcp-gateway",
+      "severity": null,
+      "published": "2025-12-08",
+      "fixedIn": [
+       "0.28.0"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "0.28.0"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-46gc-mwh4-cc5r",
+      "aliases": [
+       "CVE-2025-64443"
+      ],
+      "summary": "Docker MCP Plugin and Docker MCP Gateway have DNS Rebinding vulnerability when running in sse or streaming mode",
+      "severity": "HIGH",
+      "published": "2025-12-03",
+      "fixedIn": [
+       "0.28.0"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "0.28.0"
+        }
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "mcp-context-forge": [
+   {
+    "ecosystem": "PyPI",
+    "name": "mcp-contextforge-gateway",
+    "latest": "1.1.0",
+    "total": 5,
+    "affectingLatest": 0,
+    "weeklyDownloads": 8835,
+    "vulns": [
+     {
+      "id": "PYSEC-2026-3862",
+      "aliases": [
+       "CVE-2026-53710"
+      ],
+      "summary": "mcp-contextforge-gateway has RestrictedPython sandbox bypass via getattr builtin in python_sandbox_server",
+      "severity": null,
+      "published": "2026-09-10",
+      "fixedIn": [
+       "1.0.2"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "1.0.2"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-vwf3-4xxj-qg6h",
+      "aliases": [],
+      "summary": "mcp-contextforge-gateway has Server-Side Template Injection (SSTI) leading to Remote Code Execution in `PromptService._render_template` via unsandboxed Jinja2 Environment",
+      "severity": "HIGH",
+      "published": "2026-08-25",
+      "fixedIn": [
+       "1.0.0"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "1.0.0"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-xm98-3vcf-fph7",
+      "aliases": [
+       "CVE-2026-53710"
+      ],
+      "summary": "mcp-contextforge-gateway has RestrictedPython sandbox bypass via getattr builtin in python_sandbox_server",
+      "severity": "CRITICAL",
+      "published": "2026-08-24",
+      "fixedIn": [
+       "1.0.2"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "1.0.2"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "PYSEC-2026-3684",
+      "aliases": [
+       "CVE-2026-53708"
+      ],
+      "summary": "ContextForge: DNS TOCTOU race condition causes SSRF protection bypass (`/admin/gateways/test`)",
+      "severity": null,
+      "published": "2026-08-19",
+      "fixedIn": [
+       "1.0.3"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "1.0.3"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-9hgc-g3w5-67cm",
+      "aliases": [
+       "CVE-2026-53708"
+      ],
+      "summary": "ContextForge: DNS TOCTOU race condition causes SSRF protection bypass (`/admin/gateways/test`)",
+      "severity": "MODERATE",
+      "published": "2026-08-14",
+      "fixedIn": [
+       "1.0.3"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "1.0.3"
+        }
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "mcp-inspector": [
+   {
+    "ecosystem": "npm",
+    "name": "@modelcontextprotocol/inspector",
+    "latest": "2.12.0",
+    "total": 2,
+    "affectingLatest": 0,
+    "weeklyDownloads": 295116,
+    "vulns": [
+     {
+      "id": "GHSA-g9hg-qhmf-q45m",
+      "aliases": [
+       "CVE-2025-58444"
+      ],
+      "summary": "MCP Inspector is Vulnerable to Potential Command Execution via XSS When Connecting to an Untrusted MCP Server",
+      "severity": "HIGH",
+      "published": "2025-09-08",
+      "fixedIn": [
+       "0.16.6"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "0.16.6"
+        }
+       ]
+      ]
+     },
+     {
+      "id": "GHSA-7f8r-222p-6f5g",
+      "aliases": [
+       "CVE-2025-49596"
+      ],
+      "summary": "MCP Inspector proxy server lacks authentication between the Inspector client and proxy",
+      "severity": "CRITICAL",
+      "published": "2025-06-13",
+      "fixedIn": [
+       "0.14.1"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "0.14.1"
+        }
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "clickhouse-mcp-server": [
+   {
+    "ecosystem": "PyPI",
+    "name": "mcp-clickhouse",
+    "latest": "0.7.0",
+    "total": 0,
+    "affectingLatest": 0,
+    "weeklyDownloads": 71407,
     "vulns": []
    }
   ],
@@ -1283,17 +1728,19 @@
    {
     "ecosystem": "npm",
     "name": "kubernetes-mcp-server",
-    "latest": "0.0.67",
+    "latest": "0.0.69",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 7613,
     "vulns": []
    },
    {
     "ecosystem": "PyPI",
     "name": "kubernetes-mcp-server",
-    "latest": "0.0.67",
+    "latest": "0.0.69",
     "total": 0,
     "affectingLatest": 0,
+    "weeklyDownloads": 4353,
     "vulns": []
    },
    {
@@ -1302,6 +1749,7 @@
     "latest": null,
     "total": 0,
     "affectingLatest": null,
+    "weeklyDownloads": null,
     "vulns": []
    }
   ],
@@ -1312,6 +1760,7 @@
     "latest": "4.1.9",
     "total": 5,
     "affectingLatest": 0,
+    "weeklyDownloads": 3426,
     "vulns": [
      {
       "id": "GHSA-6mx4-4h42-r8vh",
@@ -1433,6 +1882,7 @@
     "latest": "8.7.0",
     "total": 6,
     "affectingLatest": 0,
+    "weeklyDownloads": 60509,
     "vulns": [
      {
       "id": "PYSEC-2026-2507",

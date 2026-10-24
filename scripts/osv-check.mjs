@@ -91,6 +91,29 @@ async function latest(eco, name) {
 }
 let MATCH = "";
 
+// Descargas de la última semana según el propio registro (npm) o pypistats.org (PyPI). Solo se pide para paquetes ya
+// confirmados como del mismo repositorio. Si falla, es null: nunca rompe los avisos ni se sustituye por un número.
+async function downloads(eco, name) {
+  try {
+    if (eco === "npm") {
+      const r = await get("https://api.npmjs.org/downloads/point/last-week/" + name);
+      if (r.status !== 200) return null;
+      const j = await r.json();
+      return typeof j.downloads === "number" ? j.downloads : null;
+    }
+    if (eco === "PyPI") {
+      await new Promise((res) => setTimeout(res, 700)); // pypistats limita las peticiones
+      const r = await get(`https://pypistats.org/api/packages/${name}/recent`);
+      if (r.status !== 200) return null;
+      const j = await r.json();
+      return typeof j.data?.last_week === "number" ? j.data.last_week : null;
+    }
+  } catch {
+    /* sin dato */
+  }
+  return null;
+}
+
 async function osv(body) {
   const out = [];
   let token;
@@ -138,6 +161,7 @@ for (const [slug, eco, name, match] of MAP) {
     latest: lat.version,
     total: all.length,
     affectingLatest: hitLatest ? hitLatest.length : null,
+    weeklyDownloads: await downloads(eco, name),
     vulns: all.map((v) => slim(v, eco, name)).sort((a, b) => b.published.localeCompare(a.published)),
   });
 }
@@ -151,6 +175,6 @@ if (existsSync(FILE)) {
     process.exit(1);
   }
 }
-writeFileSync(FILE, JSON.stringify({ checkedAt: new Date().toISOString().slice(0, 10), source: "https://osv.dev", items }, null, 1));
+writeFileSync(FILE, JSON.stringify({ checkedAt: new Date().toISOString().slice(0, 10), source: "https://osv.dev", downloadsSource: "npm registry API and pypistats.org, last 7 days", items }, null, 1));
 console.log("packages:", Object.values(items).flat().length, "skipped:", skipped);
 for (const [slug, ps] of Object.entries(items)) for (const p of ps) console.log(slug.padEnd(24), p.name.padEnd(40), "total", p.total, "latest", p.latest, "affecting-latest", p.affectingLatest);

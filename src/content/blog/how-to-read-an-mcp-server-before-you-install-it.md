@@ -68,4 +68,4 @@ Two warnings. A package with no advisories isn't necessarily safe; it may just b
 
 List what it can change. Search for what it sends out. Keep secrets out of the file. Turn on whatever limits it offers. Check how it's maintained and whether it has a successor. Look up its advisories and pin a version.
 
-The last four steps are already done for 25 servers on the [verified cards](/verified), and you can test your own setup with the [config checker](/check). If you spot a mistake on a card, send us the source and we'll fix it.
+The last four steps are already done for 54 servers on the [verified cards](/verified), and you can test your own setup with the [config checker](/check). If you spot a mistake on a card, send us the source and we'll fix it.

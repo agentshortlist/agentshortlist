@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { track } from "@/lib/track";
+import { CopyTextButton } from "@/components/copy-text-button";
 import type { CardView } from "@/lib/verified-view";
 
 type Entry = { name: string; text: string; env: Record<string, unknown> };
@@ -136,6 +137,24 @@ export function ConfigCheck({ cards }: { cards: CardView[] }) {
     });
   }, [result, cards]);
 
+  // Informe en Markdown: solo nombres, veredicto y avisos. Nunca valores de variables ni la configuración pegada.
+  const report = () => {
+    const out = [
+      "# MCP configuration check",
+      "",
+      `Source: agentshortlist.dev/check, ${new Date().toISOString().slice(0, 10)}. A static check against our verified cards and published advisories. Not a security review.`,
+      "",
+    ];
+    for (const { e, card, notes, advice, secrets, verdict } of rows) {
+      out.push(`## ${e.name}`, card ? `- Matches the ${card.name} card: https://agentshortlist.dev/agents/${card.slug}#verified` : "- Not one of our verified cards yet: nothing to check.");
+      if (card) out.push(`- Verdict: ${VERDICT[verdict].label}`, `- Read-only option: ${READ_ONLY[card.facts.readOnly]}`, `- Sends data by default: ${TELEMETRY[card.facts.telemetry]}`, `- Runs: ${HOSTING[card.facts.hosting]}`);
+      for (const x of secrets) out.push(`- Possible secret: ${x}`);
+      for (const x of [...notes, ...advice]) out.push(`- ${x}`);
+      out.push("");
+    }
+    return out.join("\n");
+  };
+
   const sent = useRef("");
   useEffect(() => {
     if (!rows.length) return;
@@ -176,6 +195,13 @@ export function ConfigCheck({ cards }: { cards: CardView[] }) {
       </div>
 
       {result?.error && <p role="alert" className="surface p-4 text-sm">{result.error}</p>}
+
+      {rows.length > 0 && (
+        <div className="flex flex-wrap items-center gap-3">
+          <CopyTextButton text={report} label="Copy report as Markdown" event="check_export" className="rounded-full border border-ink/20 px-4 py-2 text-sm hover:bg-ink/5" />
+          <span className="text-sm text-muted-foreground">Names, verdicts and advice only. Your configuration and any values are not included.</span>
+        </div>
+      )}
 
       {rows.length > 0 && (
         <ul className="space-y-4" aria-live="polite">

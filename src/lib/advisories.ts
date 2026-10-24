@@ -15,6 +15,7 @@ export type PackageAdvisories = {
   latest: string | null;
   total: number;
   affectingLatest: number | null;
+  weeklyDownloads?: number | null;
   vulns: Vuln[];
 };
 type File = { checkedAt: string; source: string; items: Record<string, PackageAdvisories[]> };

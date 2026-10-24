@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="What 54 verified MCP servers need to start: 3 nothing, 2 work without a key with limits, 14 credentials for systems you run, 21 a third-party account, key or paid product, 14 not verified">
+<defs><pattern id="h" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f4f1ea"/><line x1="0" y1="0" x2="0" y2="10" stroke="#8a857a" stroke-width="3"/></pattern></defs>
+<rect width="1200" height="675" fill="#f4f1ea"/>
+<text x="64" y="86" font-family="Georgia, 'Times New Roman', serif" font-size="44" fill="#1c1b18">What 54 verified MCP servers need to start</text>
+<text x="64" y="128" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#5b5850">Read from each card's credentials line, 24 October 2026</text>
+<text x="616" y="204" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="25" fill="#1c1b18">Nothing to sign up for</text>
+<rect x="640" y="170" width="67.1" height="52" rx="4" fill="#1c1b18"/>
+<text x="723.1" y="207" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#1c1b18">3</text>
+<text x="616" y="282" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="25" fill="#1c1b18">Works without a key, with limits</text>
+<rect x="640" y="248" width="44.8" height="52" rx="4" fill="#1c1b18"/>
+<text x="700.8" y="285" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#1c1b18">2</text>
+<text x="616" y="360" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="25" fill="#1c1b18">Credentials for systems you run</text>
+<rect x="640" y="326" width="313.3" height="52" rx="4" fill="#1c1b18"/>
+<text x="969.3" y="363" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#1c1b18">14</text>
+<text x="616" y="428" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="25" fill="#1c1b18">Account, key, sign-in or paid</text>
+<text x="616" y="456" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="25" fill="#1c1b18">product at a third party</text>
+<rect x="640" y="404" width="470.0" height="52" rx="4" fill="#1c1b18"/>
+<text x="1126.0" y="441" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#1c1b18">21</text>
+<text x="616" y="516" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="25" fill="#1c1b18">Not verified</text>
+<rect x="640" y="482" width="313.3" height="52" rx="4" fill="url(#h)" stroke="#8a857a" stroke-width="2"/>
+<text x="969.3" y="519" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#1c1b18">14</text>
+<text x="64" y="578" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#5b5850">49 of the 54 have an open-source license detected on GitHub.</text>
+<text x="64" y="608" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#5b5850">We did not check the price of any third-party service.</text>
+<text x="64" y="638" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#5b5850">agentshortlist.dev/methodology#access</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Packages with the most published advisories among 54 verified MCP servers: n8n-mcp 11, mcp-server-git 8, ha-mcp 6, mcp-server-kubernetes 5, mcp-contextforge-gateway 5, mysql-mcp-server 4. None affects the latest version.">
+<rect width="1200" height="675" fill="#f4f1ea"/>
+<text x="64" y="86" font-family="Georgia, 'Times New Roman', serif" font-size="44" fill="#1c1b18">Most published advisories, by package</text>
+<text x="64" y="128" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#5b5850">Across the 54 verified cards, OSV.dev, checked 24 October 2026</text>
+<text x="536" y="204" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="25" fill="#1c1b18">n8n-mcp (npm)</text>
+<rect x="560" y="170" width="500.0" height="46" rx="4" fill="#1c1b18"/>
+<text x="1076.0" y="204" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#1c1b18">11</text>
+<text x="536" y="270" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="25" fill="#1c1b18">mcp-server-git (PyPI)</text>
+<rect x="560" y="236" width="363.6" height="46" rx="4" fill="#1c1b18"/>
+<text x="939.6" y="270" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#1c1b18">8</text>
+<text x="536" y="336" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="25" fill="#1c1b18">ha-mcp (PyPI)</text>
+<rect x="560" y="302" width="272.7" height="46" rx="4" fill="#1c1b18"/>
+<text x="848.7" y="336" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#1c1b18">6</text>
+<text x="536" y="402" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="25" fill="#1c1b18">mcp-server-kubernetes (npm)</text>
+<rect x="560" y="368" width="227.3" height="46" rx="4" fill="#1c1b18"/>
+<text x="803.3" y="402" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#1c1b18">5</text>
+<text x="536" y="468" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="25" fill="#1c1b18">mcp-contextforge-gateway (PyPI)</text>
+<rect x="560" y="434" width="227.3" height="46" rx="4" fill="#1c1b18"/>
+<text x="803.3" y="468" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#1c1b18">5</text>
+<text x="536" y="534" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="25" fill="#1c1b18">mysql-mcp-server (PyPI)</text>
+<rect x="560" y="500" width="181.8" height="46" rx="4" fill="#1c1b18"/>
+<text x="757.8" y="534" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#1c1b18">4</text>
+<text x="64" y="578" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#5b5850">Each of these six packages has 0 advisories affecting its latest version.</text>
+<text x="64" y="608" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#5b5850">A count of published advisories is not a measure of how safe a project is.</text>
+<text x="64" y="638" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#5b5850">agentshortlist.dev/blog</text>
+</svg>

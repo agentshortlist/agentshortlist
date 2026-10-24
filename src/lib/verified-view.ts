@@ -1,7 +1,8 @@
 import { META, type Facts } from "@/content/verified-meta";
 import { VERIFIED, type Row, type VerifiedCard } from "@/content/verified";
 import { getAdvisories } from "@/lib/advisories";
-import { getAgent } from "@/lib/data";
+import { getAgent, isOpenSource } from "@/lib/data";
+import { ACCESS, type Needs } from "@/content/access";
 
 // Vista plana de cada ficha para las herramientas interactivas (comparador, selector, comprobador).
 import { health, risk, type Health, type Risk } from "@/lib/scores";
@@ -21,7 +22,9 @@ export type CardView = {
   adv: { total: number; latest: number | null; packages: number };
   health: Health;
   risk: Risk;
-  packages: { name: string; ecosystem: string; latest: string | null; vulns: { id: string; severity: string | null; summary: string; ranges: { introduced?: string; fixed?: string; last_affected?: string }[][] }[] }[];
+  needs: Needs;
+  openSource: boolean;
+  packages: { name: string; ecosystem: string; latest: string | null; weeklyDownloads: number | null; vulns: { id: string; severity: string | null; summary: string; ranges: { introduced?: string; fixed?: string; last_affected?: string }[][] }[] }[];
 };
 
 const find = (rows: Row[], labels: string[]) => {
@@ -68,11 +71,14 @@ const view = (c: VerifiedCard): CardView | null => {
     alternative: c.alternative ? { name: c.alternative.name, url: c.alternative.url } : null,
     adv,
     health: health(a),
+    needs: ACCESS[c.slug]?.needs ?? "unknown",
+    openSource: isOpenSource(a),
     risk: risk({ facts: m.facts, adv, checks: m.checks ?? [] }),
     packages: pk.map((p) => ({
       name: p.name,
       ecosystem: p.ecosystem,
       latest: p.latest,
+      weeklyDownloads: p.weeklyDownloads ?? null,
       vulns: p.vulns.map((v) => ({ id: v.id, severity: v.severity, summary: v.summary, ranges: v.ranges })),
     })),
   };
