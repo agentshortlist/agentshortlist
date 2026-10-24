@@ -524,24 +524,17 @@ html.has-ribbon :is(input, textarea, select, [contenteditable="true"]) { cursor:
   inset: 0;
   z-index: -10;
   pointer-events: none;
-  /* Fundido hacia el fondo arriba y abajo: el campo de puntos nace y muere dentro del hero, sin bordes duros. */
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 22%, #000 66%, transparent 100%);
-  mask-image: linear-gradient(to bottom, transparent 0, #000 22%, #000 66%, transparent 100%);
-}
-/* Zona de calma detrás del titular: los puntos se apagan donde está el texto y se ven en los bordes. */
-.hero-dots::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 62% 34% at 50% 46%, rgb(var(--paper) / 0.9) 0%, rgb(var(--paper) / 0.55) 45%, transparent 100%);
-  pointer-events: none;
+  /* Luminosidad: el centro conserva todo el brillo y los puntos se apagan hacia los lados (una viñeta radial por máscara,
+     que vale igual en tema claro y oscuro) y se funden con el fondo arriba y abajo, sin bordes duros. */
+  --dots-vignette: radial-gradient(circle farthest-corner at 50% 48%, #000 0, #000 34%, rgb(0 0 0 / 0.92) 46%, rgb(0 0 0 / 0.84) 52%, rgb(0 0 0 / 0.48) 70%, rgb(0 0 0 / 0.35) 76%, rgb(0 0 0 / 0.07) 88%, transparent 100%);
+  --dots-fade: linear-gradient(to bottom, transparent 0, #000 22%, #000 66%, transparent 100%);
+  -webkit-mask-image: var(--dots-vignette), var(--dots-fade);
+  -webkit-mask-composite: source-in;
+  mask-image: var(--dots-vignette), var(--dots-fade);
+  mask-composite: intersect;
 }
 @media (max-width: 719px) {
-  .hero-dots {
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 20%, #000 74%, transparent 100%);
-    mask-image: linear-gradient(to bottom, transparent 0, #000 20%, #000 74%, transparent 100%);
-  }
-  .hero-dots::after { background: radial-gradient(ellipse 88% 24% at 50% 44%, rgb(var(--paper) / 0.78) 0%, rgb(var(--paper) / 0.4) 55%, transparent 100%); }
+  .hero-dots { --dots-fade: linear-gradient(to bottom, transparent 0, #000 20%, #000 74%, transparent 100%); }
 }
 .hero-dots canvas { display: block; width: 100%; height: 100%; mix-blend-mode: screen; opacity: 0; transition: opacity 600ms; }
 .hero-dots canvas.is-drawn { opacity: 1; }

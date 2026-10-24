@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 // Campo de puntos del hero. Cada punto:
 //  - se aparta del puntero con una campana gaussiana (hasta 16 px en el centro, ~100 px de radio),
 //    de modo que alrededor del cursor queda un hueco y no se puede situar el puntero sobre un punto;
+//    sin puntero, el campo se comporta como si el puntero estuviera en el centro;
 //  - flota con una deriva lenta y propia (fase aleatoria);
 //  - titila de forma esporádica y desigual.
 // WebGL (GPU) con respaldo en canvas 2D que calcula exactamente lo mismo. Pausado fuera de pantalla
@@ -16,7 +17,8 @@ const PUSH = 16; // px de desplazamiento máximo
 const FALL_K = 19600; // 2·σ²: σ ≈ 99 px
 const DRIFT = 1.55; // px
 const ALPHA_BASE = 0.48;
-const HOVER_ALPHA = 0.8; // brillo extra junto al puntero: en reposo los puntos van apagados y se encienden al acercarse
+const BREATH = 0.5; // profundidad de la respiración: el brillo oscila entre 100 % y 50 % del base
+const HOVER_ALPHA = 0.28; // brillo extra junto al puntero (y, en reposo, junto al centro del campo)
 const SIZE = 2.05; // diámetro en px
 // Tema claro: puntos oscuros, algo más opacos y grandes (se mezclan con "multiplicar" en el CSS).
 const LIGHT = { color: [0.06, 0.06, 0.07] as const, alpha: 0.58, size: 2.45 };
@@ -24,7 +26,10 @@ const DARK = { color: [1, 1, 1] as const, alpha: ALPHA_BASE, size: SIZE };
 const isLight = () => document.documentElement.classList.contains("light");
 const MOUSE_TAU = 0.08; // s: suavizado del puntero, independiente de los fps
 const MAX_DT = 0.05;
-const AWAY = -500; // sin puntero, el "puntero" se aparta fuera del campo: en reposo no hay zona brillante, solo puntos apagados
+// Sin puntero (o al salir de la página), el "puntero" se aparca en el centro del campo: alrededor queda una zona algo más
+// luminosa y los puntos se van apagando hacia los lados. Al mover el ratón, esa zona sigue al puntero con suavizado.
+const IDLE_X = 0.5;
+const IDLE_Y = 0.42;
 
 const VERT = `
 attribute vec2 a_pos;
@@ -47,7 +52,9 @@ void main() {
   p += vec2(sin(u_time * 0.14 + a_phase), cos(u_time * 0.11 + a_phase * 1.27)) * (${DRIFT.toFixed(2)} * u_motion);
   float spark = 0.5 + 0.5 * sin(u_time * 1.15 + a_phase * 3.7);
   float spark2 = 0.5 + 0.5 * sin(u_time * 0.47 + a_phase * 1.9);
-  float twinkle = 1.0 + pow(spark * spark2, 7.0) * 0.65 * u_motion;
+  // Respiración continua y desigual (cada punto con su ritmo, de 3 a 8 s) más destellos esporádicos: estrellas que se encienden y se apagan.
+  float breath = 1.0 - ${BREATH.toFixed(2)} * u_motion * (0.5 - 0.5 * sin(u_time * (0.8 + 0.8 * fract(a_phase * 7.13)) + a_phase * 5.3));
+  float twinkle = breath * (1.0 + pow(spark * spark2, 7.0) * 0.65 * u_motion);
   v_alpha = (u_alpha_base + fall * ${HOVER_ALPHA.toFixed(2)}) * twinkle;
   vec2 clip = (p / u_res) * 2.0 - 1.0;
   clip.y *= -1.0;
@@ -122,6 +129,7 @@ export function HeroDots() {
     let tx = 0; // destino
     let ty = 0;
     let started = false;
+    let hovering = false; // el puntero está sobre la página: no se recoloca el punto de reposo al redimensionar
     let raf = 0;
     let lastTick = 0;
     let visible = true;
@@ -238,7 +246,9 @@ export function HeroDots() {
             const px = x + dx * inv * fall * PUSH + Math.sin(t * 0.14 + ph) * DRIFT * motion;
             const py = y + dy * inv * fall * PUSH + Math.cos(t * 0.11 + ph * 1.27) * DRIFT * motion;
             const spark = (0.5 + 0.5 * Math.sin(t * 1.15 + ph * 3.7)) * (0.5 + 0.5 * Math.sin(t * 0.47 + ph * 1.9));
-            const twinkle = 1 + Math.pow(spark, 7) * 0.65 * motion;
+            const fr = Math.abs(Math.sin(ph * 7.13) * 43758.5453) % 1;
+            const breath = 1 - BREATH * motion * (0.5 - 0.5 * Math.sin(t * (0.8 + 0.8 * fr) + ph * 5.3));
+            const twinkle = breath * (1 + Math.pow(spark, 7) * 0.65 * motion);
             ctx.globalAlpha = Math.min((th.alpha * alphaK + fall * HOVER_ALPHA) * twinkle, 1);
             const size = th.size * sizeK + fall * 1.8;
             ctx.drawImage(sprite, px - size / 2, py - size / 2, size, size);
@@ -273,9 +283,12 @@ export function HeroDots() {
       alphaK = w < 720 ? 0.85 : 1.12;
       sizeK = w < 720 ? 1 : 1.1;
       if (!started) {
-        mx = tx = AWAY;
-        my = ty = AWAY;
+        mx = tx = w * IDLE_X;
+        my = ty = h * IDLE_Y;
         started = true;
+      } else if (!hovering) {
+        tx = w * IDLE_X;
+        ty = h * IDLE_Y;
       }
       renderer?.resize();
     };
@@ -307,12 +320,14 @@ export function HeroDots() {
     const onMove = (e: PointerEvent) => {
       if (e.pointerType === "touch") return;
       const rect = host.getBoundingClientRect();
+      hovering = true;
       tx = e.clientX - rect.left;
       ty = e.clientY - rect.top;
     };
     const onLeave = () => {
-      tx = AWAY;
-      ty = AWAY;
+      hovering = false;
+      tx = w * IDLE_X;
+      ty = h * IDLE_Y;
     };
 
     // En móvil la barra del navegador cambia la altura al hacer scroll: no reconstruimos la rejilla por cambios pequeños.
