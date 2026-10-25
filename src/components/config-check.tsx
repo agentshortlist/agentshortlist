@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { track } from "@/lib/track";
 import { CopyTextButton } from "@/components/copy-text-button";
+import { NewsletterForm } from "@/components/newsletter-form";
 import type { CardView } from "@/lib/verified-view";
 
 type Entry = { name: string; text: string; env: Record<string, unknown> };
@@ -253,6 +254,16 @@ export function ConfigCheck({ cards }: { cards: CardView[] }) {
             </li>
           ))}
         </ul>
+      )}
+
+      {rows.length > 0 && (
+        <div className="surface space-y-3 p-5 sm:p-6">
+          <h2 className="font-medium tracking-[-0.02em]">New advisories on servers like these</h2>
+          <p className="text-sm text-muted-foreground">
+            The Risk Radar lists new advisories on the MCP servers we have read, with the fixed version. Your configuration stays in your browser: only the email you type is sent.
+          </p>
+          <NewsletterForm compact source="check" alertsOption />
+        </div>
       )}
     </div>
   );

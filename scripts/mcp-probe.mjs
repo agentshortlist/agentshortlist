@@ -5,6 +5,8 @@
 // Uso:  node scripts/mcp-probe.mjs --slug=playwright-mcp --package=@playwright/mcp@0.0.83 -- npx -y @playwright/mcp@0.0.83
 import { spawn } from "node:child_process";
 import os from "node:os";
+import { createHash } from "node:crypto";
+import { writeFileSync } from "node:fs";
 
 const argv = process.argv.slice(2);
 const sep = argv.indexOf("--");
@@ -14,6 +16,10 @@ if (!cmd.length || !opts.slug || !opts.package) {
   console.error("Uso: node scripts/mcp-probe.mjs --slug=<ficha> --package=<paquete@versión> [--env=KEY=VAL] [--environment=\"texto\"] -- <comando del servidor>");
   process.exit(2);
 }
+
+// JSON canónico (claves ordenadas): el mismo contenido da siempre el mismo hash, aunque el servidor ordene las claves distinto.
+const canon = (v) => JSON.stringify(v, (_, x) => (x && typeof x === "object" && !Array.isArray(x) ? Object.fromEntries(Object.keys(x).sort().map((k) => [k, x[k]])) : x));
+const sha = (v) => createHash("sha256").update(canon(v)).digest("hex");
 
 const env = { PATH: process.env.PATH ?? "", HOME: process.env.HOME ?? os.homedir(), LANG: "C.UTF-8" };
 for (const a of argv.slice(0, sep)) if (a.startsWith("--env=")) { const [k, ...v] = a.slice(6).split("="); env[k] = v.join("="); }
@@ -61,6 +67,7 @@ const record = {
   notes: "",
 };
 const tools = [];
+let fullTools = null;
 let server = null;
 try {
   const init = await request(1, "initialize", { protocolVersion: "2025-03-26", capabilities: {}, clientInfo: { name: "agentshortlist-probe", version: "0.1" } });
@@ -72,6 +79,7 @@ try {
     try {
       const list = await request(2, "tools/list", {});
       const t = list.result?.tools ?? [];
+      fullTools = [...t].sort((a, b) => String(a.name).localeCompare(String(b.name)));
       tools.push(...t.map((x) => x.name));
       record.toolsList = { status: Array.isArray(list.result?.tools) ? "pass" : "fail", count: t.length };
     } catch (e) {
@@ -94,4 +102,18 @@ if (stderr && record.handshake === "fail") record.notes += ` stderr tail: ${stde
 console.log("// Pegar en TESTS de src/content/tests.ts (revisar antes: no incluir rutas ni secretos):");
 console.log(JSON.stringify(record, null, 2));
 console.log("// Tools reported (" + tools.length + "): " + tools.join(", "));
+if (fullTools) {
+  // Una variable cada vez: descripciones y esquemas por separado, y el conjunto completo.
+  const hashes = {
+    descriptions: sha(fullTools.map((t) => ({ name: t.name, description: t.description ?? "" }))),
+    schemas: sha(fullTools.map((t) => ({ name: t.name, inputSchema: t.inputSchema ?? null }))),
+    all: sha(fullTools),
+  };
+  console.log("// sha256 of the canonical tools/list (sorted by name, sorted keys):");
+  console.log(JSON.stringify({ package: opts.package, tools: fullTools.length, ...hashes }, null, 2));
+  if (opts["tools-out"]) {
+    writeFileSync(opts["tools-out"], JSON.stringify({ package: opts.package, testedAt: record.testedAt, serverInfo: server, hashes, tools: fullTools }, null, 2));
+    console.log("// Full tools/list saved to " + opts["tools-out"]);
+  }
+}
 process.exit(record.handshake === "pass" ? 0 : 1);

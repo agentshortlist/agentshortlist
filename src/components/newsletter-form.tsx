@@ -1,10 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { track } from "@/lib/track";
 
 type State = { status: "idle" | "loading" | "done" | "error"; message: string };
 
-export function NewsletterForm({ compact = false }: { compact?: boolean }) {
+// `source` indica desde dónde se apunta la gente (por defecto, según la página). `alertsOption` añade una casilla de interés en alertas
+// por servidor: solo cuenta en GA4 como medida de demanda, no se guarda por persona ni se envía al servidor.
+export function NewsletterForm({ compact = false, source, alertsOption = false }: { compact?: boolean; source?: string; alertsOption?: boolean }) {
+  const pathname = usePathname() ?? "/";
+  const where = source ?? (pathname === "/" ? "home" : pathname.startsWith("/blog") ? "post" : pathname.startsWith("/check") ? "check" : pathname.startsWith("/pick") || pathname.startsWith("/compare") ? "tools" : "other");
   const [state, setState] = useState<State>({ status: "idle", message: "" });
   const busy = state.status === "loading" || state.status === "done";
   const id = compact ? "nl-email-compact" : "nl-email";
@@ -20,6 +26,7 @@ export function NewsletterForm({ compact = false }: { compact?: boolean }) {
         body: JSON.stringify({ email: form.get("email"), website: form.get("website") }),
       });
       const data = (await res.json().catch(() => ({}))) as { ok?: boolean; message?: string };
+      if (res.ok && data.ok) track("newsletter_signup", { source: where, alerts_interest: alertsOption && form.get("alerts") === "on" });
       setState({
         status: res.ok && data.ok ? "done" : "error",
         message: data.message ?? "Something went wrong. Please try again later.",
@@ -33,8 +40,8 @@ export function NewsletterForm({ compact = false }: { compact?: boolean }) {
     <form onSubmit={onSubmit} className="space-y-3" aria-label="Newsletter signup">
       {!compact && (
         <div>
-          <p className="font-medium tracking-[-0.02em]">Get new rankings by email</p>
-          <p className="text-sm text-muted-foreground">One short email when a ranking changes. Confirm by email, unsubscribe any time.</p>
+          <p className="font-medium tracking-[-0.02em]">Get the MCP Risk Radar by email</p>
+          <p className="text-sm text-muted-foreground">A short note when something changes: new advisories, projects that go quiet and ranking changes. Confirm by email, unsubscribe any time.</p>
         </div>
       )}
       <div className="flex flex-col gap-2 sm:flex-row">
@@ -64,6 +71,12 @@ export function NewsletterForm({ compact = false }: { compact?: boolean }) {
           {state.status === "loading" ? "Sending..." : "Subscribe"}
         </button>
       </div>
+      {alertsOption && (
+        <label className="flex items-start gap-2 text-sm text-muted-foreground">
+          <input type="checkbox" name="alerts" disabled={busy} className="mt-1" />
+          <span>I would also want an alert for the servers in my own configuration. We have not built per-server alerts yet; this only tells us whether to.</span>
+        </label>
+      )}
       <p
         role="status"
         aria-live="polite"

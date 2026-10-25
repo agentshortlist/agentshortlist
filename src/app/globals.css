@@ -524,14 +524,11 @@ html.has-ribbon :is(input, textarea, select, [contenteditable="true"]) { cursor:
   inset: 0;
   z-index: -10;
   pointer-events: none;
-  /* Luminosidad: el centro conserva todo el brillo y los puntos se apagan hacia los lados (una viñeta radial por máscara,
-     que vale igual en tema claro y oscuro) y se funden con el fondo arriba y abajo, sin bordes duros. */
-  --dots-vignette: radial-gradient(circle farthest-corner at 50% 48%, #000 0, #000 34%, rgb(0 0 0 / 0.92) 46%, rgb(0 0 0 / 0.84) 52%, rgb(0 0 0 / 0.48) 70%, rgb(0 0 0 / 0.35) 76%, rgb(0 0 0 / 0.07) 88%, transparent 100%);
+  /* Brillo uniforme en todo el campo: solo se funde con el fondo arriba y abajo, sin bordes duros.
+     El efecto de estrellas (respiración y destellos de cada punto) y la reacción al ratón los pone el canvas. */
   --dots-fade: linear-gradient(to bottom, transparent 0, #000 22%, #000 66%, transparent 100%);
-  -webkit-mask-image: var(--dots-vignette), var(--dots-fade);
-  -webkit-mask-composite: source-in;
-  mask-image: var(--dots-vignette), var(--dots-fade);
-  mask-composite: intersect;
+  -webkit-mask-image: var(--dots-fade);
+  mask-image: var(--dots-fade);
 }
 @media (max-width: 719px) {
   .hero-dots { --dots-fade: linear-gradient(to bottom, transparent 0, #000 20%, #000 74%, transparent 100%); }

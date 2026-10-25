@@ -7,6 +7,7 @@ import { CopyCodeButton } from "@/components/copy-code-button";
 import { cardViews } from "@/lib/verified-view";
 import { GITHUB_URL } from "@/lib/site";
 import { testsFor, type ProbeStatus } from "@/content/tests";
+import { capabilitiesFromTools } from "@/content/capabilities";
 import { ACCESS, NEEDS_LABEL } from "@/content/access";
 
 const STATUS: Record<ProbeStatus, string> = { pass: "Pass", fail: "Fail", "not-run": "Not run" };
@@ -126,6 +127,33 @@ function Adoption({ slug }: { slug: string }) {
   );
 }
 
+function Capabilities({ names }: { names?: string[] }) {
+  const hits = capabilitiesFromTools(names);
+  if (!hits.length) return null;
+  const covered = new Set(hits.flatMap((h) => h.tools));
+  const uncovered = (names ?? []).filter((n) => !covered.has(n)).length;
+  return (
+    <div className="sm:col-span-2">
+      <dt className="text-muted-foreground">What its tools can do, from the tool names we measured</dt>
+      <dd>
+        <ul className="mt-1 space-y-1">
+          {hits.map((c) => (
+            <li key={c.id}>
+              <strong className="font-medium">{c.label}</strong>
+              <span className="text-muted-foreground"> ({c.tools.length}): </span>
+              <span className="mono-num text-xs">{c.tools.join(", ")}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-1 text-xs text-muted-foreground">
+          Deduced from the names alone. It says which kinds of tools exist, not how they behave or whether limits apply.
+          {uncovered > 0 ? ` ${uncovered} of ${names?.length} tools match none of these groups.` : ""}
+        </p>
+      </dd>
+    </div>
+  );
+}
+
 function TestRuns({ slug }: { slug: string }) {
   const runs = testsFor(slug);
   if (!runs.length) return null;
@@ -145,6 +173,8 @@ function TestRuns({ slug }: { slug: string }) {
           <div><dt className="text-muted-foreground">System</dt><dd>{t.os}</dd></div>
           <div><dt className="text-muted-foreground">Environment</dt><dd>{t.environment}</dd></div>
           <div><dt className="text-muted-foreground">Install, handshake, tools list</dt><dd>{STATUS[t.install]}, {STATUS[t.handshake]}, {STATUS[t.toolsList.status]}{t.toolsList.count !== null ? ` (${t.toolsList.count} tools)` : ""}</dd></div>
+          {t.hashes && <div className="sm:col-span-2"><dt className="text-muted-foreground">tools/list sha256 (first 12 characters)</dt><dd className="mono-num">descriptions {t.hashes.descriptions.slice(0, 12)} · schemas {t.hashes.schemas.slice(0, 12)}</dd></div>}
+          <Capabilities names={t.toolNames} />
           {t.call && <div className="sm:col-span-2"><dt className="text-muted-foreground">Harmless call</dt><dd>{t.call.tool}: {STATUS[t.call.status]}. {t.call.note}</dd></div>}
           {t.notes && <div className="sm:col-span-2"><dt className="text-muted-foreground">Notes</dt><dd>{t.notes}</dd></div>}
         </dl>

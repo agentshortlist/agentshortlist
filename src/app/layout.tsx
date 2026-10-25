@@ -188,9 +188,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <div className="surface-lg grid gap-8 p-6 sm:p-10 md:grid-cols-2 md:items-center">
               <div className="space-y-3">
                 <Eyebrow>Newsletter</Eyebrow>
-                <h2 className="display-2 text-3xl sm:text-4xl">New rankings, in your inbox.</h2>
+                <h2 className="display-2 text-3xl sm:text-4xl">The MCP Risk Radar, in your inbox.</h2>
                 <p className="prose-measure text-muted-foreground">
-                  One short email when a ranking changes. Confirm by email, unsubscribe any time.
+                  A short note when something changes: new advisories on the MCP servers we have read, projects that go quiet, and ranking changes. Confirm by email, unsubscribe any time.
                 </p>
               </div>
               <NewsletterForm compact />

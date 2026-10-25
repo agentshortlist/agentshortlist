@@ -36,7 +36,8 @@ export default function PrivacyPage() {
         </li>
         <li>
           <strong>Visit statistics (only if you accept):</strong> Google Analytics 4 records which pages are viewed, approximate location
-          (country and city), device, browser and how you arrived. We switch off Google signals and ad personalization. Until you
+          (country and city), device, browser and how you arrived. We switch off Google signals and ad personalization. It also counts how the tools are used (for example, a configuration
+          check or a newsletter signup, and from which page) without ever including what you type or paste, such as a configuration or an email address. Until you
           press Accept it runs in a restricted mode (see below).
         </li>
         <li>We do not ask for names and we do not use advertising trackers.</li>
