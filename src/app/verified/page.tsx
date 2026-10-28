@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { Eyebrow } from "@/components/ui-kit";
 import { VERIFIED, type VerifiedCard } from "@/content/verified";
 import { fmtDate, getAgent } from "@/lib/data";
+import { TestedChip } from "@/components/tested-chip";
+import { testMark } from "@/lib/test-mark";
 import { RiskBoard } from "@/components/risk-board";
 import { cardViews } from "@/lib/verified-view";
 import { CORRECTIONS_EMAIL } from "@/lib/site";
@@ -35,6 +37,7 @@ export default function VerifiedPage() {
           can change, what it sends out, how well it is maintained and how to limit it. Every line shows where it comes from, and
           anything we could not check says so. Last review {fmtDate(latest)}. This is not a security audit.{" "}
           <Link href="/methodology#verified-cards" className="underline underline-offset-4 hover:text-foreground">How cards work</Link>.
+          For the whole directory, ranked, see the <Link href="/categories/mcp-servers" className="underline underline-offset-4 hover:text-foreground">MCP servers list</Link>.
         </p>
       </header>
 
@@ -66,6 +69,7 @@ export default function VerifiedPage() {
                 <tr key={c.slug} className="border-b border-ink/10 align-top last:border-0">
                   <td className="px-3 py-3 font-medium">
                     <Link href={`/agents/${c.slug}`} className="underline-offset-4 hover:underline">{a!.name}</Link>
+                    {testMark(c.slug) && <div className="mt-1.5 font-normal"><TestedChip mark={testMark(c.slug)} compact /></div>}
                   </td>
                   <td className="px-3 py-3 text-foreground/85">{view(c.slug)?.health.level ?? "n/a"}</td>
                   <td className="px-3 py-3 text-foreground/85">{view(c.slug) ? `${view(c.slug)!.risk.level}${view(c.slug)!.risk.limited ? " (est.)" : ""}` : "n/a"}</td>

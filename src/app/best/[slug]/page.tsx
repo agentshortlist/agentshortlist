@@ -9,6 +9,8 @@ import { ScopeBlock } from "@/components/scope-block";
 import { SponsoredSlot } from "@/components/sponsored-slot";
 import { FaqList } from "@/components/faq-list";
 import { Eyebrow, FreshChip, LicenseChip } from "@/components/ui-kit";
+import { TestedChip } from "@/components/tested-chip";
+import { testMark } from "@/lib/test-mark";
 import {
   BEST_PAGES,
   bestPageContent,
@@ -134,6 +136,7 @@ export default async function BestPageRoute({ params }: Props) {
               <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
                 <LicenseChip agent={a} />
                 <FreshChip agent={a} />
+                <TestedChip mark={testMark(a.slug)} />
                 <span className="mono-num text-xs text-muted-foreground">
                   {fmtStars(a.stars)} stars · last push {fmtDate(a.lastPush)}
                 </span>

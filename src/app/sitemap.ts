@@ -21,6 +21,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/coverage", 0.5),
     entry("/verified", 0.7),
     entry("/check", 0.6),
+    entry("/radar", 0.6),
+    entry("/advisories", 0.7),
     entry("/pick", 0.6),
     entry("/compare/live", 0.6),
     ...(getPosts().length ? [entry("/blog", 0.6), ...getPosts().map((p) => entry(`/blog/${p.slug}`, 0.6))] : []),

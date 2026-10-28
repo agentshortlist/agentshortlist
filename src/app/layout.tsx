@@ -190,7 +190,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 <Eyebrow>Newsletter</Eyebrow>
                 <h2 className="display-2 text-3xl sm:text-4xl">The MCP Risk Radar, in your inbox.</h2>
                 <p className="prose-measure text-muted-foreground">
-                  A short note when something changes: new advisories on the MCP servers we have read, projects that go quiet, and ranking changes. Confirm by email, unsubscribe any time.
+                  A short note when something changes: new advisories on the MCP servers we have read, projects that go quiet, and ranking changes. Confirm by email, unsubscribe any time.{" "}
+                  <Link href="/radar" className="underline underline-offset-4 hover:text-foreground">What is in an edition?</Link>
                 </p>
               </div>
               <NewsletterForm compact />
@@ -266,8 +267,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 <li><Link href="/methodology" className="transition-colors hover:text-foreground">Methodology</Link></li>
                 <li><Link href="/compare" className="transition-colors hover:text-foreground">Compare</Link></li>
                 <li><Link href="/verified" className="transition-colors hover:text-foreground">Verified cards</Link></li>
+                <li><Link href="/advisories" className="transition-colors hover:text-foreground">Security advisories</Link></li>
                 <li><Link href="/pick" className="transition-colors hover:text-foreground">Pick a server</Link></li>
                 <li><Link href="/check" className="transition-colors hover:text-foreground">Config checker</Link></li>
+                <li><Link href="/radar" className="transition-colors hover:text-foreground">MCP Risk Radar</Link></li>
                 {hasBlog && <li><Link href="/blog" className="transition-colors hover:text-foreground">Blog</Link></li>}
                 <li><Link href="/coverage" className="transition-colors hover:text-foreground">Coverage</Link></li>
                 <li><Link href="/changes" className="transition-colors hover:text-foreground">Changes</Link></li>

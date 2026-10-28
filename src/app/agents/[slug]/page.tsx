@@ -8,6 +8,8 @@ import { VerifiedCardView } from "@/components/verified-card";
 import { getVerified } from "@/content/verified";
 import { pairsFor } from "@/lib/compare";
 import { Eyebrow, FreshChip, LicenseChip, PillLink } from "@/components/ui-kit";
+import { TestedChip } from "@/components/tested-chip";
+import { testMark } from "@/lib/test-mark";
 import {
   fmtDate,
   fmtStars,
@@ -32,9 +34,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!a) return {};
   const cat = getCategory(a.category)!;
   const v = getVerified(a.slug);
+  const withMcp = /mcp/i.test(a.name) ? a.name : `${a.name} MCP`;
   return {
     title: v
-      ? fitTitle([`${a.name}: permissions, advisories and upkeep`, `${a.name}: permissions and upkeep`, `${a.name}: what it can do`, a.name])
+      ? fitTitle(
+          [`${a.name}: permissions, advisories and upkeep`, `${withMcp}: advisories and permissions`, `${withMcp}: security advisories`, `${a.name}: security advisories`, `${a.name}: advisories`, a.name],
+          48,
+        )
       : fitTitle([`${a.name} (${cat.name}): stars, activity, license`, `${a.name}: stars, activity and license`, `${a.name}: stars and license`, a.name]),
     description: v
       ? clip(`${a.name}: what it can change, what it sends out, open issues and published security advisories, read from its own docs and source on ${fmtDate(v.reviewedAt)}. Every line shows its source.`)
@@ -100,6 +106,7 @@ export default async function AgentPage({ params }: Props) {
         <div className="reveal reveal-1 flex flex-wrap items-center gap-3">
           <LicenseChip agent={a} />
           <FreshChip agent={a} />
+          <TestedChip mark={testMark(a.slug)} />
         </div>
         {a.description && (
           <p className="reveal reveal-2 prose-measure max-w-[42rem] text-[15px] leading-[1.65] text-muted-foreground">

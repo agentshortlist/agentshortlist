@@ -7,6 +7,7 @@ import { AUTHOR_NAME } from "@/lib/site";
 export type Post = {
   slug: string;
   title: string;
+  seoTitle?: string; // título más corto para la etiqueta <title>, si el principal no cabe
   description: string;
   date: string; // AAAA-MM-DD
   updated: string;
@@ -32,6 +33,7 @@ function parse(file: string): Post {
   return {
     slug: file.replace(/\.md$/, ""),
     title: meta.title,
+    seoTitle: meta.seo_title || undefined,
     description: meta.description,
     date: meta.date,
     updated: meta.updated || meta.date,

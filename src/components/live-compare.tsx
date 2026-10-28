@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { TestedChip } from "@/components/tested-chip";
 import { useEffect, useState } from "react";
 import { KIND_LABEL } from "@/content/verified-meta";
 import { NEEDS_LABEL } from "@/content/access";
@@ -91,7 +92,7 @@ export function LiveCompare({ cards }: { cards: CardView[] }) {
             <select
               value={s}
               onChange={(e) => set(i, e.target.value)}
-              className="w-full rounded-xl border border-ink/15 bg-transparent p-3 text-[15px] outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="w-full rounded-xl border border-ink/15 bg-paper p-3 text-[15px] text-ink outline-none focus-visible:ring-2 focus-visible:ring-ring [&_option]:bg-paper [&_option]:text-ink"
             >
               <option value="">Choose a server</option>
               {[...cards].sort((a, b) => a.name.localeCompare(b.name)).map((c) => (
@@ -119,6 +120,7 @@ export function LiveCompare({ cards }: { cards: CardView[] }) {
                   <th key={c.slug} scope="col" className="px-4 py-3 align-top">
                     <Link href={`/agents/${c.slug}#verified`} className="font-medium underline-offset-4 hover:underline">{c.name}</Link>
                     <span className="block text-xs font-normal text-muted-foreground">{c.version}</span>
+                    {c.tested && <span className="mt-1.5 block"><TestedChip mark={c.tested} compact /></span>}
                   </th>
                 ))}
               </tr>

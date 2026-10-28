@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/privacy" },
 };
 
-const UPDATED = "2026-10-19";
+const UPDATED = "2026-10-25";
 const h2 = "display-2 pt-4 text-xl sm:text-2xl";
 
 export default function PrivacyPage() {
@@ -24,7 +24,7 @@ export default function PrivacyPage() {
       <h2 className="display-2 pt-4 text-xl sm:text-2xl">What we collect</h2>
       <ul className="list-disc space-y-1 pl-5">
         <li>
-          <strong>Newsletter:</strong> your email address, only if you subscribe, and whether you have confirmed or unsubscribed.
+          <strong>Newsletter:</strong> your email address, only if you subscribe, whether you have confirmed or unsubscribed, which kind of page you signed up from (home, a post, the config checker, the tools or another page) and whether you ticked the box saying you would want alerts. Nothing else.
         </li>
         <li>
           <strong>Server logs:</strong> like every website, our server records technical details of each request (IP address,

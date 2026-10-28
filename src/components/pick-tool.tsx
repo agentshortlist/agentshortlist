@@ -6,6 +6,7 @@ import { track } from "@/lib/track";
 import { CopyTextButton } from "@/components/copy-text-button";
 import { KIND_LABEL, type Kind } from "@/content/verified-meta";
 import type { CardView } from "@/lib/verified-view";
+import { TestedChip } from "@/components/tested-chip";
 
 const DAY = 86_400_000;
 const daysSince = (d: string | null) => (d ? Math.floor((Date.now() - new Date(d).getTime()) / DAY) : null);
@@ -19,8 +20,12 @@ const FILTERS = [
   { id: "noAdv", label: "No published advisory affects the latest version", test: (c: CardView) => c.adv.latest === 0 },
   { id: "lowRisk", label: "Low risk from what we read", test: (c: CardView) => c.risk.level === "Low" && !c.risk.limited },
   { id: "healthy", label: "Strong project health", test: (c: CardView) => c.health.level === "Strong" },
+  { id: "tested", label: "Tested by us", test: (c: CardView) => c.tested !== null },
   { id: "fresh", label: "Pushed in the last 30 days", test: (c: CardView) => (daysSince(c.lastPush) ?? 999) <= 30 },
 ] as const;
+
+// "tested" filtra pero no se lista como condición en cada resultado: no queremos un ✗ en las fichas aún sin probar.
+const QUIET = ["tested"];
 
 // Es un filtro, no una clasificación: cada resultado muestra qué condiciones cumple, cuáles no y cuáles no sabemos.
 export function PickTool({ cards }: { cards: CardView[] }) {
@@ -130,9 +135,10 @@ export function PickTool({ cards }: { cards: CardView[] }) {
                   <span className="text-xs text-muted-foreground">{KIND_LABEL[c.facts.kind]}</span>
                 </div>
                 <p className="text-sm leading-[1.55] text-foreground/85">{c.rows.madeFor}</p>
+                {c.tested && <div><TestedChip mark={c.tested} compact /></div>}
                 <p className="mono-num text-xs text-muted-foreground">Health {c.health.level} · Risk {c.risk.level}{c.risk.limited ? " (estimate)" : ""}</p>
                 <ul className="space-y-1 text-sm text-muted-foreground">
-                  {FILTERS.map((f) => {
+                  {FILTERS.filter((f) => !QUIET.includes(f.id)).map((f) => {
                     const known =
                       f.id === "readOnly" ? c.facts.readOnly !== "unknown" : f.id === "noTelemetry" ? c.facts.telemetry !== "unknown" : f.id === "noAdv" ? c.adv.latest !== null : f.id === "noAccount" ? c.needs !== "unknown" : f.id === "lowRisk" ? !c.risk.limited : true;
                     return (

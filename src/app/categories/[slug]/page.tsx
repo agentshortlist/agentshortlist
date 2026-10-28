@@ -6,6 +6,7 @@ import { JsonLd, breadcrumbLd } from "@/components/json-ld";
 import { Eyebrow } from "@/components/ui-kit";
 import { pairsInCategory } from "@/lib/compare";
 import { BEST_PAGES, CATEGORIES, getAgentsByCategory, getCategory, rank } from "@/lib/data";
+import { getVerified } from "@/content/verified";
 import { absoluteUrl } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -18,8 +19,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cat = getCategory(slug);
   if (!cat) return {};
   return {
-    title: `${cat.name}: Ranked List`,
-    description: `${cat.blurb} Ranked by GitHub stars, recent activity and license.`,
+    title: cat.slug === "mcp-servers" ? "MCP Servers List: Ranked, With Advisories" : `${cat.name}: Ranked List`,
+    description: cat.slug === "mcp-servers"
+      ? `${cat.blurb} Ranked by GitHub stars, recent activity and license, with each server's permissions, published security advisories and what we tested.`
+      : `${cat.blurb} Ranked by GitHub stars, recent activity and license.`,
     alternates: { canonical: `/categories/${cat.slug}` },
   };
 }
@@ -31,6 +34,8 @@ export default async function CategoryPage({ params }: Props) {
   const ranked = rank(getAgentsByCategory(slug));
   const pairs = pairsInCategory(slug);
   const best = BEST_PAGES.filter((b) => b.select.categories.includes(slug));
+  const isMcpList = cat.slug === "mcp-servers";
+  const withCards = ranked.filter((a) => getVerified(a.slug)).length;
 
   return (
     <div>
@@ -57,8 +62,15 @@ export default async function CategoryPage({ params }: Props) {
       </nav>
       <header className="space-y-5">
         <Eyebrow>Category · {ranked.length} tools</Eyebrow>
-        <h1 className="display-2 reveal fs-title">{cat.name}</h1>
+        <h1 className="display-2 reveal fs-title">{isMcpList ? "MCP servers list" : cat.name}</h1>
         <p className="reveal reveal-1 prose-measure max-w-[42rem] text-[15px] leading-[1.65] text-muted-foreground">{cat.blurb}</p>
+        {isMcpList && (
+          <p className="reveal reveal-1 prose-measure max-w-[42rem] text-[15px] leading-[1.65] text-muted-foreground">
+            {ranked.length} MCP servers ranked by GitHub stars, recent activity and license. The {withCards} with a verified card also show what each can change, its published security advisories and what we recorded when we started it.
+            To narrow the list to what a server must meet, use the <Link href="/pick" className="underline underline-offset-4 hover:text-foreground">picker</Link>;
+            for the reports behind the advisories, see <Link href="/advisories" className="underline underline-offset-4 hover:text-foreground">security advisories</Link>.
+          </p>
+        )}
       </header>
       <AgentTable agents={ranked} showScore />
       {pairs.length > 0 && (

@@ -3,10 +3,14 @@
 // Ejecútala siempre dentro de un contenedor o máquina de pruebas, con datos sintéticos. Imprime un registro listo para pegar en src/content/tests.ts.
 //
 // Uso:  node scripts/mcp-probe.mjs --slug=playwright-mcp --package=@playwright/mcp@0.0.83 -- npx -y @playwright/mcp@0.0.83
+//
+// Llamada inocua (opcional): --calls=<archivo.json> con una lista [{"tool":"nombre","arguments":{...}}]. Se ejecutan en orden tras tools/list, con datos sintéticos.
+// El registro guarda solo el estado de cada llamada (pass o fail) y el número de elementos devueltos, nunca el contenido devuelto.
+// --record-out=<archivo> guarda el registro completo (con hashes y, si hubo, el resultado de las llamadas) para resumirlo después.
 import { spawn } from "node:child_process";
 import os from "node:os";
 import { createHash } from "node:crypto";
-import { writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 
 const argv = process.argv.slice(2);
 const sep = argv.indexOf("--");
@@ -46,9 +50,9 @@ child.stdout.on("data", (d) => {
   }
 });
 const send = (m) => child.stdin.write(JSON.stringify(m) + "\n");
-const request = (id, method, params) =>
+const request = (id, method, params, timeout = TIMEOUT) =>
   new Promise((res, rej) => {
-    const t = setTimeout(() => rej(new Error(`timeout waiting for ${method}`)), TIMEOUT);
+    const t = setTimeout(() => rej(new Error(`timeout waiting for ${method}`)), timeout);
     pending.set(id, (m) => { clearTimeout(t); res(m); });
     send({ jsonrpc: "2.0", id, method, params });
   });
@@ -95,6 +99,39 @@ try {
   record.handshake = "fail";
   record.notes += `${e.message}. `;
 }
+let callResults = null;
+if (opts.calls && record.toolsList.status === "pass") {
+  const CALL_TIMEOUT = Number(opts["call-timeout"] ?? 60) * 1000;
+  let spec = [];
+  try { spec = JSON.parse(readFileSync(opts.calls, "utf8")); } catch (e) { record.notes += `calls file: ${e.message}. `; }
+  callResults = [];
+  let callId = 100;
+  for (const c of spec) {
+    const r = { tool: c.tool, status: "fail", note: "" };
+    if (!tools.includes(c.tool)) {
+      r.note = "tool not in tools/list";
+    } else {
+      try {
+        const m = await request(callId++, "tools/call", { name: c.tool, arguments: c.arguments ?? {} }, CALL_TIMEOUT);
+        if (m.error) r.note = `JSON-RPC error ${m.error.code}`;
+        else if (m.result?.isError) r.note = "the tool reported an error";
+        else { r.status = "pass"; r.note = `returned ${(m.result?.content ?? []).length} content item(s)`; }
+        r.raw = m; // solo para el archivo local --record-out; no entra en el registro publicable
+      } catch (e) {
+        r.note = e.message;
+      }
+    }
+    callResults.push(r);
+  }
+  if (callResults.length) {
+    record.call = {
+      tool: callResults.map((x) => x.tool).join(" then "),
+      status: callResults.every((x) => x.status === "pass") ? "pass" : "fail",
+      note: callResults.map((x) => `${x.tool}: ${x.status} (${x.note})`).join("; "),
+    };
+    record.clientVersion = "scripts/mcp-probe.mjs (initialize + tools/list + tools/call)";
+  }
+}
 child.kill();
 record.notes += `Server reported: ${server ? `${server.name} ${server.version ?? ""}`.trim() : "nothing"}. Took ${((Date.now() - started) / 1000).toFixed(1)} s.`;
 if (stderr && record.handshake === "fail") record.notes += ` stderr tail: ${stderr.replace(/\s+/g, " ").slice(-300)}`;
@@ -115,5 +152,16 @@ if (fullTools) {
     writeFileSync(opts["tools-out"], JSON.stringify({ package: opts.package, testedAt: record.testedAt, serverInfo: server, hashes, tools: fullTools }, null, 2));
     console.log("// Full tools/list saved to " + opts["tools-out"]);
   }
+}
+if (opts["record-out"]) {
+  const hashes = fullTools
+    ? {
+        descriptions: sha(fullTools.map((t) => ({ name: t.name, description: t.description ?? "" }))),
+        schemas: sha(fullTools.map((t) => ({ name: t.name, inputSchema: t.inputSchema ?? null }))),
+        all: sha(fullTools),
+      }
+    : null;
+  writeFileSync(opts["record-out"], JSON.stringify({ record, toolNames: tools, hashes, callResults }, null, 2));
+  console.log("// Record saved to " + opts["record-out"]);
 }
 process.exit(record.handshake === "pass" ? 0 : 1);

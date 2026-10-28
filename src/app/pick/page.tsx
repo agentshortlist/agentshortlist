@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { PickTool } from "@/components/pick-tool";
 import { Eyebrow } from "@/components/ui-kit";
@@ -19,6 +20,7 @@ export default function PickPage() {
         <p className="reveal reveal-1 prose-measure max-w-[42rem] text-[15px] leading-[1.65] text-muted-foreground">
           Say what the server is for and what it must meet. We show the verified servers that qualify and, for each, what we could and could not
           confirm. It filters, it does not rank, and it only covers the {cards.length} servers we have read.
+          Looking for every server instead? See the <Link href="/categories/mcp-servers" className="underline underline-offset-4 hover:text-foreground">MCP servers list</Link>.
         </p>
       </header>
       <section className="section">

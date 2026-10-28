@@ -132,7 +132,7 @@ export const VERIFIED: VerifiedCard[] = [
       { label: "Not made for", value: "Containing an untrusted or compromised AI client. The project's security policy says its restrictions are guardrails, not a sandbox.", source: "official", url: "https://github.com/wonderwhy-er/DesktopCommanderMCP/blob/main/SECURITY.md" },
     ],
     context: [
-      { label: "Tools", value: "24 distinct tool names in the server source (counted by us).", source: "github", url: "https://github.com/wonderwhy-er/DesktopCommanderMCP/blob/main/src/server.ts" },
+      { label: "Tools", value: "25 distinct tool names in the server source (counted by us). One of them, give_feedback_to_desktop_commander, is left out when the client identifies itself as desktop-commander-app, so that client sees 24. Our test run listed all 25.", source: "github", url: "https://github.com/wonderwhy-er/DesktopCommanderMCP/blob/main/src/server.ts" },
       { label: "Token weight of the definitions", value: "Not measured.", source: "unknown" },
     ],
     permissions: [

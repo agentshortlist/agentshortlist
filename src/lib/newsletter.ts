@@ -3,6 +3,7 @@ import { SITE_NAME, absoluteUrl } from "@/lib/site";
 
 // Variables de entorno (las crea el propietario; nunca se imprimen ni se commitean):
 // RESEND_API_KEY, RESEND_FROM, NEWSLETTER_TOKEN_SECRET; opcionales: RESEND_REPLY_TO, RESEND_SEGMENT_ID.
+// Las propiedades de contacto signup_source y alerts_interest deben existir antes en Resend (scripts/resend-create-properties.mjs).
 const RESEND = "https://api.resend.com";
 
 export const newsletterConfigured = () =>
@@ -80,6 +81,28 @@ export async function getContact(email: string): Promise<{ id: string; unsubscri
 export async function createPendingContact(email: string) {
   const res = await resend("/contacts", { method: "POST", body: JSON.stringify({ email, unsubscribed: true }) });
   if (!res.ok) throw new Error(`resend create contact failed: ${res.status}`);
+}
+
+// Origen del alta e interés en alertas, como propiedades del contacto. Mejor esfuerzo: si Resend rechaza la llamada
+// (p. ej. las propiedades aún no existen) se registra el estado HTTP y la suscripción sigue adelante.
+export const SIGNUP_SOURCES = ["home", "post", "check", "tools", "radar", "other"] as const;
+export type SignupMeta = { source: (typeof SIGNUP_SOURCES)[number]; alerts: boolean };
+
+export function readSignupMeta(source: unknown, alerts: unknown): SignupMeta {
+  const s = SIGNUP_SOURCES.find((x) => x === source) ?? "other";
+  return { source: s, alerts: alerts === true };
+}
+
+export async function setSignupMeta(email: string, meta: SignupMeta) {
+  try {
+    const res = await resend(`/contacts/${encodeURIComponent(email)}`, {
+      method: "PATCH",
+      body: JSON.stringify({ properties: { signup_source: meta.source, alerts_interest: meta.alerts ? "yes" : "no" } }),
+    });
+    if (!res.ok) console.error("newsletter signup meta not stored:", res.status);
+  } catch {
+    console.error("newsletter signup meta not stored: network error");
+  }
 }
 
 export async function setUnsubscribed(email: string, unsubscribed: boolean) {

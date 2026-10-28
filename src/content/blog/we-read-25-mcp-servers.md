@@ -71,4 +71,4 @@ A few READMEs say another option fits better, which is useful to read before you
 
 If a server can change data, look for its read-only option before anything else. Search the README for telemetry and set the opt-out if you want it. Pin versions and check them against advisories; the [config checker](/check) does that in your browser. And treat "not stated" as a question to ask the maintainers, not as a yes.
 
-Every card, with its sources, is on the [verified cards page](/verified). You can compare servers in the [live comparator](/compare/live) or filter by what you need in the [picker](/pick). If a card has a mistake, send us the primary source and we'll correct it.
+Every card, with its sources, is on the [verified cards page](/verified), and the whole directory, ranked, is the [MCP servers list](/categories/mcp-servers). You can compare servers in the [live comparator](/compare/live) or filter by what you need in the [picker](/pick). If a card has a mistake, send us the primary source and we'll correct it.

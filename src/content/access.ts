@@ -58,10 +58,20 @@ export const ACCESS: Record<string, Access> = {
   "ida-pro-mcp": { needs: "third-party", note: "Requires IDA Pro 8.3 or higher, a commercial product. IDA Free is not supported." },
   prest: { needs: "own-systems", note: "Connects to your own PostgreSQL or MySQL database with the credentials in its configuration." },
 
-  // Sin clasificar: la ficha o el README no dicen qué hace falta para empezar. La nota recoge solo lo que sí está documentado.
-  serena: { needs: "unknown", note: "The README describes free, open-source language servers and an optional paid JetBrains plugin with a free trial. What you need to start is not stated." },
-  "blender-mcp": { needs: "unknown", note: "The README offers optional AI 3D generation through a paid Premium plan with no key, or with your own provider keys (Meshy needs a paid plan). What the core Blender control needs is not stated." },
-  "desktop-commander-mcp": { needs: "unknown", note: "The README calls it free and open source and says it uses your AI client's subscription instead of API costs. Credentials are not described." },
-  context7: { needs: "unknown", note: "The README recommends a free API key for higher rate limits. It does not say whether the hosted server works without one." },
-  "docker-mcp-gateway": { needs: "unknown", note: "The README says secrets are handled through Docker Desktop. What you need to start is not stated." },
+  // Clasificadas el 25 oct 2026 a partir del README oficial de cada proyecto (ver changelog interno). "nothing" = el README no pide clave ni cuenta
+  // y lo único que enumera como requisito es software local. Lo opcional (planes de pago, claves para funciones extra) va en la nota.
+  serena: { needs: "nothing", note: "The README says uv is the only required prerequisite and the language servers are free and open source. The JetBrains plugin is optional and paid, with a free trial." },
+  "blender-mcp": { needs: "nothing", note: "Listed prerequisites are Blender, Python and uv. Optional AI 3D generation needs the paid Premium plan or your own provider keys; Meshy needs a paid plan." },
+  "desktop-commander-mcp": { needs: "nothing", note: "The install options list only Node.js or Docker as prerequisites. The README describes no key or account and says it uses your AI client's subscription." },
+  "browser-tools-mcp": { needs: "nothing", note: "Setup is one npx command plus a Chrome extension loaded unpacked; the README calls that the whole setup. Needs Node 22.19 or newer." },
+  "chrome-devtools-mcp": { needs: "nothing", note: "The README describes no key or account; it drives a local Chrome. Usage statistics are on by default and can be turned off." },
+  "context-mode": { needs: "nothing", note: "The README says no account is required and nothing leaves your machine." },
+  "mcp-inspector": { needs: "nothing", note: "Runs with npx and needs no account. It stores OAuth tokens and env values for the servers you connect it to." },
+  "mcp-reference-servers": { needs: "nothing", note: "The READMEs of the seven current reference servers ask for no key or account. These are reference implementations, not production-ready." },
+  "data-api-builder": { needs: "own-systems", note: "A connection string for your own database, read from the config file or an environment variable." },
+  graphjin: { needs: "own-systems", note: "Connection details for your own databases. The built-in demo uses seeded SQLite; the built-in agent is optional and needs a model API key." },
+  "talk-to-figma-mcp": { needs: "unknown", note: "The README installs a Figma plugin and a local WebSocket server. It does not say whether a Figma account or paid seat is required." },
+  "unity-mcp": { needs: "unknown", note: "Free and MIT. Requires Unity 2021.3 or newer and Python 3.10+ with uv. The README does not say what the Unity Editor itself requires." },
+  context7: { needs: "unknown", note: "The README recommends a free API key for higher rate limits and shows the key in the hosted-server header. It does not say whether the hosted server works without one." },
+  "docker-mcp-gateway": { needs: "unknown", note: "Requires Docker Desktop 4.59 or newer, or the CLI plugin on its own. Secrets are handled through Docker Desktop and depend on each server you enable." },
 };

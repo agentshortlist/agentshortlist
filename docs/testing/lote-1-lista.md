@@ -23,7 +23,7 @@ Elegidos porque arrancan sin clave ni cuenta, tienen mucho uso y cubren paquetes
 - Chrome DevTools MCP y Playwright pueden anunciar sus herramientas sin abrir un navegador, pero si piden uno, el resultado es "no arranca" y se anota.
 - La sonda solo demuestra arranque, handshake y lista de herramientas. No demuestra que las herramientas funcionen ni que los límites de solo lectura se cumplan.
 
-## Par para el experimento con mrpkk
+## Par para el experimento de versiones consecutivas
 
 Dos parches seguidos con un advisory entre ellos. `@bytebase/dbhub` 0.22.5 contra 0.22.6: el advisory GHSA-mwwr-p57h-56pf (el modo solo lectura no impedía escrituras) afecta a 0.22.5 y se corrigió en 0.22.6. La 0.22.5 ya tiene corregido el otro (GHSA-fm8p-53ww-hf6w).
 

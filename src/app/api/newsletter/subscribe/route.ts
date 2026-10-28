@@ -4,7 +4,9 @@ import {
   getContact,
   newsletterConfigured,
   rateLimited,
+  readSignupMeta,
   sendConfirmationEmail,
+  setSignupMeta,
   validEmail,
 } from "@/lib/newsletter";
 
@@ -19,7 +21,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, message: "Too many attempts. Try again in a few minutes." }, { status: 429 });
   }
 
-  let body: { email?: unknown; website?: unknown } = {};
+  let body: { email?: unknown; website?: unknown; source?: unknown; alerts?: unknown } = {};
   try {
     body = await req.json();
   } catch {
@@ -40,6 +42,7 @@ export async function POST(req: Request) {
     const existing = await getContact(email);
     if (existing && !existing.unsubscribed) return NextResponse.json(OK); // ya confirmado: no reenviar nada
     if (!existing) await createPendingContact(email);
+    await setSignupMeta(email, readSignupMeta(body.source, body.alerts)); // solo mientras no está confirmado
     await sendConfirmationEmail(email);
     return NextResponse.json(OK);
   } catch (err) {

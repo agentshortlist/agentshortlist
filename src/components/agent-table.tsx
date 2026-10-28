@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { LicenseChip } from "@/components/ui-kit";
+import { TestedChip } from "@/components/tested-chip";
+import { testMark } from "@/lib/test-mark";
 import { ScoreBar, ScoreLegend } from "@/components/score-bar";
 import { fmtDate, fmtStars, type Agent, type Ranked } from "@/lib/data";
 
@@ -28,6 +30,7 @@ export function AgentTable({ agents, showScore = false }: { agents: (Agent | Ran
                   <Link href={`/agents/${a.slug}`} className="font-medium tracking-[-0.02em] outline-none hover:underline focus-visible:ring-2 focus-visible:ring-ring">
                     {a.name}
                   </Link>
+                  {testMark(a.slug) && <div className="mt-1.5"><TestedChip mark={testMark(a.slug)} compact /></div>}
                 </td>
                 {showScore && (
                   <td className="px-3 py-3">

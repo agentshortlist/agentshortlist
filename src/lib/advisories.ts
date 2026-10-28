@@ -26,3 +26,5 @@ export const getAdvisories = (slug: string): PackageAdvisories[] => data.items[s
 export const osvUrl = (id: string) => `https://osv.dev/vulnerability/${id}`;
 export const CHECKED_PACKAGES = Object.values(data.items).reduce((n, ps) => n + ps.length, 0);
 export const ADVISORIES_TOTAL = Object.values(data.items).flat().reduce((n, p) => n + p.total, 0);
+
+export const allAdvisories = (): [string, PackageAdvisories[]][] => Object.entries(data.items);

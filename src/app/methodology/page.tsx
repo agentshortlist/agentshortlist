@@ -81,6 +81,7 @@ export default function MethodologyPage() {
       <ul className="list-disc space-y-1 pl-5">
         <li><strong>Documented:</strong> the project, its repository or its package says it. The line links to the source and the card shows the review date.</li>
         <li><strong>Tested:</strong> we ran it ourselves and can state the client, version, system, package or commit, date and result. Each card lists the runs we have made. Until there is one it says &quot;Not yet&quot;. A pass means the server started, answered the handshake and listed its tools; it does not show that the tools work or that limits such as read-only hold.</li>
+        <li><strong>The &quot;Tested by us&quot; mark:</strong> a small outlined tag on a card or in a list means we have at least one recorded run for that server, with the date of the latest one. It is not a seal of approval: it does not mean the server is safe, that its tools work, or that it is better than one without the mark. Servers we have not run yet carry no mark and are not worse for it. If a run does not pass, the mark says so.</li>
         <li><strong>Estimated:</strong> a calculation or opinion of ours with its assumptions visible. Our own view is drawn with a dashed outline. Health and risk are estimates built from simple public rules.</li>
         <li><strong>Not verified:</strong> we found no evidence or the source does not answer the question. It is shown as unknown and never counted as a yes.</li>
       </ul>

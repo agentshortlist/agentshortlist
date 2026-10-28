@@ -156,7 +156,17 @@ function Capabilities({ names }: { names?: string[] }) {
 
 function TestRuns({ slug }: { slug: string }) {
   const runs = testsFor(slug);
-  if (!runs.length) return null;
+  if (!runs.length) {
+    return (
+      <div className="surface space-y-2 p-5 sm:p-6">
+        <h3 className="eyebrow">Tested by us</h3>
+        <p className="text-sm leading-[1.6] text-muted-foreground">
+          Not tested yet. This card is read from the project&apos;s documentation and source only.{" "}
+          <Link href="/methodology#evidence" className="underline underline-offset-4">What a test run covers</Link>.
+        </p>
+      </div>
+    );
+  }
   return (
     <div className="surface space-y-4 p-5 sm:p-6">
       <div className="space-y-2">
@@ -165,8 +175,16 @@ function TestRuns({ slug }: { slug: string }) {
           Each run is one exact combination. A pass means the server started, answered the handshake and listed its tools. It does not mean the tools work or that limits such as read-only hold.
         </p>
       </div>
-      {runs.map((t) => (
-        <dl key={`${t.testedAt}:${t.package}:${t.client}`} className="grid gap-x-6 gap-y-1 border-t border-ink/10 pt-4 text-sm first:border-0 first:pt-0 sm:grid-cols-2">
+      {runs.map((t) => {
+        const steps: [string, ProbeStatus][] = [["install", t.install], ["handshake", t.handshake], ["tools list", t.toolsList.status]];
+        const failedAt = steps.filter(([, st]) => st === "fail").map(([n]) => n);
+        return (
+        <div key={`${t.testedAt}:${t.package}:${t.client}`} className="space-y-3 border-t border-ink/10 pt-4 first:border-0 first:pt-0">
+        <p className={`text-sm font-medium ${failedAt.length ? "border-l-2 border-destructive pl-3" : ""}`}>
+          {failedAt.length ? `Did not pass: ${failedAt.join(", ")} failed` : "Passed: started, answered the handshake, listed its tools"}
+          <span className="mono-num mt-1 block break-all text-xs font-normal text-muted-foreground">{fmtDate(t.testedAt)} · {t.package}{t.hashes ? ` · fingerprint ${t.hashes.all.slice(0, 12)}` : ""}</span>
+        </p>
+        <dl className="grid gap-x-6 gap-y-1 text-sm sm:grid-cols-2">
           <div><dt className="text-muted-foreground">Date</dt><dd>{fmtDate(t.testedAt)}</dd></div>
           <div><dt className="text-muted-foreground">Package</dt><dd className="mono-num">{t.package}</dd></div>
           <div><dt className="text-muted-foreground">Client</dt><dd>{t.client} {t.clientVersion}</dd></div>
@@ -178,7 +196,9 @@ function TestRuns({ slug }: { slug: string }) {
           {t.call && <div className="sm:col-span-2"><dt className="text-muted-foreground">Harmless call</dt><dd>{t.call.tool}: {STATUS[t.call.status]}. {t.call.note}</dd></div>}
           {t.notes && <div className="sm:col-span-2"><dt className="text-muted-foreground">Notes</dt><dd>{t.notes}</dd></div>}
         </dl>
-      ))}
+        </div>
+        );
+      })}
     </div>
   );
 }

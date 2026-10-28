@@ -65,3 +65,20 @@ docs/brand/linkedin-company-page.md
 docs/blog-template.md
 docs/stripe-setup.md
 /docs/roadmap/
+
+# borradores y planes de difusión internos (no van al repositorio público)
+/docs/brand/bios-con-enlace.md
+/docs/brand/cita-vladimir-kubernetes-ai-agent-sandbox.md
+/docs/brand/comentarios-devto-*.md
+/docs/brand/distribucion-destinos-*.md
+/docs/brand/github-issue-y-comentario.md
+/docs/brand/hilo-10-servidores-probados.md
+/docs/brand/miercoles-28-kit.md
+/docs/brand/newsletter-bienvenida.md
+/docs/brand/posts-*.md
+/docs/brand/reddit-*.md
+/docs/testing/borrador-envio-escaner-externo.md
+# se publican con el post de dbhub (30 oct)
+/docs/testing/lote-2-guia.md
+/docs/testing/run-lote-2.ps1
+/docs/testing/run-lote-2b.ps1

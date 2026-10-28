@@ -3,6 +3,7 @@ import { VERIFIED, type Row, type VerifiedCard } from "@/content/verified";
 import { getAdvisories } from "@/lib/advisories";
 import { getAgent, isOpenSource } from "@/lib/data";
 import { ACCESS, type Needs } from "@/content/access";
+import { testMark, type TestMark } from "@/lib/test-mark";
 
 // Vista plana de cada ficha para las herramientas interactivas (comparador, selector, comprobador).
 import { health, risk, type Health, type Risk } from "@/lib/scores";
@@ -24,6 +25,7 @@ export type CardView = {
   risk: Risk;
   needs: Needs;
   openSource: boolean;
+  tested: TestMark | null;
   packages: { name: string; ecosystem: string; latest: string | null; weeklyDownloads: number | null; vulns: { id: string; severity: string | null; summary: string; ranges: { introduced?: string; fixed?: string; last_affected?: string }[][] }[] }[];
 };
 
@@ -73,6 +75,7 @@ const view = (c: VerifiedCard): CardView | null => {
     health: health(a),
     needs: ACCESS[c.slug]?.needs ?? "unknown",
     openSource: isOpenSource(a),
+    tested: testMark(c.slug),
     risk: risk({ facts: m.facts, adv, checks: m.checks ?? [] }),
     packages: pk.map((p) => ({
       name: p.name,

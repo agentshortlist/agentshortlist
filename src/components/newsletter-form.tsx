@@ -7,10 +7,10 @@ import { track } from "@/lib/track";
 type State = { status: "idle" | "loading" | "done" | "error"; message: string };
 
 // `source` indica desde dónde se apunta la gente (por defecto, según la página). `alertsOption` añade una casilla de interés en alertas
-// por servidor: solo cuenta en GA4 como medida de demanda, no se guarda por persona ni se envía al servidor.
+// por servidor: se envía a GA4 como medida de demanda y se guarda como propiedad del contacto en Resend (alerts_interest).
 export function NewsletterForm({ compact = false, source, alertsOption = false }: { compact?: boolean; source?: string; alertsOption?: boolean }) {
   const pathname = usePathname() ?? "/";
-  const where = source ?? (pathname === "/" ? "home" : pathname.startsWith("/blog") ? "post" : pathname.startsWith("/check") ? "check" : pathname.startsWith("/pick") || pathname.startsWith("/compare") ? "tools" : "other");
+  const where = source ?? (pathname === "/" ? "home" : pathname.startsWith("/blog") ? "post" : pathname.startsWith("/check") ? "check" : pathname.startsWith("/radar") ? "radar" : pathname.startsWith("/pick") || pathname.startsWith("/compare") ? "tools" : "other");
   const [state, setState] = useState<State>({ status: "idle", message: "" });
   const busy = state.status === "loading" || state.status === "done";
   const id = compact ? "nl-email-compact" : "nl-email";
@@ -23,7 +23,7 @@ export function NewsletterForm({ compact = false, source, alertsOption = false }
       const res = await fetch("/api/newsletter/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: form.get("email"), website: form.get("website") }),
+        body: JSON.stringify({ email: form.get("email"), website: form.get("website"), source: where, alerts: alertsOption && form.get("alerts") === "on" }),
       });
       const data = (await res.json().catch(() => ({}))) as { ok?: boolean; message?: string };
       if (res.ok && data.ok) track("newsletter_signup", { source: where, alerts_interest: alertsOption && form.get("alerts") === "on" });
