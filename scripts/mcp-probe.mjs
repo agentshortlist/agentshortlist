@@ -30,25 +30,33 @@ for (const a of argv.slice(0, sep)) if (a.startsWith("--env=")) { const [k, ...v
 
 const TIMEOUT = Number(opts.timeout ?? 120) * 1000; // la primera ejecución con npx/uvx descarga el paquete
 const started = Date.now();
-const child = spawn(cmd[0], cmd.slice(1), { env, stdio: ["pipe", "pipe", "pipe"] });
+let child = null;
 let stderr = "";
-child.stderr.on("data", (d) => { stderr = (stderr + d).slice(-1500); });
-
 const pending = new Map();
 let buf = "";
-child.stdout.on("data", (d) => {
-  buf += d;
-  let i;
-  while ((i = buf.indexOf("\n")) >= 0) {
-    const line = buf.slice(0, i).trim();
-    buf = buf.slice(i + 1);
-    if (!line) continue;
-    try {
-      const m = JSON.parse(line);
-      if (m.id !== undefined && pending.has(m.id)) { pending.get(m.id)(m); pending.delete(m.id); }
-    } catch { /* línea que no es JSON-RPC: se ignora */ }
-  }
-});
+// El proceso se puede lanzar mas de una vez: si server/discover no obtiene respuesta, el respaldo con initialize se hace en un proceso NUEVO,
+// porque un servidor que admite las dos eras puede quedarse en la era de la primera peticion que recibe y rechazar la otra.
+function launch() {
+  if (child) child.kill();
+  stderr = ""; buf = ""; pending.clear();
+  const c = spawn(cmd[0], cmd.slice(1), { env, stdio: ["pipe", "pipe", "pipe"] });
+  child = c;
+  c.stderr.on("data", (d) => { stderr = (stderr + d).slice(-1500); });
+  c.stdout.on("data", (d) => {
+    buf += d;
+    let i;
+    while ((i = buf.indexOf("\n")) >= 0) {
+      const line = buf.slice(0, i).trim();
+      buf = buf.slice(i + 1);
+      if (!line) continue;
+      try {
+        const m = JSON.parse(line);
+        if (m.id !== undefined && pending.has(m.id)) { pending.get(m.id)(m); pending.delete(m.id); }
+      } catch { /* línea que no es JSON-RPC: se ignora */ }
+    }
+  });
+}
+launch();
 const send = (m) => child.stdin.write(JSON.stringify(m) + "\n");
 const request = (id, method, params, timeout = TIMEOUT) =>
   new Promise((res, rej) => {
@@ -65,6 +73,8 @@ const record = {
   clientVersion: "scripts/mcp-probe.mjs (initialize + tools/list)",
   os: `${os.type()} ${os.release()} ${os.arch()}`,
   environment: opts.environment ?? "set with --environment, e.g. Docker node:22-slim, no credentials, synthetic data",
+  command: cmd.join(" "), // comando de arranque exacto, tal como se lanzó
+  envSet: Object.keys(env).filter((k) => !["PATH", "HOME", "LANG"].includes(k)), // solo los nombres de las variables que se pasaron, nunca los valores
   install: "not-run",
   handshake: "not-run",
   toolsList: { status: "not-run", count: null },
@@ -73,15 +83,51 @@ const record = {
 const tools = [];
 let fullTools = null;
 let server = null;
+// Detección de la era del protocolo (revisión 2026-07-28 y anteriores). Orden que da la especificación para stdio:
+// 1) server/discover con la versión moderna en _meta; 2) si responde, el servidor es moderno; 3) si responde con un error moderno
+// reconocido (-32022), es moderno pero no habla la versión pedida (no se cae a initialize); 4) cualquier otro error o silencio: legacy, y se hace initialize.
+// --no-discover la desactiva; --discover-timeout=<s> cambia la espera (por defecto 20 s). Tras silencio o error no moderno, se reinicia el proceso antes de initialize.
+const MODERN = "2026-07-28";
+const DISCOVER_TIMEOUT = Number(opts["discover-timeout"] ?? 20) * 1000; // los servidores de Python tardan en arrancar
+const meta = {
+  "io.modelcontextprotocol/protocolVersion": MODERN,
+  "io.modelcontextprotocol/clientInfo": { name: "agentshortlist-probe", version: "0.2" },
+  "io.modelcontextprotocol/clientCapabilities": {},
+};
+record.protocol = { era: "unknown", discover: opts["no-discover"] ? "not-run" : "pending", versionAnswered: null, supportedVersions: null };
+let era = "legacy";
+if (!opts["no-discover"]) {
+  record.clientVersion = "scripts/mcp-probe.mjs (server/discover, initialize if needed, tools/list)";
+  const tDiscover = Date.now();
+  try {
+    const d = await request(0, "server/discover", { _meta: meta }, DISCOVER_TIMEOUT);
+    record.protocol.discoverMs = Date.now() - tDiscover; // tiempo hasta la respuesta o el error, desde que se envia la peticion (el proceso ya estaba lanzado)
+    if (d.result?.supportedVersions) {
+      record.protocol.discover = "result";
+      record.protocol.supportedVersions = d.result.supportedVersions;
+      server = d.result._meta?.["io.modelcontextprotocol/serverInfo"] ?? null;
+      era = d.result.supportedVersions.includes(MODERN) ? "modern" : "legacy";
+    } else if (d.error?.code === -32022) {
+      record.protocol.discover = "error -32022 (unsupported protocol version)";
+      record.protocol.supportedVersions = d.error.data?.supported ?? null;
+      era = "modern-unsupported";
+    } else {
+      record.protocol.discover = `error ${d.error?.code ?? "unknown"}`;
+    }
+  } catch {
+    record.protocol.discover = "no-answer";
+    record.protocol.discoverMs = Date.now() - tDiscover; // espera completa sin respuesta
+  }
+  if (era === "legacy") launch(); // proceso nuevo para el respaldo con initialize
+}
 try {
-  const init = await request(1, "initialize", { protocolVersion: "2025-03-26", capabilities: {}, clientInfo: { name: "agentshortlist-probe", version: "0.1" } });
-  record.install = "pass"; // el proceso arrancó y respondió
-  if (init.result?.protocolVersion) {
-    record.handshake = "pass";
-    server = init.result.serverInfo ?? null;
-    send({ jsonrpc: "2.0", method: "notifications/initialized" });
+  if (era === "modern") {
+    record.install = "pass"; // el proceso arrancó y respondió
+    record.handshake = "pass"; // respondió a server/discover con las versiones que admite
+    record.protocol.era = "modern";
+    record.protocol.versionAnswered = MODERN;
     try {
-      const list = await request(2, "tools/list", {});
+      const list = await request(2, "tools/list", { _meta: meta });
       const t = list.result?.tools ?? [];
       fullTools = [...t].sort((a, b) => String(a.name).localeCompare(String(b.name)));
       tools.push(...t.map((x) => x.name));
@@ -90,9 +136,35 @@ try {
       record.toolsList = { status: "fail", count: null };
       record.notes += `tools/list: ${e.message}. `;
     }
+  } else if (era === "modern-unsupported") {
+    record.install = "pass";
+    record.protocol.era = "modern";
+    record.notes += `The server answered server/discover with an unsupported-version error listing ${JSON.stringify(record.protocol.supportedVersions)}; this probe speaks ${MODERN} and the legacy handshake, so nothing was recorded. `;
   } else {
-    record.handshake = "fail";
-    record.notes += `initialize returned no protocolVersion. `;
+    const tInit = Date.now();
+    const init = await request(1, "initialize", { protocolVersion: "2025-03-26", capabilities: {}, clientInfo: { name: "agentshortlist-probe", version: "0.1" } });
+    record.install = "pass"; // el proceso arrancó y respondió
+    record.protocol.era = "legacy";
+    record.protocol.initializeMs = Date.now() - tInit; // tiempo del respaldo con initialize, en el proceso nuevo
+    if (init.result?.protocolVersion) {
+      record.handshake = "pass";
+      record.protocol.versionAnswered = init.result.protocolVersion;
+      server = init.result.serverInfo ?? null;
+      send({ jsonrpc: "2.0", method: "notifications/initialized" });
+      try {
+        const list = await request(2, "tools/list", {});
+        const t = list.result?.tools ?? [];
+        fullTools = [...t].sort((a, b) => String(a.name).localeCompare(String(b.name)));
+        tools.push(...t.map((x) => x.name));
+        record.toolsList = { status: Array.isArray(list.result?.tools) ? "pass" : "fail", count: t.length };
+      } catch (e) {
+        record.toolsList = { status: "fail", count: null };
+        record.notes += `tools/list: ${e.message}. `;
+      }
+    } else {
+      record.handshake = "fail";
+      record.notes += `initialize returned no protocolVersion. `;
+    }
   }
 } catch (e) {
   record.install = record.install === "pass" ? "pass" : "fail";
@@ -112,7 +184,7 @@ if (opts.calls && record.toolsList.status === "pass") {
       r.note = "tool not in tools/list";
     } else {
       try {
-        const m = await request(callId++, "tools/call", { name: c.tool, arguments: c.arguments ?? {} }, CALL_TIMEOUT);
+        const m = await request(callId++, "tools/call", { name: c.tool, arguments: c.arguments ?? {}, ...(era === "modern" ? { _meta: meta } : {}) }, CALL_TIMEOUT);
         if (m.error) r.note = `JSON-RPC error ${m.error.code}`;
         else if (m.result?.isError) r.note = "the tool reported an error";
         else { r.status = "pass"; r.note = `returned ${(m.result?.content ?? []).length} content item(s)`; }

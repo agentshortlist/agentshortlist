@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Two DBHub releases published three hours apart: 0.22.5, affected by advisory GHSA-mwwr-p57h-56pf, and 0.22.6, which fixes it. Both announce the same two tools, execute_sql and search_objects, and the same hashes of the tool list.">
+<rect width="1200" height="675" fill="#f4f1ea"/>
+<text x="64" y="76" font-family="Georgia, 'Times New Roman', serif" font-size="40" fill="#1c1b18">Same tool list, different security status</text>
+<text x="64" y="112" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#5b5850">DBHub, two runs of each release in Docker, 25 October 2026, no credentials, --demo mode</text>
+<rect x="64" y="150" width="520" height="400" rx="4" fill="none" stroke="#1c1b18" stroke-width="2"/>
+<text x="92" y="206" font-family="Georgia, 'Times New Roman', serif" font-size="44" fill="#1c1b18">0.22.5</text>
+<rect x="92" y="226" width="464" height="46" rx="3" fill="#1c1b18"/>
+<text x="108" y="258" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#f4f1ea">Affected by GHSA-mwwr-p57h-56pf (high)</text>
+<text x="92" y="316" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#5b5850">Tools listed</text>
+<text x="92" y="346" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#1c1b18">execute_sql, search_objects</text>
+<text x="92" y="396" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#5b5850">sha256 of the tools/list (first 12 characters)</text>
+<text x="92" y="430" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1c1b18">descriptions  a629bd6a8da8</text>
+<text x="92" y="462" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1c1b18">schemas       910f0162e312</text>
+<text x="92" y="494" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1c1b18">both          5fc028095d37</text>
+<text x="92" y="532" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#5b5850">Published 24 June 2026, 04:22 UTC</text>
+<rect x="616" y="150" width="520" height="400" rx="4" fill="none" stroke="#1c1b18" stroke-width="2"/>
+<text x="644" y="206" font-family="Georgia, 'Times New Roman', serif" font-size="44" fill="#1c1b18">0.22.6</text>
+<rect x="644" y="226" width="464" height="46" rx="3" fill="#e2ddd0"/>
+<text x="660" y="258" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1c1b18">Fixes GHSA-mwwr-p57h-56pf</text>
+<text x="644" y="316" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#5b5850">Tools listed</text>
+<text x="644" y="346" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#1c1b18">execute_sql, search_objects</text>
+<text x="644" y="396" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#5b5850">sha256 of the tools/list (first 12 characters)</text>
+<text x="644" y="430" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1c1b18">descriptions  a629bd6a8da8</text>
+<text x="644" y="462" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1c1b18">schemas       910f0162e312</text>
+<text x="644" y="494" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1c1b18">both          5fc028095d37</text>
+<text x="644" y="532" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#5b5850">Published 24 June 2026, 07:34 UTC</text>
+<text x="64" y="618" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#5b5850">A check that reads only the tool list cannot tell them apart. The advisory database can. agentshortlist.dev/blog</text>
+</svg>

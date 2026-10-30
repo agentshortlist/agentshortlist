@@ -10,7 +10,7 @@ A hash of a server's tool descriptions can change between two runs without anyon
 
 Our first reading was that something had changed in the tool. It had not. The server writes its container hostname into the description, so the text depends on where it runs. This is an effect of the environment, not a vulnerability and not a sign of risk. We corrected our own notes the same day.
 
-The practical lesson is for anyone who watches MCP servers for changes by hashing `tools/list`: compare hashes taken in the same environment, or strip hostnames and paths before hashing. Otherwise a harmless container ID looks like a changed tool.
+The practical lesson is for anyone who watches MCP servers for changes by hashing `tools/list`: compare hashes taken in the same environment, and normalize only what you can show is incidental, like a container ID, keeping the raw hash next to the normalized one. Stripping every hostname and path would also hide a changed target. It helps to hash descriptions and schemas separately: a changed description can be incidental, a changed schema is harder to explain away. Otherwise a harmless container ID looks like a changed tool.
 
 The rest of this post is what else those runs recorded.
 

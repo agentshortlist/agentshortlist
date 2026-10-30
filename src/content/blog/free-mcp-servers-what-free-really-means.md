@@ -5,6 +5,8 @@ date: 2026-10-24
 tags: free, access
 ---
 
+> **Update, 25 October 2026.** After reading the READMEs of the 14 cards we had left as "not verified", we classified 10 of them. The counts below were written before that. Today 11 servers need nothing to sign up for (was 3), 16 need credentials for systems you run (was 14), 2 work without a key with limits, 21 need a third-party account, key or paid product, and 4 are still not verified (was 14). The filter that combines "no third-party account or key" with "open-source license" now returns 25 of the 54 (was 19). We have left the original text and chart as published.
+
 Search for free MCP servers and you get lists of repositories. A repository you can download for nothing tells you very little about whether you can use the server without paying someone.
 
 So we read the credentials line on each of our [54 verified cards](/verified) and sorted the servers by what you need to start. We keep three questions apart: the software license, what you need to get it running, and what the service behind it costs. The first two come from the card. **We did not check the third.**
@@ -59,6 +61,20 @@ Pick the two filters "Needs no third-party account or key" and "Open-source lice
 ![The Pick page with the filters Needs no third-party account or key and Open-source license selected: 19 of 54 verified servers match](/blog/pick-no-third-party-account-open-source.png "1568x497")
 
 You can also compare up to three servers side by side. The [comparison](/compare/live) now has a row called "Needed to start". How we classify each label is on the [methodology page](/methodology#access).
+
+## Frequently asked questions
+
+### Are MCP servers free?
+
+The software usually is: 49 of our 54 verified servers have an open-source license detected on GitHub. Starting one is a separate question. After our 25 October update, 25 of the 54 are open source and need no third-party account or key, while 21 need a third-party account, key or paid product. We list the requirement, not the price of the service behind it.
+
+### What are the best free MCP servers?
+
+We do not rank servers by price. What we can show is which ones need nothing to sign up for: 11 of the 54 on the 25 October count, among them [Playwright MCP](/agents/playwright-mcp#verified), [codebase-memory-mcp](/agents/codebase-memory-mcp#verified) and the [Excel MCP server](/agents/excel-mcp-server#verified). [Open the filtered list](/pick?f=noAccount,openSource) for the current selection.
+
+### Are there free remote (hosted) MCP servers?
+
+Three of our cards describe a hosted option that works without an account, from what their READMEs say. [Exa](/agents/exa-mcp-server#verified) works anonymously with rate limits. [Firecrawl](/agents/firecrawl-mcp-server#verified) has a keyless free tier with rate limits. The hosted AWS Knowledge server in the [AWS MCP servers](/agents/aws-mcp-servers#verified) card needs no credentials. We did not measure the limits, and a README can change.
 
 ## What this is not
 

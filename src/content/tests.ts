@@ -10,6 +10,9 @@ export type ProbeRecord = {
   clientVersion: string;
   os: string; // sistema anfitrión
   environment: string; // p. ej. "Docker node:22-slim, no credentials, synthetic data"
+  command?: string; // comando de arranque exacto, con sus flags, tal como se lanzó
+  protocol?: { era: "modern" | "legacy" | "unknown"; discover: string; versionAnswered: string | null; supportedVersions?: string[] | null; checkedAt?: string }; // era del protocolo que habló el servidor; la sonda prueba server/discover (2026-07-28) y, si no, initialize
+  envSet?: string[]; // nombres (nunca valores) de las variables de entorno que se pasaron al servidor
   install: ProbeStatus;
   handshake: ProbeStatus; // initialize respondido con un protocolo válido
   toolsList: { status: ProbeStatus; count: number | null };
@@ -24,6 +27,8 @@ export const TESTS: ProbeRecord[] = [
     "slug": "playwright-mcp",
     "testedAt": "2026-10-25",
     "package": "@playwright/mcp@0.0.83",
+    "command": "npx -y @playwright/mcp@0.0.83",
+    "protocol": { "era": "legacy", "discover": "error -32601", "versionAnswered": "2025-03-26", "checkedAt": "2026-10-29" },
     "toolNames": [
       "browser_click",
       "browser_close",
@@ -72,6 +77,8 @@ export const TESTS: ProbeRecord[] = [
     "slug": "chrome-devtools-mcp",
     "testedAt": "2026-10-25",
     "package": "chrome-devtools-mcp@1.12.0",
+    "command": "npx -y chrome-devtools-mcp@1.12.0",
+    "protocol": { "era": "legacy", "discover": "error -32601", "versionAnswered": "2025-03-26", "checkedAt": "2026-10-29" },
     "toolNames": [
       "click",
       "close_page",
@@ -127,6 +134,8 @@ export const TESTS: ProbeRecord[] = [
     "slug": "codebase-memory-mcp",
     "testedAt": "2026-10-25",
     "package": "codebase-memory-mcp@0.12.1",
+    "command": "npx -y codebase-memory-mcp@0.12.1",
+    "protocol": { "era": "legacy", "discover": "error -32601", "versionAnswered": "2025-03-26", "checkedAt": "2026-10-29" },
     "toolNames": [
       "check_index_coverage",
       "compare_graphs",
@@ -167,6 +176,8 @@ export const TESTS: ProbeRecord[] = [
     "slug": "context7",
     "testedAt": "2026-10-25",
     "package": "@upstash/context7-mcp@4.4.4",
+    "command": "npx -y @upstash/context7-mcp@4.4.4",
+    "protocol": { "era": "modern", "discover": "result", "versionAnswered": "2026-07-28", "checkedAt": "2026-10-29", "supportedVersions": ["2026-07-28"] },
     "toolNames": [
       "query-docs",
       "resolve-library-id"
@@ -192,6 +203,8 @@ export const TESTS: ProbeRecord[] = [
     "slug": "desktop-commander-mcp",
     "testedAt": "2026-10-25",
     "package": "@wonderwhy-er/desktop-commander@0.3.1",
+    "command": "npx -y @wonderwhy-er/desktop-commander@0.3.1",
+    "protocol": { "era": "legacy", "discover": "no answer within 20 s", "versionAnswered": "2025-03-26", "checkedAt": "2026-10-29" },
     "toolNames": [
       "create_directory",
       "edit_block",
@@ -240,6 +253,8 @@ export const TESTS: ProbeRecord[] = [
     "slug": "excel-mcp-server",
     "testedAt": "2026-10-25",
     "package": "excel-mcp-server@2.2.2",
+    "command": "uvx excel-mcp-server@2.2.2 stdio",
+    "protocol": { "era": "modern", "discover": "result", "versionAnswered": "2026-07-28", "checkedAt": "2026-10-29", "supportedVersions": ["2026-07-28"] },
     "toolNames": [
       "add_conditional_format",
       "add_data_validation",
@@ -309,6 +324,8 @@ export const TESTS: ProbeRecord[] = [
     "slug": "mcp-reference-servers",
     "testedAt": "2026-10-25",
     "package": "@modelcontextprotocol/server-memory@2.0.0",
+    "command": "npx -y @modelcontextprotocol/server-memory@2.0.0",
+    "protocol": { "era": "modern", "discover": "result", "versionAnswered": "2026-07-28", "checkedAt": "2026-10-29", "supportedVersions": ["2026-07-28"] },
     "toolNames": [
       "add_observations",
       "create_entities",
@@ -346,6 +363,8 @@ export const TESTS: ProbeRecord[] = [
     "slug": "mcp-reference-servers",
     "testedAt": "2026-10-25",
     "package": "@modelcontextprotocol/server-everything@2.0.0",
+    "command": "npx -y @modelcontextprotocol/server-everything@2.0.0",
+    "protocol": { "era": "modern", "discover": "result", "versionAnswered": "2026-07-28", "checkedAt": "2026-10-29", "supportedVersions": ["2026-07-28"] },
     "toolNames": [
       "echo",
       "get-annotated-message",
@@ -390,6 +409,8 @@ export const TESTS: ProbeRecord[] = [
     "slug": "mcp-reference-servers",
     "testedAt": "2026-10-25",
     "package": "mcp-server-fetch@2026.10.19",
+    "command": "uvx mcp-server-fetch@2026.10.19",
+    "protocol": { "era": "modern", "discover": "result", "versionAnswered": "2026-07-28", "checkedAt": "2026-10-29", "supportedVersions": ["2026-07-28"] },
     "toolNames": [
       "fetch"
     ],
@@ -419,6 +440,8 @@ export const TESTS: ProbeRecord[] = [
     "slug": "mcp-reference-servers",
     "testedAt": "2026-10-25",
     "package": "mcp-server-git@2026.10.19",
+    "command": "uvx mcp-server-git@2026.10.19",
+    "protocol": { "era": "modern", "discover": "result", "versionAnswered": "2026-07-28", "checkedAt": "2026-10-29", "supportedVersions": ["2026-07-28"] },
     "toolNames": [
       "git_add",
       "git_branch",
@@ -459,6 +482,8 @@ export const TESTS: ProbeRecord[] = [
     "slug": "dbhub",
     "testedAt": "2026-10-25",
     "package": "@bytebase/dbhub@0.22.5",
+    "command": "npx -y @bytebase/dbhub@0.22.5 --demo",
+    "protocol": { "era": "legacy", "discover": "no answer within 20 s", "versionAnswered": "2025-03-26", "checkedAt": "2026-10-29" },
     "toolNames": [
       "execute_sql",
       "search_objects"
@@ -484,6 +509,8 @@ export const TESTS: ProbeRecord[] = [
     "slug": "dbhub",
     "testedAt": "2026-10-25",
     "package": "@bytebase/dbhub@0.22.6",
+    "command": "npx -y @bytebase/dbhub@0.22.6 --demo",
+    "protocol": { "era": "legacy", "discover": "no answer within 20 s", "versionAnswered": "2025-03-26", "checkedAt": "2026-10-29" },
     "toolNames": [
       "execute_sql",
       "search_objects"
@@ -509,6 +536,9 @@ export const TESTS: ProbeRecord[] = [
     "slug": "mysql-mcp-server",
     "testedAt": "2026-10-25",
     "package": "mysql-mcp-server@0.4.4",
+    "command": "uvx --from mysql-mcp-server==0.4.4 mysql_mcp_server",
+    "envSet": ["MYSQL_HOST", "MYSQL_USER", "MYSQL_PASSWORD", "MYSQL_DATABASE"],
+    "protocol": { "era": "legacy", "discover": "error -32602", "versionAnswered": "2025-03-26", "checkedAt": "2026-10-29" },
     "toolNames": [
       "execute_sql",
       "get_schema_info",
@@ -535,6 +565,8 @@ export const TESTS: ProbeRecord[] = [
     "slug": "mcp-server-kubernetes",
     "testedAt": "2026-10-25",
     "package": "mcp-server-kubernetes@4.1.9",
+    "command": "npx -y mcp-server-kubernetes@4.1.9",
+    "protocol": { "era": "legacy", "discover": "no answer within 20 s", "versionAnswered": "2025-03-26", "checkedAt": "2026-10-29" },
     "toolNames": [
       "cleanup",
       "kubectl_get",
@@ -581,6 +613,8 @@ export const TESTS: ProbeRecord[] = [
     "slug": "browser-tools-mcp",
     "testedAt": "2026-10-25",
     "package": "@agentdeskai/browser-tools-mcp@2.0.2",
+    "command": "npx -y @agentdeskai/browser-tools-mcp@2.0.2",
+    "protocol": { "era": "legacy", "discover": "no answer within 5 s (the server was slow to start; checked again with 20 s: failed on an npm error)", "versionAnswered": "2025-03-26", "checkedAt": "2026-10-29" },
     "toolNames": [
       "listBrowserTabs",
       "getConsoleLogs",
@@ -620,6 +654,8 @@ export const TESTS: ProbeRecord[] = [
     "slug": "context-mode",
     "testedAt": "2026-10-25",
     "package": "context-mode@1.0.169",
+    "command": "npx -y context-mode@1.0.169",
+    "protocol": { "era": "legacy", "discover": "error -32601", "versionAnswered": "2025-03-26", "checkedAt": "2026-10-29" },
     "toolNames": [
       "ctx_execute",
       "ctx_execute_file",
@@ -654,6 +690,9 @@ export const TESTS: ProbeRecord[] = [
     "slug": "n8n-mcp",
     "testedAt": "2026-10-25",
     "package": "n8n-mcp@2.99.1",
+    "command": "npx -y n8n-mcp@2.99.1",
+    "envSet": ["MCP_MODE", "LOG_LEVEL"],
+    "protocol": { "era": "legacy", "discover": "error -32601", "versionAnswered": "2025-03-26", "checkedAt": "2026-10-29" },
     "toolNames": [
       "tools_documentation",
       "search_nodes",
@@ -684,6 +723,8 @@ export const TESTS: ProbeRecord[] = [
     "slug": "mongodb-mcp-server",
     "testedAt": "2026-10-25",
     "package": "mongodb-mcp-server@3.1.0",
+    "command": "npx -y mongodb-mcp-server@3.1.0",
+    "protocol": { "era": "legacy", "discover": "no answer within 20 s", "versionAnswered": "2025-03-26", "checkedAt": "2026-10-29" },
     "toolNames": [
       "aggregate-db",
       "aggregate",
@@ -734,6 +775,8 @@ export const TESTS: ProbeRecord[] = [
     "slug": "mongodb-mcp-server",
     "testedAt": "2026-10-26",
     "package": "mongodb-mcp-server@3.1.0 --readOnly",
+    "command": "npx -y mongodb-mcp-server@3.1.0 --readOnly",
+    "protocol": { "era": "legacy", "discover": "no answer within 20 s", "versionAnswered": "2025-03-26", "checkedAt": "2026-10-29" },
     "toolNames": [
       "aggregate-db",
       "aggregate",
@@ -775,6 +818,8 @@ export const TESTS: ProbeRecord[] = [
     "slug": "redis-mcp-server",
     "testedAt": "2026-10-25",
     "package": "redis-mcp-server@0.5.1",
+    "command": "uvx redis-mcp-server@0.5.1 --url redis://127.0.0.1:6379/0",
+    "protocol": { "era": "legacy", "discover": "error -32602", "versionAnswered": "2025-03-26", "checkedAt": "2026-10-29" },
     "toolNames": [
       "hset",
       "hget",
@@ -851,6 +896,9 @@ export const TESTS: ProbeRecord[] = [
     "slug": "qdrant-mcp-server",
     "testedAt": "2026-10-25",
     "package": "mcp-server-qdrant@0.8.1",
+    "command": "uvx mcp-server-qdrant@0.8.1",
+    "envSet": ["QDRANT_LOCAL_PATH", "COLLECTION_NAME"],
+    "protocol": { "era": "legacy", "discover": "error -32602", "versionAnswered": "2025-03-26", "checkedAt": "2026-10-29" },
     "toolNames": [
       "qdrant-find",
       "qdrant-store"
@@ -876,6 +924,8 @@ export const TESTS: ProbeRecord[] = [
     "slug": "motherduck-mcp-server",
     "testedAt": "2026-10-25",
     "package": "mcp-server-motherduck@1.1.0",
+    "command": "uvx mcp-server-motherduck@1.1.0 --db-path :memory: --read-write",
+    "protocol": { "era": "modern", "discover": "result", "versionAnswered": "2026-07-28", "checkedAt": "2026-10-29", "supportedVersions": ["2026-07-28"] },
     "toolNames": [
       "execute_query",
       "list_databases",
@@ -903,6 +953,9 @@ export const TESTS: ProbeRecord[] = [
     "slug": "kubernetes-mcp-server",
     "testedAt": "2026-10-25",
     "package": "kubernetes-mcp-server@0.0.69",
+    "command": "npx -y kubernetes-mcp-server@0.0.69",
+    "envSet": ["KUBECONFIG"],
+    "protocol": { "era": "modern", "discover": "result", "versionAnswered": "2026-07-28", "checkedAt": "2026-10-29", "supportedVersions": ["2026-07-28", "2025-11-25", "2025-06-18", "2025-03-26", "2024-11-05"] },
     "toolNames": [
       "configuration_view",
       "events_list",
@@ -941,7 +994,526 @@ export const TESTS: ProbeRecord[] = [
       "all": "1221332f580b27240c4a7a7198bd1f7cc1bc049b62b2400a51edd7b49f5b4e7e"
     },
     "notes": "Server reported: kubernetes-mcp-server v0.0.69. Two independent runs gave identical hashes. With the invented kubeconfig the server answered in about 3 s and listed its tools; none was called. In an earlier attempt with no kubeconfig it did not answer within 240 s."
+  },
+  {
+    "slug": "serena",
+    "testedAt": "2026-10-28",
+    "package": "serena-agent@2.1.0",
+    "command": "uvx --from serena-agent==2.1.0 serena start-mcp-server",
+    "protocol": { "era": "modern", "discover": "result", "versionAnswered": "2026-07-28", "checkedAt": "2026-10-29", "supportedVersions": ["2026-07-28"] },
+    "toolNames": [
+      "activate_project",
+      "initial_instructions",
+      "serena_repl"
+    ],
+    "client": "mcp-probe",
+    "clientVersion": "scripts/mcp-probe.mjs (initialize + tools/list)",
+    "os": "Linux 6.18.54.1-microsoft-standard-WSL2 x64",
+    "environment": "uv python3.12 image, Docker on Windows, no real credentials, filler values for any setting that needs one, fixed hostname, resource limits",
+    "install": "pass",
+    "handshake": "pass",
+    "toolsList": {
+      "status": "pass",
+      "count": 3
+    },
+    "hashes": {
+      "descriptions": "c2e55b904a20ab0f8898f453c74eea493fde9d1da672c5283dd0e57796f9f665",
+      "schemas": "eac6e203635942a03c5a151bcbd0cea279d8f6be1f1600c5bcce63b38b9d3c3e",
+      "all": "93d8fb0d77fd63fdb145f2ec526dcc78d1649ad8b3f82d39e2655935e90061e2"
+    },
+    "notes": "Server reported: Serena 2.1.0. Two independent runs gave identical hashes. Started with no project active, so the list may grow once a project is activated (not tested). The tools were listed and none was called."
+  },
+  {
+    "slug": "blender-mcp",
+    "testedAt": "2026-10-28",
+    "package": "mcp-for-blender@2.2.4 (BLENDER_MCP_SAFE_MODE=1)",
+    "command": "uvx mcp-for-blender@2.2.4",
+    "envSet": [
+      "BLENDER_MCP_SAFE_MODE",
+      "DISABLE_TELEMETRY"
+    ],
+    "protocol": { "era": "legacy", "discover": "error -32602", "versionAnswered": "2025-03-26", "checkedAt": "2026-10-29" },
+    "toolNames": [
+      "get_addon_status",
+      "disable_telemetry",
+      "get_scene_info",
+      "execute_blender_code",
+      "record_trajectory_feedback",
+      "look",
+      "generate_3d",
+      "search_assets",
+      "import_asset"
+    ],
+    "client": "mcp-probe",
+    "clientVersion": "scripts/mcp-probe.mjs (initialize + tools/list)",
+    "os": "Linux 6.18.54.1-microsoft-standard-WSL2 x64",
+    "environment": "uv python3.12 image, Docker on Windows, no real credentials, filler values for any setting that needs one, fixed hostname, resource limits",
+    "install": "pass",
+    "handshake": "pass",
+    "toolsList": {
+      "status": "pass",
+      "count": 9
+    },
+    "hashes": {
+      "descriptions": "117eac15f080c8e4902baf0d05308288ca59b452cb8fd362cf03174fc8be81d2",
+      "schemas": "6b6d388e82932e19db52b5bc4d7c404fd07fbeedac69067a8c8f920bb6e43ae7",
+      "all": "573132035ee2e44b4efd4a644229ce1420c77077cca548865eaf7f01547fff5c"
+    },
+    "notes": "Server reported: MCP for Blender 1.30.0. Two independent runs gave identical hashes. Started without Blender running. The tool list was identical with and without BLENDER_MCP_SAFE_MODE=1 (same hashes), so the setting does not show in what the server announces. The tools were listed and none was called."
+  },
+  {
+    "slug": "blender-mcp",
+    "testedAt": "2026-10-28",
+    "package": "mcp-for-blender@2.2.4",
+    "command": "uvx mcp-for-blender@2.2.4",
+    "envSet": [
+      "DISABLE_TELEMETRY"
+    ],
+    "protocol": { "era": "legacy", "discover": "error -32602", "versionAnswered": "2025-03-26", "checkedAt": "2026-10-29" },
+    "toolNames": [
+      "get_addon_status",
+      "disable_telemetry",
+      "get_scene_info",
+      "execute_blender_code",
+      "record_trajectory_feedback",
+      "look",
+      "generate_3d",
+      "search_assets",
+      "import_asset"
+    ],
+    "client": "mcp-probe",
+    "clientVersion": "scripts/mcp-probe.mjs (initialize + tools/list)",
+    "os": "Linux 6.18.54.1-microsoft-standard-WSL2 x64",
+    "environment": "uv python3.12 image, Docker on Windows, no real credentials, filler values for any setting that needs one, fixed hostname, resource limits",
+    "install": "pass",
+    "handshake": "pass",
+    "toolsList": {
+      "status": "pass",
+      "count": 9
+    },
+    "hashes": {
+      "descriptions": "117eac15f080c8e4902baf0d05308288ca59b452cb8fd362cf03174fc8be81d2",
+      "schemas": "6b6d388e82932e19db52b5bc4d7c404fd07fbeedac69067a8c8f920bb6e43ae7",
+      "all": "573132035ee2e44b4efd4a644229ce1420c77077cca548865eaf7f01547fff5c"
+    },
+    "notes": "Server reported: MCP for Blender 1.30.0. Two independent runs gave identical hashes. Started without Blender running and without BLENDER_MCP_SAFE_MODE. Identical tool list to the run with it. The tools were listed and none was called."
+  },
+  {
+    "slug": "grafana-mcp-server",
+    "testedAt": "2026-10-28",
+    "package": "mcp-grafana@2.1.1 --disable-write",
+    "command": "uvx mcp-grafana@2.1.1 --disable-write",
+    "envSet": [
+      "GRAFANA_URL",
+      "GRAFANA_SERVICE_ACCOUNT_TOKEN"
+    ],
+    "protocol": { "era": "modern", "discover": "result", "versionAnswered": "2026-07-28", "checkedAt": "2026-10-29", "supportedVersions": ["2026-07-28", "2025-11-25", "2025-06-18", "2025-03-26", "2024-11-05"] },
+    "toolNames": [
+      "alerting_manage_routing",
+      "alerting_rules_read",
+      "alerting_silences_read",
+      "analyze_loki_labels",
+      "check_datasources_health",
+      "diff_tempo_traces",
+      "generate_deeplink",
+      "get_alert_group",
+      "get_annotation_tags",
+      "get_annotations",
+      "get_assertions",
+      "get_current_oncall_users",
+      "get_dashboard_by_uid",
+      "get_dashboard_panel_queries",
+      "get_dashboard_property",
+      "get_dashboard_summary",
+      "get_datasource",
+      "get_doc",
+      "get_incident",
+      "get_oncall_shift",
+      "get_panel_image",
+      "get_plugin",
+      "get_snapshot",
+      "get_tempo_trace",
+      "get_tempo_traceql_docs",
+      "grafana_api_request",
+      "list_alert_groups",
+      "list_dashboard_versions",
+      "list_datasources",
+      "list_incident_custom_fields",
+      "list_incidents",
+      "list_loki_label_names",
+      "list_loki_label_values",
+      "list_oncall_schedules",
+      "list_oncall_teams",
+      "list_oncall_users",
+      "list_prometheus_label_names",
+      "list_prometheus_label_values",
+      "list_prometheus_metric_metadata",
+      "list_prometheus_metric_names",
+      "list_provisioning_repositories",
+      "list_pyroscope_label_names",
+      "list_pyroscope_label_values",
+      "list_pyroscope_profile_types",
+      "list_snapshots",
+      "list_tempo_attribute_names",
+      "list_tempo_attribute_values",
+      "query_loki_logs",
+      "query_loki_patterns",
+      "query_loki_stats",
+      "query_prometheus",
+      "query_prometheus_histogram",
+      "query_pyroscope",
+      "query_tempo_metrics",
+      "search_dashboards",
+      "search_docs",
+      "search_folders",
+      "search_plugin_information",
+      "search_tempo_traces",
+      "suggest_loki_alloy_label_config",
+      "user_info",
+      "validate_provisioning_file"
+    ],
+    "client": "mcp-probe",
+    "clientVersion": "scripts/mcp-probe.mjs (initialize + tools/list)",
+    "os": "Linux 6.18.54.1-microsoft-standard-WSL2 x64",
+    "environment": "uv python3.12 image, Docker on Windows, no real credentials, filler values for any setting that needs one, fixed hostname, resource limits",
+    "install": "pass",
+    "handshake": "pass",
+    "toolsList": {
+      "status": "pass",
+      "count": 62
+    },
+    "hashes": {
+      "descriptions": "5582cadcd971708237fd50b10fe12199d775c930d8d6c7b66b2c7c74760e1b3e",
+      "schemas": "63d24951095a7cdf4ec7797bb9507a3270542de62e0b05c31d836babccdbb82d",
+      "all": "01511c6d60aaf90f8ad989cc3a9f3d84ce3999300fa35f9c10b857a261801571"
+    },
+    "notes": "Server reported: mcp-grafana v2.1.1. Two independent runs gave identical hashes. Started with --disable-write and a filler service account token; no Grafana was running. 62 tools; 17 fewer than without the flag, all with names that create, update or delete. The list still contains grafana_api_request; we did not test what it can do under --disable-write. The tools were listed and none was called."
+  },
+  {
+    "slug": "grafana-mcp-server",
+    "testedAt": "2026-10-28",
+    "package": "mcp-grafana@2.1.1",
+    "command": "uvx mcp-grafana@2.1.1",
+    "envSet": [
+      "GRAFANA_URL",
+      "GRAFANA_SERVICE_ACCOUNT_TOKEN"
+    ],
+    "protocol": { "era": "modern", "discover": "result", "versionAnswered": "2026-07-28", "checkedAt": "2026-10-29", "supportedVersions": ["2026-07-28", "2025-11-25", "2025-06-18", "2025-03-26", "2024-11-05"] },
+    "toolNames": [
+      "add_activity_to_incident",
+      "alerting_manage_routing",
+      "alerting_routing_write",
+      "alerting_rules_read",
+      "alerting_rules_write",
+      "alerting_silences_read",
+      "alerting_silences_write",
+      "analyze_loki_labels",
+      "check_datasources_health",
+      "create_annotation",
+      "create_datasource",
+      "create_folder",
+      "create_incident",
+      "create_snapshot",
+      "delete_annotation",
+      "delete_snapshot",
+      "diff_tempo_traces",
+      "generate_deeplink",
+      "get_alert_group",
+      "get_annotation_tags",
+      "get_annotations",
+      "get_assertions",
+      "get_current_oncall_users",
+      "get_dashboard_by_uid",
+      "get_dashboard_panel_queries",
+      "get_dashboard_property",
+      "get_dashboard_summary",
+      "get_datasource",
+      "get_doc",
+      "get_incident",
+      "get_oncall_shift",
+      "get_panel_image",
+      "get_plugin",
+      "get_snapshot",
+      "get_tempo_trace",
+      "get_tempo_traceql_docs",
+      "grafana_api_request",
+      "install_plugin",
+      "list_alert_groups",
+      "list_dashboard_versions",
+      "list_datasources",
+      "list_incident_custom_fields",
+      "list_incidents",
+      "list_loki_label_names",
+      "list_loki_label_values",
+      "list_oncall_schedules",
+      "list_oncall_teams",
+      "list_oncall_users",
+      "list_prometheus_label_names",
+      "list_prometheus_label_values",
+      "list_prometheus_metric_metadata",
+      "list_prometheus_metric_names",
+      "list_provisioning_repositories",
+      "list_pyroscope_label_names",
+      "list_pyroscope_label_values",
+      "list_pyroscope_profile_types",
+      "list_snapshots",
+      "list_tempo_attribute_names",
+      "list_tempo_attribute_values",
+      "query_loki_logs",
+      "query_loki_patterns",
+      "query_loki_stats",
+      "query_prometheus",
+      "query_prometheus_histogram",
+      "query_pyroscope",
+      "query_tempo_metrics",
+      "search_dashboards",
+      "search_docs",
+      "search_folders",
+      "search_plugin_information",
+      "search_tempo_traces",
+      "suggest_loki_alloy_label_config",
+      "update_alert_group",
+      "update_annotation",
+      "update_dashboard",
+      "update_datasource",
+      "update_incident",
+      "user_info",
+      "validate_provisioning_file"
+    ],
+    "client": "mcp-probe",
+    "clientVersion": "scripts/mcp-probe.mjs (initialize + tools/list)",
+    "os": "Linux 6.18.54.1-microsoft-standard-WSL2 x64",
+    "environment": "uv python3.12 image, Docker on Windows, no real credentials, filler values for any setting that needs one, fixed hostname, resource limits",
+    "install": "pass",
+    "handshake": "pass",
+    "toolsList": {
+      "status": "pass",
+      "count": 79
+    },
+    "hashes": {
+      "descriptions": "ff80a05035a4533c2aabe875c575cb81a870322b8e5cffe0425f8ba4d33711a8",
+      "schemas": "bad3eac8232c99b3ccf022a4432a19c21ec09eac6979341c1af94eb6c1ebe31e",
+      "all": "e354103ae2a2722be8eed9663f267b72105e156739b1b952f0f8af8983a07f22"
+    },
+    "notes": "Server reported: mcp-grafana v2.1.1. Two independent runs gave identical hashes. Started without --disable-write and with a filler token; no Grafana was running. 79 tools, 17 more than with --disable-write (names that create, update or delete). The tools were listed and none was called."
+  },
+  {
+    "slug": "clickhouse-mcp-server",
+    "testedAt": "2026-10-28",
+    "package": "mcp-clickhouse@0.7.0 (CLICKHOUSE_ALLOW_WRITE_ACCESS=false)",
+    "command": "uvx mcp-clickhouse@0.7.0",
+    "envSet": [
+      "CLICKHOUSE_HOST",
+      "CLICKHOUSE_USER",
+      "CLICKHOUSE_PASSWORD",
+      "CLICKHOUSE_ALLOW_WRITE_ACCESS"
+    ],
+    "protocol": { "era": "modern", "discover": "result", "versionAnswered": "2026-07-28", "checkedAt": "2026-10-29", "supportedVersions": ["2026-07-28"] },
+    "toolNames": [
+      "list_databases",
+      "list_tables",
+      "run_query"
+    ],
+    "client": "mcp-probe",
+    "clientVersion": "scripts/mcp-probe.mjs (initialize + tools/list)",
+    "os": "Linux 6.18.54.1-microsoft-standard-WSL2 x64",
+    "environment": "uv python3.12 image, Docker on Windows, no real credentials, filler values for any setting that needs one, fixed hostname, resource limits",
+    "install": "pass",
+    "handshake": "pass",
+    "toolsList": {
+      "status": "pass",
+      "count": 3
+    },
+    "hashes": {
+      "descriptions": "e72221b87b44151a6dcab29f3caf1bf9a2829e68c6fa25c53f1226984f11a839",
+      "schemas": "0777e156732b9d1d282bbc6953ab164f00aba6ca614aee275b56fa557250611f",
+      "all": "9f80c06c5d61f129e2e34f010ed96472834bf17ab948d757b2fb7dd8aa22f9cd"
+    },
+    "notes": "Server reported: mcp-clickhouse 0.7.0. Two independent runs gave identical hashes. Started with filler connection values and no ClickHouse server running. The tool list was identical with CLICKHOUSE_ALLOW_WRITE_ACCESS set to true (same hashes), so the setting does not show in what the server announces. Its start-up log shows a request to pypi.org. The tools were listed and none was called."
+  },
+  {
+    "slug": "clickhouse-mcp-server",
+    "testedAt": "2026-10-28",
+    "package": "mcp-clickhouse@0.7.0 (CLICKHOUSE_ALLOW_WRITE_ACCESS=true)",
+    "command": "uvx mcp-clickhouse@0.7.0",
+    "envSet": [
+      "CLICKHOUSE_HOST",
+      "CLICKHOUSE_USER",
+      "CLICKHOUSE_PASSWORD",
+      "CLICKHOUSE_ALLOW_WRITE_ACCESS"
+    ],
+    "protocol": { "era": "modern", "discover": "result", "versionAnswered": "2026-07-28", "checkedAt": "2026-10-29", "supportedVersions": ["2026-07-28"] },
+    "toolNames": [
+      "list_databases",
+      "list_tables",
+      "run_query"
+    ],
+    "client": "mcp-probe",
+    "clientVersion": "scripts/mcp-probe.mjs (initialize + tools/list)",
+    "os": "Linux 6.18.54.1-microsoft-standard-WSL2 x64",
+    "environment": "uv python3.12 image, Docker on Windows, no real credentials, filler values for any setting that needs one, fixed hostname, resource limits",
+    "install": "pass",
+    "handshake": "pass",
+    "toolsList": {
+      "status": "pass",
+      "count": 3
+    },
+    "hashes": {
+      "descriptions": "e72221b87b44151a6dcab29f3caf1bf9a2829e68c6fa25c53f1226984f11a839",
+      "schemas": "0777e156732b9d1d282bbc6953ab164f00aba6ca614aee275b56fa557250611f",
+      "all": "9f80c06c5d61f129e2e34f010ed96472834bf17ab948d757b2fb7dd8aa22f9cd"
+    },
+    "notes": "Server reported: mcp-clickhouse 0.7.0. Two independent runs gave identical hashes. Started with filler connection values and no ClickHouse server running. Identical tool list to the run with the setting at false. The tools were listed and none was called."
+  },
+  {
+    "slug": "mcp-toolbox-for-databases",
+    "testedAt": "2026-10-28",
+    "package": "@toolbox-sdk/server@1.15.0 --prebuilt=sqlite",
+    "command": "npx -y @toolbox-sdk/server@1.15.0 --prebuilt=sqlite --stdio",
+    "envSet": [
+      "SQLITE_DATABASE"
+    ],
+    "protocol": { "era": "modern", "discover": "result", "versionAnswered": "2026-07-28", "checkedAt": "2026-10-29", "supportedVersions": ["2024-11-05", "2025-03-26", "2025-06-18", "2025-11-25", "2026-07-28"] },
+    "toolNames": [
+      "execute_sql",
+      "list_tables"
+    ],
+    "client": "mcp-probe",
+    "clientVersion": "scripts/mcp-probe.mjs (initialize + tools/list)",
+    "os": "Linux 6.18.54.1-microsoft-standard-WSL2 x64",
+    "environment": "node:22-slim, Docker on Windows, no real credentials, filler values for any setting that needs one, fixed hostname, resource limits",
+    "install": "pass",
+    "handshake": "pass",
+    "toolsList": {
+      "status": "pass",
+      "count": 2
+    },
+    "hashes": {
+      "descriptions": "a65fa0852629b5c5e32e954605d0638283254b7ff26f444ae56c16d6d2363826",
+      "schemas": "b00003a7851118c872d435bf4274f6ad0647e1fff17e6153759ef01846300a9f",
+      "all": "116e1edf37a48dfa7633c9537ed9a0801b6109b15d8b196485da4c20d9482d72"
+    },
+    "notes": "Server reported: Toolbox 1.15.0+binary.linux.amd64.8e8e569+prebuilt.sqlite. Two independent runs gave identical hashes. Started with the prebuilt sqlite configuration over stdio and a filler database path. Other prebuilt sources were not tried. The tools were listed and none was called."
+  },
+  {
+    "slug": "talk-to-figma-mcp",
+    "testedAt": "2026-10-28",
+    "package": "cursor-talk-to-figma-mcp@0.3.5",
+    "command": "bunx cursor-talk-to-figma-mcp@0.3.5",
+    "protocol": { "era": "legacy", "discover": "error -32601", "versionAnswered": "2025-03-26", "checkedAt": "2026-10-29" },
+    "toolNames": [
+      "get_document_info",
+      "get_selection",
+      "read_my_design",
+      "get_node_info",
+      "get_nodes_info",
+      "create_rectangle",
+      "create_frame",
+      "create_text",
+      "set_fill_color",
+      "set_stroke_color",
+      "move_node",
+      "clone_node",
+      "resize_node",
+      "delete_node",
+      "delete_multiple_nodes",
+      "export_node_as_image",
+      "set_text_content",
+      "get_styles",
+      "get_local_components",
+      "get_annotations",
+      "set_annotation",
+      "set_multiple_annotations",
+      "create_component_instance",
+      "get_instance_overrides",
+      "set_instance_overrides",
+      "set_corner_radius",
+      "scan_text_nodes",
+      "scan_nodes_by_types",
+      "set_multiple_text_contents",
+      "set_layout_mode",
+      "set_padding",
+      "set_axis_align",
+      "set_layout_sizing",
+      "set_item_spacing",
+      "get_reactions",
+      "set_default_connector",
+      "create_connections",
+      "set_focus",
+      "set_selections",
+      "join_channel"
+    ],
+    "client": "mcp-probe",
+    "clientVersion": "scripts/mcp-probe.mjs (initialize + tools/list)",
+    "os": "Linux 6.18.54.1-microsoft-standard-WSL2 x64",
+    "environment": "node:22-slim + bun, Docker on Windows, no real credentials, filler values for any setting that needs one, fixed hostname, resource limits",
+    "install": "pass",
+    "handshake": "pass",
+    "toolsList": {
+      "status": "pass",
+      "count": 40
+    },
+    "hashes": {
+      "descriptions": "20b5e5973fd3b39a8f592945cc55d7bf1abf5c5658fd7dcebe502d43a7196928",
+      "schemas": "ca5191013b0ab70c3a82269df371a42226fbe91592d8c5988e8cae6f2ff36b6a",
+      "all": "729eb8ad958afc6724c15130ab33b6d70092a658bf29d1b44ed67f778592207f"
+    },
+    "notes": "Server reported: TalkToFigmaMCP 1.0.0. Two independent runs gave identical hashes. Needs Bun. Started without the Figma WebSocket server: it kept retrying ws://localhost:3055 and still listed 40 tools. The tools were listed and none was called."
+  },
+  {
+    "slug": "mcp-reference-servers",
+    "testedAt": "2026-10-29",
+    "package": "@modelcontextprotocol/server-everything@2.0.0 (protocol 2026-07-28)",
+    "command": "npx -y @modelcontextprotocol/server-everything@2.0.0",
+    "protocol": {
+      "era": "modern",
+      "discover": "result",
+      "versionAnswered": "2026-07-28",
+      "checkedAt": "2026-10-29",
+      "supportedVersions": [
+        "2026-07-28"
+      ]
+    },
+    "toolNames": [
+      "echo",
+      "get-annotated-message",
+      "get-env",
+      "get-header-params",
+      "get-resource-links",
+      "get-resource-reference",
+      "get-structured-content",
+      "get-sum",
+      "get-tiny-image",
+      "gzip-file-as-resource",
+      "trigger-list-changed",
+      "trigger-log-messages",
+      "trigger-long-running-operation",
+      "trigger-resource-update",
+      "get-roots-list",
+      "trigger-elicitation-request",
+      "trigger-multi-step-elicitation",
+      "trigger-url-elicitation",
+      "trigger-sampling-request",
+      "simulate-research-query",
+      "trigger-sampling-request-async",
+      "trigger-elicitation-request-async"
+    ],
+    "client": "mcp-probe",
+    "clientVersion": "scripts/mcp-probe.mjs (server/discover, initialize if needed, tools/list)",
+    "os": "Linux 6.18.54.1-microsoft-standard-WSL2 x64",
+    "environment": "Docker node:22-slim on Windows (WSL2), no real credentials, fixed hostname, resource limits",
+    "install": "pass",
+    "handshake": "pass",
+    "toolsList": {
+      "status": "pass",
+      "count": 22
+    },
+    "hashes": {
+      "descriptions": "00dce439b058df456b6408f26d16c4d7b9ecfcd3c12c857914e60ee792736d05",
+      "schemas": "99559498024342b71e9d0c70f15987445b1fea79fdf38ceaebf22ef7296158f1",
+      "all": "c2538eb571def953eb09d4914a9d67a49629763aa9bb32aa510e0ce906347bd3"
+    },
+    "notes": "Same version as the other server-everything record, but asked the new way: server/discover and per-request metadata (revision 2026-07-28). It lists 22 tools instead of 16: 8 added (get-roots-list, simulate-research-query, trigger-elicitation-request, trigger-elicitation-request-async, trigger-multi-step-elicitation, trigger-sampling-request, trigger-sampling-request-async, trigger-url-elicitation) and 2 left out (toggle-simulated-logging, toggle-subscriber-updates). One run. The tools were listed and none was called."
   }
 ];
-
 export const testsFor = (slug: string): ProbeRecord[] => TESTS.filter((t) => t.slug === slug).sort((a, b) => b.testedAt.localeCompare(a.testedAt));

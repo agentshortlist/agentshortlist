@@ -138,3 +138,38 @@ export async function sendConfirmationEmail(email: string) {
   });
   if (!res.ok) throw new Error(`resend send email failed: ${res.status}`);
 }
+
+// Bienvenida tras confirmar. Mejor esfuerzo: si falla, la suscripción ya está confirmada y no se reintenta.
+export async function sendWelcomeEmail(email: string) {
+  const u = (path: string) => absoluteUrl(`${path}${path.includes("?") ? "&" : "?"}utm_source=welcome`);
+  const unsub = absoluteUrl(`/newsletter/unsubscribe?token=${encodeURIComponent(makeToken("unsubscribe", email))}`);
+  const posts: [string, string][] = [
+    ["How to read an MCP server before you install it", "/blog/how-to-read-an-mcp-server-before-you-install-it"],
+    ["MCP Risk Radar #1: 66 advisories, none on the latest versions", "/blog/mcp-risk-radar-1-66-advisories-none-on-the-latest-versions"],
+    ["10 MCP servers in Docker: what their tool lists tell you", "/blog/10-mcp-servers-in-docker-what-their-tool-lists-tell-you"],
+  ];
+  const intro =
+    "The MCP Risk Radar is a short note about MCP servers, built from evidence you can check: published advisories (OSV.dev), downloads, what we recorded when we started a server, and what changed since last time. Every line has a source, or says \"not verified\".";
+  const expect = "What to expect: about one email a week, and only when there is something real to report. No sponsored picks, no scores that depend on opinion.";
+  const check = "If you want to check a configuration before you use it, /check reads it in your browser and never stores your values.";
+  const fix = "If something we publish is wrong, reply to this email or use the report link on the page. We correct the card, not the ranking.";
+  const res = await resend("/emails", {
+    method: "POST",
+    body: JSON.stringify({
+      from: process.env.RESEND_FROM,
+      to: [email],
+      ...(process.env.RESEND_REPLY_TO ? { reply_to: process.env.RESEND_REPLY_TO } : {}),
+      subject: "You're in: The MCP Risk Radar",
+      html:
+        `<p>Thanks for confirming.</p><p>${intro}</p><p>${expect}</p><p>Three posts to start with:</p><ol>` +
+        posts.map(([t, h]) => `<li><a href="${u(h)}">${t}</a></li>`).join("") +
+        `</ol><p>${check} <a href="${u("/check")}">Open /check</a>.</p><p>${fix}</p>` +
+        `<p>${SITE_NAME}</p><p style="font-size:12px;color:#666"><a href="${unsub}">Unsubscribe</a></p>`,
+      text:
+        `Thanks for confirming.\n\n${intro}\n\n${expect}\n\nThree posts to start with:\n` +
+        posts.map(([t, h], i) => `${i + 1}. ${t}\n   ${u(h)}`).join("\n") +
+        `\n\n${check} ${u("/check")}\n\n${fix}\n\n${SITE_NAME}\n\nUnsubscribe: ${unsub}`,
+    }),
+  });
+  if (!res.ok) throw new Error(`resend send welcome failed: ${res.status}`);
+}

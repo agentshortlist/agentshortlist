@@ -182,7 +182,7 @@ function TestRuns({ slug }: { slug: string }) {
         <div key={`${t.testedAt}:${t.package}:${t.client}`} className="space-y-3 border-t border-ink/10 pt-4 first:border-0 first:pt-0">
         <p className={`text-sm font-medium ${failedAt.length ? "border-l-2 border-destructive pl-3" : ""}`}>
           {failedAt.length ? `Did not pass: ${failedAt.join(", ")} failed` : "Passed: started, answered the handshake, listed its tools"}
-          <span className="mono-num mt-1 block break-all text-xs font-normal text-muted-foreground">{fmtDate(t.testedAt)} · {t.package}{t.hashes ? ` · fingerprint ${t.hashes.all.slice(0, 12)}` : ""}</span>
+          <span className="mono-num mt-1 block break-all text-xs font-normal text-muted-foreground">{fmtDate(t.testedAt)} · {t.package}{t.hashes ? ` · schema fingerprint ${t.hashes.schemas.slice(0, 12)}` : ""}</span>
         </p>
         <dl className="grid gap-x-6 gap-y-1 text-sm sm:grid-cols-2">
           <div><dt className="text-muted-foreground">Date</dt><dd>{fmtDate(t.testedAt)}</dd></div>
@@ -190,6 +190,8 @@ function TestRuns({ slug }: { slug: string }) {
           <div><dt className="text-muted-foreground">Client</dt><dd>{t.client} {t.clientVersion}</dd></div>
           <div><dt className="text-muted-foreground">System</dt><dd>{t.os}</dd></div>
           <div><dt className="text-muted-foreground">Environment</dt><dd>{t.environment}</dd></div>
+          {t.protocol && <div className="sm:col-span-2"><dt className="text-muted-foreground">Protocol{t.protocol.checkedAt ? `, checked ${fmtDate(t.protocol.checkedAt)}` : ""}</dt><dd>{t.protocol.era === "modern" ? `Revision 2026-07-28: answered server/discover with ${t.protocol.supportedVersions?.join(", ") ?? "its versions"}.` : `Earlier handshake: answered initialize with ${t.protocol.versionAnswered ?? "a protocol version"}. server/discover: ${t.protocol.discover === "no-answer" ? "no answer" : t.protocol.discover}.`}</dd></div>}
+          {t.command && <div className="sm:col-span-2"><dt className="text-muted-foreground">Start command</dt><dd className="mono-num break-all">{t.command}{t.envSet?.length ? ` (environment variables set: ${t.envSet.join(", ")})` : ""}</dd></div>}
           <div><dt className="text-muted-foreground">Install, handshake, tools list</dt><dd>{STATUS[t.install]}, {STATUS[t.handshake]}, {STATUS[t.toolsList.status]}{t.toolsList.count !== null ? ` (${t.toolsList.count} tools)` : ""}</dd></div>
           {t.hashes && <div className="sm:col-span-2"><dt className="text-muted-foreground">tools/list sha256 (first 12 characters)</dt><dd className="mono-num">descriptions {t.hashes.descriptions.slice(0, 12)} · schemas {t.hashes.schemas.slice(0, 12)}</dd></div>}
           <Capabilities names={t.toolNames} />

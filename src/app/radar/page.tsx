@@ -24,7 +24,7 @@ export default function RadarPage() {
         <Eyebrow>Newsletter</Eyebrow>
         <h1 className="display-2 reveal max-w-4xl fs-title">The MCP Risk Radar.</h1>
         <p className="reveal reveal-1 prose-measure max-w-[42rem] text-[15px] leading-[1.65] text-muted-foreground">
-          A short note about MCP servers, built from evidence you can check. Every line has a source, or says &ldquo;not verified&rdquo;.
+          A short note about MCP servers, built from evidence you can check. Every line has a source, or says &ldquo;not verified&rdquo;. About once a week, and only when there is something real to report.
         </p>
       </header>
 

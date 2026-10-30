@@ -22,7 +22,7 @@ export const CAPABILITIES: Capability[] = [
 
 const R: Record<CapabilityId, (n: string) => boolean> = {
   shell: (n) => /^(start_process|interact_with_process|kill_process|force_terminate|list_processes|read_process_output|list_sessions|exec_in_pod|pods_exec)$/.test(n),
-  "code-exec": (n) => /(^|_)(evaluate|evaluate_script|run_code(_unsafe)?)$/.test(n) || n === "browser_evaluate" || /^ctx_(execute|execute_file|batch_execute)$/.test(n),
+  "code-exec": (n) => /(^|_)(evaluate|evaluate_script|run_code(_unsafe)?)$/.test(n) || n === "browser_evaluate" || /^ctx_(execute|execute_file|batch_execute)$/.test(n) || /^execute_.*_code$/.test(n) || /(^|_)repl$/.test(n),
   "filesystem-write": (n) => /^(write_file|edit_block|create_directory|move_file|write_pdf|export_csv|export_workbook|write_range|create_workbook)$/.test(n),
   "filesystem-read": (n) => /^(read_file|read_multiple_files|list_directory|get_file_info|start_search|upload_file|browser_file_upload|import_csv|import_workbook|list_workbooks|read_vba)$/.test(n) || n === "gzip-file-as-resource",
   network: (n) => /^(fetch|browser_navigate|navigate_page|new_page|ctx_fetch_and_index|port_forward)$/.test(n),
@@ -30,10 +30,11 @@ const R: Record<CapabilityId, (n: string) => boolean> = {
   "git-write": (n) => /^git_(add|commit|checkout|create_branch|reset)$/.test(n),
   "git-read": (n) => /^git_(status|diff|diff_staged|diff_unstaged|log|show|branch)$/.test(n),
   env: (n) => /^get[-_]env$/.test(n),
-  config: (n) => /^(get_config|set_config_value|set_workbook_settings)$/.test(n),
+  config: (n) => /^(get_config|set_config_value|set_workbook_settings|disable_telemetry)$/.test(n),
   "data-write": (n) =>
     /^(create|delete|add|set|insert|write|replace|clear|merge|rename|copy|sort|transform|import|format|drop|update|remove)[-_]/.test(n) ||
-    /^(hset|hdel|set|delete|expire|rename|lpush|rpush|lpop|rpop|lrem|publish|sadd|srem|zadd|zrem|xadd|xdel|xack|json_set|json_del|set_vector_in_hash|qdrant-store)$/.test(n),
+    /^(hset|hdel|set|delete|expire|rename|lpush|rpush|lpop|rpop|lrem|publish|sadd|srem|zadd|zrem|xadd|xdel|xack|json_set|json_del|set_vector_in_hash|qdrant-store|install_plugin|(move|clone|resize)_node)$/.test(n) ||
+    /_write$/.test(n),
   "cluster-write": (n) => /^(kubectl_(apply|delete|create|scale|patch|rollout)|install_helm_chart|upgrade_helm_chart|uninstall_helm_chart|node_management|cleanup|pods_delete|pods_run|resources_create_or_update|resources_delete|resources_scale)$/.test(n),
 };
 

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { addToSegment, newsletterConfigured, rateLimited, readToken, setUnsubscribed } from "@/lib/newsletter";
+import { addToSegment, getContact, newsletterConfigured, rateLimited, readToken, sendWelcomeEmail, setUnsubscribed } from "@/lib/newsletter";
 
 export const runtime = "nodejs";
 
@@ -13,8 +13,17 @@ export async function POST(req: Request) {
   if (!email) return NextResponse.json({ ok: false, message: "This link is invalid or has expired." }, { status: 400 });
 
   try {
+    const before = await getContact(email);
     await setUnsubscribed(email, false);
     await addToSegment(email);
+    // Solo en la primera confirmación: repetir el enlace no reenvía la bienvenida.
+    if (before?.unsubscribed) {
+      try {
+        await sendWelcomeEmail(email);
+      } catch (err) {
+        console.error("newsletter welcome error:", err instanceof Error ? err.message : "unknown");
+      }
+    }
     return NextResponse.json({ ok: true, message: "Subscription confirmed." });
   } catch (err) {
     console.error("newsletter confirm error:", err instanceof Error ? err.message : "unknown");
