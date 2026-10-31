@@ -8,6 +8,7 @@ import { FaqList } from "@/components/faq-list";
 import { Eyebrow, PillLink } from "@/components/ui-kit";
 import { VERIFIED } from "@/content/verified";
 import { ADVISORIES_TOTAL, CHECKED_PACKAGES, getAdvisories } from "@/lib/advisories";
+import { getPosts } from "@/lib/blog";
 import {
   BEST_PAGES,
   CATEGORIES,
@@ -20,7 +21,8 @@ import {
   rank,
 } from "@/lib/data";
 
-export const revalidate = 600;
+// Sin revalidación en caliente: los artículos se leen del disco (src/content/blog) y en el servidor de producción esa carpeta no existe,
+// así que al regenerar la página en caliente el bloque del blog salía vacío. La página se genera en cada build (y el sync diario reconstruye).
 
 export const metadata = {
   alternates: { canonical: "/" },
@@ -35,6 +37,7 @@ export default function HomePage() {
   const verified = all.map((a) => a.verifiedAt).sort().at(-1)!;
   const cards = VERIFIED.length;
   // Ejemplo real del comprobador: el primer aviso de Playwright MCP y su versión corregida.
+  const posts = getPosts().slice(0, 3);
   const demo = getAdvisories("playwright-mcp")[0]?.vulns.find((v) => v.fixedIn.length > 0);
 
   const faq = [
@@ -62,6 +65,21 @@ export default function HomePage() {
 
   return (
     <div>
+      {posts.length > 0 && (
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Latest articles on MCP servers",
+            itemListElement: posts.map((p, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              url: `https://agentshortlist.dev/blog/${p.slug}`,
+              name: p.title,
+            })),
+          }}
+        />
+      )}
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -160,6 +178,59 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {posts.length > 0 && (
+        <section aria-labelledby="blog" className={section}>
+          <div className="space-y-4">
+            <Eyebrow>From the blog</Eyebrow>
+            <h2 id="blog" className="display-2 max-w-4xl fs-title">Latest articles on MCP servers: tests, advisories, evidence.</h2>
+            <p className="prose-measure text-muted-foreground">
+              What happens when we start the servers ourselves, what the published advisories say, and where a tool list can mislead. Every claim
+              links to its source.
+            </p>
+          </div>
+          <div className="grid gap-3 lg:grid-cols-5">
+            <article className="surface surface-hover group relative flex flex-col justify-between gap-8 p-6 lg:col-span-3 lg:p-8">
+              <div className="space-y-3">
+                <div className="flex items-start justify-between gap-4">
+                  <p className="mono-num text-xs text-muted-foreground">
+                    <time dateTime={posts[0].date}>{fmtDate(posts[0].date)}</time>
+                    {posts[0].tags.length ? ` · ${posts[0].tags.join(", ")}` : ""}
+                  </p>
+                  <span aria-hidden="true" className="text-muted-foreground transition-transform duration-200 group-hover:translate-x-0.5 group-hover:text-foreground">→</span>
+                </div>
+                <h3 className="text-2xl font-medium tracking-[-0.035em]">
+                  <Link href={`/blog/${posts[0].slug}`} className="outline-none after:absolute after:inset-0 focus-visible:ring-2 focus-visible:ring-ring">
+                    {posts[0].title}
+                  </Link>
+                </h3>
+                <p className="max-w-[34rem] text-sm leading-[1.6] text-muted-foreground">{posts[0].description}</p>
+              </div>
+            </article>
+            <div className="grid gap-3 lg:col-span-2">
+              {posts.slice(1).map((p) => (
+                <article key={p.slug} className="surface surface-hover group relative flex items-start justify-between gap-4 p-5">
+                  <div className="space-y-1.5">
+                    <p className="mono-num text-xs text-muted-foreground">
+                      <time dateTime={p.date}>{fmtDate(p.date)}</time>
+                    </p>
+                    <h3 className="font-medium tracking-[-0.035em]">
+                      <Link href={`/blog/${p.slug}`} className="outline-none after:absolute after:inset-0 focus-visible:ring-2 focus-visible:ring-ring">
+                        {p.title}
+                      </Link>
+                    </h3>
+                    <p className="line-clamp-3 text-sm text-muted-foreground">{p.description}</p>
+                  </div>
+                  <span aria-hidden="true" className="text-muted-foreground transition-transform duration-200 group-hover:translate-x-0.5 group-hover:text-foreground">→</span>
+                </article>
+              ))}
+            </div>
+          </div>
+          <div>
+            <PillLink href="/blog" variant="soft">All articles</PillLink>
+          </div>
+        </section>
+      )}
 
       <section aria-labelledby="rankings" className={section}>
         <div className="space-y-4">

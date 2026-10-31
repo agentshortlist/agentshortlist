@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "What changed in AI agent rankings",
   description: "Tools that entered or left, license changes, star gains and rank movement, from dated snapshots of public GitHub data.",
   alternates: { canonical: "/changes", types: { "application/atom+xml": "/changes/feed.xml" } },
-  robots: hasHistory ? undefined : { index: false, follow: true },
+  ...(hasHistory ? {} : { robots: { index: false, follow: true } }),
 };
 
 const Group = ({ title, children }: { title: string; children: React.ReactNode }) => (

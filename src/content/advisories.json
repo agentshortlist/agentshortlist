@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-10-24",
+ "checkedAt": "2026-10-31",
  "source": "https://osv.dev",
  "downloadsSource": "npm registry API and pypistats.org, last 7 days",
  "items": {
@@ -110,7 +110,7 @@
     "latest": "0.0.83",
     "total": 1,
     "affectingLatest": 0,
-    "weeklyDownloads": 3804915,
+    "weeklyDownloads": 8572341,
     "vulns": [
      {
       "id": "GHSA-6fg3-hvw7-2fwq",
@@ -144,7 +144,7 @@
     "latest": "0.3.1",
     "total": 2,
     "affectingLatest": 0,
-    "weeklyDownloads": 394686,
+    "weeklyDownloads": 640833,
     "vulns": [
      {
       "id": "GHSA-5xx3-j724-wmx5",
@@ -195,10 +195,10 @@
    {
     "ecosystem": "PyPI",
     "name": "mysql-mcp-server",
-    "latest": "0.4.4",
+    "latest": "0.4.5",
     "total": 4,
     "affectingLatest": 0,
-    "weeklyDownloads": 8825,
+    "weeklyDownloads": 24089,
     "vulns": [
      {
       "id": "PYSEC-2026-4109",
@@ -298,7 +298,7 @@
     "latest": "4.4.4",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 440853,
+    "weeklyDownloads": 556118,
     "vulns": []
    }
   ],
@@ -309,7 +309,7 @@
     "latest": "1.12.0",
     "total": 2,
     "affectingLatest": 0,
-    "weeklyDownloads": 2262793,
+    "weeklyDownloads": 2848483,
     "vulns": [
      {
       "id": "GHSA-8qf9-62x2-82pp",
@@ -362,10 +362,10 @@
    {
     "ecosystem": "npm",
     "name": "n8n-mcp",
-    "latest": "2.98.1",
+    "latest": "2.99.2",
     "total": 11,
     "affectingLatest": 0,
-    "weeklyDownloads": 93806,
+    "weeklyDownloads": 83221,
     "vulns": [
      {
       "id": "GHSA-2cf7-hpwf-47h9",
@@ -612,10 +612,10 @@
    {
     "ecosystem": "npm",
     "name": "firecrawl-mcp",
-    "latest": "3.34.1",
+    "latest": "3.36.0",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 128628,
+    "weeklyDownloads": 170113,
     "vulns": []
    }
   ],
@@ -623,10 +623,10 @@
    {
     "ecosystem": "npm",
     "name": "mongodb-mcp-server",
-    "latest": "3.1.0",
+    "latest": "3.2.2",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 83264,
+    "weeklyDownloads": 170471,
     "vulns": []
    }
   ],
@@ -637,7 +637,7 @@
     "latest": "1.5.0",
     "total": 2,
     "affectingLatest": 0,
-    "weeklyDownloads": 17149,
+    "weeklyDownloads": 34901,
     "vulns": [
      {
       "id": "GHSA-fm8p-53ww-hf6w",
@@ -690,10 +690,10 @@
    {
     "ecosystem": "npm",
     "name": "@agentdeskai/browser-tools-mcp",
-    "latest": "2.0.2",
+    "latest": "2.0.4",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 1715,
+    "weeklyDownloads": 7910,
     "vulns": []
    }
   ],
@@ -701,10 +701,10 @@
    {
     "ecosystem": "npm",
     "name": "@apify/actors-mcp-server",
-    "latest": "0.19.3",
+    "latest": "0.20.0",
     "total": 2,
     "affectingLatest": 0,
-    "weeklyDownloads": 20764,
+    "weeklyDownloads": 30525,
     "vulns": [
      {
       "id": "GHSA-6gr2-qh89-hxwm",
@@ -757,10 +757,10 @@
    {
     "ecosystem": "PyPI",
     "name": "mcp-for-blender",
-    "latest": "2.2.4",
+    "latest": "2.2.6",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 843712,
+    "weeklyDownloads": 756560,
     "vulns": []
    }
   ],
@@ -771,7 +771,7 @@
     "latest": "1.4.0",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 3246,
+    "weeklyDownloads": 2766,
     "vulns": []
    }
   ],
@@ -782,7 +782,7 @@
     "latest": "1.0.169",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 13833,
+    "weeklyDownloads": 30261,
     "vulns": []
    }
   ],
@@ -793,7 +793,7 @@
     "latest": "2.1.0",
     "total": 2,
     "affectingLatest": 0,
-    "weeklyDownloads": 47203,
+    "weeklyDownloads": 35757,
     "vulns": [
      {
       "id": "PYSEC-2026-3061",
@@ -849,7 +849,7 @@
     "latest": "10.3.0",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 71845,
+    "weeklyDownloads": 55559,
     "vulns": []
    }
   ],
@@ -860,7 +860,7 @@
     "latest": "0.12.1",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 6780,
+    "weeklyDownloads": 11993,
     "vulns": []
    }
   ],
@@ -868,10 +868,10 @@
    {
     "ecosystem": "npm",
     "name": "graphjin",
-    "latest": "3.21.16",
+    "latest": "3.21.18",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 519,
+    "weeklyDownloads": 651,
     "vulns": []
    }
   ],
@@ -879,10 +879,10 @@
    {
     "ecosystem": "npm",
     "name": "@modelcontextprotocol/server-filesystem",
-    "latest": "2.0.0",
+    "latest": "2.1.0",
     "total": 2,
     "affectingLatest": 0,
-    "weeklyDownloads": 439752,
+    "weeklyDownloads": 1217330,
     "vulns": [
      {
       "id": "GHSA-hc55-p739-j48w",
@@ -949,28 +949,28 @@
    {
     "ecosystem": "npm",
     "name": "@modelcontextprotocol/server-memory",
-    "latest": "2.0.0",
+    "latest": "2.0.1",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 122926,
+    "weeklyDownloads": 265364,
     "vulns": []
    },
    {
     "ecosystem": "npm",
     "name": "@modelcontextprotocol/server-everything",
-    "latest": "2.0.0",
+    "latest": "2.1.0",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 169257,
+    "weeklyDownloads": 300001,
     "vulns": []
    },
    {
     "ecosystem": "PyPI",
     "name": "mcp-server-git",
-    "latest": "2026.10.19",
+    "latest": "2026.10.28",
     "total": 8,
     "affectingLatest": 0,
-    "weeklyDownloads": 88172,
+    "weeklyDownloads": 103243,
     "vulns": [
      {
       "id": "PYSEC-2026-2630",
@@ -1153,10 +1153,10 @@
    {
     "ecosystem": "PyPI",
     "name": "mcp-server-fetch",
-    "latest": "2026.10.19",
+    "latest": "2026.10.28",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 228583,
+    "weeklyDownloads": 286710,
     "vulns": []
    }
   ],
@@ -1164,10 +1164,10 @@
    {
     "ecosystem": "npm",
     "name": "@supabase/mcp-server-supabase",
-    "latest": "0.14.0",
+    "latest": "0.15.0",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 68012,
+    "weeklyDownloads": 153380,
     "vulns": []
    }
   ],
@@ -1175,10 +1175,10 @@
    {
     "ecosystem": "npm",
     "name": "@notionhq/notion-mcp-server",
-    "latest": "2.5.2",
+    "latest": "2.6.1",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 106705,
+    "weeklyDownloads": 322412,
     "vulns": []
    }
   ],
@@ -1197,10 +1197,10 @@
    {
     "ecosystem": "npm",
     "name": "@brightdata/mcp",
-    "latest": "4.1.0",
+    "latest": "4.1.1",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 11829,
+    "weeklyDownloads": 15737,
     "vulns": []
    }
   ],
@@ -1211,7 +1211,7 @@
     "latest": "3.4.2",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 11469,
+    "weeklyDownloads": 33632,
     "vulns": []
    }
   ],
@@ -1222,7 +1222,7 @@
     "latest": "0.2.22",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 12526,
+    "weeklyDownloads": 26333,
     "vulns": []
    }
   ],
@@ -1233,7 +1233,7 @@
     "latest": "0.13.2",
     "total": 1,
     "affectingLatest": 0,
-    "weeklyDownloads": 61327,
+    "weeklyDownloads": 140026,
     "vulns": [
      {
       "id": "GHSA-gxw4-4fc5-9gr5",
@@ -1268,7 +1268,7 @@
     "latest": "2.1.1",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 122146,
+    "weeklyDownloads": 98302,
     "vulns": []
    }
   ],
@@ -1276,10 +1276,10 @@
    {
     "ecosystem": "PyPI",
     "name": "workspace-mcp",
-    "latest": "2.2.0",
+    "latest": "2.3.0",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 73281,
+    "weeklyDownloads": 70193,
     "vulns": []
    }
   ],
@@ -1290,7 +1290,7 @@
     "latest": "1.3.0",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 7941,
+    "weeklyDownloads": 22729,
     "vulns": []
    }
   ],
@@ -1301,7 +1301,7 @@
     "latest": "0.5.1",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 3588,
+    "weeklyDownloads": 3471,
     "vulns": []
    }
   ],
@@ -1312,7 +1312,7 @@
     "latest": "0.3.3",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 12204,
+    "weeklyDownloads": 22262,
     "vulns": []
    }
   ],
@@ -1323,7 +1323,7 @@
     "latest": "0.1.0-beta.19",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 5743,
+    "weeklyDownloads": 14323,
     "vulns": []
    }
   ],
@@ -1334,7 +1334,7 @@
     "latest": "0.42.0",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 77861,
+    "weeklyDownloads": 198109,
     "vulns": []
    }
   ],
@@ -1342,10 +1342,10 @@
    {
     "ecosystem": "PyPI",
     "name": "excel-mcp-server",
-    "latest": "2.2.2",
+    "latest": "2.2.3",
     "total": 2,
     "affectingLatest": 0,
-    "weeklyDownloads": 52155,
+    "weeklyDownloads": 33569,
     "vulns": [
      {
       "id": "PYSEC-2026-331",
@@ -1398,10 +1398,10 @@
    {
     "ecosystem": "npm",
     "name": "@azure/mcp",
-    "latest": "4.0.0-beta.3",
+    "latest": "4.0.0-beta.4",
     "total": 1,
     "affectingLatest": 0,
-    "weeklyDownloads": 68622,
+    "weeklyDownloads": 185462,
     "vulns": [
      {
       "id": "GHSA-hhfx-wfvq-7g9c",
@@ -1544,7 +1544,7 @@
     "latest": "1.1.0",
     "total": 5,
     "affectingLatest": 0,
-    "weeklyDownloads": 8835,
+    "weeklyDownloads": 8553,
     "vulns": [
      {
       "id": "PYSEC-2026-3862",
@@ -1661,10 +1661,10 @@
    {
     "ecosystem": "npm",
     "name": "@modelcontextprotocol/inspector",
-    "latest": "2.12.0",
+    "latest": "2.13.0",
     "total": 2,
     "affectingLatest": 0,
-    "weeklyDownloads": 295116,
+    "weeklyDownloads": 731794,
     "vulns": [
      {
       "id": "GHSA-g9hg-qhmf-q45m",
@@ -1720,7 +1720,7 @@
     "latest": "0.7.0",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 71407,
+    "weeklyDownloads": 88727,
     "vulns": []
    }
   ],
@@ -1728,19 +1728,19 @@
    {
     "ecosystem": "npm",
     "name": "kubernetes-mcp-server",
-    "latest": "0.0.69",
+    "latest": "0.1.1",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 7613,
+    "weeklyDownloads": 59414,
     "vulns": []
    },
    {
     "ecosystem": "PyPI",
     "name": "kubernetes-mcp-server",
-    "latest": "0.0.69",
+    "latest": "0.1.1",
     "total": 0,
     "affectingLatest": 0,
-    "weeklyDownloads": 4353,
+    "weeklyDownloads": 4540,
     "vulns": []
    },
    {
@@ -1757,11 +1757,33 @@
    {
     "ecosystem": "npm",
     "name": "mcp-server-kubernetes",
-    "latest": "4.1.9",
-    "total": 5,
+    "latest": "4.2.1",
+    "total": 6,
     "affectingLatest": 0,
-    "weeklyDownloads": 3426,
+    "weeklyDownloads": 19145,
     "vulns": [
+     {
+      "id": "GHSA-wmg3-h8mf-wgvr",
+      "aliases": [
+       "CVE-2026-61459"
+      ],
+      "summary": "mcp-server-kubernetes argument injection can expose Kubernetes cluster credentials",
+      "severity": "CRITICAL",
+      "published": "2026-07-10",
+      "fixedIn": [
+       "3.9.0"
+      ],
+      "ranges": [
+       [
+        {
+         "introduced": "0"
+        },
+        {
+         "fixed": "3.9.0"
+        }
+       ]
+      ]
+     },
      {
       "id": "GHSA-6mx4-4h42-r8vh",
       "aliases": [
@@ -1879,10 +1901,10 @@
    {
     "ecosystem": "PyPI",
     "name": "ha-mcp",
-    "latest": "8.7.0",
+    "latest": "9.0.0",
     "total": 6,
     "affectingLatest": 0,
-    "weeklyDownloads": 60509,
+    "weeklyDownloads": 124995,
     "vulns": [
      {
       "id": "PYSEC-2026-2507",

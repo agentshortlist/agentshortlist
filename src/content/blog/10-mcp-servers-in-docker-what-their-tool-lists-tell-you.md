@@ -1,7 +1,7 @@
 ---
 title: "10 MCP servers in Docker: what their tool lists tell you"
 seo_title: "10 MCP servers in Docker: what tool lists show"
-description: We started 10 MCP servers in Docker and recorded what each one lists. All 10 passed. One changed its description hash between two runs of the same version, and the cause was a container ID.
+description: We started 10 MCP servers in Docker and recorded what each lists. All 10 passed. One changed its description hash between runs: the cause was a container ID.
 date: 2026-10-27
 tags: testing, tool-lists, hashes
 ---

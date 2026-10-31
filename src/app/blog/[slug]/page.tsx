@@ -89,6 +89,23 @@ export default async function PostPage({ params }: Props) {
           articles and ranking changes by email from the form at the bottom of the page.
         </p>
       </aside>
+      {(() => {
+        const more = getPosts().filter((x) => x.slug !== p.slug).slice(0, 3);
+        if (!more.length) return null;
+        return (
+          <nav aria-labelledby="more-articles" className="mt-10 space-y-4">
+            <h2 id="more-articles" className="text-xl font-medium tracking-[-0.035em]">More articles</h2>
+            <ul className="divide-y divide-ink/10">
+              {more.map((m) => (
+                <li key={m.slug} className="py-3 first:pt-0">
+                  <Link href={`/blog/${m.slug}`} className="font-medium tracking-[-0.035em] underline-offset-4 hover:underline">{m.title}</Link>
+                  <p className="text-sm text-muted-foreground"><time dateTime={m.date}>{fmtDate(m.date)}</time></p>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        );
+      })()}
     </article>
   );
 }

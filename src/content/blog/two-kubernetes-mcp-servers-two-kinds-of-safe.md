@@ -1,6 +1,6 @@
 ---
 title: Two Kubernetes MCP servers, two kinds of safe
-description: Both Kubernetes MCP servers offer a safer mode. One is documented as read-only; the other documents a non-destructive mode. What each README says, line by line, and where to put the limit.
+description: Both Kubernetes MCP servers offer a safer mode: one is documented read-only, the other non-destructive. What each README says and where to put the limit.
 date: 2026-10-21
 tags: security, kubernetes
 ---

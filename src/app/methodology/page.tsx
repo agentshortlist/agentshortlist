@@ -80,7 +80,7 @@ export default function MethodologyPage() {
       </p>
       <ul className="list-disc space-y-1 pl-5">
         <li><strong>Documented:</strong> the project, its repository or its package says it. The line links to the source and the card shows the review date.</li>
-        <li><strong>Tested:</strong> we ran it ourselves and can state the client, version, system, package or commit, date and result. Each card lists the runs we have made. Until there is one it says &quot;Not yet&quot;. A pass means the server started, answered the handshake and listed its tools; it does not show that the tools work or that limits such as read-only hold.</li>
+        <li><strong>Tested:</strong> we ran it ourselves and can state the client, version, system, package or commit, date and result. Each card lists the runs we have made. Until there is one it says &quot;Not yet&quot;. A pass means the server started, answered the handshake and listed its tools; it does not show that the tools work or that limits such as read-only hold. Since the 2026-07-28 revision of the protocol replaced the <code>initialize</code> handshake, the probe asks <code>server/discover</code> first and falls back to <code>initialize</code> in a fresh process if it gets an error or no answer in 20 seconds. Each run records which one the server answered, so a tool list is always tied to the handshake that produced it.</li>
         <li><strong>The &quot;Tested by us&quot; mark:</strong> a small outlined tag on a card or in a list means we have at least one recorded run for that server, with the date of the latest one. It is not a seal of approval: it does not mean the server is safe, that its tools work, or that it is better than one without the mark. Servers we have not run yet carry no mark and are not worse for it. If a run does not pass, the mark says so.</li>
         <li><strong>Estimated:</strong> a calculation or opinion of ours with its assumptions visible. Our own view is drawn with a dashed outline. Health and risk are estimates built from simple public rules.</li>
         <li><strong>Not verified:</strong> we found no evidence or the source does not answer the question. It is shown as unknown and never counted as a yes.</li>
@@ -142,6 +142,13 @@ export default function MethodologyPage() {
         the repository is archived. Scores are recomputed from those signals with the formula above. We never backfill or
         estimate past values, so history starts on the date of the first snapshot. Changes are on the{" "}
         <Link href="/changes" className="underline underline-offset-4 hover:text-foreground">changes page</Link> and in its Atom feed.
+      </p>
+      <h2 id="how-we-work" className="display-2 scroll-mt-28 pt-6 text-2xl sm:text-3xl">How we work, and how we use AI</h2>
+      <p>
+        The tests, the hashes and the scripts are ours: we start the servers in Docker on our own machine, with no real credentials, and every record
+        is on its card with the exact command, the date and the result. The probe script is public in the repository. We use an AI assistant to help
+        draft articles and replies and to organize our notes. Every number comes from a record or from a source linked on the page, and when
+        something is wrong we correct the card.
       </p>
       <h2 className="display-2 pt-6 text-2xl sm:text-3xl">Corrections</h2>
       <p>

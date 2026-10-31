@@ -133,6 +133,7 @@ export const VERIFIED: VerifiedCard[] = [
     ],
     context: [
       { label: "Tools", value: "25 distinct tool names in the server source (counted by us). One of them, give_feedback_to_desktop_commander, is left out when the client identifies itself as desktop-commander-app, so that client sees 24. Our test run listed all 25.", source: "github", url: "https://github.com/wonderwhy-er/DesktopCommanderMCP/blob/main/src/server.ts" },
+      { label: "Dynamic tool text", value: "The description of start_process includes the host name of the machine it runs on, so its hash differs between hosts. The maintainer says this is deliberate, so the model knows the environment upfront, and that other tool descriptions are dynamic for similar reasons (reply in issue 935, 30 October 2026).", source: "github", url: "https://github.com/wonderwhy-er/DesktopCommanderMCP/issues/935#issuecomment-6518489272" },
       { label: "Token weight of the definitions", value: "Not measured.", source: "unknown" },
     ],
     permissions: [

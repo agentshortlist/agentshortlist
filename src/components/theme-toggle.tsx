@@ -7,7 +7,7 @@ const KEY = "agentshortlist:theme";
 
 // Claro u oscuro, a elección del lector. Se guarda y se aplica antes de pintar (script del <head>).
 export function ThemeToggle() {
-  const [light, setLight] = useState(false);
+  const [light, setLight] = useState(true);
   useEffect(() => {
     // La elección guardada manda. Si React vuelve a pintar la raíz (p. ej. tras un fallo de hidratación) puede devolver la clase
     // "dark" del servidor, así que se reaplica al montar, al volver desde la caché del navegador y cuando cambia en otra pestaña.
@@ -17,7 +17,7 @@ export function ThemeToggle() {
         stored = window.localStorage.getItem(KEY);
       } catch {}
       const root = document.documentElement;
-      const wantLight = stored === "light";
+      const wantLight = stored !== "dark"; // claro por defecto; solo el oscuro se guarda como elección
       if (root.classList.contains("light") !== wantLight || root.classList.contains("dark") === wantLight) {
         root.classList.toggle("light", wantLight);
         root.classList.toggle("dark", !wantLight);

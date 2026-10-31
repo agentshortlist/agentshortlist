@@ -6,6 +6,8 @@ import { ScoreBar, ScoreLegend } from "@/components/score-bar";
 import { TrustBlock } from "@/components/trust-block";
 import { VerifiedCardView } from "@/components/verified-card";
 import { getVerified } from "@/content/verified";
+import { RELATED_POSTS } from "@/content/related-posts";
+import { getPost } from "@/lib/blog";
 import { pairsFor } from "@/lib/compare";
 import { Eyebrow, FreshChip, LicenseChip, PillLink } from "@/components/ui-kit";
 import { TestedChip } from "@/components/tested-chip";
@@ -141,6 +143,24 @@ export default async function AgentPage({ params }: Props) {
       </section>
 
       {verified && <VerifiedCardView card={verified} />}
+
+      {(() => {
+        const related = (RELATED_POSTS[a.slug] ?? []).map((x) => getPost(x)).filter((x): x is NonNullable<typeof x> => Boolean(x));
+        if (!related.length) return null;
+        return (
+          <section aria-labelledby="articles" className="section space-y-4">
+            <h2 id="articles" className="display-2 fs-title">Articles about {a.name}</h2>
+            <ul className="divide-y divide-ink/10">
+              {related.map((r) => (
+                <li key={r.slug} className="py-4 first:pt-0">
+                  <Link href={`/blog/${r.slug}`} className="font-medium tracking-[-0.035em] underline-offset-4 hover:underline">{r.title}</Link>
+                  <p className="prose-measure text-sm text-muted-foreground">{r.description}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        );
+      })()}
 
       <TrustBlock agent={a} categoryRank={position + 1} categorySize={ranked.length} score={me.score} />
 

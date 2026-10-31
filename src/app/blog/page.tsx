@@ -9,7 +9,7 @@ export function generateMetadata(): Metadata {
     title: "Blog: MCP servers read from their docs",
     description: "Articles built on the verified cards: what MCP servers can change, what they send out and how to run them more safely. Every claim has a source.",
     alternates: { canonical: "/blog", types: { "application/atom+xml": "/blog/feed.xml" } },
-    robots: getPosts().length ? undefined : { index: false },
+    ...(getPosts().length ? {} : { robots: { index: false } }),
   };
 }
 

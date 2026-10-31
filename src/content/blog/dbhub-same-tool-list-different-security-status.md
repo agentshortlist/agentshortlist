@@ -1,7 +1,7 @@
 ---
 title: "DBHub 0.22.5 and 0.22.6: same tool list, different security status"
 seo_title: "DBHub: same tool list, different security"
-description: Two DBHub releases three hours apart announced a byte-identical tool list. One is affected by a published advisory and one is not. We ran both in Docker and compared the hashes.
+description: Two DBHub releases, three hours apart, announced a byte-identical tool list. One has a published advisory, the other does not. We ran both in Docker.
 date: 2026-10-30
 tags: dbhub, advisories, testing
 ---
@@ -14,7 +14,7 @@ A check that reads only what an MCP server tells the model cannot tell these two
 ## What we compared
 
 - `@bytebase/dbhub` 0.22.5 and 0.22.6, published on 24 June 2026, about three hours apart (04:22 and 07:34 UTC, from the npm registry).
-- Advisory GHSA-mwwr-p57h-56pf, from OSV.dev, rated high: DBHub's read-only mode did not prevent database writes. It affects every release before 0.22.6, including 0.22.5, and 0.22.6 is the fixed one. The advisory was published on 24 September 2026, three months after the fix.
+- Advisory [GHSA-mwwr-p57h-56pf](https://github.com/bytebase/dbhub/security/advisories/GHSA-mwwr-p57h-56pf), from OSV.dev, rated high: DBHub's read-only mode did not prevent database writes. It affects every release before 0.22.6, including 0.22.5, and 0.22.6 is the fixed one. The advisory was published on 24 September 2026, three months after the fix.
 - Both releases in Docker (`node:22-slim`), no credentials, DBHub's `--demo` mode (an in-memory SQLite database with sample data), a fixed hostname, in the order 0.22.5, 0.22.6, 0.22.5, 0.22.6. Each version ran twice so we could see whether the environment alone changes the result.
 
 ## What we measured
@@ -31,7 +31,7 @@ Two runs of the same version were identical, so the environment is not what make
 
 ## What did change
 
-Not the tool definitions. We compared the two published packages as text, without running either. In 0.22.6 the PostgreSQL, MySQL, MariaDB and SQLite connectors contain read-only statements (`BEGIN READ ONLY`, `START TRANSACTION READ ONLY` and `PRAGMA query_only`); in 0.22.5 none of those strings appear. The lines that define each tool's description, input schema and registration are the same in both. That is the part the advisory is about, and it is not visible in `tools/list`.
+Not the tool definitions. We compared the two published packages as text, without running either. In 0.22.6 the PostgreSQL, MySQL, MariaDB and SQLite connectors contain read-only statements (`BEGIN READ ONLY`, `START TRANSACTION READ ONLY` and `PRAGMA query_only`); in 0.22.5 none of those strings appear. The lines that define each tool's description, input schema and registration are the same in both. That fits what the advisory describes: the database-level read-only setting was written but gated on a config value that was never set, so only a check of each statement's first keyword remained, and a `SELECT` that calls a function with side effects passed it. It is the part the advisory is about, and it is not visible in `tools/list`.
 
 ## What this means
 
