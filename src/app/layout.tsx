@@ -276,6 +276,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 <li><Link href="/radar" className="transition-colors hover:text-foreground">MCP Risk Radar</Link></li>
                 {hasBlog && <li><Link href="/blog" className="transition-colors hover:text-foreground">Blog</Link></li>}
                 <li><Link href="/coverage" className="transition-colors hover:text-foreground">Coverage</Link></li>
+                <li><Link href="/data" className="transition-colors hover:text-foreground">Open data</Link></li>
                 <li><Link href="/changes" className="transition-colors hover:text-foreground">Changes</Link></li>
                 <li><Link href="/about" className="transition-colors hover:text-foreground">About</Link></li>
                 <li><Link href="/sponsor" className="transition-colors hover:text-foreground">Sponsor</Link></li>

@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/about", 0.4),
     entry("/privacy", 0.2),
     entry("/coverage", 0.5),
+    entry("/data", 0.5),
     entry("/verified", 0.7),
     entry("/check", 0.6),
     entry("/radar", 0.6),

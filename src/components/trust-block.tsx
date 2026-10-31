@@ -22,7 +22,7 @@ export function TrustBlock({ agent, categoryRank, categorySize, score }: { agent
     ["Last push", fmtDate(agent.lastPush)],
     ["License", agent.license ?? "None detected by GitHub"],
     ["Rank in category", `${categoryRank} of ${categorySize}`],
-    ["Score", `${score} of 100`],
+    ["Signal score", `${score} of 100`],
   ];
   return (
     <section aria-labelledby="evidence" className="section space-y-8 ">

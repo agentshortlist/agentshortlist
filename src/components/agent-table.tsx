@@ -16,7 +16,7 @@ export function AgentTable({ agents, showScore = false }: { agents: (Agent | Ran
             <tr className="border-b border-ink/[0.09]">
               {showScore && <th scope="col" className={`${th} w-12`}>#</th>}
               <th scope="col" className={th}>Agent</th>
-              {showScore && <th scope="col" className={th}>Score</th>}
+              {showScore && <th scope="col" className={th}>Signal score</th>}
               <th scope="col" className={`${th} text-right`}>Stars</th>
               <th scope="col" className={th}>Last push</th>
               <th scope="col" className={th}>License</th>
