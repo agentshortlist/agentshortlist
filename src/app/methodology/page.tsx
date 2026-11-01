@@ -146,7 +146,7 @@ export default function MethodologyPage() {
       <h2 id="how-we-work" className="display-2 scroll-mt-28 pt-6 text-2xl sm:text-3xl">How we work, and how we use AI</h2>
       <p>
         The tests, the hashes and the scripts are ours: we start the servers in Docker on our own machine, with no real credentials, and every record
-        is on its card with the exact command, the date and the result. The probe script is public in the repository. We use an AI assistant to help
+        is on its card with the exact command, the date and the result. The probe script is public in the repository, and the records are <Link href="/data" className="underline underline-offset-4">open data</Link>. We use an AI assistant to help
         draft articles and replies and to organize our notes. Every number comes from a record or from a source linked on the page, and when
         something is wrong we correct the card.
       </p>

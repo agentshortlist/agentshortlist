@@ -172,7 +172,7 @@ function TestRuns({ slug }: { slug: string }) {
       <div className="space-y-2">
         <h3 className="eyebrow">Tested by us</h3>
         <p className="text-sm leading-[1.6] text-muted-foreground">
-          Each run is one exact combination. A pass means the server started, answered the handshake and listed its tools. It does not mean the tools work or that limits such as read-only hold.
+          Each run is one exact combination. A pass means the server started, answered the handshake and listed its tools. It does not mean the tools work or that limits such as read-only hold. <Link href="/data" className="underline underline-offset-4">All test records as open data</Link>.
         </p>
       </div>
       {runs.map((t) => {

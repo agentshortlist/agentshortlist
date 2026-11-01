@@ -129,7 +129,7 @@ export default function HomePage() {
           <h2 id="tools" className="display-2 max-w-4xl fs-title">Know what it can do before it runs on your machine.</h2>
           <p className="prose-measure text-muted-foreground">
             {cards} servers read from their own docs and source, with the origin of every line. {ADVISORIES_TOTAL} security advisories
-            matched to {CHECKED_PACKAGES} packages. No stars involved.
+            matched to {CHECKED_PACKAGES} packages. No stars involved. Our test records are <Link href="/data" className="underline underline-offset-4 hover:text-foreground">open data</Link>.
           </p>
         </div>
         <div className="grid gap-3 lg:grid-cols-5">

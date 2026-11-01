@@ -37,7 +37,7 @@ export default function VerifiedPage() {
           can change, what it sends out, how well it is maintained and how to limit it. Every line shows where it comes from, and
           anything we could not check says so. Last review {fmtDate(latest)}. This is not a security audit.{" "}
           <Link href="/methodology#verified-cards" className="underline underline-offset-4 hover:text-foreground">How cards work</Link>.
-          For the whole directory, ranked, see the <Link href="/categories/mcp-servers" className="underline underline-offset-4 hover:text-foreground">MCP servers list</Link>.
+          Our test records are <Link href="/data" className="underline underline-offset-4 hover:text-foreground">open data</Link>, as JSON and CSV. For the whole directory, ranked, see the <Link href="/categories/mcp-servers" className="underline underline-offset-4 hover:text-foreground">MCP servers list</Link>.
         </p>
       </header>
 
