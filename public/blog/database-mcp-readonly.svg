@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Of 13 verified database MCP servers, 8 document a read-only option, 2 document none and 3 are not verified.">
+<defs><pattern id="h" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f4f1ea"/><line x1="0" y1="0" x2="0" y2="10" stroke="#8a857a" stroke-width="3"/></pattern></defs>
+<rect width="1200" height="675" fill="#f4f1ea"/>
+<text x="64" y="86" font-family="Georgia, 'Times New Roman', serif" font-size="44" fill="#1c1b18">13 database MCP servers: who can write?</text>
+<text x="64" y="128" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#5b5850">Read-only option, from each server's own documentation, 24 October 2026</text>
+<text x="496" y="252" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="27" fill="#1c1b18">Document a read-only option</text>
+<rect x="520" y="210" width="520.0" height="64" rx="4" fill="#1c1b18"/>
+<text x="1058.0" y="256" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#1c1b18">8</text>
+<text x="496" y="362" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="27" fill="#1c1b18">Document none</text>
+<rect x="520" y="320" width="130.0" height="64" rx="4" fill="#1c1b18"/>
+<text x="668.0" y="366" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#1c1b18">2</text>
+<text x="496" y="472" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="27" fill="#1c1b18">Not verified</text>
+<rect x="520" y="430" width="195.0" height="64" rx="4" fill="url(#h)" stroke="#8a857a" stroke-width="2"/>
+<text x="733.0" y="476" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#1c1b18">3</text>
+<text x="64" y="548" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#5b5850">MySQL and Redis are the two with none. DBHub documents one, and had an advisory saying it did not hold.</text>
+<text x="64" y="578" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#5b5850">A documented option is not a tested one: we have not run any of these servers.</text>
+<text x="64" y="608" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#5b5850">agentshortlist.dev/blog</text>
+</svg>
