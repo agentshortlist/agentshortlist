@@ -31,7 +31,8 @@ const FLAGS: { slug: string; name: string; setting: string; without: number; wit
 ];
 
 export default function DataPage() {
-  const servers = new Set(TESTS.map((t) => t.slug)).size;
+  const cards = new Set(TESTS.map((t) => t.slug)).size;
+  const servers = new Set(TESTS.map((t) => t.package.replace(/(?<=.)@[^@]+$/, ""))).size;
   const latest = TESTS.map((t) => t.testedAt).sort().at(-1)!;
   return (
     <div>
@@ -39,7 +40,7 @@ export default function DataPage() {
         <Eyebrow>Open data</Eyebrow>
         <h1 className="display-2 reveal max-w-4xl fs-title">Every MCP server start we recorded, as data.</h1>
         <p className="reveal reveal-1 prose-measure max-w-[42rem] text-[15px] leading-[1.65] text-muted-foreground">
-          {TESTS.length} records for {servers} servers, the latest from {fmtDate(latest)}. Each one says which version we started, in what
+          {TESTS.length} records for {servers} servers on {cards} cards, the latest from {fmtDate(latest)}. Each one says which version we started, in what
           environment, what it listed and the hash of that list. A pass means the server started and listed its tools. It does not
           mean it is safe.
         </p>

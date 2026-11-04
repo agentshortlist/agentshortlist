@@ -1,7 +1,7 @@
 ---
 title: "MCP Risk Radar #2: 67 advisories, one new critical, 0 on latest"
 seo_title: "MCP Risk Radar #2: 67 advisories, 0 on latest"
-description: One new critical advisory for a tracked MCP server, none affecting a latest version, and what we recorded when we started 24 servers ourselves (33 runs).
+description: One new critical advisory for a tracked MCP server, none on a latest version, and what we recorded starting 27 servers (24 cards, 33 runs) in Docker.
 date: 2026-11-01
 tags: security, advisories, risk-radar
 ---
@@ -46,6 +46,7 @@ We started servers in Docker and recorded the exact version, the environment and
 
 - Desktop Commander: the card now says 25 tools. The count depends on the client, and the maintainer confirmed that part of the description is generated at runtime ([issue 935](https://github.com/wonderwhy-er/DesktopCommanderMCP/issues/935)).
 - Our post about free MCP servers got an FAQ on what "free" covers.
+- We first described our Docker tests as "24 servers". It is 24 cards and 27 servers: four reference servers share one card.
 
 ## What to check this week
 

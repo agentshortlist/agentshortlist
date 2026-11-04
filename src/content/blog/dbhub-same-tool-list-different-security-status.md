@@ -27,7 +27,7 @@ Each server reported `execute_sql` and `search_objects`. The SHA-256 of the desc
 | Schemas | 910f0162e3129022 |
 | Both | 5fc028095d373457 |
 
-Two runs of the same version were identical, so the environment is not what makes them match. The tool list of 0.22.5 and of 0.22.6 is byte-identical.
+Two runs of the same version were identical, so the environment is not what makes them match. The tool list of 0.22.5 and of 0.22.6 is byte-identical. Both releases answered with protocol revision 2025-03-26: neither answered `server/discover` within 20 seconds, so these hashes come from `initialize`. A hash is only comparable if it says how the list was asked.
 
 ## What did change
 
@@ -43,8 +43,8 @@ Not the tool definitions. We compared the two published packages as text, withou
 
 `mysql-mcp-server` 0.4.1 and 0.4.2 also span an advisory (GHSA-rqfv-2mw9-78g2, a missing Origin and Host check in the SSE transport). We could not compare their tool lists: in a clean Docker environment neither started, first because of a missing `dotenv` module and then, with that added, on an `AttributeError` about `list_resources`. We did not investigate the cause. Version 0.4.4 started and listed three tools.
 
-What we did not test: whether read-only mode holds in 0.22.5 or 0.22.6 (we did not run a write), other DBHub versions (the card is on an older version; the latest at the time of writing was 1.5.0), or any other transport. A matching hash is not a security result. It tells you the announced tools did not change.
+What we did not test: whether read-only mode holds in 0.22.5 or 0.22.6 (we did not run a write), other DBHub versions (the card is on an older version; the latest at the time of writing was 1.5.0), or any other transport. Read-only mode on the database also says nothing about data leaving through another tool in the same client, which a reader pointed out; that is outside this test. A matching hash is not a security result. It tells you the announced tools did not change.
 
 ## See it on the cards
 
-[DBHub](/agents/dbhub#verified) shows both test records and the advisory. All [66 advisories we track](/advisories) are listed there with the affected and fixed versions. If we got something wrong, the report link at the bottom of each card reaches us, and corrections change the card, not a score.
+[DBHub](/agents/dbhub#verified) shows both test records and the advisory. All [the advisories we track](/advisories) are listed there with the affected and fixed versions. If we got something wrong, the report link at the bottom of each card reaches us, and corrections change the card, not a score.

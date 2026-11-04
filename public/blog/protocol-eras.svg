@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="How 27 MCP servers answered server/discover: 12 answered with revision 2026-07-28, 10 returned an error and worked with initialize, 4 gave no answer in 20 seconds and worked with initialize, 1 was not classified. server-everything 2.0.0 lists 16 tools with initialize and 22 with server/discover.">
+<rect width="1200" height="675" fill="#f4f1ea"/>
+<text x="64" y="76" font-family="Georgia, 'Times New Roman', serif" font-size="40" fill="#1c1b18">How 27 MCP servers answered server/discover</text>
+<text x="64" y="112" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#5b5850">29 October 2026, Docker, no real credentials, one run each, 20 s wait</text>
+<text x="420" y="177" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1c1b18">Answered server/discover</text>
+<rect x="444" y="150" width="560.0" height="38" rx="3" fill="#1c1b18"/>
+<text x="1018.0" y="180" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#1c1b18">12</text>
+<text x="420" y="239" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1c1b18">Error, then initialize worked</text>
+<rect x="444" y="212" width="466.7" height="38" rx="3" fill="#6b675c"/>
+<text x="924.7" y="242" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#1c1b18">10</text>
+<text x="420" y="301" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1c1b18">No answer in 20 s, initialize worked</text>
+<rect x="444" y="274" width="186.7" height="38" rx="3" fill="#9a968b"/>
+<text x="644.7" y="304" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#1c1b18">4</text>
+<text x="420" y="363" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1c1b18">Not classified (npm error on retry)</text>
+<rect x="444" y="336" width="46.7" height="38" rx="3" fill="#cfc9ba"/>
+<text x="504.7" y="366" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#1c1b18">1</text>
+<rect x="64" y="430" width="1072" height="170" rx="4" fill="none" stroke="#1c1b18" stroke-width="2"/>
+<text x="92" y="478" font-family="Georgia, 'Times New Roman', serif" font-size="32" fill="#1c1b18">Same version, two lists: server-everything 2.0.0</text>
+<text x="92" y="522" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#1c1b18">16 tools asked with initialize.  22 tools asked with server/discover.</text>
+<text x="92" y="566" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#5b5850">The other 11 servers that answered server/discover list exactly the same tools either way. agentshortlist.dev/blog</text>
+</svg>
