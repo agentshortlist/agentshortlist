@@ -3,14 +3,39 @@
 // Uso: node scripts/tools-diff.mjs a.json b.json [--normalize]
 // --normalize sustituye cualquier cadena de 12 caracteres hexadecimales (el ID corto de un contenedor Docker, como pasa en Desktop Commander)
 // por <ID12> antes de comparar y de calcular los hashes. Se usa solo para explicar una diferencia entre entornos; el resultado normalizado se declara como tal.
+// --normalize-lists ordena los elementos de cualquier `default` que sea una lista separada por comas de identificadores simples (2 o más elementos),
+// porque algunos servidores (mcp-atlassian) los emiten en otro orden en cada arranque. Es independiente de --normalize y se declara aparte.
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 const args = process.argv.slice(2);
-const normalize = args.includes("--normalize");
+const normalizeIds = args.includes("--normalize");
+const normalizeLists = args.includes("--normalize-lists");
+const normalize = normalizeIds || normalizeLists;
 const [a, b] = args.filter((x) => !x.startsWith("--")).map((f) => JSON.parse(readFileSync(f, "utf8")));
-if (!a || !b) { console.error("Uso: node scripts/tools-diff.mjs a.json b.json [--normalize]"); process.exit(2); }
+if (!a || !b) { console.error("Uso: node scripts/tools-diff.mjs a.json b.json [--normalize] [--normalize-lists]"); process.exit(2); }
 const ID12 = /\b[0-9a-f]{12}\b/g;
-if (normalize) for (const x of [a, b]) x.tools = JSON.parse(JSON.stringify(x.tools).replace(ID12, "<ID12>"));
+const CSV_ITEM = /^[\w.-]+$/;
+const reordered = [];
+const sortCsvDefaults = (schema, tool) => {
+  const walk = (x, path) => {
+    if (Array.isArray(x)) return x.map((v, i) => walk(v, `${path}[${i}]`));
+    if (!x || typeof x !== "object") return x;
+    return Object.fromEntries(Object.entries(x).map(([k, v]) => {
+      if (k === "default" && typeof v === "string" && v.includes(",")) {
+        const items = v.split(",").map((s) => s.trim());
+        if (items.length >= 2 && items.every((s) => CSV_ITEM.test(s))) {
+          const sorted = [...items].sort().join(",");
+          if (sorted !== items.join(",")) reordered.push(`${tool}${path}`);
+          return [k, sorted];
+        }
+      }
+      return [k, walk(v, `${path}.${k}`)];
+    }));
+  };
+  return walk(schema, "");
+};
+if (normalizeIds) for (const x of [a, b]) x.tools = JSON.parse(JSON.stringify(x.tools).replace(ID12, "<ID12>"));
+if (normalizeLists) for (const x of [a, b]) x.tools = x.tools.map((t) => (t.inputSchema ? { ...t, inputSchema: sortCsvDefaults(t.inputSchema, t.name) } : t));
 const by = (x) => new Map(x.tools.map((t) => [t.name, t]));
 const A = by(a), B = by(b);
 const added = [...B.keys()].filter((k) => !A.has(k));
@@ -32,7 +57,8 @@ const hashesOf = (x) => {
   return { descriptions: sha(s.map((t) => ({ name: t.name, description: t.description ?? "" }))), schemas: sha(s.map((t) => ({ name: t.name, inputSchema: t.inputSchema ?? null }))), all: sha(s) };
 };
 const ha = hashesOf(a), hb = hashesOf(b);
-if (normalize) console.log("NORMALIZED: 12-hex strings replaced by <ID12> before comparing.\n");
+if (normalizeIds) console.log("NORMALIZED: 12-hex strings replaced by <ID12> before comparing.\n");
+if (normalizeLists) console.log(`NORMALIZED: comma-separated \`default\` lists sorted before comparing (${reordered.length} reordered: ${reordered.length ? [...new Set(reordered)].join(", ") : "none"}).\n`);
 // Dónde empieza la diferencia en cada descripción distinta, para poder explicarla.
 for (const k of descChanged) {
   const x = A.get(k).description ?? "", y = B.get(k).description ?? "";

@@ -25,6 +25,33 @@ if (!cmd.length || !opts.slug || !opts.package) {
 const canon = (v) => JSON.stringify(v, (_, x) => (x && typeof x === "object" && !Array.isArray(x) ? Object.fromEntries(Object.keys(x).sort().map((k) => [k, x[k]])) : x));
 const sha = (v) => createHash("sha256").update(canon(v)).digest("hex");
 
+// Un `default` que es una lista separada por comas (p. ej. los 11 campos de jira_search en mcp-atlassian) puede salir en otro orden en cada arranque
+// sin que cambie su contenido. Para el hash NORMALIZADO se ordenan esos elementos; el hash bruto de esquemas se guarda siempre sin tocar.
+// Solo cuenta si hay 2 o más elementos y todos son identificadores simples (letras, números, _ . -): un texto libre con comas no se toca.
+const CSV_ITEM = /^[\w.-]+$/;
+const sortCsvDefaults = (schema, hits = []) => {
+  const walk = (x, path) => {
+    if (Array.isArray(x)) return x.map((v, i) => walk(v, `${path}[${i}]`));
+    if (!x || typeof x !== "object") return x;
+    return Object.fromEntries(Object.entries(x).map(([k, v]) => {
+      if (k === "default" && typeof v === "string" && v.includes(",")) {
+        const items = v.split(",").map((s) => s.trim());
+        if (items.length >= 2 && items.every((s) => CSV_ITEM.test(s))) {
+          const sorted = [...items].sort().join(",");
+          if (sorted !== items.join(",")) hits.push(path);
+          return [k, sorted];
+        }
+      }
+      return [k, walk(v, `${path}.${k}`)];
+    }));
+  };
+  return walk(schema, "");
+};
+const schemaHashes = (tools) => ({
+  schemas: sha(tools.map((t) => ({ name: t.name, inputSchema: t.inputSchema ?? null }))),
+  schemasNormalized: sha(tools.map((t) => ({ name: t.name, inputSchema: sortCsvDefaults(t.inputSchema ?? null) }))),
+});
+
 const env = { PATH: process.env.PATH ?? "", HOME: process.env.HOME ?? os.homedir(), LANG: "C.UTF-8" };
 for (const a of argv.slice(0, sep)) if (a.startsWith("--env=")) { const [k, ...v] = a.slice(6).split("="); env[k] = v.join("="); }
 
@@ -215,10 +242,10 @@ if (fullTools) {
   // Una variable cada vez: descripciones y esquemas por separado, y el conjunto completo.
   const hashes = {
     descriptions: sha(fullTools.map((t) => ({ name: t.name, description: t.description ?? "" }))),
-    schemas: sha(fullTools.map((t) => ({ name: t.name, inputSchema: t.inputSchema ?? null }))),
+    ...schemaHashes(fullTools),
     all: sha(fullTools),
   };
-  console.log("// sha256 of the canonical tools/list (sorted by name, sorted keys):");
+  console.log("// sha256 of the canonical tools/list (sorted by name, sorted keys). schemasNormalized also sorts comma-separated `default` lists; schemas stays raw:");
   console.log(JSON.stringify({ package: opts.package, tools: fullTools.length, ...hashes }, null, 2));
   if (opts["tools-out"]) {
     writeFileSync(opts["tools-out"], JSON.stringify({ package: opts.package, testedAt: record.testedAt, serverInfo: server, hashes, tools: fullTools }, null, 2));
@@ -229,7 +256,7 @@ if (opts["record-out"]) {
   const hashes = fullTools
     ? {
         descriptions: sha(fullTools.map((t) => ({ name: t.name, description: t.description ?? "" }))),
-        schemas: sha(fullTools.map((t) => ({ name: t.name, inputSchema: t.inputSchema ?? null }))),
+        ...schemaHashes(fullTools),
         all: sha(fullTools),
       }
     : null;

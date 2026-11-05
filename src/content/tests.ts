@@ -11,7 +11,7 @@ export type ProbeRecord = {
   os: string; // sistema anfitrión
   environment: string; // p. ej. "Docker node:22-slim, no credentials, synthetic data"
   command?: string; // comando de arranque exacto, con sus flags, tal como se lanzó
-  protocol?: { era: "modern" | "legacy" | "unknown"; discover: string; versionAnswered: string | null; supportedVersions?: string[] | null; checkedAt?: string }; // era del protocolo que habló el servidor; la sonda prueba server/discover (2026-07-28) y, si no, initialize
+  protocol?: { era: "modern" | "legacy" | "unknown"; discover: string; versionAnswered: string | null; supportedVersions?: string[] | null; checkedAt?: string; discoverMs?: number; initializeMs?: number }; // era del protocolo que habló el servidor; la sonda prueba server/discover (2026-07-28) y, si no, initialize
   envSet?: string[]; // nombres (nunca valores) de las variables de entorno que se pasaron al servidor
   install: ProbeStatus;
   handshake: ProbeStatus; // initialize respondido con un protocolo válido
@@ -2430,7 +2430,7 @@ export const TESTS: ProbeRecord[] = [
       "schemas": "96bca3db6c560ee7ffcc4d87083b7bfe16e671b58d8000a7b392998e24cf39ab",
       "all": "327555fc9a5f2363d7a25154bf76bb19d5cd9c8ea9037f29ffb5d4fd9dd0922c"
     },
-    "notes": "Server reported: Atlassian MCP 3.4.11. Took 9.9 s."
+    "notes": "Server reported: Atlassian MCP 3.4.11. Took 9.9 s. Unstable schema hash: two runs of the same configuration gave different schema hashes while descriptions stayed identical. In jira_get_issue, jira_search, jira_get_board_issues and jira_get_sprint_issues only the order of the 11 comma-separated fields in the default of `fields` changes between starts (same set). Compare this server with comma-separated defaults sorted (schemasNormalized in the probe, --normalize-lists in tools-diff); the raw hash is kept as recorded."
   },
   {
     "slug": "mcp-atlassian",
@@ -2568,7 +2568,7 @@ export const TESTS: ProbeRecord[] = [
       "schemas": "ab2fab97a343068c46865639673a078994b6722f9a5eddc6740382fd5e7b5d9b",
       "all": "f95e25333161d9e50b9c2eac647ef6324720ffb8dd445bf2fc6dd086230713a2"
     },
-    "notes": "Server reported: Atlassian MCP 3.4.11. Took 9.9 s."
+    "notes": "Server reported: Atlassian MCP 3.4.11. Took 9.9 s. Unstable schema hash: two runs of the same configuration gave different schema hashes while descriptions stayed identical. In jira_get_issue, jira_search, jira_get_board_issues and jira_get_sprint_issues only the order of the 11 comma-separated fields in the default of `fields` changes between starts (same set). Compare this server with comma-separated defaults sorted (schemasNormalized in the probe, --normalize-lists in tools-diff); the raw hash is kept as recorded."
   },
   {
     "slug": "mcp-atlassian",
@@ -2666,7 +2666,7 @@ export const TESTS: ProbeRecord[] = [
       "schemas": "6cd202f736ac41cbf505c825edb6792833fa39dafa5f3d8f39c7073c925a5ca9",
       "all": "a987e48e9ec442aed2176b40bccff5404718fe2f4eb1aa19682bc318bc8f1898"
     },
-    "notes": "Server reported: Atlassian MCP 3.4.11. Took 10.0 s."
+    "notes": "Server reported: Atlassian MCP 3.4.11. Took 10.0 s. Unstable schema hash: two runs of the same configuration gave different schema hashes while descriptions stayed identical. In jira_get_issue, jira_search, jira_get_board_issues and jira_get_sprint_issues only the order of the 11 comma-separated fields in the default of `fields` changes between starts (same set). Compare this server with comma-separated defaults sorted (schemasNormalized in the probe, --normalize-lists in tools-diff); the raw hash is kept as recorded."
   },
   {
     "slug": "mcp-atlassian",
@@ -2764,7 +2764,7 @@ export const TESTS: ProbeRecord[] = [
       "schemas": "07f07193d24602cea48ccdaee0bce8487c753342ece1113ed3253e111e1ac219",
       "all": "d33dd8b4ad5209f19091bc13e9a1d9e6523b9f599128ea93c310e9676eb71ccb"
     },
-    "notes": "Server reported: Atlassian MCP 3.4.11. Took 10.9 s."
+    "notes": "Server reported: Atlassian MCP 3.4.11. Took 10.9 s. Unstable schema hash: two runs of the same configuration gave different schema hashes while descriptions stayed identical. In jira_get_issue, jira_search, jira_get_board_issues and jira_get_sprint_issues only the order of the 11 comma-separated fields in the default of `fields` changes between starts (same set). Compare this server with comma-separated defaults sorted (schemasNormalized in the probe, --normalize-lists in tools-diff); the raw hash is kept as recorded."
   },
   {
     "slug": "microsoft-mcp-catalog",
@@ -3370,6 +3370,402 @@ export const TESTS: ProbeRecord[] = [
       "all": "e563a83ef3111abb96489f5a52919232faac53348d58a2bcd3d2797a4e055f93"
     },
     "notes": "Server reported: tavily-mcp 0.2.22. Took 11.8 s."
+  },
+  {
+    "slug": "github-mcp-server",
+    "testedAt": "2026-11-05",
+    "package": "ghcr.io/github/github-mcp-server@sha256:f6056fc10bfffcc8c81a6417a2e9ca12808647e8dd6049642a4feaadee0e0f8a (github-mcp-server v2.1.0)",
+    "command": "github-mcp-server stdio",
+    "protocol": {
+      "era": "modern",
+      "discover": "result",
+      "versionAnswered": "2026-07-28",
+      "supportedVersions": [
+        "2026-07-28",
+        "2025-11-25",
+        "2025-06-18",
+        "2025-03-26",
+        "2024-11-05"
+      ],
+      "discoverMs": 109,
+      "checkedAt": "2026-11-05"
+    },
+    "toolNames": [
+      "add_comment_to_pending_review",
+      "add_issue_comment",
+      "add_reply_to_pull_request_comment",
+      "assign_copilot_to_issue",
+      "create_branch",
+      "create_or_update_file",
+      "create_pull_request",
+      "create_repository",
+      "delete_file",
+      "fork_repository",
+      "get_commit",
+      "get_file_contents",
+      "get_label",
+      "get_latest_release",
+      "get_me",
+      "get_release_by_tag",
+      "get_tag",
+      "get_team_members",
+      "get_teams",
+      "issue_read",
+      "issue_write",
+      "list_branches",
+      "list_commits",
+      "list_issue_fields",
+      "list_issue_types",
+      "list_issues",
+      "list_pull_requests",
+      "list_releases",
+      "list_repository_collaborators",
+      "list_tags",
+      "merge_pull_request",
+      "pull_request_read",
+      "pull_request_review_write",
+      "push_files",
+      "request_copilot_review",
+      "search_code",
+      "search_commits",
+      "search_issues",
+      "search_pull_requests",
+      "search_repositories",
+      "search_users",
+      "sub_issue_write",
+      "ui_get",
+      "update_issue_comment",
+      "update_pull_request",
+      "update_pull_request_branch"
+    ],
+    "client": "mcp-probe",
+    "clientVersion": "scripts/mcp-probe.mjs (server/discover, initialize if needed, tools/list)",
+    "os": "Linux 6.18.54.1-microsoft-standard-WSL2 x64",
+    "environment": "node:22-slim + binary extracted from the official image, Docker on Windows, no real credentials, filler values, fixed hostname, resource limits, variant: default",
+    "envSet": [
+      "GITHUB_PERSONAL_ACCESS_TOKEN"
+    ],
+    "install": "pass",
+    "handshake": "pass",
+    "toolsList": {
+      "status": "pass",
+      "count": 46
+    },
+    "hashes": {
+      "descriptions": "29b6d40ae739387a70c0b075c9b0317b110430cd2636e206f6afb6bfdb23e950",
+      "schemas": "3058377321667319366811ff2e6ab7893b5e3bc38a47dc32c7124368ea871e25",
+      "all": "9c7a0befb4861238fd0fb7e6cc4911da9f1612b26a34ff1fd3fd7254e0207f87"
+    },
+    "notes": "Server reported: github-mcp-server v2.1.0. Took 0.2 s."
+  },
+  {
+    "slug": "github-mcp-server",
+    "testedAt": "2026-11-05",
+    "package": "ghcr.io/github/github-mcp-server@sha256:f6056fc10bfffcc8c81a6417a2e9ca12808647e8dd6049642a4feaadee0e0f8a (github-mcp-server v2.1.0)",
+    "command": "github-mcp-server stdio",
+    "protocol": {
+      "era": "modern",
+      "discover": "result",
+      "versionAnswered": "2026-07-28",
+      "supportedVersions": [
+        "2026-07-28",
+        "2025-11-25",
+        "2025-06-18",
+        "2025-03-26",
+        "2024-11-05"
+      ],
+      "discoverMs": 116,
+      "checkedAt": "2026-11-05"
+    },
+    "toolNames": [
+      "add_comment_to_pending_review",
+      "add_issue_comment",
+      "add_reply_to_pull_request_comment",
+      "assign_copilot_to_issue",
+      "create_branch",
+      "create_or_update_file",
+      "create_pull_request",
+      "create_repository",
+      "delete_file",
+      "fork_repository",
+      "get_commit",
+      "get_file_contents",
+      "get_label",
+      "get_latest_release",
+      "get_me",
+      "get_release_by_tag",
+      "get_tag",
+      "get_team_members",
+      "get_teams",
+      "issue_read",
+      "issue_write",
+      "list_branches",
+      "list_commits",
+      "list_issue_fields",
+      "list_issue_types",
+      "list_issues",
+      "list_pull_requests",
+      "list_releases",
+      "list_repository_collaborators",
+      "list_tags",
+      "merge_pull_request",
+      "pull_request_read",
+      "pull_request_review_write",
+      "push_files",
+      "request_copilot_review",
+      "search_code",
+      "search_commits",
+      "search_issues",
+      "search_pull_requests",
+      "search_repositories",
+      "search_users",
+      "sub_issue_write",
+      "ui_get",
+      "update_issue_comment",
+      "update_pull_request",
+      "update_pull_request_branch"
+    ],
+    "client": "mcp-probe",
+    "clientVersion": "scripts/mcp-probe.mjs (server/discover, initialize if needed, tools/list)",
+    "os": "Linux 6.18.54.1-microsoft-standard-WSL2 x64",
+    "environment": "node:22-slim + binary extracted from the official image, Docker on Windows, no real credentials, filler values, fixed hostname, resource limits, variant: default",
+    "envSet": [
+      "GITHUB_PERSONAL_ACCESS_TOKEN"
+    ],
+    "install": "pass",
+    "handshake": "pass",
+    "toolsList": {
+      "status": "pass",
+      "count": 46
+    },
+    "hashes": {
+      "descriptions": "29b6d40ae739387a70c0b075c9b0317b110430cd2636e206f6afb6bfdb23e950",
+      "schemas": "3058377321667319366811ff2e6ab7893b5e3bc38a47dc32c7124368ea871e25",
+      "all": "9c7a0befb4861238fd0fb7e6cc4911da9f1612b26a34ff1fd3fd7254e0207f87"
+    },
+    "notes": "Server reported: github-mcp-server v2.1.0. Took 0.1 s."
+  },
+  {
+    "slug": "github-mcp-server",
+    "testedAt": "2026-11-05",
+    "package": "ghcr.io/github/github-mcp-server@sha256:f6056fc10bfffcc8c81a6417a2e9ca12808647e8dd6049642a4feaadee0e0f8a (github-mcp-server v2.1.0)",
+    "command": "github-mcp-server stdio --read-only",
+    "protocol": {
+      "era": "modern",
+      "discover": "result",
+      "versionAnswered": "2026-07-28",
+      "supportedVersions": [
+        "2026-07-28",
+        "2025-11-25",
+        "2025-06-18",
+        "2025-03-26",
+        "2024-11-05"
+      ],
+      "discoverMs": 102,
+      "checkedAt": "2026-11-05"
+    },
+    "toolNames": [
+      "get_commit",
+      "get_file_contents",
+      "get_label",
+      "get_latest_release",
+      "get_me",
+      "get_release_by_tag",
+      "get_tag",
+      "get_team_members",
+      "get_teams",
+      "issue_read",
+      "list_branches",
+      "list_commits",
+      "list_issue_fields",
+      "list_issue_types",
+      "list_issues",
+      "list_pull_requests",
+      "list_releases",
+      "list_repository_collaborators",
+      "list_tags",
+      "pull_request_read",
+      "search_code",
+      "search_commits",
+      "search_issues",
+      "search_pull_requests",
+      "search_repositories",
+      "search_users",
+      "ui_get"
+    ],
+    "client": "mcp-probe",
+    "clientVersion": "scripts/mcp-probe.mjs (server/discover, initialize if needed, tools/list)",
+    "os": "Linux 6.18.54.1-microsoft-standard-WSL2 x64",
+    "environment": "node:22-slim + binary extracted from the official image, Docker on Windows, no real credentials, filler values, fixed hostname, resource limits, variant: read-only",
+    "envSet": [
+      "GITHUB_PERSONAL_ACCESS_TOKEN"
+    ],
+    "install": "pass",
+    "handshake": "pass",
+    "toolsList": {
+      "status": "pass",
+      "count": 27
+    },
+    "hashes": {
+      "descriptions": "0140d63a264b2a78e4fc92aa2953368a5c4b6db89b0c7fef34183a0371efeed7",
+      "schemas": "7e5de3929e8fbad7c7a8ad881125d2ac9716cd35447303cbb299eaa5e17811e3",
+      "all": "ac0d1081b5e014c34744d2215df5e9c93ec943369de4ff47918d2ce89b0a22ce"
+    },
+    "notes": "Server reported: github-mcp-server v2.1.0. Took 0.1 s."
+  },
+  {
+    "slug": "github-mcp-server",
+    "testedAt": "2026-11-05",
+    "package": "ghcr.io/github/github-mcp-server@sha256:f6056fc10bfffcc8c81a6417a2e9ca12808647e8dd6049642a4feaadee0e0f8a (github-mcp-server v2.1.0)",
+    "command": "github-mcp-server stdio --read-only",
+    "protocol": {
+      "era": "modern",
+      "discover": "result",
+      "versionAnswered": "2026-07-28",
+      "supportedVersions": [
+        "2026-07-28",
+        "2025-11-25",
+        "2025-06-18",
+        "2025-03-26",
+        "2024-11-05"
+      ],
+      "discoverMs": 108,
+      "checkedAt": "2026-11-05"
+    },
+    "toolNames": [
+      "get_commit",
+      "get_file_contents",
+      "get_label",
+      "get_latest_release",
+      "get_me",
+      "get_release_by_tag",
+      "get_tag",
+      "get_team_members",
+      "get_teams",
+      "issue_read",
+      "list_branches",
+      "list_commits",
+      "list_issue_fields",
+      "list_issue_types",
+      "list_issues",
+      "list_pull_requests",
+      "list_releases",
+      "list_repository_collaborators",
+      "list_tags",
+      "pull_request_read",
+      "search_code",
+      "search_commits",
+      "search_issues",
+      "search_pull_requests",
+      "search_repositories",
+      "search_users",
+      "ui_get"
+    ],
+    "client": "mcp-probe",
+    "clientVersion": "scripts/mcp-probe.mjs (server/discover, initialize if needed, tools/list)",
+    "os": "Linux 6.18.54.1-microsoft-standard-WSL2 x64",
+    "environment": "node:22-slim + binary extracted from the official image, Docker on Windows, no real credentials, filler values, fixed hostname, resource limits, variant: read-only",
+    "envSet": [
+      "GITHUB_PERSONAL_ACCESS_TOKEN"
+    ],
+    "install": "pass",
+    "handshake": "pass",
+    "toolsList": {
+      "status": "pass",
+      "count": 27
+    },
+    "hashes": {
+      "descriptions": "0140d63a264b2a78e4fc92aa2953368a5c4b6db89b0c7fef34183a0371efeed7",
+      "schemas": "7e5de3929e8fbad7c7a8ad881125d2ac9716cd35447303cbb299eaa5e17811e3",
+      "all": "ac0d1081b5e014c34744d2215df5e9c93ec943369de4ff47918d2ce89b0a22ce"
+    },
+    "notes": "Server reported: github-mcp-server v2.1.0. Took 0.1 s."
+  },
+  {
+    "slug": "terraform-mcp-server",
+    "testedAt": "2026-11-05",
+    "package": "hashicorp/terraform-mcp-server@sha256:11dd418bba6003dd5777e9d0979b68de59929a155b355f338f407947e00e9d80 (terraform-mcp-server 1.4.1)",
+    "command": "terraform-mcp-server",
+    "protocol": {
+      "era": "legacy",
+      "discover": "error -32601",
+      "versionAnswered": "2025-03-26",
+      "supportedVersions": null,
+      "discoverMs": 6,
+      "initializeMs": 9,
+      "checkedAt": "2026-11-05"
+    },
+    "toolNames": [
+      "get_latest_module_version",
+      "get_latest_provider_version",
+      "get_module_details",
+      "get_policy_details",
+      "get_provider_capabilities",
+      "get_provider_details",
+      "search_modules",
+      "search_policies",
+      "search_provider_docs"
+    ],
+    "client": "mcp-probe",
+    "clientVersion": "scripts/mcp-probe.mjs (server/discover, initialize if needed, tools/list)",
+    "os": "Linux 6.18.54.1-microsoft-standard-WSL2 x64",
+    "environment": "node:22-slim + binary extracted from the official image, Docker on Windows, no real credentials, filler values, fixed hostname, resource limits, variant: default",
+    "envSet": [],
+    "install": "pass",
+    "handshake": "pass",
+    "toolsList": {
+      "status": "pass",
+      "count": 9
+    },
+    "hashes": {
+      "descriptions": "3005807c2fff60c3762eb498874d70435fd0f1b0bb2a609318291677c83be31d",
+      "schemas": "13592eb7b128f5ec313630574f0f6e6eadbdf3ac3360dbbe0563d26d144137dd",
+      "all": "489219be5b936a5b33eb52ce2099dec4dea78338ce2ae73bff69e62841a8b948"
+    },
+    "notes": "Server reported: terraform-mcp-server 1.4.1. Took 0.0 s."
+  },
+  {
+    "slug": "terraform-mcp-server",
+    "testedAt": "2026-11-05",
+    "package": "hashicorp/terraform-mcp-server@sha256:11dd418bba6003dd5777e9d0979b68de59929a155b355f338f407947e00e9d80 (terraform-mcp-server 1.4.1)",
+    "command": "terraform-mcp-server",
+    "protocol": {
+      "era": "legacy",
+      "discover": "error -32601",
+      "versionAnswered": "2025-03-26",
+      "supportedVersions": null,
+      "discoverMs": 5,
+      "initializeMs": 7,
+      "checkedAt": "2026-11-05"
+    },
+    "toolNames": [
+      "get_latest_module_version",
+      "get_latest_provider_version",
+      "get_module_details",
+      "get_policy_details",
+      "get_provider_capabilities",
+      "get_provider_details",
+      "search_modules",
+      "search_policies",
+      "search_provider_docs"
+    ],
+    "client": "mcp-probe",
+    "clientVersion": "scripts/mcp-probe.mjs (server/discover, initialize if needed, tools/list)",
+    "os": "Linux 6.18.54.1-microsoft-standard-WSL2 x64",
+    "environment": "node:22-slim + binary extracted from the official image, Docker on Windows, no real credentials, filler values, fixed hostname, resource limits, variant: default",
+    "envSet": [],
+    "install": "pass",
+    "handshake": "pass",
+    "toolsList": {
+      "status": "pass",
+      "count": 9
+    },
+    "hashes": {
+      "descriptions": "3005807c2fff60c3762eb498874d70435fd0f1b0bb2a609318291677c83be31d",
+      "schemas": "13592eb7b128f5ec313630574f0f6e6eadbdf3ac3360dbbe0563d26d144137dd",
+      "all": "489219be5b936a5b33eb52ce2099dec4dea78338ce2ae73bff69e62841a8b948"
+    },
+    "notes": "Server reported: terraform-mcp-server 1.4.1. Took 0.0 s."
   }
 ];
 export const testsFor = (slug: string): ProbeRecord[] => TESTS.filter((t) => t.slug === slug).sort((a, b) => b.testedAt.localeCompare(a.testedAt));
