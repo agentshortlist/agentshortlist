@@ -7,9 +7,10 @@ import { absoluteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const verified = new Date(getAgents().map((a) => a.verifiedAt).sort().at(-1)!);
-  const entry = (path: string, priority: number): MetadataRoute.Sitemap[number] => ({
+  // lastmod real: los posts llevan su propia fecha (updated o date); poner la fecha de la ultima verificacion en las 294 URLs hace que Google lo ignore.
+  const entry = (path: string, priority: number, lastModified: Date = verified): MetadataRoute.Sitemap[number] => ({
     url: absoluteUrl(path),
-    lastModified: verified,
+    lastModified,
     changeFrequency: "weekly",
     priority,
   });
@@ -26,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/advisories", 0.7),
     entry("/pick", 0.6),
     entry("/compare/live", 0.6),
-    ...(getPosts().length ? [entry("/blog", 0.6), ...getPosts().map((p) => entry(`/blog/${p.slug}`, 0.6))] : []),
+    ...(getPosts().length ? [entry("/blog", 0.6), ...getPosts().map((p) => entry(`/blog/${p.slug}`, 0.6, new Date(p.updated)))] : []),
     ...(snapshotCount >= 2 ? [entry("/changes", 0.5)] : []),
     entry("/sponsor", 0.4),
     entry("/sponsor/terms", 0.2),
