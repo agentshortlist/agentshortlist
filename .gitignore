@@ -78,8 +78,6 @@ docs/stripe-setup.md
 /docs/brand/posts-*.md
 /docs/brand/reddit-*.md
 /docs/testing/borrador-envio-escaner-externo.md
-# imágenes de posts aún sin publicar (se publican con su post)
-/public/blog/flags-and-tool-lists.svg
 /docs/brand/devto-*.md
 /docs/brand/hilo-*.md
 /docs/brand/glama-mailto.txt

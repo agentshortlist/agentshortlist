@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Tools listed by default and with a setting applied, in Docker tests: Atlassian 98 and 58, Grafana 79 and 62, GitHub 46 and 27, Supabase 31 and 19, MongoDB 27 and 18, Blender 9 and 9, ClickHouse 3 and 3.">
+<rect width="1200" height="675" fill="#f4f1ea"/>
+<text x="64" y="70" font-family="Georgia, 'Times New Roman', serif" font-size="40" fill="#1c1b18">What a setting does to the tool list</text>
+<text x="64" y="104" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#5b5850">Tools listed by default (dark) and with the setting on (grey). Docker, 25 Oct to 5 Nov 2026, no real credentials</text>
+<text x="360" y="154" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#1c1b18">Atlassian 0.23.1</text>
+<text x="360" y="176" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#5b5850">READ_ONLY_MODE=true</text>
+<rect x="384" y="132" width="560.0" height="22" rx="3" fill="#1c1b18"/>
+<text x="954.0" y="150" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#1c1b18">98</text>
+<rect x="384" y="158" width="331.4" height="22" rx="3" fill="#9a968b"/>
+<text x="725.4" y="176" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#5b5850">58</text>
+<text x="360" y="219" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#1c1b18">Grafana 2.1.1</text>
+<text x="360" y="241" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#5b5850">--disable-write</text>
+<rect x="384" y="197" width="451.4" height="22" rx="3" fill="#1c1b18"/>
+<text x="845.4" y="215" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#1c1b18">79</text>
+<rect x="384" y="223" width="354.3" height="22" rx="3" fill="#9a968b"/>
+<text x="748.3" y="241" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#5b5850">62</text>
+<text x="360" y="284" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#1c1b18">GitHub 2.1.0</text>
+<text x="360" y="306" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#5b5850">--read-only</text>
+<rect x="384" y="262" width="262.9" height="22" rx="3" fill="#1c1b18"/>
+<text x="656.9" y="280" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#1c1b18">46</text>
+<rect x="384" y="288" width="154.3" height="22" rx="3" fill="#9a968b"/>
+<text x="548.3" y="306" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#5b5850">27</text>
+<text x="360" y="349" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#1c1b18">Supabase 0.15.0</text>
+<text x="360" y="371" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#5b5850">--read-only</text>
+<rect x="384" y="327" width="177.1" height="22" rx="3" fill="#1c1b18"/>
+<text x="571.1" y="345" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#1c1b18">31</text>
+<rect x="384" y="353" width="108.6" height="22" rx="3" fill="#9a968b"/>
+<text x="502.6" y="371" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#5b5850">19</text>
+<text x="360" y="414" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#1c1b18">MongoDB 3.1.0</text>
+<text x="360" y="436" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#5b5850">--readOnly</text>
+<rect x="384" y="392" width="154.3" height="22" rx="3" fill="#1c1b18"/>
+<text x="548.3" y="410" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#1c1b18">27</text>
+<rect x="384" y="418" width="102.9" height="22" rx="3" fill="#9a968b"/>
+<text x="496.9" y="436" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#5b5850">18</text>
+<text x="360" y="479" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#1c1b18">Blender 2.2.4</text>
+<text x="360" y="501" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#5b5850">BLENDER_MCP_SAFE_MODE=1</text>
+<rect x="384" y="457" width="51.4" height="22" rx="3" fill="#1c1b18"/>
+<text x="445.4" y="475" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#1c1b18">9</text>
+<rect x="384" y="483" width="51.4" height="22" rx="3" fill="#9a968b"/>
+<text x="445.4" y="501" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#5b5850">9</text>
+<text x="360" y="544" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#1c1b18">ClickHouse 0.7.0</text>
+<text x="360" y="566" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#5b5850">CLICKHOUSE_ALLOW_WRITE_ACCESS=false</text>
+<rect x="384" y="522" width="17.1" height="22" rx="3" fill="#1c1b18"/>
+<text x="411.1" y="540" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#1c1b18">3</text>
+<rect x="384" y="548" width="17.1" height="22" rx="3" fill="#9a968b"/>
+<text x="411.1" y="566" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#5b5850">3</text>
+<text x="64" y="636" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#5b5850">Five lists shrank. Two did not change: the setting exists but the tool list cannot show it. agentshortlist.dev/blog</text>
+</svg>

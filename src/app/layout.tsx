@@ -48,13 +48,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   // Fijo: las páginas que se regeneran en el servidor (inicio, rankings) no ven src/content y perdían el enlace al blog.
   const hasBlog = true;
   return (
-    <html lang="en" suppressHydrationWarning className={`light ${geistSans.variable} ${plexMono.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`dark ${geistSans.variable} ${plexMono.variable}`}>
       <head>
         {/* Aplica el tema elegido antes de pintar para evitar el parpadeo. Por defecto: claro; el oscuro es opcional y se guarda cuando el lector lo elige. */}
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "try{var l=localStorage.getItem('agentshortlist:theme')!=='dark',c=document.documentElement;c.classList.toggle('light',l);c.classList.toggle('dark',!l);c.style.colorScheme=l?'light':'dark'}catch(e){}" +
+              "try{var l=localStorage.getItem('agentshortlist:theme')==='light',c=document.documentElement;c.classList.toggle('light',l);c.classList.toggle('dark',!l);c.style.colorScheme=l?'light':'dark'}catch(e){}" +
               "try{var d=document.documentElement;if(location.pathname==='/'&&(/[?&]intro=1/.test(location.search)||(!sessionStorage.getItem('agentshortlist:intro')&&!navigator.webdriver&&!matchMedia('(prefers-reduced-motion: reduce)').matches))){d.classList.add('intro');setTimeout(function(){d.classList.remove('intro')},6000)}}catch(e){}",
           }}
         />

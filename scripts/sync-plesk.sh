@@ -82,4 +82,7 @@ if [ "$ok" != "1" ]; then
   fail "publicación revertida"
 fi
 
+# 6. IndexNow: avisa solo de las URLs nuevas que ya responden 200 (Bing y otros; no Google). Nunca hace fallar la sincronización.
+node scripts/indexnow-new.mjs "$SRC/.indexnow-seen.txt" || echo "AVISO: indexnow-new falló"
+
 echo "=== $(date -u +%FT%TZ) OK ($STAMP) ==="
