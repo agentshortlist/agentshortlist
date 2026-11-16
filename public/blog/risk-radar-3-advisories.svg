@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="MCP Risk Radar third edition: 68 published advisories, up from 67. One new, moderate, in DBHub, fixed in 0.22.6. None affects a latest version.">
+<rect width="1200" height="675" fill="#f4f1ea"/>
+<text x="64" y="86" font-family="Georgia, 'Times New Roman', serif" font-size="44" fill="#1c1b18">One new advisory since the second edition</text>
+<text x="64" y="128" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#5b5850">Published advisories for the packages of our verified cards, OSV.dev, checked 11 November 2026</text>
+<text x="536" y="236" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="25" fill="#1c1b18">Second edition, 31 October</text>
+<rect x="560" y="202" width="502.5" height="46" rx="4" fill="#8a867b"/>
+<text x="1078.5" y="236" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#1c1b18">67</text>
+<text x="536" y="312" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="25" fill="#1c1b18">This edition, 11 November</text>
+<rect x="560" y="278" width="510" height="46" rx="4" fill="#1c1b18"/>
+<text x="1086" y="312" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#1c1b18">68</text>
+<text x="64" y="420" font-family="Helvetica, Arial, sans-serif" font-size="27" font-weight="700" fill="#1c1b18">The new one: moderate, in DBHub</text>
+<text x="64" y="462" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#1c1b18">GHSA-j656-3hf2-fvjc. Fixed in 0.22.6. It does not affect the latest release, 1.6.1.</text>
+<text x="64" y="578" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#5b5850">Advisories affecting a latest version: 0.</text>
+<text x="64" y="608" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#5b5850">A count of published advisories is not a measure of how safe a project is.</text>
+<text x="64" y="638" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#5b5850">agentshortlist.dev/blog</text>
+</svg>

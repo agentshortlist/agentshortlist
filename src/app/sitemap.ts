@@ -1,40 +1,52 @@
 import type { MetadataRoute } from "next";
 import { BEST_PAGES, CATEGORIES, getAgents } from "@/lib/data";
-import { PAIRS } from "@/lib/compare";
 import { snapshotCount } from "@/lib/history";
 import { getPosts } from "@/lib/blog";
+import { allAdvisories } from "@/lib/advisories";
+import { VERIFIED, getVerified } from "@/content/verified";
+import { TESTS } from "@/content/tests";
 import { absoluteUrl } from "@/lib/site";
 
+// Qué se ofrece a Google: solo páginas con contenido propio. Los datos de GitHub se refrescan cada día en el servidor, así que
+// poner esa fecha como lastmod hacía que Google lo ignorase (283 de 296 URLs con la misma fecha). Ahora:
+//  - lastmod solo cuando hay una fecha real de cambio de contenido (post, tarjeta, prueba, aviso); si no la hay, no se pone.
+//  - changefreq y priority fuera: Google no los usa.
+//  - fichas sin tarjeta verificada y comparativas siguen existiendo y enlazadas, pero no se piden en el sitemap
+//    (son plantillas con las mismas cifras de GitHub; ver docs/audits/auditoria-opus-2026-11-12.md, hallazgo M1).
+const d = (iso: string) => new Date(iso.length === 10 ? `${iso}T00:00:00.000Z` : iso);
+const latest = (dates: string[]) => (dates.length ? d(dates.slice().sort().at(-1)!) : undefined);
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const verified = new Date(getAgents().map((a) => a.verifiedAt).sort().at(-1)!);
-  // lastmod real: los posts llevan su propia fecha (updated o date); poner la fecha de la ultima verificacion en las 294 URLs hace que Google lo ignore.
-  const entry = (path: string, priority: number, lastModified: Date = verified): MetadataRoute.Sitemap[number] => ({
+  const entry = (path: string, lastModified?: Date): MetadataRoute.Sitemap[number] => ({
     url: absoluteUrl(path),
-    lastModified,
-    changeFrequency: "weekly",
-    priority,
+    ...(lastModified ? { lastModified } : {}),
   });
+
+  const posts = getPosts();
+  const radar = posts.filter((p) => p.tags.includes("risk-radar"));
+  const cardDates = VERIFIED.map((c) => c.reviewedAt);
+  const advisoryDates = allAdvisories().flatMap(([, pkgs]) => pkgs.flatMap((p) => p.vulns.map((v) => v.published))).filter(Boolean) as string[];
+  const withCard = getAgents().filter((a) => getVerified(a.slug));
+
   return [
-    entry("/", 1),
-    entry("/methodology", 0.5),
-    entry("/about", 0.4),
-    entry("/privacy", 0.2),
-    entry("/coverage", 0.5),
-    entry("/data", 0.5),
-    entry("/verified", 0.7),
-    entry("/check", 0.6),
-    entry("/radar", 0.6),
-    entry("/advisories", 0.7),
-    entry("/pick", 0.6),
-    entry("/compare/live", 0.6),
-    ...(getPosts().length ? [entry("/blog", 0.6), ...getPosts().map((p) => entry(`/blog/${p.slug}`, 0.6, new Date(p.updated)))] : []),
-    ...(snapshotCount >= 2 ? [entry("/changes", 0.5)] : []),
-    entry("/sponsor", 0.4),
-    entry("/sponsor/terms", 0.2),
-    entry("/compare", 0.5),
-    ...PAIRS.map((p) => entry(`/compare/${p.slug}`, 0.5)),
-    ...BEST_PAGES.map((b) => entry(`/best/${b.slug}`, 0.9)),
-    ...CATEGORIES.map((c) => entry(`/categories/${c.slug}`, 0.7)),
-    ...getAgents().map((a) => entry(`/agents/${a.slug}`, 0.6)),
+    entry("/"),
+    entry("/methodology"),
+    entry("/about"),
+    entry("/privacy"),
+    entry("/coverage"),
+    entry("/data", latest(TESTS.map((t) => t.testedAt))),
+    entry("/verified", latest(cardDates)),
+    entry("/check"),
+    entry("/radar", latest(radar.map((p) => p.updated))),
+    entry("/advisories", latest(advisoryDates)),
+    entry("/pick"),
+    entry("/compare/live"),
+    ...(posts.length ? [entry("/blog", latest(posts.map((p) => p.updated))), ...posts.map((p) => entry(`/blog/${p.slug}`, d(p.updated)))] : []),
+    ...(snapshotCount >= 2 ? [entry("/changes")] : []),
+    entry("/sponsor"),
+    entry("/sponsor/terms"),
+    ...BEST_PAGES.map((b) => entry(`/best/${b.slug}`)),
+    ...CATEGORIES.map((c) => entry(`/categories/${c.slug}`)),
+    ...withCard.map((a) => entry(`/agents/${a.slug}`, d(getVerified(a.slug)!.reviewedAt))),
   ];
 }

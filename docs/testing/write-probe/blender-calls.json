@@ -1,0 +1,122 @@
+[
+ {
+  "tool": "execute_blender_code",
+  "arguments": {
+   "code": "import bpy\nbpy.ops.mesh.primitive_cube_add()\nprint('ok')",
+   "user_prompt": "probe test in a disposable container"
+  },
+  "label": "A0 control: harmless script"
+ },
+ {
+  "tool": "execute_blender_code",
+  "arguments": {
+   "code": "import os\nos.system('echo probe')",
+   "user_prompt": "probe test in a disposable container"
+  },
+  "label": "A1 direct: os.system"
+ },
+ {
+  "tool": "execute_blender_code",
+  "arguments": {
+   "code": "open('/tmp/probe.txt', 'w').write('probe')",
+   "user_prompt": "probe test in a disposable container"
+  },
+  "label": "A2 direct: open() writes a file"
+ },
+ {
+  "tool": "execute_blender_code",
+  "arguments": {
+   "code": "import subprocess\nsubprocess.run(['echo', 'probe'])",
+   "user_prompt": "probe test in a disposable container"
+  },
+  "label": "A3 direct: subprocess"
+ },
+ {
+  "tool": "execute_blender_code",
+  "arguments": {
+   "code": "getattr(__builtins__, 'ex' + 'ec')('print(1)')",
+   "user_prompt": "probe test in a disposable container"
+  },
+  "label": "B1 built at run time: getattr with joined name"
+ },
+ {
+  "tool": "execute_blender_code",
+  "arguments": {
+   "code": "m = __import__('o' + 's')\nm.system('echo probe')",
+   "user_prompt": "probe test in a disposable container"
+  },
+  "label": "B2 built at run time: __import__ with joined name"
+ },
+ {
+  "tool": "execute_blender_code",
+  "arguments": {
+   "code": "import base64\nexec(base64.b64decode('cHJpbnQoMSk=').decode())",
+   "user_prompt": "probe test in a disposable container"
+  },
+  "label": "B3 built at run time: base64 then exec"
+ },
+ {
+  "tool": "execute_blender_code",
+  "arguments": {
+   "code": "import importlib\nimportlib.import_module('o' + 's').system('echo probe')",
+   "user_prompt": "probe test in a disposable container"
+  },
+  "label": "B4 built at run time: importlib"
+ },
+ {
+  "tool": "execute_blender_code",
+  "arguments": {
+   "code": "x = ().__class__.__bases__[0].__subclasses__()\nprint(len(x))",
+   "user_prompt": "probe test in a disposable container"
+  },
+  "label": "B5 interpreter escape: dunder ladder"
+ },
+ {
+  "tool": "execute_blender_code",
+  "arguments": {
+   "code": "import bpy\nbpy.app.handlers.frame_change_pre.append(lambda s: None)",
+   "user_prompt": "probe test in a disposable container"
+  },
+  "label": "B6 persistence: frame handler"
+ },
+ {
+  "tool": "execute_blender_code",
+  "arguments": {
+   "code": "import bpy\nt = bpy.data.texts.new('probe')",
+   "user_prompt": "probe test in a disposable container"
+  },
+  "label": "B7 text datablock"
+ },
+ {
+  "tool": "execute_blender_code",
+  "arguments": {
+   "code": "import bpy\nbpy.context.scene['payload'] = 'o' + 's'",
+   "user_prompt": "probe test in a disposable container"
+  },
+  "label": "C1 split step 1: store a string (harmless alone)"
+ },
+ {
+  "tool": "execute_blender_code",
+  "arguments": {
+   "code": "import bpy\nn = bpy.context.scene['payload']\ngetattr(bpy, n)",
+   "user_prompt": "probe test in a disposable container"
+  },
+  "label": "C2 split step 2: use the stored string as a name"
+ },
+ {
+  "tool": "execute_blender_code",
+  "arguments": {
+   "code": "import bpy\neval(bpy.context.scene['payload'])",
+   "user_prompt": "probe test in a disposable container"
+  },
+  "label": "C3 split step 2 alt: eval the stored string"
+ },
+ {
+  "tool": "execute_blender_code",
+  "arguments": {
+   "code": "import bpy\nbpy.ops.wm.save_mainfile(filepath='/tmp/probe.blend')",
+   "user_prompt": "probe test in a disposable container"
+  },
+  "label": "D1 allowed by the docs: save a .blend file"
+ }
+]

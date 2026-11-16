@@ -2,6 +2,7 @@
 title: 20 of 54 MCP servers document a read-only mode
 description: We counted which of our 54 verified MCP servers document a way to run read-only, which ones use a switch and which only a recipe, and which say nothing.
 date: 2026-10-22
+updated: 2026-11-12
 tags: security, read-only
 ---
 
@@ -47,7 +48,7 @@ A recipe is only as strong as the permission behind it. That's the point of the 
 
 ## 12 document none
 
-[Playwright](/agents/playwright-mcp), [Desktop Commander](/agents/desktop-commander-mcp), [MySQL](/agents/mysql-mcp-server), [Chrome DevTools](/agents/chrome-devtools-mcp), [Blender](/agents/blender-mcp), [IDA Pro](/agents/ida-pro-mcp), [Talk to Figma](/agents/talk-to-figma-mcp), [Terraform](/agents/terraform-mcp-server), [Redis](/agents/redis-mcp-server), [Datadog](/agents/datadog-mcp-server), [Sentry](/agents/sentry-mcp) and [Flux159's Kubernetes server](/agents/mcp-server-kubernetes).
+[Playwright](/agents/playwright-mcp), [Desktop Commander](/agents/desktop-commander-mcp), [MySQL](/agents/mysql-mcp-server), [Chrome DevTools](/agents/chrome-devtools-mcp), [Blender](/agents/blender-mcp), [IDA Pro](/agents/ida-pro-mcp), Talk to Figma (no longer listed: it went past our 90-day rule, see [Radar #3](/blog/mcp-risk-radar-3-68-advisories-one-new-none-on-latest)), [Terraform](/agents/terraform-mcp-server), [Redis](/agents/redis-mcp-server), [Datadog](/agents/datadog-mcp-server), [Sentry](/agents/sentry-mcp) and [Flux159's Kubernetes server](/agents/mcp-server-kubernetes).
 
 A browser or a 3D editor may not need one in the same way. Others clearly do. The MySQL server's `execute_sql` accepts INSERT, UPDATE and DELETE, and we found no read-only mode in its source. Redis's README suggests a Redis ACL user instead, which is the right answer, but it lives in Redis, not in the MCP server.
 

@@ -3,6 +3,7 @@ title: "Five read-only settings shrank an MCP tool list. Two did nothing."
 seo_title: "Five MCP read-only flags shrink the tool list"
 description: We started seven MCP servers with and without a read-only or safe-mode setting. Five lists shrank by 9 to 40 tools. Two did not change, so a client cannot see the setting.
 date: 2026-11-10
+updated: 2026-11-16
 tags: testing, read-only, tool-lists
 ---
 
@@ -34,7 +35,7 @@ GitHub's server is distributed as a container image, so we took its binary from 
 
 Atlassian, Grafana, GitHub, Supabase and MongoDB take tools away when you set the flag. A client, or a scanner reading tool definitions, can tell the two configurations apart from names and schemas alone. That is the useful case, and the size differs a lot: 9 tools for MongoDB, 40 for Atlassian.
 
-Two caveats. First, we only listed the tools; we did not check that the remaining ones respect the setting. Second, Grafana still lists `grafana_api_request` with `--disable-write`. The name says it makes API requests, and we did not test what it allows in that mode.
+Two caveats. First, we only listed the tools; we did not check that the remaining ones respect the setting. Second, Grafana still lists `grafana_api_request` with `--disable-write`. The name says it makes API requests, and we did not test what it allows in that mode. **Update, 16 November:** we have now called the write tools and tested exactly that. See [We called the write tools with read-only on](/blog/we-called-the-write-tools-with-read-only-on).
 
 ## When it does not, the setting is invisible
 

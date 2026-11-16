@@ -5,7 +5,7 @@ import { JsonLd, breadcrumbLd } from "@/components/json-ld";
 import { Markdown } from "@/components/markdown";
 import { ShareButtons } from "@/components/share-buttons";
 import { getPost, getPosts } from "@/lib/blog";
-import { fmtDate } from "@/lib/data";
+import { fmtDate, getAgent } from "@/lib/data";
 import { AUTHOR_BIO, AUTHOR_NAME, SITE_NAME, absoluteUrl, fitTitle } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -90,20 +90,45 @@ export default async function PostPage({ params }: Props) {
         </p>
       </aside>
       {(() => {
-        const more = getPosts().filter((x) => x.slug !== p.slug).slice(0, 3);
-        if (!more.length) return null;
+        // Relacionados por etiquetas (no solo los más nuevos) y un artículo ancla fijo: así los posts antiguos también reciben enlaces.
+        const ANCHOR = "we-read-25-mcp-servers";
+        // 3 enlaces: el siguiente en el anillo de fechas (cada post recibe siempre al menos uno), el más afín por etiquetas y un ancla fija.
+        const all = getPosts();
+        const i = all.findIndex((x) => x.slug === p.slug);
+        const ring = all[(i + 1) % all.length];
+        const anchor = all.find((x) => x.slug === ANCHOR);
+        const shared = (x: { tags: string[] }) => x.tags.filter((t) => p.tags.includes(t)).length;
+        const taken = new Set([p.slug, ring.slug, anchor?.slug]);
+        const byTags = all.filter((x) => !taken.has(x.slug)).sort((a, b) => shared(b) - shared(a) || b.date.localeCompare(a.date))[0];
+        const more: typeof all = [];
+        for (const x of [ring, byTags, anchor]) if (x && x.slug !== p.slug && !more.some((y) => y.slug === x.slug)) more.push(x);
+        const cited = [...new Set([...p.body.matchAll(/\]\(\/agents\/([a-z0-9-]+)\)/g)].map((m) => m[1]))].map((s) => getAgent(s)).filter((a): a is NonNullable<typeof a> => Boolean(a));
         return (
-          <nav aria-labelledby="more-articles" className="mt-10 space-y-4">
-            <h2 id="more-articles" className="text-xl font-medium tracking-[-0.035em]">More articles</h2>
-            <ul className="divide-y divide-ink/10">
-              {more.map((m) => (
-                <li key={m.slug} className="py-3 first:pt-0">
-                  <Link href={`/blog/${m.slug}`} className="font-medium tracking-[-0.035em] underline-offset-4 hover:underline">{m.title}</Link>
-                  <p className="text-sm text-muted-foreground"><time dateTime={m.date}>{fmtDate(m.date)}</time></p>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <>
+            {cited.length > 0 && (
+              <nav aria-labelledby="servers-in-article" className="mt-10 space-y-3">
+                <h2 id="servers-in-article" className="text-xl font-medium tracking-[-0.035em]">Servers in this article</h2>
+                <ul className="flex flex-wrap gap-x-5 gap-y-2 text-[15px]">
+                  {cited.map((a) => (
+                    <li key={a.slug}><Link href={`/agents/${a.slug}`} className="underline underline-offset-4 hover:text-foreground">{a.name}</Link></li>
+                  ))}
+                </ul>
+              </nav>
+            )}
+            {more.length > 0 && (
+              <nav aria-labelledby="more-articles" className="mt-10 space-y-4">
+                <h2 id="more-articles" className="text-xl font-medium tracking-[-0.035em]">More articles</h2>
+                <ul className="divide-y divide-ink/10">
+                  {more.map((m) => (
+                    <li key={m.slug} className="py-3 first:pt-0">
+                      <Link href={`/blog/${m.slug}`} className="font-medium tracking-[-0.035em] underline-offset-4 hover:underline">{m.title}</Link>
+                      <p className="text-sm text-muted-foreground"><time dateTime={m.date}>{fmtDate(m.date)}</time></p>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            )}
+          </>
         );
       })()}
     </article>

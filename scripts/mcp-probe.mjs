@@ -207,7 +207,7 @@ if (opts.calls && record.toolsList.status === "pass") {
   let callId = 100;
   for (const c of spec) {
     const r = { tool: c.tool, status: "fail", note: "" };
-    if (!tools.includes(c.tool)) {
+    if (!tools.includes(c.tool) && !c.force) { // "force": true envia la llamada aunque la herramienta no figure en tools/list (para comprobar si una herramienta oculta sigue siendo invocable)
       r.note = "tool not in tools/list";
     } else {
       try {

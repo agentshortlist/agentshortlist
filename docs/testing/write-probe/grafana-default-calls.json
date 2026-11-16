@@ -1,0 +1,33 @@
+[
+ {
+  "tool": "grafana_api_request",
+  "arguments": {
+   "endpoint": "/api/org"
+  },
+  "label": "G0 control: GET /api/org"
+ },
+ {
+  "tool": "grafana_api_request",
+  "arguments": {
+   "endpoint": "/api/folders",
+   "method": "POST",
+   "body": "{\"title\": \"probe-by-api-default\"}"
+  },
+  "label": "G1 flag off: POST /api/folders through grafana_api_request"
+ },
+ {
+  "tool": "create_folder",
+  "arguments": {
+   "title": "probe-by-tool-default"
+  },
+  "label": "G2 flag off: create_folder (dedicated write tool)"
+ },
+ {
+  "tool": "grafana_api_request",
+  "arguments": {
+   "endpoint": "/api/folders/probe-victim",
+   "method": "DELETE"
+  },
+  "label": "G3 flag off: DELETE the victim folder"
+ }
+]

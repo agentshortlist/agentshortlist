@@ -1,0 +1,100 @@
+[
+ {
+  "tool": "run_query",
+  "arguments": {
+   "query": "SELECT count() FROM probe_test.t"
+  },
+  "label": "W0 control: read"
+ },
+ {
+  "tool": "run_query",
+  "arguments": {
+   "query": "INSERT INTO probe_test.t VALUES (100, now())"
+  },
+  "label": "W1 INSERT (write is on)"
+ },
+ {
+  "tool": "run_query",
+  "arguments": {
+   "query": "CREATE TABLE probe_test.t_new (id UInt32) ENGINE = MergeTree ORDER BY id"
+  },
+  "label": "W2 CREATE TABLE (write is on)"
+ },
+ {
+  "tool": "run_query",
+  "arguments": {
+   "query": "ALTER TABLE probe_test.t ADD COLUMN extra UInt8 DEFAULT 0"
+  },
+  "label": "W3 ALTER ADD COLUMN"
+ },
+ {
+  "tool": "run_query",
+  "arguments": {
+   "query": "ALTER TABLE probe_test.t DELETE WHERE id = 1"
+  },
+  "label": "W4 ALTER ... DELETE"
+ },
+ {
+  "tool": "run_query",
+  "arguments": {
+   "query": "DROP TABLE probe_test.t_victim"
+  },
+  "label": "W5 DROP TABLE (drop gate should stop it)"
+ },
+ {
+  "tool": "run_query",
+  "arguments": {
+   "query": "DROP/**/TABLE probe_test.t_victim"
+  },
+  "label": "W6 DROP with a comment instead of a space"
+ },
+ {
+  "tool": "run_query",
+  "arguments": {
+   "query": "TRUNCATE TABLE probe_test.t_victim"
+  },
+  "label": "W7 TRUNCATE TABLE"
+ },
+ {
+  "tool": "run_query",
+  "arguments": {
+   "query": "ALTER TABLE probe_test.t DROP PARTITION tuple()"
+  },
+  "label": "W8 ALTER ... DROP PARTITION"
+ },
+ {
+  "tool": "run_query",
+  "arguments": {
+   "query": "SELECT count() FROM probe_test.t"
+  },
+  "label": "W9 count before the TTL change"
+ },
+ {
+  "tool": "run_query",
+  "arguments": {
+   "query": "ALTER TABLE probe_test.t MODIFY TTL ts + INTERVAL 1 SECOND"
+  },
+  "label": "W10 MODIFY TTL in the past (rows expire, no destructive keyword)"
+ },
+ {
+  "tool": "run_query",
+  "arguments": {
+   "query": "EXCHANGE TABLES probe_test.t AND probe_test.t_victim"
+  },
+  "label": "W11 EXCHANGE TABLES (swaps contents, no destructive keyword)"
+ },
+ {
+  "tool": "run_query",
+  "arguments": {
+   "query": "RENAME TABLE probe_test.t_victim TO probe_test.t_renamed"
+  },
+  "label": "W12 RENAME TABLE (no destructive keyword)"
+ },
+ {
+  "tool": "run_query",
+  "arguments": {
+   "query": "OPTIMIZE TABLE probe_test.t_renamed FINAL DEDUPLICATE"
+  },
+  "label": "W13 OPTIMIZE ... DEDUPLICATE"
+ }
+]

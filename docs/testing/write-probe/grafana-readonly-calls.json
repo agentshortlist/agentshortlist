@@ -1,0 +1,76 @@
+[
+ {
+  "tool": "grafana_api_request",
+  "arguments": {
+   "endpoint": "/api/org"
+  },
+  "label": "H0 control: GET /api/org"
+ },
+ {
+  "tool": "grafana_api_request",
+  "arguments": {
+   "endpoint": "/api/folders",
+   "method": "POST"
+  },
+  "label": "H1 --disable-write: POST, no body"
+ },
+ {
+  "tool": "grafana_api_request",
+  "arguments": {
+   "endpoint": "/api/folders",
+   "method": "post"
+  },
+  "label": "H2 --disable-write: lowercase post, no body"
+ },
+ {
+  "tool": "grafana_api_request",
+  "arguments": {
+   "endpoint": "/api/folders/probe-victim",
+   "method": "DELETE"
+  },
+  "label": "H3 --disable-write: DELETE the victim folder"
+ },
+ {
+  "tool": "grafana_api_request",
+  "arguments": {
+   "endpoint": "/api/folders/probe-victim",
+   "method": "PUT"
+  },
+  "label": "H4 --disable-write: PUT, no body"
+ },
+ {
+  "tool": "grafana_api_request",
+  "arguments": {
+   "endpoint": "/api/folders/probe-victim",
+   "method": "PATCH"
+  },
+  "label": "H5 --disable-write: PATCH, no body"
+ },
+ {
+  "tool": "grafana_api_request",
+  "arguments": {
+   "endpoint": "/api/folders/probe-victim",
+   "method": "GET",
+   "headers": {
+    "X-HTTP-Method-Override": "DELETE"
+   }
+  },
+  "label": "H6 --disable-write: GET with X-HTTP-Method-Override: DELETE"
+ },
+ {
+  "tool": "grafana_api_request",
+  "arguments": {
+   "endpoint": "/api/folders/probe-victim",
+   "method": "TRACE"
+  },
+  "label": "H7 --disable-write: unusual method TRACE"
+ },
+ {
+  "tool": "create_folder",
+  "arguments": {
+   "title": "probe-by-tool-readonly"
+  },
+  "label": "H8 --disable-write: call create_folder, which is not listed (sent anyway)",
+  "force": true
+ }
+]

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Write attempts with the setting on, in Docker tests: ClickHouse 7 of 7 stopped, Grafana 6 of 6 stopped, Blender 12 of 12 risky scripts stopped and 3 harmless ones passed, ClickHouse with writes on stopped 5 DROP, DELETE and TRUNCATE forms and let a TTL change, EXCHANGE and RENAME through.">
+<rect width="1200" height="675" fill="#f4f1ea"/>
+<text x="64" y="70" font-family="Georgia, 'Times New Roman', serif" font-size="40" fill="#1c1b18">What happened when we called the write tools</text>
+<text x="64" y="104" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#5b5850">One square per call, with the read-only setting on. Docker, 16 Nov 2026, synthetic data, disposable instances</text>
+<text x="360" y="172" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#1c1b18">ClickHouse 0.7.0</text>
+<text x="360" y="194" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#5b5850">CLICKHOUSE_ALLOW_WRITE_ACCESS off</text>
+<rect x="384" y="150" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="426" y="150" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="468" y="150" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="510" y="150" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="552" y="150" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="594" y="150" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="636" y="150" width="34" height="34" rx="3" fill="#1c1b18"/>
+<text x="384" y="212" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#1c1b18">7 of 7 writes stopped, by the database itself (READONLY, code 164)</text>
+<text x="360" y="284" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#1c1b18">Grafana 2.1.1</text>
+<text x="360" y="306" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#5b5850">--disable-write</text>
+<rect x="384" y="262" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="426" y="262" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="468" y="262" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="510" y="262" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="552" y="262" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="594" y="262" width="34" height="34" rx="3" fill="#1c1b18"/>
+<text x="384" y="324" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#1c1b18">6 of 6 write methods stopped (POST, post, PUT, PATCH, DELETE, TRACE)</text>
+<text x="360" y="396" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#1c1b18">Blender 2.2.4</text>
+<text x="360" y="418" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#5b5850">BLENDER_MCP_SAFE_MODE=1</text>
+<rect x="384" y="374" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="426" y="374" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="468" y="374" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="510" y="374" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="552" y="374" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="594" y="374" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="636" y="374" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="678" y="374" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="720" y="374" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="762" y="374" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="804" y="374" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="846" y="374" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="889" y="375" width="32" height="32" rx="3" fill="none" stroke="#9a968b" stroke-width="2.5"/>
+<rect x="931" y="375" width="32" height="32" rx="3" fill="none" stroke="#9a968b" stroke-width="2.5"/>
+<rect x="973" y="375" width="32" height="32" rx="3" fill="none" stroke="#9a968b" stroke-width="2.5"/>
+<text x="384" y="436" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#1c1b18">12 of 12 risky scripts stopped before the socket; 3 harmless or allowed by design went through</text>
+<text x="360" y="508" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#1c1b18">ClickHouse, writes on</text>
+<text x="360" y="530" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#5b5850">CLICKHOUSE_ALLOW_DROP off</text>
+<rect x="384" y="486" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="426" y="486" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="468" y="486" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="510" y="486" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="552" y="486" width="34" height="34" rx="3" fill="#1c1b18"/>
+<rect x="594" y="486" width="34" height="34" rx="3" fill="#b3412b"/>
+<rect x="636" y="486" width="34" height="34" rx="3" fill="#b3412b"/>
+<rect x="678" y="486" width="34" height="34" rx="3" fill="#b3412b"/>
+<text x="384" y="548" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#1c1b18">5 of 5 keyword forms stopped; TTL change, EXCHANGE and RENAME got through</text>
+<rect x="64" y="616" width="22" height="22" rx="3" fill="#1c1b18"/><text x="96" y="633" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#5b5850">stopped</text>
+<rect x="215" y="617" width="20" height="20" rx="3" fill="none" stroke="#9a968b" stroke-width="2.5"/><text x="246" y="633" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#5b5850">harmless or allowed by design</text>
+<rect x="520" y="616" width="22" height="22" rx="3" fill="#b3412b"/><text x="552" y="633" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#5b5850">got through and changed data</text>
+<text x="1136" y="633" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#5b5850">agentshortlist.dev</text>
+</svg>

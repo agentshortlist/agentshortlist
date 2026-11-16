@@ -1,0 +1,16 @@
+[
+ {
+  "tool": "run_query",
+  "arguments": {
+   "query": "SELECT count() FROM probe_test.t_victim"
+  },
+  "label": "D0 control: read"
+ },
+ {
+  "tool": "run_query",
+  "arguments": {
+   "query": "DROP TABLE probe_test.t_victim"
+  },
+  "label": "D1 DROP TABLE (drop gate is off)"
+ }
+]

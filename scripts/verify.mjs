@@ -186,5 +186,20 @@ if (!flag("--skip-history-test")) {
   } finally { rmSync(tmp, { recursive: true, force: true }); }
 }
 
+// ---------- G. Enlaces internos de los posts ----------
+// Un post no puede enlazar a una ficha que ya no existe (p. ej. retirada por la regla de 90 días): sería un 404 interno.
+console.log("\n## G. Enlaces de los posts");
+{
+  const slugs = new Set(agents.map((a) => a.slug));
+  const dir = "src/content/blog";
+  const broken = [];
+  for (const f of readdirSync(dir).filter((x) => x.endsWith(".md"))) {
+    const src = readFileSync(join(dir, f), "utf8");
+    for (const m of src.matchAll(/\]\(\/agents\/([a-z0-9-]+)\)/g)) if (!slugs.has(m[1])) broken.push(`${f} → /agents/${m[1]}`);
+    for (const m of src.matchAll(/\]\(\/blog\/([a-z0-9-]+)\)/g)) if (!readdirSync(dir).includes(`${m[1]}.md`)) broken.push(`${f} → /blog/${m[1]}`);
+  }
+  ok("ningún post enlaza a una ficha o post que no existe", broken.length === 0, broken.join("; "));
+}
+
 console.log(`\n${total - failed}/${total} comprobaciones superadas${failed ? `, ${failed} FALLAN` : ""}`);
 process.exit(failed ? 1 : 0);
