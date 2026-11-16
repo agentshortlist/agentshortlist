@@ -42,7 +42,23 @@ Turn writes on and ClickHouse adds a second gate: `CLICKHOUSE_ALLOW_DROP`. Witho
 
 It did not stop `ALTER TABLE ... MODIFY TTL ts + INTERVAL 1 SECOND`. The table had four rows before it and none after, with no destructive keyword in the statement. `RENAME TABLE` and `EXCHANGE TABLES` also went through.
 
+On timing: we counted the rows before the statement and again after the next three statements, not right after it. The statement itself came back as a success at once, and ClickHouse applies a TTL change to existing rows as a background mutation, so the rows went after the response, not in it. We did not time how long that took. What the test shows is that a success followed, within that sequence, by an empty table; it does not show how long the gap was.
+
 This is documented. The tool's description calls the gate "a best-effort accident guard, not a security boundary" and tells you to restrict the database user's grants. It only applies if you turned writes on yourself. But it is worth knowing that the second switch is a text filter, not a permission.
+
+## What the caller sees, and whether anything changed
+
+A workflow that wires one of these servers in has to decide when to mark a write as done. These are the two things it can look at, side by side, for what we ran:
+
+| Server and setting | What the caller gets | Did the state change? |
+| --- | --- | --- |
+| ClickHouse, writes off | Error (`isError` true) with ClickHouse's own `READONLY`, code 164 | No |
+| Grafana, `--disable-write` | Error (`isError` true), "only GET requests are permitted"; for the unlisted `create_folder`, a protocol error "unknown tool" | No |
+| Blender, safe mode on | A normal result (`isError` false) with the text "Rejected by safe mode" | No: 12 of 15 never reached the socket |
+| ClickHouse, writes on, drop gate | Error with "Destructive operations are not allowed" for the five keyword forms | No |
+| ClickHouse, writes on, drop gate | A normal result for `MODIFY TTL`, `EXCHANGE TABLES` and `RENAME TABLE` | Yes, seen later: four rows before, none after the next three statements |
+
+The two rows that need extra handling are the Blender rejection, which looks like success, and the last ClickHouse row, which is success. Checking the response alone would get both wrong. Reading the state before and after, as we did, gets both right.
 
 ## Do the annotations match?
 
