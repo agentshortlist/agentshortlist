@@ -1,5 +1,6 @@
 // Auditoría SEO de todas las URLs del sitemap: estado, title, description, canonical, robots, h1, Open Graph y JSON-LD.
 // Uso: node scripts/seo-audit.mjs https://agentshortlist.dev
+import { sitemapUrls } from "./sitemap-urls.mjs";
 const base = (process.argv[2] ?? "https://agentshortlist.dev").replace(/\/$/, "");
 const get = async (u) => {
   const r = await fetch(u, { redirect: "manual", headers: { "User-Agent": "agentshortlist-seo-audit" } });
@@ -8,8 +9,8 @@ const get = async (u) => {
 const pick = (re, s) => (s.match(re) ?? [])[1] ?? null;
 const dec = (s) => (s ?? "").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#x27;|&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
 
-const sm = await get(`${base}/sitemap.xml`);
-const urls = [...sm.text.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].replace(/^https?:\/\/[^/]+/, base));
+const sm = await sitemapUrls(base);
+const urls = sm.urls.map((u) => u.replace(/^https?:\/\/[^/]+/, base));
 console.log(`sitemap: ${urls.length} URLs (status ${sm.status})`);
 
 const rows = [];

@@ -6,6 +6,7 @@
 //  - Una URL que aún no responde 200 se deja sin anotar y se reintenta en la siguiente publicación.
 //  - Nunca falla la sincronización: ante cualquier error sale con código 0 y lo cuenta en el registro.
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { sitemapUrls } from "./sitemap-urls.mjs";
 
 const HOST = "agentshortlist.dev";
 const KEY = "4b2ea51ffb81ee3fb69a4908c844f23f";
@@ -28,8 +29,7 @@ async function okOnly(urls) {
 }
 
 try {
-  const xml = await (await fetch(`https://${HOST}/sitemap.xml`, { signal: AbortSignal.timeout(30000) })).text();
-  const all = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+  const all = (await sitemapUrls(`https://${HOST}`)).urls;
   if (!all.length) { console.log("IndexNow: sitemap vacío, no hago nada"); process.exit(0); }
 
   if (!existsSync(seenFile)) {

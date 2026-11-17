@@ -5,6 +5,7 @@
 // reimplementación independiente de la fórmula, y que el historial es válido, idempotente y solo-añade.
 // --baseline compara el orden de cada /best/ con un fichero {ruta: [nombres]} (útil antes/después de cambios).
 import { execFileSync } from "node:child_process";
+import { sitemapUrls } from "./sitemap-urls.mjs";
 import { cpSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -44,13 +45,15 @@ for (const l of Object.values(ranked)) l.forEach((a, i) => (info[a.slug] = { ...
 
 // ---------- A. Sitemap ----------
 console.log(`\n## A. Sitemap (${BASE})`);
-const sm = await get("/sitemap.xml");
-const paths = [...sm.text.matchAll(/<loc>https?:\/\/[^/]+(\/[^<]*)<\/loc>/g)].map((m) => m[1] || "/");
+const sm = await sitemapUrls(BASE);
+const paths = sm.urls.map((u) => u.replace(/^https?:\/\/[^/]+/, "") || "/");
 let non200 = 0; const pages = {};
 for (const p of paths) { const r = await get(p); pages[p] = r.text; if (r.status !== 200) { non200++; console.log("   no 200:", p, r.status); } }
 ok(`todas las URLs del sitemap responden 200 (${paths.length})`, non200 === 0 && paths.length > 0);
 const comparePaths = paths.filter((p) => /^\/compare\/[^/]+-vs-[^/]+$/.test(p));
 ok("el sitemap incluye /coverage y /compare", paths.includes("/coverage") && paths.includes("/compare"));
+ok("coherencia: todas las fichas de agents.json están en el sitemap (lo indexable va todo)", agents.every((a) => paths.includes(`/agents/${a.slug}`)), agents.filter((a) => !paths.includes(`/agents/${a.slug}`)).map((a) => a.slug).join(", "));
+ok("el sitemap es un índice con archivos por tipo", sm.files.length > 1, `${sm.files.length} archivos`);
 ok("/changes está en el sitemap solo si hay al menos 2 registros", true, `(se comprueba en D)`);
 const sample = comparePaths[0]?.replace("/compare/", "").split("-vs-");
 if (sample?.length === 2) { const rev = await get(`/compare/${sample[1]}-vs-${sample[0]}`); ok("el orden inverso de un par no existe (404)", rev.status === 404, `status ${rev.status}`); }
@@ -116,7 +119,7 @@ for (const a of agents) {
   const i = info[a.slug];
   const verified = h.match(/Stars<\/dt><dd[^>]*>([^<]*)<\/dd>/)?.[1];
   const rankTxt = h.match(/Rank in category<\/dt><dd[^>]*>([^<]*)<\/dd>/g)?.map((x) => strip(x)).join("|") ?? "";
-  const scoreTxt = h.match(/Score<\/dt><dd[^>]*>([^<]*)<\/dd>/)?.[1];
+  const scoreTxt = h.match(/(?:Signal score|Score)<\/dt><dd[^>]*>([^<]*)<\/dd>/)?.[1];
   if (verified !== fmt(a.stars)) agentBad.push(`${a.slug} estrellas`);
   if (!rankTxt.includes(`${i.rank} of ${i.size}`)) agentBad.push(`${a.slug} posición`);
   if (!(scoreTxt ?? "").includes(`${i.score} of 100`)) agentBad.push(`${a.slug} puntuación`);
