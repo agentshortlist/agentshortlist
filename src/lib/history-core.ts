@@ -2,7 +2,7 @@
 // Nunca se rellena ni se estima un valor pasado: solo se usan los registros reales guardados.
 
 export type SnapTool = [stars: number | null, lastPush: string | null, license: string | null, archived: 0 | 1, category: string];
-export type SnapExcluded = { slug: string; name: string; reason: string; daysSincePush: number };
+export type SnapExcluded = { slug: string; name: string; reason: string; daysSincePush: number | null };
 export type Snapshot = { verifiedAt: string; tools: Record<string, SnapTool>; excluded: SnapExcluded[] };
 export type History = Record<string, Snapshot>;
 export type Order = Record<string, string[]>; // categoría → slugs en orden de ranking

@@ -1,7 +1,7 @@
 import excluded from "@/data/excluded.json";
 import { CATEGORIES, getAgents, getAgentsByCategory, isOpenSource, type Agent } from "@/lib/data";
 
-export type Excluded = { name: string; repo: string; reason: string; daysSincePush: number };
+export type Excluded = { name: string; repo: string; reason: string; daysSincePush: number | null };
 export const EXCLUDED = excluded as Excluded[];
 
 export type LicenseMix = { total: number; osi: number; other: number; notStated: number; osiLabels: { license: string; count: number }[]; notStatedNames: string[]; otherNames: string[] };

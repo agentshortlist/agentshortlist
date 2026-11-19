@@ -12,7 +12,7 @@ export function tickerFacts(): Fact[] {
   const byPush = [...all].sort((a, b) => (b.lastPush ?? "").localeCompare(a.lastPush ?? ""))[0];
   const verified = all.map((a) => a.verifiedAt).sort().at(-1)!;
   const open = all.filter(isOpenSource).length;
-  const inactive = (excluded as { name: string; reason: string; daysSincePush: number }[]).filter((e) => e.reason === "inactive");
+  const inactive = (excluded as { name: string; reason: string; daysSincePush: number | null }[]).filter((e) => e.reason === "inactive");
 
   const facts: Fact[] = [
     { key: "tools", label: "Tools tracked", value: String(all.length) },

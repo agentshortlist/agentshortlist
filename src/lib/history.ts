@@ -81,5 +81,6 @@ export const REASON_TEXT: Record<string, string> = {
   inactive: "no push in the last 90 days",
   archived: "repository archived",
   "no English description": "no English description on GitHub",
+  "repository not found": "repository no longer found on GitHub",
   "not in the current list": "no longer in the curated list",
 };

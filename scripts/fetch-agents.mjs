@@ -264,6 +264,11 @@ for (const [repo, category, display] of SEED) {
       continue;
     }
     live++;
+    if (res.status === 404) {
+      // El repositorio ya no existe (borrado, privado o movido sin redirección): sale de la lista como una exclusión más, no tumba la sincronización.
+      excluded.push({ name: display, repo, reason: "repository not found", daysSincePush: null });
+      continue;
+    }
     if (!res.ok) {
       failed.push({ repo, status: res.status });
       continue;
