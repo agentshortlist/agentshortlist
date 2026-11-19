@@ -231,6 +231,12 @@ if (opts.calls && record.toolsList.status === "pass") {
     record.clientVersion = "scripts/mcp-probe.mjs (initialize + tools/list + tools/call)";
   }
 }
+// --hold=<segundos>: tras tools/list, deja el servidor vivo ese tiempo antes de cerrarlo (prueba de telemetria: algunos envian en lotes cada cierto tiempo).
+if (opts.hold) {
+  console.error(`HOLD-START ${new Date().toISOString()} ${opts.hold}s`);
+  await new Promise((r) => setTimeout(r, Number(opts.hold) * 1000));
+  record.notes += `Held ${opts.hold} s after tools/list. `;
+}
 child.kill();
 record.notes += `Server reported: ${server ? `${server.name} ${server.version ?? ""}`.trim() : "nothing"}. Took ${((Date.now() - started) / 1000).toFixed(1)} s.`;
 if (stderr && record.handshake === "fail") record.notes += ` stderr tail: ${stderr.replace(/\s+/g, " ").slice(-300)}`;

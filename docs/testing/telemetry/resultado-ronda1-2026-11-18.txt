@@ -1,0 +1,239 @@
+﻿######## RESULTADO prueba de telemetria
+######## 2026-11-18T09:09:02  ventana tras tools/list: 40 s  imagen: v22.23.4 | uv 0.13.9 (x86_64-unknown-linux-musl)
+
+=== apify.default
+  handshake: fail | tools/list: - | servidor: nothing | fin de tools/list a los 113.2 s
+  - o272833.ingest.us.sentry.io  (primera vez a los 3.8 s; DNS 6, TLS 6)
+  - api.apify.com  (primera vez a los 4.1 s; DNS 26, TLS 26)
+
+=== apify.optout
+  handshake: fail | tools/list: - | servidor: nothing | fin de tools/list a los 113.2 s
+  - api.apify.com  (primera vez a los 4.8 s; DNS 26, TLS 26)
+
+=== atlassian.default
+  handshake: pass | tools/list: pass (98) | servidor: Atlassian MCP 3.4.11 | fin de tools/list a los 8.5 s
+  - pypi.org  (primera vez a los 6.9 s; DNS 4, TLS 2)
+
+=== azure.default
+  handshake: fail | tools/list: - | servidor: nothing | fin de tools/list a los 113.3 s
+  nombres contactados: NINGUNO
+
+=== azure.optout
+  handshake: fail | tools/list: - | servidor: nothing | fin de tools/list a los 113.2 s
+  nombres contactados: NINGUNO
+
+=== blender.default
+  handshake: pass | tools/list: pass (9) | servidor: MCP for Blender 1.30.0 | fin de tools/list a los 5 s
+  - yzasssndwqceclzilcdu.supabase.co  (primera vez a los 5.1 s; DNS 2, TLS 1)
+
+=== blender.optout
+  handshake: pass | tools/list: pass (9) | servidor: MCP for Blender 1.30.0 | fin de tools/list a los 3.9 s
+  nombres contactados: NINGUNO
+
+=== bright-data.default
+  handshake: ? | tools/list: - | servidor: -
+  nombres contactados: NINGUNO
+
+=== browser-tools.default
+  handshake: pass | tools/list: pass (16) | servidor: browser-tools-mcp 2.0.0 | fin de tools/list a los 3.8 s
+  nombres contactados: NINGUNO
+
+=== chrome-devtools.default
+  handshake: pass | tools/list: pass (32) | servidor: chrome_devtools 1.12.0 | fin de tools/list a los 4.4 s
+  - play.googleapis.com  (primera vez a los 3.8 s; DNS 2, TLS 2)
+  - registry.npmjs.org  (primera vez a los 3.8 s; DNS 1, TLS 1)
+
+=== chrome-devtools.optout
+  handshake: pass | tools/list: pass (32) | servidor: chrome_devtools 1.12.0 | fin de tools/list a los 4.1 s
+  - registry.npmjs.org  (primera vez a los 3.8 s; DNS 2, TLS 1)
+
+=== clickhouse.default
+  handshake: pass | tools/list: pass (3) | servidor: mcp-clickhouse 0.7.0 | fin de tools/list a los 5.9 s
+  - pypi.org  (primera vez a los 5.4 s; DNS 2, TLS 1)
+
+=== codebase-memory.default
+  handshake: pass | tools/list: pass (17) | servidor: codebase-memory-mcp 0.12.1 | fin de tools/list a los 11.7 s
+  nombres contactados: NINGUNO
+
+=== context-mode.default
+  handshake: pass | tools/list: pass (11) | servidor: context-mode 1.0.169 | fin de tools/list a los 3.5 s
+  - registry.npmjs.org  (primera vez a los 3.3 s; DNS 2, TLS 2)
+
+=== context7.default
+  handshake: pass | tools/list: pass (2) | servidor: Context7 4.4.4 | fin de tools/list a los 3.5 s
+  nombres contactados: NINGUNO
+
+=== control.default
+  handshake: ? | tools/list: - | servidor: -
+  - telemetry.control.test  (primera vez a los 3.2 s; DNS 1, TLS 1)
+  - plain.control.test  (primera vez a los 3.2 s; DNS 1, HTTP: POST /e (cuerpo 3 B))
+
+=== dbhub.default
+  handshake: pass | tools/list: pass (2) | servidor: DBHub MCP Server 0.22.6 | fin de tools/list a los 4.2 s
+  nombres contactados: NINGUNO
+
+=== desktop-commander.default
+  handshake: pass | tools/list: pass (25) | servidor: desktop-commander 0.3.1 | fin de tools/list a los 4 s
+  - desktopcommander.app  (primera vez a los 3.6 s; DNS 2, TLS 2)
+  - telemetry.desktopcommander.app  (primera vez a los 3.9 s; DNS 3, TLS 3)
+  - dc-telemetry-proxy-83847352264.europe-west1.run.app  (primera vez a los 3.9 s; DNS 3, TLS 3)
+  - googlechromelabs.github.io  (primera vez a los 4 s; DNS 1, TLS 1)
+
+=== exa.default
+  handshake: pass | tools/list: pass (3) | servidor: exa-search-server 3.4.3 | fin de tools/list a los 3.5 s
+  nombres contactados: NINGUNO
+
+=== excel.default
+  handshake: pass | tools/list: pass (46) | servidor: excel-mcp-server 2.2.2 | fin de tools/list a los 5.1 s
+  nombres contactados: NINGUNO
+
+=== fetch.default
+  handshake: pass | tools/list: pass (1) | servidor: mcp-fetch 2026.10.19 | fin de tools/list a los 4.7 s
+  nombres contactados: NINGUNO
+
+=== figma.default
+  handshake: pass | tools/list: pass (2) | servidor: Figma MCP Server 0.13.2 | fin de tools/list a los 4.2 s
+  nombres contactados: NINGUNO
+
+=== firecrawl.default
+  handshake: pass | tools/list: pass (28) | servidor: firecrawl-fastmcp 3.36.1 | fin de tools/list a los 3.9 s
+  nombres contactados: NINGUNO
+
+=== git.default
+  handshake: fail | tools/list: - | servidor: nothing | fin de tools/list a los 113.2 s
+  nombres contactados: NINGUNO
+
+=== google-workspace.default
+  handshake: pass | tools/list: pass (119) | servidor: google_workspace 4.2.1 | fin de tools/list a los 6.9 s
+  nombres contactados: NINGUNO
+
+=== grafana.default
+  handshake: pass | tools/list: pass (79) | servidor: mcp-grafana v2.1.1 | fin de tools/list a los 3.3 s
+  - stats.grafana.org  (primera vez a los 43.3 s; DNS 2, TLS 1)
+
+=== home-assistant.default
+  handshake: no-instalado | tools/list: - | servidor: -
+  NO-INSTALADO: Downloading cpython-3.13.18-linux-x86_64-gnu (download) (33.9MiB) Downloaded cpython-3.13.18-linux-x86_64-gnu (download) error: No solution found when resolving dependencies cause: Because the current Python version (3.12.16) does not satisfy Python>=3.13,<3.15 and ha-mcp==9.1.0 dep
+  nombres contactados: NINGUNO
+
+=== mcp-server-kubernetes.default
+  handshake: pass | tools/list: pass (23) | servidor: kubernetes 4.1.9 | fin de tools/list a los 5 s
+  nombres contactados: NINGUNO
+
+=== mongodb.default
+  handshake: pass | tools/list: pass (27) | servidor: MongoDB MCP Server 3.1.0 | fin de tools/list a los 3.9 s
+  - cloud.mongodb.com  (primera vez a los 43.9 s; DNS 1, TLS 1)
+
+=== motherduck.default
+  handshake: pass | tools/list: pass (4) | servidor: mcp-server-motherduck 1.1.0 | fin de tools/list a los 5.8 s
+  - pypi.org  (primera vez a los 5.1 s; DNS 2, TLS 1)
+
+=== mysql.default
+  handshake: pass | tools/list: pass (3) | servidor: mysql_mcp_server 1.30.0 | fin de tools/list a los 4.5 s
+  nombres contactados: NINGUNO
+
+=== n8n.default
+  handshake: pass | tools/list: pass (7) | servidor: n8n-documentation-mcp 2.99.1 | fin de tools/list a los 3.9 s
+  - telemetry.n8n-mcp.com  (primera vez a los 43.9 s; DNS 2, TLS 1)
+
+=== neon.default
+  handshake: fail | tools/list: - | servidor: nothing | fin de tools/list a los 113.3 s
+  - console.neon.tech  (primera vez a los 4.4 s; DNS 2, TLS 2)
+
+=== notion.default
+  handshake: pass | tools/list: pass (24) | servidor: Notion API 1.0.0 | fin de tools/list a los 3.5 s
+  nombres contactados: NINGUNO
+
+=== perplexity.default
+  handshake: pass | tools/list: pass (4) | servidor: ai | fin de tools/list a los 3.7 s
+  nombres contactados: NINGUNO
+
+=== playwright.default
+  handshake: pass | tools/list: pass (25) | servidor: Playwright 1.64.0-alpha-1790635538000 | fin de tools/list a los 3.8 s
+  nombres contactados: NINGUNO
+
+=== qdrant.default
+  handshake: fail | tools/list: - | servidor: nothing | fin de tools/list a los 113.2 s
+  - huggingface.co  (primera vez a los 6.4 s; DNS 16, TLS 8)
+  - mobile.events.data.microsoft.com  (primera vez a los 15.2 s; DNS 10)
+
+=== redis.default
+  handshake: pass | tools/list: pass (53) | servidor: Redis MCP Server 1.30.0 | fin de tools/list a los 6.1 s
+  nombres contactados: NINGUNO
+
+=== sentry.default
+  handshake: pass | tools/list: pass (9) | servidor: Sentry MCP 0.42.0 | fin de tools/list a los 4.7 s
+  nombres contactados: NINGUNO
+
+=== serena.default
+  handshake: pass | tools/list: pass (3) | servidor: Serena 2.1.0 | fin de tools/list a los 5.7 s
+  - pypi.org  (primera vez a los 5.6 s; DNS 2, TLS 1)
+  - oraios-software.de  (primera vez a los 5.6 s; DNS 4, TLS 2)
+
+=== server-everything.default
+  handshake: pass | tools/list: pass (22) | servidor: mcp-servers/everything 2.0.0 | fin de tools/list a los 3.4 s
+  nombres contactados: NINGUNO
+
+=== server-memory.default
+  handshake: pass | tools/list: pass (9) | servidor: memory-server 2.0.0 | fin de tools/list a los 3.3 s
+  nombres contactados: NINGUNO
+
+=== stripe.default
+  handshake: fail | tools/list: - | servidor: nothing | fin de tools/list a los 113.2 s
+  - mcp.stripe.com  (primera vez a los 3.4 s; DNS 2, TLS 2)
+
+=== supabase.default
+  handshake: pass | tools/list: fail (0) | servidor: supabase 0.15.0 | fin de tools/list a los 3.5 s
+  - supabase.com  (primera vez a los 3.5 s; DNS 1, TLS 1)
+
+=== tavily.default
+  handshake: pass | tools/list: pass (5) | servidor: tavily-mcp 0.2.22 | fin de tools/list a los 3.8 s
+  nombres contactados: NINGUNO
+
+=== toolbox.default
+  handshake: pass | tools/list: pass (2) | servidor: Toolbox 1.15.0+binary | fin de tools/list a los 3.3 s
+  - api.github.com  (primera vez a los 3.3 s; DNS 2, TLS 1)
+
+46 ejecuciones resumidas
+######## warm.log
+WARM chrome-devtools: OK {"bin":"chrome-devtools-mcp","installed":"1.12.0"}
+WARM apify: OK {"bin":"actors-mcp-server","installed":"0.20.1"}
+WARM blender: OK {"bin":"mcp-for-blender","installed":"2.2.4"}
+WARM azure: OK {"bin":"azmcp","installed":"4.0.0-beta.4"}
+WARM playwright: OK {"bin":"playwright-mcp","installed":"0.0.83"}
+WARM context7: OK {"bin":"context7-mcp","installed":"4.4.4"}
+WARM codebase-memory: OK {"bin":"codebase-memory-mcp","installed":"0.12.1"}
+WARM context-mode: OK {"bin":"context-mode","installed":"1.0.169"}
+WARM desktop-commander: OK {"bin":"desktop-commander","installed":"0.3.1"}
+WARM browser-tools: OK {"bin":"browser-tools-mcp","installed":"2.0.2"}
+WARM dbhub: OK {"bin":"dbhub","installed":"0.22.6"}
+WARM mcp-server-kubernetes: OK {"bin":"mcp-server-kubernetes","installed":"4.1.9"}
+WARM n8n: OK {"bin":"n8n-mcp","installed":"2.99.1"}
+WARM mongodb: OK {"bin":"mongodb-mcp-server","installed":"3.1.0"}
+WARM server-memory: OK {"bin":"mcp-server-memory","installed":"2.0.0"}
+WARM server-everything: OK {"bin":"mcp-server-everything","installed":"2.0.0"}
+WARM bright-data: OK {"bin":"@brightdata/mcp","installed":"4.3.0"}
+WARM exa: OK {"bin":"exa-mcp-server","installed":"3.4.3"}
+WARM firecrawl: OK {"bin":"firecrawl-mcp","installed":"3.36.1"}
+WARM figma: OK {"bin":"figma-developer-mcp","installed":"0.13.2"}
+WARM notion: OK {"bin":"notion-mcp-server","installed":"2.6.1"}
+WARM perplexity: OK {"bin":"perplexity-mcp","installed":"1.3.0"}
+WARM sentry: OK {"bin":"sentry-mcp","installed":"0.42.0"}
+WARM supabase: OK {"bin":"mcp-server-supabase","installed":"0.15.0"}
+WARM tavily: OK {"bin":"tavily-mcp","installed":"0.2.22"}
+WARM toolbox: OK {"bin":"toolbox","installed":"1.15.0"}
+WARM neon: OK {"bin":"mcp-server-neon","installed":"0.6.5"}
+WARM stripe: OK {"bin":"mcp","installed":"0.3.3"}
+WARM fetch: OK {"bin":"mcp-server-fetch","installed":"2026.10.19"}
+WARM git: OK {"bin":"mcp-server-git","installed":"2026.10.19"}
+WARM excel: OK {"bin":"excel-mcp-server","installed":"2.2.2"}
+WARM redis: OK {"bin":"redis-mcp-server","installed":"0.5.1"}
+WARM qdrant: OK {"bin":"mcp-server-qdrant","installed":"0.8.1"}
+WARM motherduck: OK {"bin":"mcp-server-motherduck","installed":"1.1.0"}
+WARM serena: OK {"bin":"serena","installed":"2.1.0"}
+WARM grafana: OK {"bin":"mcp-grafana","installed":"2.1.1"}
+WARM clickhouse: OK {"bin":"mcp-clickhouse","installed":"0.7.0"}
+WARM google-workspace: OK {"bin":"workspace-mcp","installed":"2.3.0"}
+WARM home-assistant: FALLO -mcp==9.1.0 depends on Python>=3.13,<3.15, we can conclude that ha-mcp==9.1.0 cannot be used. And because you require ha-mcp==9.1.0, we can conclude that your requirements are unsatisfiable. 
+WARM atlassian: OK {"bin":"mcp-atlassian","installed":"0.23.1"}
+WARM mysql: OK {"bin":"mysql_mcp_server","installed":"0.4.4"}

@@ -1,0 +1,539 @@
+[
+ {
+  "id": "chrome-devtools",
+  "slug": "chrome-devtools-mcp",
+  "kind": "node",
+  "pkg": "chrome-devtools-mcp",
+  "ver": "1.12.0",
+  "args": [],
+  "env": [],
+  "optout": {
+   "args": [
+    "--no-usage-statistics"
+   ],
+   "env": [],
+   "note": "--no-usage-statistics"
+  }
+ },
+ {
+  "id": "apify",
+  "slug": "apify-mcp-server",
+  "kind": "node",
+  "pkg": "@apify/actors-mcp-server",
+  "ver": "0.20.1",
+  "args": [],
+  "env": [
+   "APIFY_TOKEN=filler-not-a-real-key"
+  ],
+  "optout": {
+   "args": [
+    "--telemetry-enabled=false"
+   ],
+   "env": [],
+   "note": "--telemetry-enabled=false"
+  }
+ },
+ {
+  "id": "blender",
+  "slug": "blender-mcp",
+  "kind": "uv",
+  "pkg": "mcp-for-blender",
+  "ver": "2.2.4",
+  "exe": "mcp-for-blender",
+  "args": [],
+  "env": [],
+  "optout": {
+   "args": [],
+   "env": [
+    "DISABLE_TELEMETRY=true"
+   ],
+   "note": "DISABLE_TELEMETRY=true"
+  }
+ },
+ {
+  "id": "azure",
+  "slug": "microsoft-mcp-catalog",
+  "kind": "node",
+  "pkg": "@azure/mcp",
+  "ver": "4.0.0-beta.4",
+  "args": [
+   "server",
+   "start"
+  ],
+  "env": [
+   "DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1"
+  ],
+  "optout": {
+   "args": [],
+   "env": [
+    "AZURE_MCP_COLLECT_TELEMETRY=false"
+   ],
+   "note": "AZURE_MCP_COLLECT_TELEMETRY=false"
+  }
+ },
+ {
+  "id": "playwright",
+  "slug": "playwright-mcp",
+  "kind": "node",
+  "pkg": "@playwright/mcp",
+  "ver": "0.0.83",
+  "args": [],
+  "env": []
+ },
+ {
+  "id": "context7",
+  "slug": "context7",
+  "kind": "node",
+  "pkg": "@upstash/context7-mcp",
+  "ver": "4.4.4",
+  "args": [],
+  "env": []
+ },
+ {
+  "id": "codebase-memory",
+  "slug": "codebase-memory-mcp",
+  "kind": "node",
+  "pkg": "codebase-memory-mcp",
+  "ver": "0.12.1",
+  "args": [],
+  "env": []
+ },
+ {
+  "id": "context-mode",
+  "slug": "context-mode",
+  "kind": "node",
+  "pkg": "context-mode",
+  "ver": "1.0.169",
+  "args": [],
+  "env": []
+ },
+ {
+  "id": "desktop-commander",
+  "slug": "desktop-commander-mcp",
+  "kind": "node",
+  "pkg": "@wonderwhy-er/desktop-commander",
+  "ver": "0.3.1",
+  "args": [],
+  "env": [],
+  "optout": {
+   "args": [],
+   "env": [],
+   "files": [
+    {
+     "path": "/root/.claude-server-commander/config.json",
+     "content": "{\"telemetryEnabled\": false}"
+    }
+   ],
+   "note": "telemetryEnabled=false en ~/.claude-server-commander/config.json"
+  }
+ },
+ {
+  "id": "browser-tools",
+  "slug": "browser-tools-mcp",
+  "kind": "node",
+  "pkg": "@agentdeskai/browser-tools-mcp",
+  "ver": "2.0.2",
+  "args": [],
+  "env": []
+ },
+ {
+  "id": "dbhub",
+  "slug": "dbhub",
+  "kind": "node",
+  "pkg": "@bytebase/dbhub",
+  "ver": "0.22.6",
+  "args": [
+   "--demo"
+  ],
+  "env": []
+ },
+ {
+  "id": "mcp-server-kubernetes",
+  "slug": "mcp-server-kubernetes",
+  "kind": "node",
+  "pkg": "mcp-server-kubernetes",
+  "ver": "4.1.9",
+  "args": [],
+  "env": []
+ },
+ {
+  "id": "n8n",
+  "slug": "n8n-mcp",
+  "kind": "node",
+  "pkg": "n8n-mcp",
+  "ver": "2.99.1",
+  "args": [],
+  "env": [
+   "MCP_MODE=stdio",
+   "LOG_LEVEL=error"
+  ],
+  "optout": {
+   "args": [],
+   "env": [
+    "N8N_MCP_TELEMETRY_DISABLED=true"
+   ],
+   "note": "N8N_MCP_TELEMETRY_DISABLED=true"
+  }
+ },
+ {
+  "id": "mongodb",
+  "slug": "mongodb-mcp-server",
+  "kind": "node",
+  "pkg": "mongodb-mcp-server",
+  "ver": "3.1.0",
+  "args": [],
+  "env": [],
+  "optout": {
+   "args": [],
+   "env": [
+    "MDB_MCP_TELEMETRY=disabled"
+   ],
+   "note": "MDB_MCP_TELEMETRY=disabled"
+  }
+ },
+ {
+  "id": "server-memory",
+  "slug": "mcp-reference-servers",
+  "kind": "node",
+  "pkg": "@modelcontextprotocol/server-memory",
+  "ver": "2.0.0",
+  "args": [],
+  "env": []
+ },
+ {
+  "id": "server-everything",
+  "slug": "mcp-reference-servers",
+  "kind": "node",
+  "pkg": "@modelcontextprotocol/server-everything",
+  "ver": "2.0.0",
+  "args": [],
+  "env": []
+ },
+ {
+  "id": "bright-data",
+  "slug": "bright-data-mcp",
+  "kind": "node",
+  "pkg": "@brightdata/mcp",
+  "ver": "4.3.0",
+  "args": [],
+  "env": [
+   "API_TOKEN=filler-not-a-real-key"
+  ]
+ },
+ {
+  "id": "exa",
+  "slug": "exa-mcp-server",
+  "kind": "node",
+  "pkg": "exa-mcp-server",
+  "ver": "3.4.3",
+  "args": [],
+  "env": [
+   "EXA_API_KEY=filler-not-a-real-key"
+  ]
+ },
+ {
+  "id": "firecrawl",
+  "slug": "firecrawl-mcp-server",
+  "kind": "node",
+  "pkg": "firecrawl-mcp",
+  "ver": "3.36.1",
+  "args": [],
+  "env": [
+   "FIRECRAWL_API_KEY=filler-not-a-real-key"
+  ]
+ },
+ {
+  "id": "figma",
+  "slug": "framelink-mcp-for-figma",
+  "kind": "node",
+  "pkg": "figma-developer-mcp",
+  "ver": "0.13.2",
+  "args": [
+   "--stdio"
+  ],
+  "env": [
+   "FIGMA_API_KEY=filler-not-a-real-key"
+  ]
+ },
+ {
+  "id": "notion",
+  "slug": "notion-mcp-server",
+  "kind": "node",
+  "pkg": "@notionhq/notion-mcp-server",
+  "ver": "2.6.1",
+  "args": [],
+  "env": [
+   "NOTION_TOKEN=filler-not-a-real-key"
+  ]
+ },
+ {
+  "id": "perplexity",
+  "slug": "perplexity-mcp-server",
+  "kind": "node",
+  "pkg": "@perplexity-ai/mcp-server",
+  "ver": "1.3.0",
+  "args": [],
+  "env": [
+   "PERPLEXITY_API_KEY=filler-not-a-real-key"
+  ]
+ },
+ {
+  "id": "sentry",
+  "slug": "sentry-mcp",
+  "kind": "node",
+  "pkg": "@sentry/mcp-server",
+  "ver": "0.42.0",
+  "args": [
+   "--access-token=filler-not-a-real-key"
+  ],
+  "env": []
+ },
+ {
+  "id": "supabase",
+  "slug": "supabase-mcp",
+  "kind": "node",
+  "pkg": "@supabase/mcp-server-supabase",
+  "ver": "0.15.0",
+  "args": [
+   "--access-token=filler-not-a-real-key"
+  ],
+  "env": []
+ },
+ {
+  "id": "tavily",
+  "slug": "tavily-mcp",
+  "kind": "node",
+  "pkg": "tavily-mcp",
+  "ver": "0.2.22",
+  "args": [],
+  "env": [
+   "TAVILY_API_KEY=filler-not-a-real-key"
+  ]
+ },
+ {
+  "id": "toolbox",
+  "slug": "mcp-toolbox-for-databases",
+  "kind": "node",
+  "pkg": "@toolbox-sdk/server",
+  "ver": "1.15.0",
+  "args": [
+   "--prebuilt=sqlite",
+   "--stdio"
+  ],
+  "env": [
+   "SQLITE_DATABASE=/tmp/filler.db"
+  ]
+ },
+ {
+  "id": "neon",
+  "slug": "neon-mcp-server",
+  "kind": "node",
+  "pkg": "@neondatabase/mcp-server-neon",
+  "ver": "0.6.5",
+  "args": [
+   "start",
+   "filler-not-a-real-key"
+  ],
+  "env": []
+ },
+ {
+  "id": "stripe",
+  "slug": "stripe-agent-toolkit",
+  "kind": "node",
+  "pkg": "@stripe/mcp",
+  "ver": "0.3.3",
+  "args": [
+   "--tools=all"
+  ],
+  "env": [
+   "STRIPE_SECRET_KEY=rk_test_filler_not_a_real_key"
+  ]
+ },
+ {
+  "id": "fetch",
+  "slug": "mcp-reference-servers",
+  "kind": "uv",
+  "pkg": "mcp-server-fetch",
+  "ver": "2026.10.19",
+  "exe": "mcp-server-fetch",
+  "args": [],
+  "env": []
+ },
+ {
+  "id": "git",
+  "slug": "mcp-reference-servers",
+  "kind": "uv",
+  "pkg": "mcp-server-git",
+  "ver": "2026.10.19",
+  "exe": "mcp-server-git",
+  "args": [],
+  "env": []
+ },
+ {
+  "id": "excel",
+  "slug": "excel-mcp-server",
+  "kind": "uv",
+  "pkg": "excel-mcp-server",
+  "ver": "2.2.2",
+  "exe": "excel-mcp-server",
+  "args": [
+   "stdio"
+  ],
+  "env": []
+ },
+ {
+  "id": "redis",
+  "slug": "redis-mcp-server",
+  "kind": "uv",
+  "pkg": "redis-mcp-server",
+  "ver": "0.5.1",
+  "exe": "redis-mcp-server",
+  "args": [
+   "--url",
+   "redis://127.0.0.1:6379/0"
+  ],
+  "env": []
+ },
+ {
+  "id": "qdrant",
+  "slug": "qdrant-mcp-server",
+  "kind": "uv",
+  "pkg": "mcp-server-qdrant",
+  "ver": "0.8.1",
+  "exe": "mcp-server-qdrant",
+  "args": [],
+  "env": [
+   "QDRANT_LOCAL_PATH=/tmp/qdrant",
+   "COLLECTION_NAME=filler"
+  ]
+ },
+ {
+  "id": "motherduck",
+  "slug": "motherduck-mcp-server",
+  "kind": "uv",
+  "pkg": "mcp-server-motherduck",
+  "ver": "1.1.0",
+  "exe": "mcp-server-motherduck",
+  "args": [
+   "--db-path",
+   ":memory:",
+   "--read-write"
+  ],
+  "env": []
+ },
+ {
+  "id": "serena",
+  "slug": "serena",
+  "kind": "uv",
+  "pkg": "serena-agent",
+  "ver": "2.1.0",
+  "exe": "serena",
+  "args": [
+   "start-mcp-server"
+  ],
+  "env": []
+ },
+ {
+  "id": "grafana",
+  "slug": "grafana-mcp-server",
+  "kind": "uv",
+  "pkg": "mcp-grafana",
+  "ver": "2.1.1",
+  "exe": "mcp-grafana",
+  "args": [],
+  "env": [
+   "GRAFANA_URL=http://localhost:3000",
+   "GRAFANA_SERVICE_ACCOUNT_TOKEN=filler-not-a-real-token"
+  ],
+  "optout": {
+   "args": [],
+   "env": [
+    "GRAFANA_USAGE_STATS=disabled"
+   ],
+   "note": "GRAFANA_USAGE_STATS=disabled"
+  },
+  "variants": {
+   "log": {
+    "args": [
+     "--usage-stats=log"
+    ],
+    "env": [],
+    "note": "--usage-stats=log (imprime en stderr el informe y no envia nada)"
+   }
+  }
+ },
+ {
+  "id": "clickhouse",
+  "slug": "clickhouse-mcp-server",
+  "kind": "uv",
+  "pkg": "mcp-clickhouse",
+  "ver": "0.7.0",
+  "exe": "mcp-clickhouse",
+  "args": [],
+  "env": [
+   "CLICKHOUSE_HOST=localhost",
+   "CLICKHOUSE_USER=default",
+   "CLICKHOUSE_PASSWORD=filler",
+   "CLICKHOUSE_ALLOW_WRITE_ACCESS=false"
+  ]
+ },
+ {
+  "id": "google-workspace",
+  "slug": "google-workspace-mcp",
+  "kind": "uv",
+  "pkg": "workspace-mcp",
+  "ver": "2.3.0",
+  "exe": "workspace-mcp",
+  "args": [],
+  "env": [
+   "GOOGLE_OAUTH_CLIENT_ID=filler-not-a-real-id",
+   "GOOGLE_OAUTH_CLIENT_SECRET=filler-not-a-real-key"
+  ]
+ },
+ {
+  "id": "home-assistant",
+  "slug": "home-assistant-mcp-server",
+  "kind": "uv",
+  "pkg": "ha-mcp",
+  "ver": "9.1.0",
+  "exe": "ha-mcp",
+  "args": [],
+  "env": [
+   "HOMEASSISTANT_URL=http://localhost:8123",
+   "HOMEASSISTANT_TOKEN=filler-not-a-real-key"
+  ],
+  "python": "3.13"
+ },
+ {
+  "id": "atlassian",
+  "slug": "mcp-atlassian",
+  "kind": "uv",
+  "pkg": "mcp-atlassian",
+  "ver": "0.23.1",
+  "exe": "mcp-atlassian",
+  "args": [],
+  "env": [
+   "JIRA_URL=http://localhost:8081",
+   "JIRA_USERNAME=filler",
+   "JIRA_API_TOKEN=filler-not-a-real-key",
+   "CONFLUENCE_URL=http://localhost:8082",
+   "CONFLUENCE_USERNAME=filler",
+   "CONFLUENCE_API_TOKEN=filler-not-a-real-key"
+  ]
+ },
+ {
+  "id": "mysql",
+  "slug": "mysql-mcp-server",
+  "kind": "uv",
+  "pkg": "mysql-mcp-server",
+  "ver": "0.4.4",
+  "exe": "mysql_mcp_server",
+  "args": [],
+  "env": [
+   "MYSQL_HOST=localhost",
+   "MYSQL_USER=filler",
+   "MYSQL_PASSWORD=filler",
+   "MYSQL_DATABASE=filler"
+  ]
+ }
+]

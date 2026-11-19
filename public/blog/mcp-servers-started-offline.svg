@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="41 MCP servers started with no internet: 8 reached an address their opt-out silences (5 at startup, 3 only at shutdown), 21 contacted nothing, 7 contacted a package registry or GitHub, 4 contacted their own service or a model host, 1 gave no result.">
+<rect width="1200" height="675" fill="#f4f1ea"/>
+<text x="64" y="70" font-family="Georgia, 'Times New Roman', serif" font-size="40" fill="#1c1b18">What 41 MCP servers asked for with no internet</text>
+<text x="64" y="104" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#5b5850">One square per server. Docker, 18-19 Nov 2026, startup plus 40 seconds plus shutdown, no tool called</text>
+<text x="320" y="164" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1c1b18">Reached an address</text>
+<text x="320" y="186" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#5b5850">the opt-out silences</text>
+<rect x="340" y="146" width="30" height="30" rx="3" fill="#b3412b"/>
+<rect x="378" y="146" width="30" height="30" rx="3" fill="#b3412b"/>
+<rect x="416" y="146" width="30" height="30" rx="3" fill="#b3412b"/>
+<rect x="454" y="146" width="30" height="30" rx="3" fill="#b3412b"/>
+<rect x="492" y="146" width="30" height="30" rx="3" fill="#b3412b"/>
+<rect x="530" y="146" width="30" height="30" rx="3" fill="#d9a441"/>
+<rect x="568" y="146" width="30" height="30" rx="3" fill="#d9a441"/>
+<rect x="606" y="146" width="30" height="30" rx="3" fill="#d9a441"/>
+<text x="340" y="200" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#1c1b18">At startup: Blender, Chrome DevTools, Apify, Desktop Commander, Azure</text><text x="340" y="221" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#1c1b18">Only at shutdown: Grafana, MongoDB, n8n</text>
+<text x="320" y="252" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1c1b18">Asked for nothing</text>
+<rect x="340" y="234" width="30" height="30" rx="3" fill="#1c1b18"/>
+<rect x="378" y="234" width="30" height="30" rx="3" fill="#1c1b18"/>
+<rect x="416" y="234" width="30" height="30" rx="3" fill="#1c1b18"/>
+<rect x="454" y="234" width="30" height="30" rx="3" fill="#1c1b18"/>
+<rect x="492" y="234" width="30" height="30" rx="3" fill="#1c1b18"/>
+<rect x="530" y="234" width="30" height="30" rx="3" fill="#1c1b18"/>
+<rect x="568" y="234" width="30" height="30" rx="3" fill="#1c1b18"/>
+<rect x="606" y="234" width="30" height="30" rx="3" fill="#1c1b18"/>
+<rect x="644" y="234" width="30" height="30" rx="3" fill="#1c1b18"/>
+<rect x="682" y="234" width="30" height="30" rx="3" fill="#1c1b18"/>
+<rect x="720" y="234" width="30" height="30" rx="3" fill="#1c1b18"/>
+<rect x="758" y="234" width="30" height="30" rx="3" fill="#1c1b18"/>
+<rect x="796" y="234" width="30" height="30" rx="3" fill="#1c1b18"/>
+<rect x="834" y="234" width="30" height="30" rx="3" fill="#1c1b18"/>
+<rect x="872" y="234" width="30" height="30" rx="3" fill="#1c1b18"/>
+<rect x="910" y="234" width="30" height="30" rx="3" fill="#1c1b18"/>
+<rect x="948" y="234" width="30" height="30" rx="3" fill="#1c1b18"/>
+<rect x="986" y="234" width="30" height="30" rx="3" fill="#1c1b18"/>
+<rect x="1024" y="234" width="30" height="30" rx="3" fill="#1c1b18"/>
+<rect x="1062" y="234" width="30" height="30" rx="3" fill="#1c1b18"/>
+<rect x="1100" y="234" width="30" height="30" rx="3" fill="#1c1b18"/>
+<text x="340" y="288" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#1c1b18">no name during startup, 40 seconds or shutdown</text>
+<text x="320" y="340" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1c1b18">Registry or GitHub</text>
+<rect x="341" y="323" width="28" height="28" rx="3" fill="none" stroke="#9a968b" stroke-width="2.5"/>
+<rect x="379" y="323" width="28" height="28" rx="3" fill="none" stroke="#9a968b" stroke-width="2.5"/>
+<rect x="417" y="323" width="28" height="28" rx="3" fill="none" stroke="#9a968b" stroke-width="2.5"/>
+<rect x="455" y="323" width="28" height="28" rx="3" fill="none" stroke="#9a968b" stroke-width="2.5"/>
+<rect x="493" y="323" width="28" height="28" rx="3" fill="none" stroke="#9a968b" stroke-width="2.5"/>
+<rect x="531" y="323" width="28" height="28" rx="3" fill="none" stroke="#9a968b" stroke-width="2.5"/>
+<rect x="569" y="323" width="28" height="28" rx="3" fill="none" stroke="#9a968b" stroke-width="2.5"/>
+<text x="340" y="376" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#1c1b18">npm, PyPI or api.github.com: a version check or package lookup, we cannot tell which</text>
+<text x="320" y="428" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1c1b18">Own service or model</text>
+<rect x="340" y="410" width="30" height="30" rx="3" fill="#7a766b"/>
+<rect x="378" y="410" width="30" height="30" rx="3" fill="#7a766b"/>
+<rect x="416" y="410" width="30" height="30" rx="3" fill="#7a766b"/>
+<rect x="454" y="410" width="30" height="30" rx="3" fill="#7a766b"/>
+<text x="340" y="464" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#1c1b18">Neon, Stripe, Supabase APIs; Qdrant model download. Handshake cut short in three</text>
+<text x="320" y="516" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1c1b18">No result</text>
+<rect x="341" y="499" width="28" height="28" rx="3" fill="none" stroke="#9a968b" stroke-width="2.5" stroke-dasharray="5 4"/>
+<text x="340" y="552" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#1c1b18">Bright Data: no handshake, no names</text>
+<rect x="64" y="608" width="22" height="22" rx="3" fill="#b3412b"/><text x="96" y="625" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#5b5850">at startup</text><rect x="215" y="608" width="22" height="22" rx="3" fill="#d9a441"/><text x="247" y="625" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#5b5850">only when we shut it down</text>
+<text x="1136" y="625" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#5b5850">agentshortlist.dev</text>
+</svg>

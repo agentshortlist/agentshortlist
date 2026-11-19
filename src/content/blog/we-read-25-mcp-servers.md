@@ -2,6 +2,7 @@
 title: We read 25 MCP servers. Here is what we found
 description: What 25 popular MCP servers can change, what they send out and how they are kept up, read from their own docs and source, with the gaps stated.
 date: 2026-10-19
+updated: 2026-11-19
 tags: data, security
 ---
 
@@ -23,7 +24,7 @@ Plenty of these servers can change data. Whether you can run them read-only is t
 
 Chrome DevTools MCP collects usage statistics by default, and its performance tools can send trace URLs to Google's CrUX API. The Apify MCP server collects telemetry about tool calls by default, with Sentry error tracking. Blender MCP collects a minimal anonymous usage record by default; prompts, generated code and scene data are collected only if you opt in.
 
-All three document how to turn it off. Two more projects, codebase-memory-mcp and context-mode, say they send nothing; we didn't verify that claim. For the other 20 we found no statement either way in the docs we read. What stood out to us is how few projects say anything about what leaves your machine.
+All three document how to turn it off. Two more projects, codebase-memory-mcp and context-mode, say they send nothing; we didn't verify that claim. For the other 20 we found no statement either way in the docs we read. What stood out to us is how few projects say anything about what leaves your machine. **Update, 19 November:** we [started 41 servers with no internet](/blog/we-started-mcp-servers-with-no-internet) and logged what they asked for. Codebase Memory asked for nothing; Context Mode asked only for the npm registry.
 
 ## Advisories: 40 published, none on the latest versions we checked
 
